@@ -1,0 +1,1918 @@
+WEBVTT
+
+1
+00:00:33.020 --> 00:00:45.980
+Al Dungo: Hey everybody, sorry about that delayed start, let me just fix my mic. I was with another student in some office hours, and it ran over, so… deepest apologies for that, but thank you guys for being patient and waiting here in class.
+
+2
+00:00:45.980 --> 00:01:10.210
+Al Dungo: Unfortunate day for me to be late because I had a whole thing planned where you guys came in, and there was a question, regarding Monday's topics to kind of just get your brains turning, remember what we went over, and vice versa, but we didn't have time for that, so I'm actually gonna put it up now, because, as I talk about some things that we're diving into, we're actually gonna go through this example together. I just wanted to give you guys a chance.
+
+3
+00:01:10.510 --> 00:01:24.020
+Al Dungo: to, try it out. Try it out, really. So, we'll take things a little bit different today. It's been a crazy Wednesday and a crazy week, but welcome, everyone. Thank you guys for being here. Let's just dive right in, since we're already 5 minutes into it.
+
+4
+00:01:24.260 --> 00:01:30.680
+Al Dungo: But this is actually the equation that comes from the book, from the slides, and it really talks about what we went over last time.
+
+5
+00:01:31.030 --> 00:01:35.690
+Al Dungo: So the question that you have here in the chat, it actually asks you to try
+
+6
+00:01:35.750 --> 00:01:52.719
+Al Dungo: coding this. And another reason why it actually won't take you a terrible amount of time is because I'm not looking for you to write the whole example, even though we're going to in class right now, because, again, this is where we emphasize where you guys grasp things, right? Here, you already should know
+
+7
+00:01:52.720 --> 00:02:01.139
+Al Dungo: This is a point that we're at in Programming Fundamentals where you should know, hey, okay, I can tell that we're gonna be doing some math, but first things first.
+
+8
+00:02:01.140 --> 00:02:16.960
+Al Dungo: let me get those values. Let me get the velocity, let me get the angle in degrees. So it's aspects like that, because then the part that's probably hardest for you guys, or I hope is hardest, because all of that solid stuff was taken care of before.
+
+9
+00:02:17.310 --> 00:02:20.449
+Al Dungo: Is where you guys try to do the actual equation.
+
+10
+00:02:20.880 --> 00:02:23.629
+Al Dungo: And as you can see here, we've got some sign in there.
+
+11
+00:02:23.820 --> 00:02:28.829
+Al Dungo: Got a little bit of, power going on, some divisions, so lots of math going on.
+
+12
+00:02:29.130 --> 00:02:31.670
+Al Dungo: And then we know that at the end of it all, we just…
+
+13
+00:02:32.330 --> 00:02:45.059
+Al Dungo: Spit out that output. And so, again, this is great reflection, especially as we are finished with Exam 1 that took place on Monday. Hopefully you guys felt good about it, you'll expect the grades for that by the end of the week end.
+
+14
+00:02:45.310 --> 00:03:01.179
+Al Dungo: And this is, again, your reflection point, right? That's the whole point of exams. If you started the exam and were straight up just like, I have no idea what the heck is happening, I don't know what any of these terms are, I'm… this code is so stress-inducing and confusing.
+
+15
+00:03:01.310 --> 00:03:19.379
+Al Dungo: Talk to me, reach out, schedule office hours. I, you know, provide a lot of leniency, but it's easy to let this snowball to where, okay, I'm gonna get it, I'm gonna get it one day. And next thing you know, it's lab 7 or 8, and we're still struggling with variables, or input, or, you know, trying to put a math equation together.
+
+16
+00:03:19.480 --> 00:03:35.510
+Al Dungo: So this is a great time to reflect. So, try out this question, and, you know, come up with what the, at least the equation is. Like I said, don't give me scanner input, this is the variables. Just give me a gist as to what you think this, velocity,
+
+17
+00:03:35.620 --> 00:03:39.750
+Al Dungo: This projected mile equation is going to do, and we're going to code it together, of course.
+
+18
+00:03:40.570 --> 00:03:53.380
+Al Dungo: And then you can also take a glance at the question that follows after it, which covers math methods, so consider this your participation for the day, your welcome in, and your, you know, brain refresher as to what we went over on Monday.
+
+19
+00:03:53.610 --> 00:04:05.339
+Al Dungo: And hopefully you guys are doing good, so check out those poll questions. This also tells me who's actively paying attention 5 minutes late into class starting, and, you know, about 10 minutes in, as you guys try it out.
+
+20
+00:04:06.950 --> 00:04:16.649
+Al Dungo: I'm actually gonna pull up my code as well, and even start trying to work through it so that we give everyone a fair chance to try and answer that equation up there.
+
+21
+00:04:16.970 --> 00:04:32.410
+Al Dungo: As well as the second one, because the second one asks you about randomness. It's a backwards way of thinking. On Monday, I would give you guys an equation and say, okay, which one of these, or not which one of these, what are the highest and possible numbers of this range?
+
+22
+00:04:32.970 --> 00:04:39.799
+Al Dungo: Right? But now this way is asking you, okay, let's say that I want the highest and the lowest number to be 10 and 59.
+
+23
+00:04:40.190 --> 00:04:42.700
+Al Dungo: What is the equation to do so?
+
+24
+00:04:43.570 --> 00:04:49.410
+Al Dungo: And this is a really good exercise for in class, that lab that's gonna be happening tonight, so…
+
+25
+00:04:50.220 --> 00:04:55.519
+Al Dungo: Try out those questions in the chat, I'll leave that here, and I'm gonna get my… oop, my notes ready.
+
+26
+00:04:55.970 --> 00:04:57.820
+Al Dungo: And welcome, welcome.
+
+27
+00:04:58.030 --> 00:04:59.569
+Al Dungo: Glad you guys are here.
+
+28
+00:05:02.990 --> 00:05:13.270
+Al Dungo: Also, feel free to drop anything in the chat if you have questions or need clarification. Remember that that's how we like to run things here. It's not just an open forum.
+
+29
+00:05:14.250 --> 00:05:21.209
+Al Dungo: It is a time for you guys to say, hey, Let me try this myself.
+
+30
+00:05:23.500 --> 00:05:30.900
+Al Dungo: I'm also curious and would love your guys' opinion, too, especially, like, in… Come on.
+
+31
+00:05:31.630 --> 00:05:40.009
+Al Dungo: I told you guys before that there are some instances where I would consider doing, like, a flipped classroom. I don't know if you guys know what a flipped classroom is.
+
+32
+00:05:40.330 --> 00:05:42.609
+Al Dungo: But Flipped Classroom is actually where
+
+33
+00:05:42.720 --> 00:05:52.529
+Al Dungo: basically think of it as, you know, how we come to lecture, where… maybe I'll do a poll, or maybe we'll try a few classes, like, later on, whenever you guys are, like, super comfortable.
+
+34
+00:05:52.740 --> 00:05:53.940
+Al Dungo: Basically.
+
+35
+00:05:54.670 --> 00:06:11.229
+Al Dungo: it's like, you know how we come here to class, and we learn, and we… I do all the demonstration, you guys listen, you take notes, and then you go home, and you try it yourselves, you do your assignments, you do your labs. A flipped classroom actually kind of takes that concept switched, and so you're actually expected to come to class
+
+36
+00:06:11.250 --> 00:06:21.740
+Al Dungo: Already going over the material, reading the book, reading the slides and all that, and we actually do more of the hands-on stuff in class, just like this.
+
+37
+00:06:21.880 --> 00:06:27.450
+Al Dungo: So it's more open-ended, it's more working sessions, as we would call it.
+
+38
+00:06:27.920 --> 00:06:33.419
+Al Dungo: Programming Fundamentals can be an interesting place to do that because of lab.
+
+39
+00:06:33.510 --> 00:06:49.110
+Al Dungo: Lab is meant to be that hour and a half where you do the hands-on, whereas lecture is what it sounds like to be lecture. So that's the biggest constraint, but I've kind of met in the middle with you guys to do examples here, and kind of do, like, half and half, so…
+
+40
+00:06:50.150 --> 00:06:54.959
+Al Dungo: All good things, all good things. Let's see here…
+
+41
+00:07:02.900 --> 00:07:07.959
+Al Dungo: I'll wait about a couple more minutes, because I'm sure you guys are working your way through it.
+
+42
+00:07:11.840 --> 00:07:28.909
+Al Dungo: Yeah, yeah, yeah, appreciate the feedback on however way you guys like things. Again, that's what the polls are for, that's what the knowledge checks are for, although pretty unofficial, as I call it, especially in the sense of, like, Blackboard and all that. It's about that engagement, right? About seeing that you guys react and say, hey.
+
+43
+00:07:29.060 --> 00:07:38.200
+Al Dungo: this is what I'm, you know, grasping and talking to me in class, because… just because there's a screen doesn't mean that you can't, you know, be…
+
+44
+00:07:38.210 --> 00:07:50.860
+Al Dungo: obligated or feel drawn to having that discussion. I think in today's classroom settings, more than ever, that's exactly how we do things. I mean, that's how a lot of tech places do things for work, right? You're doing things through the computer.
+
+45
+00:07:51.670 --> 00:08:08.040
+Al Dungo: I have a workplace where, you know, everyone's there in person, but majority of the times we're all on our computers actually talking to each other, because that's where the communications are happening, and that's where conversations are captured. So try to think of classroom setting in that way.
+
+46
+00:08:08.650 --> 00:08:10.270
+Al Dungo: It's really… it's really key.
+
+47
+00:08:13.380 --> 00:08:17.980
+Al Dungo: Okay, and so, like I said, I'm gonna actually start today with the question itself.
+
+48
+00:08:19.860 --> 00:08:23.890
+Al Dungo: Cause we're just… we're just keeping you guys alive and engaged in here.
+
+49
+00:08:24.440 --> 00:08:28.589
+Al Dungo: It's in y'all's screen, so if you lose it or something, let me know.
+
+50
+00:08:35.750 --> 00:08:45.259
+Al Dungo: One thing I've never tried doing before, actually, is actually, like, talking and focusing on the lesson while, like, trying to dual-hat it at the same time.
+
+51
+00:08:45.450 --> 00:08:48.879
+Al Dungo: But let's try it, because we're not behind, there's no rush.
+
+52
+00:08:49.020 --> 00:09:04.160
+Al Dungo: We're great on schedule, actually, but I love to keep things moving for you guys. So I'm actually just not gonna, explain all the terrible details of this code, but then, besides the part that you guys already know.
+
+53
+00:09:04.520 --> 00:09:07.160
+Al Dungo: My keyboard has been acting funny since yesterday.
+
+54
+00:09:07.890 --> 00:09:10.839
+Al Dungo: But remember that your exam was on…
+
+55
+00:09:10.980 --> 00:09:17.279
+Al Dungo: Monday, so you guys will see grades for that soon, as well as grades being posted for other things.
+
+56
+00:09:17.470 --> 00:09:31.719
+Al Dungo: Labs, assignments are going to be graded soon, knowing that your assignment 1 and 2 was… is, active stages, and then the third one will be available soon, especially because that's the deep of chapter 4 that we're in right now. And then, of course, we've got lab tonight.
+
+57
+00:09:31.720 --> 00:09:46.999
+Al Dungo: So, Lab 5 was due yesterday regarding that switch statement. Really, really crucial to be able to understand and complete, and especially, hopefully, you've also had that one done by or before the exam on Monday, just because you guys saw that there was a switch statement in there itself.
+
+58
+00:09:47.000 --> 00:09:58.500
+Al Dungo: And then we'll be doing Lab 6 tonight, which is really covering all of the concepts that we went over on Monday. And so we are starting today with math, but then we add some more math, but then shift it a little bit later.
+
+59
+00:09:58.960 --> 00:10:09.709
+Al Dungo: And that is what we covered last time, which was these mathematical operations, trig methods, exponent methods, and that big one that you guys see as a question in here is that math.random.
+
+60
+00:10:10.040 --> 00:10:34.620
+Al Dungo: And so that's really where we're at, that's why class is, you know, already in session, and we're covering that. We're just making sure we do our recap from Monday. And then, as per usual, all things, normal operations in the class, make sure you're following, being active, and reaching out for help if you guys need. This is the time where we're getting closer to that midpoint of the semester, and we really want to make sure that our momentum is strong and going. So, don't be discouraged by exempt
+
+61
+00:10:34.620 --> 00:10:40.799
+Al Dungo: one, if anyone feels that way after, you know, use that as your checkpoint and know that I'm here to help.
+
+62
+00:10:41.010 --> 00:10:54.050
+Al Dungo: all it takes is for you to reach out and let me know. Today and yesterday have been crazy days, so if you guys are waiting on an email response or a Zoom response from me, I will get back to you by tonight and start answering those during lab, but I appreciate your guys' patience.
+
+63
+00:10:54.980 --> 00:11:10.080
+Al Dungo: And then, of course, you know, you guys saw that we talked about it on Monday, that semester project, so make sure that you do have that in mind, so that, we can, you know, start… keep brainstorming and have that at the back of our heads, okay?
+
+64
+00:11:11.690 --> 00:11:26.520
+Al Dungo: And so, just to go through this, again, this is the parts of a problem that you should know. We're just asking for motion, velocity, and angle, and a fun constant that you see in here is actually gravity.
+
+65
+00:11:28.420 --> 00:11:40.300
+Al Dungo: And so, like I said, you guys aren't expected to do the whole equation, even if you didn't initially declare gravity. What I'm looking for is more of those uses of these new math functions that we have.
+
+66
+00:11:40.420 --> 00:11:55.559
+Al Dungo: Right? So you give me the velocity and the angle as in degrees, then I will give you the projectile motion using all of this. Lowercase g, which is gravity, is an actual constant of gravity. It's always 9.8, so that's where that comes from.
+
+67
+00:11:55.790 --> 00:12:02.540
+Al Dungo: And then from here, you know, very similar operations to things that we've done previously. We would tell…
+
+68
+00:12:06.570 --> 00:12:08.239
+Al Dungo: I think my keyboard's dying.
+
+69
+00:12:11.830 --> 00:12:12.920
+Al Dungo: Oops, hold on.
+
+70
+00:12:16.200 --> 00:12:17.490
+Al Dungo: Been a day, guys.
+
+71
+00:12:17.900 --> 00:12:24.310
+Al Dungo: Been a day. Enter the initial velocity in meters per second.
+
+72
+00:12:25.000 --> 00:12:27.970
+Al Dungo: Like that, and we, whatever they decide to give us.
+
+73
+00:12:28.070 --> 00:12:31.059
+Al Dungo: It's going to be that amount as such.
+
+74
+00:12:32.670 --> 00:12:38.120
+Al Dungo: Right? And then one more thing that we need to ask for is that angles and angle in degrees.
+
+75
+00:12:40.600 --> 00:12:45.120
+Al Dungo: Enter the… Angle and degrees.
+
+76
+00:12:45.470 --> 00:12:46.560
+Al Dungo: And here.
+
+77
+00:12:50.070 --> 00:12:51.240
+Al Dungo: Now.
+
+78
+00:12:51.670 --> 00:13:14.770
+Al Dungo: We've done this before. We've asked for height and weight for BMI. We've asked for the area for circle, or the radius so that we can get the area of circle. We've even asked for the side of a cube to be given the volume and the service area. And in one of my opinions, one of the more complex equations from your labs is that interest rate one. Give me the years.
+
+79
+00:13:14.770 --> 00:13:17.709
+Al Dungo: The initial value and the interest rate.
+
+80
+00:13:17.710 --> 00:13:26.609
+Al Dungo: And given this equation that I didn't come up with, you guys didn't come up with, I'm plugging those numbers into a calculator and spreading it out.
+
+81
+00:13:27.050 --> 00:13:45.140
+Al Dungo: And so, again, the whole emphasis of this is to say, let me know if you guys are struggling. That is the, you know, where we want to be at, and, you know, have that connection, that communication. Or if you're grasping it, and everything that I'm doing along this line is just making so much sense, and all the tools provided to you, just click. Awesome.
+
+82
+00:13:45.140 --> 00:13:48.440
+Al Dungo: I'm glad that you guys are here, I hope you guys are enjoying this class.
+
+83
+00:13:48.440 --> 00:13:50.650
+Al Dungo: And, you know, we'll keep things moving along.
+
+84
+00:13:51.340 --> 00:13:55.700
+Al Dungo: Motion on the last… oh, look, I spelled velocity wrong, that's funny.
+
+85
+00:13:56.670 --> 00:13:58.210
+Al Dungo: It's like, why is it not picking it up?
+
+86
+00:13:58.660 --> 00:14:02.889
+Al Dungo: Motion, as we can see here, this is our projectile motion that we get.
+
+87
+00:14:03.390 --> 00:14:21.129
+Al Dungo: How do we take all of those values given to us and add them into this complex equation where V is velocity squared? Well, you know, now take it piece by piece, right? Velocity squared, well, I know how to take something and say that it goes to the square root of it. Isn't that…
+
+88
+00:14:21.490 --> 00:14:25.060
+Al Dungo: Math up how… Velocity squared.
+
+89
+00:14:25.250 --> 00:14:26.210
+Al Dungo: Just like that.
+
+90
+00:14:26.360 --> 00:14:35.139
+Al Dungo: But that's not all that there is into it, because we actually see that this chunk gets multiplied by sine 2 theta.
+
+91
+00:14:35.460 --> 00:14:39.980
+Al Dungo: And what this is, is actually the degrees and angles.
+
+92
+00:14:40.310 --> 00:14:43.409
+Al Dungo: Sorry, angry, angle and degree, let's say that backwards.
+
+93
+00:14:43.920 --> 00:14:50.779
+Al Dungo: And whenever I take it piece by piece, what this looks like is I'm actually going to do math.sign.
+
+94
+00:14:51.400 --> 00:15:01.850
+Al Dungo: Right? Because I know that sine is going to be the 2 times this angle. So anything that I put in this parentheses of sine is going to be…
+
+95
+00:15:03.970 --> 00:15:07.290
+Al Dungo: Taking, you know, the sine function is going to be performed on there.
+
+96
+00:15:07.980 --> 00:15:13.870
+Al Dungo: And from this sign, What we'll… what we'll be able to do is, we're gonna take the…
+
+97
+00:15:14.110 --> 00:15:19.050
+Al Dungo: 2 and multiply it times… The angle.
+
+98
+00:15:19.450 --> 00:15:20.359
+Al Dungo: Just like that.
+
+99
+00:15:22.530 --> 00:15:25.939
+Al Dungo: And even from a first glance, and even as you guys see this.
+
+100
+00:15:26.280 --> 00:15:36.439
+Al Dungo: I would hope that you guys would… well, actually, mass sign to my angle, okay, and then we take all of that divided by gravity.
+
+101
+00:15:41.530 --> 00:15:53.580
+Al Dungo: Now, do you have to set gravity as a constant? Technically, no, but if you wanted to ensure that that variable never got messed with and stayed as such, then, you know, we do have the power of constants.
+
+102
+00:15:56.460 --> 00:16:04.160
+Al Dungo: Can any… does anyone have any objections as to what is wrong with this equation before I print it to the screen?
+
+103
+00:16:04.650 --> 00:16:10.730
+Al Dungo: The projectile motion is… Motion…
+
+104
+00:16:20.100 --> 00:16:30.979
+Al Dungo: No, you're not supposed to type the whole thing out. Like I said, it's really just for your own engagement to try it. I'm looking that you at least attempted it, and for example, what you would actually put is this.
+
+105
+00:16:31.550 --> 00:16:40.279
+Al Dungo: that's, like, this would be a sufficient answer. Like, if I was to put this into the thing, and it's okay if you guys didn't, so just, like, like that. I'm looking for you guys to write that.
+
+106
+00:16:41.420 --> 00:16:48.430
+Al Dungo: And if you took that, and you added it, and you put it into it, A-U-R… that one exactly?
+
+107
+00:16:48.550 --> 00:16:50.800
+Al Dungo: That is incorrect.
+
+108
+00:16:51.990 --> 00:16:53.490
+Al Dungo: Because…
+
+109
+00:16:54.120 --> 00:17:01.180
+Al Dungo: If you're following closely, and you didn't just throw the answer in there and then skip through the rest of the lecture, if you're watching this later.
+
+110
+00:17:01.570 --> 00:17:03.090
+Al Dungo: Or after the fact.
+
+111
+00:17:03.970 --> 00:17:21.400
+Al Dungo: Where did my code go? Remember that these sine functions take it in radians, not degrees. And so this is a boo-boo, this is a absolute no-no, because what we want to do is actually take 2, and theta stands for degree, that's an angle.
+
+112
+00:17:21.520 --> 00:17:27.040
+Al Dungo: We want to actually take that angle and turn it to radiance first.
+
+113
+00:17:29.460 --> 00:17:41.110
+Al Dungo: And the parentheses here is very crucial, and you guys will actually see me, enhance it by one more thing, because this right here is solely this part. Sine 2 theta…
+
+114
+00:17:41.110 --> 00:17:51.429
+Al Dungo: Taking the sine of 2 data, which is their angle and radians. And see, notice how that is all that's encapsulated in the yellow parentheses? That's one thing I like about Visual Studio Code.
+
+115
+00:17:51.430 --> 00:17:57.489
+Al Dungo: is that it really highlights your parentheses. The yellow one is for our sign.
+
+116
+00:17:57.580 --> 00:18:00.080
+Al Dungo: And so that's 2 times the angle.
+
+117
+00:18:00.460 --> 00:18:06.619
+Al Dungo: This blue one right here is actually encapsulating the math part, math science.
+
+118
+00:18:06.880 --> 00:18:21.649
+Al Dungo: And you don't have to have that there, technically, but me, personally, I like to really, really, really make sure that the sine 2 theta gets completed as its own entity before it's multiplied times the velocity squared.
+
+119
+00:18:22.450 --> 00:18:33.259
+Al Dungo: And one way that I've always been taught in math that I like to enhance with you guys is that in fractions, or in this case here, your top is just divided by the bottom.
+
+120
+00:18:33.520 --> 00:18:52.720
+Al Dungo: And so if I really, really want to take it up a notch, which I'm a bit of a stickler, I actually personally will encapsulate this entire top part into parentheses, just to extra make sure. And if you look at… I highlight my… you guys can see that, right? That… the square around that parentheses?
+
+121
+00:18:53.070 --> 00:18:55.249
+Al Dungo: It is legit telling me
+
+122
+00:18:55.390 --> 00:19:01.619
+Al Dungo: And that's why attention to detail is so important, that's why being able to pick these out and read the code in the program is crucial.
+
+123
+00:19:02.040 --> 00:19:14.130
+Al Dungo: When I'm here, I can see that all of that is the top, and all of this within those two blue parentheses is going to be calculated, then divided by gravity.
+
+124
+00:19:14.340 --> 00:19:17.529
+Al Dungo: And does that not look closely like this equation here?
+
+125
+00:19:19.690 --> 00:19:23.680
+Al Dungo: And so that is actually the answer. You can't forget to put that in radians.
+
+126
+00:19:27.080 --> 00:19:29.020
+Al Dungo: And yeah.
+
+127
+00:19:29.830 --> 00:19:41.349
+Al Dungo: So that is an example out of the slide, out of the book, that's actually what we're starting today. This covers, you know, what we were just talking about, how we went over trig functions, as you saw, exponent methods, there's two right there.
+
+128
+00:19:41.390 --> 00:20:01.389
+Al Dungo: And as per usual, you know, we move past where we, you know, we use them, we apply them, but these actual definitions have been covered and, you know, discussed. So if you have any further questions about the service methods or any of this, we'll keep implementing them, you know, you're gonna do a math.random lab tonight, but then we keep the Chapter 4 conversation going.
+
+129
+00:20:02.160 --> 00:20:07.860
+Al Dungo: So hopefully you guys liked that example. Again, you know where to find it. We'll run it just so that we can get that tested.
+
+130
+00:20:08.320 --> 00:20:10.780
+Al Dungo: Let's do… not the…
+
+131
+00:20:18.200 --> 00:20:19.100
+Al Dungo: There you go
+
+132
+00:20:31.930 --> 00:20:43.159
+Al Dungo: And to the velocity, let's say something's going at 100 meters per second, and then they get thrown in… they throw it at a 45 degree angle, your projectile motion is going to be about 1020 meters.
+
+133
+00:20:46.150 --> 00:20:50.510
+Al Dungo: So, you can try that all day, but the focus of that was the equation.
+
+134
+00:20:50.580 --> 00:21:08.420
+Al Dungo: And that brings me to our last, question of the poll, which dives us into today, is asking what the random equation is. What are the… what's the random equation for these ranges provided? So we won't spend too much time on that one, because we'll be talking about a lot of randomness during lab tonight.
+
+135
+00:21:08.460 --> 00:21:16.530
+Al Dungo: But this is what we discussed on Monday, right? Seeing how this math.random equation comes into play.
+
+136
+00:21:16.870 --> 00:21:17.980
+Al Dungo: Right here.
+
+137
+00:21:18.350 --> 00:21:26.160
+Al Dungo: And knowing that we can manipulate it, and you combine it, so this is a very key math.random equation that you will continue to use in this class.
+
+138
+00:21:26.240 --> 00:21:45.310
+Al Dungo: And so, it's really important that you know how to read what the random number ranges are. You'll be doing that as a lab tonight, you'll be asked on assignment, and it will be on, you know, a future exam. So, random… randomness in programming is really key, and so if we're struggling to grasp what that equation is, for sure, let me know.
+
+139
+00:21:45.410 --> 00:21:49.020
+Al Dungo: I will let you guys see… where is it? I lost the poll.
+
+140
+00:21:49.440 --> 00:21:55.140
+Al Dungo: For a random number between 10 and 59, inclusive.
+
+141
+00:21:55.290 --> 00:21:58.079
+Al Dungo: The answer for that is…
+
+142
+00:21:58.530 --> 00:22:05.210
+Al Dungo: So some of the out.printLine, and we'll just throw the equation in there. It's int, math.random.
+
+143
+00:22:05.630 --> 00:22:12.780
+Al Dungo: times 50, because we should know that that gives us 0 through 49 initially. If this doesn't work, I'm gonna…
+
+144
+00:22:13.660 --> 00:22:14.390
+Al Dungo: Okay.
+
+145
+00:22:14.710 --> 00:22:16.370
+Al Dungo: I was scared that it wasn't gonna work.
+
+146
+00:22:22.990 --> 00:22:24.080
+Al Dungo: Oh, there you go.
+
+147
+00:22:24.360 --> 00:22:30.769
+Al Dungo: 0 to 50… Also, let's just do it this way, too. Being lazy.
+
+148
+00:22:33.210 --> 00:22:34.040
+Al Dungo: Come on.
+
+149
+00:22:40.110 --> 00:22:43.590
+Al Dungo: Yeah, my computer is not being my friend today.
+
+150
+00:22:53.830 --> 00:22:54.839
+Al Dungo: Say that again.
+
+151
+00:23:19.330 --> 00:23:33.030
+Al Dungo: Okay, so, sorry about that. This right here, if we see this and we're like, okay, I'm still brain refreshing, that's okay, but this is where we want to be in the direction of seeing it. This right here, we should know, is numbers 0,
+
+152
+00:23:33.760 --> 00:23:34.800
+Al Dungo: Through what?
+
+153
+00:23:34.900 --> 00:23:36.919
+Al Dungo: Is it 50? Is it 60?
+
+154
+00:23:37.140 --> 00:23:39.629
+Al Dungo: 51, it is 0 through 49.
+
+155
+00:23:40.280 --> 00:23:56.359
+Al Dungo: But then where we have to understand where shift comes into play is that if we do plus 10, now, one thing to note here is that notice that we always start at 0 when there's no addition, and so a little hint for tonight's lab, what you shift by?
+
+156
+00:23:56.460 --> 00:24:03.790
+Al Dungo: or the number that you want to start as your smallest possible range is going to be that M, is it not?
+
+157
+00:24:03.930 --> 00:24:09.340
+Al Dungo: Because here, now this goes from 0 to 49 to 10,
+
+158
+00:24:09.550 --> 00:24:24.150
+Al Dungo: And see that pattern there? If I'm starting at… if I want to start at 10, isn't that what I add by? And then we just make sure that we account for our math here to understand that 10 through 59 is what it would be. See how both shifted by 10?
+
+159
+00:24:24.700 --> 00:24:30.559
+Al Dungo: Simplest way to approach it, but do know how we do that so that we can generate random numbers.
+
+160
+00:24:31.390 --> 00:24:32.230
+Al Dungo: So…
+
+161
+00:24:32.840 --> 00:24:50.570
+Al Dungo: That is our knowledge checks for today. Again, really wrapping up that third… that first part of Chapter 4. It doesn't seem like there's any questions in the 30 minutes that we've had to begin, especially focusing on that math, so we'll start with the new stuff, and again, if there's any questions about this one.
+
+162
+00:24:50.690 --> 00:25:02.170
+Al Dungo: This one is a good one. This program takes user input… for velocity, Meters per second, and angle.
+
+163
+00:25:03.580 --> 00:25:11.199
+Al Dungo: degrees, then uses those values to calculate projectile motion, given an equation.
+
+164
+00:25:13.440 --> 00:25:25.790
+Al Dungo: So, solid examples, again, as you guys saw for Exam 1 and the first three chapters, those are always going to be provided to you in Blackboard in the sense of a Java file for you to grab and take and try it out yourselves.
+
+165
+00:25:26.780 --> 00:25:39.630
+Al Dungo: But we'll move on, and this is fun, because we'll still be seeing some math, but this is a really good conversation for us to have. What we're going to be talking about today is, lo and behold, the character data type.
+
+166
+00:25:40.050 --> 00:25:42.539
+Al Dungo: And operations that we can do in there.
+
+167
+00:25:42.710 --> 00:25:44.870
+Al Dungo: So what is a character?
+
+168
+00:25:45.580 --> 00:25:55.319
+Al Dungo: Even whenever you've heard character before Java programming, what do you think a characteristic is? Is the character a person in the movie show? Character in the show? Character in a TV?
+
+169
+00:25:56.770 --> 00:26:03.250
+Al Dungo: character… is… used… oh… Hello.
+
+170
+00:26:06.540 --> 00:26:08.530
+Al Dungo: I rarely am needing to upgrade.
+
+171
+00:26:10.860 --> 00:26:16.290
+Al Dungo: used in Java to represent a single character.
+
+172
+00:26:18.960 --> 00:26:26.220
+Al Dungo: And what that looks like here, it's our friend… Char…
+
+173
+00:26:28.820 --> 00:26:32.839
+Al Dungo: So, just like string, just like boolean, just like int, double.
+
+174
+00:26:32.950 --> 00:26:36.540
+Al Dungo: What you have here is your character data type.
+
+175
+00:26:37.650 --> 00:26:42.930
+Al Dungo: Is enclosed in… Whoa.
+
+176
+00:26:44.540 --> 00:26:55.530
+Al Dungo: When assigning a character literal, remember we have numeric literal, string literals, when assigning a character literal, it is enclosed in single quotation.
+
+177
+00:26:56.480 --> 00:27:05.280
+Al Dungo: And we'll demonstrate that very nicely here. Code… And we do character, letter, It would be… A.
+
+178
+00:27:06.360 --> 00:27:10.060
+Al Dungo: Whenever we print it… We would do the letter itself.
+
+179
+00:27:10.460 --> 00:27:12.620
+Al Dungo: you can see, we'll get the letter A.
+
+180
+00:27:15.720 --> 00:27:21.280
+Al Dungo: Numbers can technically be characters, because it's a single… character.
+
+181
+00:27:23.420 --> 00:27:24.320
+Al Dungo: Right?
+
+182
+00:27:25.330 --> 00:27:27.500
+Al Dungo: But dude… Biss.
+
+183
+00:27:27.690 --> 00:27:34.079
+Al Dungo: But then, notice the difference between this and the actual number, which is key.
+
+184
+00:27:34.350 --> 00:27:37.449
+Al Dungo: And don't you want you guys missing out on that now?
+
+185
+00:27:40.230 --> 00:27:48.630
+Al Dungo: And that's why declaration of variables is so important, and how you write them, because there's this… And this.
+
+186
+00:27:49.950 --> 00:28:07.439
+Al Dungo: You can perform math on this, because that is a numeric literal where the, you know, computer recognizes, hey, this is an actual 4, and I'm manipulating it with this as such. Characters are a data type, and you're specifically saying that what's stored at this variable is a value of 4, yes.
+
+187
+00:28:07.440 --> 00:28:15.079
+Al Dungo: But that's a character, not a number. And so that's a very, you know, important distinction to make there, and that's how we understand characters.
+
+188
+00:28:16.330 --> 00:28:26.540
+Al Dungo: In Java, there are special characters, used.
+
+189
+00:28:26.700 --> 00:28:35.100
+Al Dungo: And in order to indicate that in the code, What we call escape sequences.
+
+190
+00:28:35.660 --> 00:28:40.200
+Al Dungo: Are used for these special cases… characters.
+
+191
+00:28:42.500 --> 00:28:44.630
+Al Dungo: These are characters…
+
+192
+00:28:50.980 --> 00:28:53.990
+Al Dungo: Not normally, easily.
+
+193
+00:28:57.060 --> 00:28:58.470
+Al Dungo: Representative.
+
+194
+00:28:59.780 --> 00:29:01.400
+Al Dungo: Represented. Okay.
+
+195
+00:29:02.410 --> 00:29:04.940
+Al Dungo: Here…
+
+196
+00:29:05.500 --> 00:29:23.250
+Al Dungo: So, the ones that I'm going to show you, and they're actually not straightforward, but once you see them and see them listed here, very similar to math, remember how, you know, I'm throwing lots of different ways to do things, but it's how we use them is what I want you guys to grasp and take away and remember. Here.
+
+197
+00:29:27.440 --> 00:29:28.140
+Al Dungo: Okay.
+
+198
+00:29:29.900 --> 00:29:37.730
+Al Dungo: Let's do… This, and then where is my example?
+
+199
+00:29:43.900 --> 00:29:45.370
+Al Dungo: Actually, whoa.
+
+200
+00:29:46.950 --> 00:29:48.020
+Al Dungo: Oh, okay.
+
+201
+00:29:48.970 --> 00:29:57.460
+Al Dungo: Let's just try one. So, let's say we have system.out.print, and we put, he said, Java is fun.
+
+202
+00:29:57.900 --> 00:29:58.650
+Al Dungo: Okay.
+
+203
+00:29:59.250 --> 00:30:00.290
+Al Dungo: Whatever.
+
+204
+00:30:00.470 --> 00:30:08.519
+Al Dungo: We throw that in there. But another note to be made here is, when we quote somebody saying something.
+
+205
+00:30:09.380 --> 00:30:12.200
+Al Dungo: How do we usually express that?
+
+206
+00:30:13.880 --> 00:30:23.249
+Al Dungo: we say it in quotations, so then, isn't that a little bit backwards, or how would you represent double quotations in this case if I wanted to say, literally.
+
+207
+00:30:23.380 --> 00:30:28.960
+Al Dungo: he said Java is fun. And the comparison that I'm asking you guys to make there is against this.
+
+208
+00:30:32.600 --> 00:30:35.100
+Al Dungo: I'm gonna… I'm pulling up one word on purpose.
+
+209
+00:30:37.410 --> 00:30:42.329
+Al Dungo: Right, if I was to say, he said, Java is fun.
+
+210
+00:30:43.260 --> 00:30:48.339
+Al Dungo: Right? Because that's how we grammatically write things. Well, how would we do that here? Okay, let's just…
+
+211
+00:30:52.880 --> 00:31:05.779
+Al Dungo: Now that… now that is… that is looking funny. Java does not like that. And so that is what we mean by not normally easily represented. And what that looks like here… I don't know why I keep saying represent…
+
+212
+00:31:06.470 --> 00:31:10.919
+Al Dungo: My thing is… Really just not being my friend today.
+
+213
+00:31:12.060 --> 00:31:15.730
+Al Dungo: For example, if we do slash…
+
+214
+00:31:16.560 --> 00:31:19.500
+Al Dungo: Like this, and I'll write it in here.
+
+215
+00:31:23.660 --> 00:31:40.729
+Al Dungo: is how we could represent a double quote. And look at how that is, right? Look at what I did there. Slash quotation. And so even in our wrong-looking one here, and I'll switch it down so that you guys can see it, if I wanted to put those double quotes in there, I could do…
+
+216
+00:31:42.800 --> 00:31:43.800
+Al Dungo: Like this.
+
+217
+00:31:45.550 --> 00:31:50.629
+Al Dungo: And so, this one's wrong, but check out how it looks whenever we run it. Java is 1.
+
+218
+00:31:51.370 --> 00:32:03.609
+Al Dungo: And so that is what we mean by special escape sequences, that escape sequence is that backslash. And so some other ones that we actually are able to see that, you know, will make sense is we can do a… oops.
+
+219
+00:32:04.650 --> 00:32:07.120
+Al Dungo: We can do a new line character.
+
+220
+00:32:10.550 --> 00:32:15.319
+Al Dungo: We can do a tab, and I'm gonna show you guys all of these, so don't worry.
+
+221
+00:32:15.540 --> 00:32:24.180
+Al Dungo: Tab, character. Additionally, similar to double quote, we can also do… Double quotations.
+
+222
+00:32:25.850 --> 00:32:35.679
+Al Dungo: And then, what if we actually wanted an actual backslash in the code? Because if backslash is what is, like, our escape sequence, well, how do we do an actual backslash?
+
+223
+00:32:38.700 --> 00:32:39.709
+Al Dungo: It's a double.
+
+224
+00:32:54.070 --> 00:32:56.290
+Al Dungo: A literal backslash.
+
+225
+00:32:59.580 --> 00:33:03.879
+Al Dungo: Another one that is, you know, interesting to be able to see here, I'll do this one.
+
+226
+00:33:04.320 --> 00:33:08.960
+Al Dungo: And then, if I do…
+
+227
+00:33:10.030 --> 00:33:12.750
+Al Dungo: I'm writing these for you guys to see it. Like this.
+
+228
+00:33:13.600 --> 00:33:14.350
+Al Dungo: Oops.
+
+229
+00:33:15.870 --> 00:33:17.569
+Al Dungo: Actually, let's take it down.
+
+230
+00:33:19.820 --> 00:33:23.650
+Al Dungo: That's why I love… This notebook.
+
+231
+00:33:24.160 --> 00:33:26.269
+Al Dungo: See how the tab did it there?
+
+232
+00:33:26.600 --> 00:33:30.050
+Al Dungo: So that's, you know, very clearly seen here.
+
+233
+00:33:30.380 --> 00:33:33.859
+Al Dungo: And then the last one that's also really good to see, because this also helps with…
+
+234
+00:33:34.110 --> 00:33:41.730
+Al Dungo: line breaks. This is where you guys get, you know, print line new, but then also know that you have the ability to do, say…
+
+235
+00:33:42.310 --> 00:33:45.400
+Al Dungo: See how this is another line?
+
+236
+00:33:45.900 --> 00:33:48.400
+Al Dungo: And I'll do the same here without that.
+
+237
+00:33:51.660 --> 00:33:53.200
+Al Dungo: Very jumbled together.
+
+238
+00:33:54.150 --> 00:34:00.380
+Al Dungo: This is not another line, but then look how it's all… not much difference, except for that new line character.
+
+239
+00:34:01.110 --> 00:34:03.550
+Al Dungo: See how this is another… and you can also see the tab.
+
+240
+00:34:04.020 --> 00:34:17.689
+Al Dungo: So, fun ways, this is also where we really start to see our character data operations, this is where we see the data type really coming into play, and, you know, very powerful usage of that other data type that you guys hadn't known by now, and being able to see it.
+
+241
+00:34:21.330 --> 00:34:24.640
+Al Dungo: Where does the character data type come from?
+
+242
+00:34:24.920 --> 00:34:39.299
+Al Dungo: Which is good, like, how… where did it originate? How did Java start to understand that, you know, these are each characters, and then these characters are all put together to make words, aka strings? Java…
+
+243
+00:34:39.550 --> 00:34:46.449
+Al Dungo: Has a coding standard called… Unicode.
+
+244
+00:35:04.630 --> 00:35:07.449
+Al Dungo: I'm struggling to type notes today, as you guys can see.
+
+245
+00:35:08.200 --> 00:35:25.760
+Al Dungo: And what Unicode does, and what it did, and it kind of expands further, and, you know, it started off to be simple, became complex, and then now, you know, just because, you know, we let tech get away from us and let, you know, languages run wild, Unicode,
+
+246
+00:35:25.870 --> 00:35:31.290
+Al Dungo: encodes numeric representations, as characters.
+
+247
+00:35:31.900 --> 00:35:42.420
+Al Dungo: the details of it are not for you guys to get, like, super worked about. I'm not gonna go in there and ask you in the exam, okay, what is the history of Unicode, and how did it, you know, originate, and,
+
+248
+00:35:42.480 --> 00:36:01.270
+Al Dungo: Oh yeah, we were doing character, and now we were… and then we were doing escape sec… escape sequences, sorry for who was asking. Just showing how we use these to demonstrate some little characters in there, not normally represented easily, and then just seeing, like, our new line here, and see how it goes onto another line, so that's where we were at.
+
+249
+00:36:02.320 --> 00:36:13.769
+Al Dungo: But with these characters, encoded numeric representations, this is actually where Lab 5 comes into a little bit of play, because you guys were introduced to what was called hexadecimal.
+
+250
+00:36:14.110 --> 00:36:19.440
+Al Dungo: And a little bit of history, quick run-through of, hexadecimal history…
+
+251
+00:36:20.520 --> 00:36:29.339
+Al Dungo: on this, and hexadecimal. Hexadecimal, as you guys saw, and some of you asked after last week, as,
+
+252
+00:36:29.340 --> 00:36:42.430
+Al Dungo: Decimal is just 0 through 9, right? Because whenever we get through 10… when you get to 10, 20, 100, 1,000, you're repeating the usage of 1s and zeros, right? So 0 through 9s are your only possible digits.
+
+253
+00:36:43.040 --> 00:36:46.129
+Al Dungo: Hex… Bring in hexadecimal.
+
+254
+00:36:53.500 --> 00:37:00.589
+Al Dungo: Which expands to not just the digits 0 through 9, but then you also get 0 through 9,
+
+255
+00:37:01.030 --> 00:37:09.409
+Al Dungo: as well as A, B, C, D, E, F. And so in hexadecimal, you'll actually see numbers such as, like, 16F.
+
+256
+00:37:09.430 --> 00:37:22.149
+Al Dungo: Or 23B. And that actually translates to an actual decimal number. But that's not what I want you guys to focus on, I just kind of wanted you to remember what hexadecimal is, and understand the storage bit of…
+
+257
+00:37:22.750 --> 00:37:26.130
+Al Dungo: Characters being variable values.
+
+258
+00:37:27.020 --> 00:37:30.910
+Al Dungo: And with the history on this and hexadecimal.
+
+259
+00:37:31.180 --> 00:37:37.840
+Al Dungo: What we see as an encoded representation, as we see it, Unicode format
+
+260
+00:37:38.910 --> 00:37:48.680
+Al Dungo: is written with a leading-u, followed By a 4-digit hexadecimal.
+
+261
+00:37:49.860 --> 00:37:50.790
+Al Dungo: Number.
+
+262
+00:37:52.290 --> 00:38:02.030
+Al Dungo: So, the possible ranges back whenever we talk about Unicode, possible ranges equal, are from… Zero…
+
+263
+00:38:03.300 --> 00:38:05.030
+Al Dungo: Like this, to…
+
+264
+00:38:09.980 --> 00:38:14.760
+Al Dungo: And it is interesting to see here, because, you know, you get, you know, you have 00…
+
+265
+00:38:15.450 --> 00:38:16.600
+Al Dungo: Think about it this way.
+
+266
+00:38:18.390 --> 00:38:24.609
+Al Dungo: Just like we do, you know, 1 through 100, then to 1,000, then to a million, you get 000…
+
+267
+00:38:25.150 --> 00:38:30.360
+Al Dungo: 0001, right? 002, 2. 03.
+
+268
+00:38:33.660 --> 00:38:50.909
+Al Dungo: You can come up with all the possible hexadecimal numbers, all to understand that the ranges for those are from here to here. You know, you'll eventually get E, E, E, F, right? E, E, you know, and that's also hexadecimal representation. Even if we look it up, let's try it.
+
+269
+00:38:51.190 --> 00:38:56.329
+Al Dungo: What is hexadecimal EEFF in decimal?
+
+270
+00:39:02.040 --> 00:39:03.470
+Al Dungo: I ended it slow today.
+
+271
+00:39:07.110 --> 00:39:10.470
+Al Dungo: It's a huge number using this 16 base.
+
+272
+00:39:10.600 --> 00:39:11.390
+Al Dungo: Right?
+
+273
+00:39:11.620 --> 00:39:21.390
+Al Dungo: So, understanding that that's where Unicode comes from, again, don't get too worked up on the details, but know that that's where it comes from. That's where we kind of started.
+
+274
+00:39:21.650 --> 00:39:25.919
+Al Dungo: And so, even in… and this is just all for example.
+
+275
+00:39:26.070 --> 00:39:27.690
+Al Dungo: Love that I wrote it like this.
+
+276
+00:39:28.190 --> 00:39:33.150
+Al Dungo: If I do character number… Letter.
+
+277
+00:39:33.540 --> 00:39:36.550
+Al Dungo: And then… open my OBS on X. Oops.
+
+278
+00:39:38.600 --> 00:39:39.590
+Al Dungo: Come on.
+
+279
+00:39:41.060 --> 00:39:42.160
+Al Dungo: Check this out.
+
+280
+00:39:46.010 --> 00:39:47.010
+Al Dungo: 41.
+
+281
+00:39:47.410 --> 00:39:59.990
+Al Dungo: For example, right? This is a hexadecimal representation of the basic number 41, and now we know that the notation used for hexadecimal in Unicode, as we saw, it was a leading U followed by a four-digit code.
+
+282
+00:40:05.830 --> 00:40:25.749
+Al Dungo: You don't know this, but the computer understands this very closely, again, in terms of Unicode, and you'll see that we actually get… that this right here is the letter A. And then check this out, look. If I do 442B, let's go all the way to 56.
+
+283
+00:40:26.060 --> 00:40:26.960
+Al Dungo: B.
+
+284
+00:40:27.310 --> 00:40:32.180
+Al Dungo: How about 78? What did we start to get? Oh, look! Lowercase x.
+
+285
+00:40:32.830 --> 00:40:34.010
+Al Dungo: 79.
+
+286
+00:40:35.230 --> 00:40:40.470
+Al Dungo: Right? And so, I'm gonna do a random one. Let's try 126, I don't know what that's gonna be.
+
+287
+00:40:40.650 --> 00:40:49.850
+Al Dungo: It's some foreign symbol, right? So now you guys are seeing, oh, okay, these hexadecimal representations are literally doing Unicode as characters.
+
+288
+00:40:50.450 --> 00:41:01.690
+Al Dungo: Right? And then it started to get a bit more complex, because then they started to, you know, add a bunch of different symbols, and all of that. All is which to say that these…
+
+289
+00:41:04.030 --> 00:41:05.149
+Al Dungo: Where did they go?
+
+290
+00:41:05.860 --> 00:41:07.849
+Al Dungo: All of this is to say…
+
+291
+00:41:16.010 --> 00:41:27.980
+Al Dungo: that because of Unicode, Character values can actually be converted Two numeric value equivalents.
+
+292
+00:41:28.560 --> 00:41:49.299
+Al Dungo: And this is something to be careful with, it's not ever meant to be confusing, especially whenever you're actually trying to write code and make usage of it, and we do some fun little spy conversions, as I like to call it in this chapter, so I think that's why sometimes some students feel super engaged with the character lesson. And it's a nice transition because we go numbers, then characters, and then strings.
+
+293
+00:41:49.300 --> 00:41:57.259
+Al Dungo: All of which, you know, you can see a lot of operations being done, so in your head, you're like, well, I think operations and math, right, like, I'm adding
+
+294
+00:41:57.260 --> 00:42:01.989
+Al Dungo: All these numbers together, and multiplying, dividing, doing, you know, projectile motion.
+
+295
+00:42:02.030 --> 00:42:22.030
+Al Dungo: But it's interesting, too, because we're, you know, really diving into the world of a programming language, all the math and science of it all, and I hope you guys find it interesting, because you see some really useful, unique case scenarios of it being used, again, to maybe even expand on your own way of thinking and real-life application later on.
+
+296
+00:42:22.710 --> 00:42:36.390
+Al Dungo: And so, now that we have, like, a little bit of history of Unicode and, you know, knowing that that's where it originates and how it works, we can actually, again, go back to the simpler understanding of it and what we have here, which is numeric value equivalence.
+
+297
+00:42:36.660 --> 00:42:38.879
+Al Dungo: And show it in this way, so…
+
+298
+00:42:39.260 --> 00:42:47.040
+Al Dungo: Remember how I had… I think I did 41 up here? This is very… not… I wouldn't call it…
+
+299
+00:42:56.810 --> 00:43:00.400
+Al Dungo: Let's see, you know… Oops.
+
+300
+00:43:01.250 --> 00:43:12.799
+Al Dungo: I wouldn't call it… Simple, but, int… Uppercase… something, let's say A,
+
+301
+00:43:18.080 --> 00:43:31.290
+Al Dungo: Here, look at the difference. I use the character as the variable value, and this is not meant to be confusing, that's what I meant to say, and see how it's an integer, and look at what I do whenever I print it. Look at how the computer understands it.
+
+302
+00:43:35.840 --> 00:43:41.699
+Al Dungo: I'm printing uppercase, which is an integer. What value is it going to be?
+
+303
+00:43:42.190 --> 00:43:45.550
+Al Dungo: And sure enough, whenever I run it, look, I got 65.
+
+304
+00:43:46.930 --> 00:43:55.740
+Al Dungo: And so that is what we mean whenever we have those actual, you know, representations as such. If I do lowercase.
+
+305
+00:43:55.840 --> 00:43:56.580
+Al Dungo: Oops.
+
+306
+00:44:23.190 --> 00:44:24.399
+Al Dungo: There we go.
+
+307
+00:44:25.140 --> 00:44:25.900
+Al Dungo: Oops.
+
+308
+00:44:32.200 --> 00:44:46.940
+Al Dungo: Now we're starting to see that the numeric value equivalent of the lowercase a, for example, would be 97, is assigned to the value of lowercase.
+
+309
+00:44:47.790 --> 00:44:52.090
+Al Dungo: Here, 65 was the value of uppercase.
+
+310
+00:44:52.860 --> 00:45:08.350
+Al Dungo: And so, really, again, this is emphasizing that these character values can be converted to these numeric value equivalents, and you can actually, manipulate them a bit, and you'll see that here. But what's important to note here is that numbers cast
+
+311
+00:45:08.560 --> 00:45:17.879
+Al Dungo: See where our casting comes back into play? Numbers cast to characters only use lower 16 bits.
+
+312
+00:45:20.560 --> 00:45:25.040
+Al Dungo: And so, because of this, whenever we say lower 16 bits, this…
+
+313
+00:45:26.620 --> 00:45:31.079
+Al Dungo: Allows for the conversion below to be implicit.
+
+314
+00:45:31.450 --> 00:45:43.990
+Al Dungo: note… when I say implicit, remember how we were talking about CAS? That's why this conversation comes from Chapter 2 and 3? It's because here, I don't have to actually manually convert this
+
+315
+00:45:44.350 --> 00:45:54.830
+Al Dungo: A to B an integer like this. This is acceptable, and if it was anything in the higher 16 bits, which we don't work… we don't bother with, so don't… don't worry about that.
+
+316
+00:45:55.060 --> 00:46:01.880
+Al Dungo: Know that, you know, we see that here, and just as we do it this way, I'll switch it for us.
+
+317
+00:46:08.630 --> 00:46:32.859
+Al Dungo: It's weird. It's a weird way of doing it, but, you know, having this lesson to refer back to, truly allowing ourselves to understand, and this is all very theoretical, this is all very complex, this is really just enhancing your usage of characters, and understanding the importance of that data type and how it is, you know, very specific. Yeah, sure, strings are common, because that's how we actually string words together and, you know, write about those things.
+
+318
+00:46:32.900 --> 00:46:35.870
+Al Dungo: And display output, and, you know, make…
+
+319
+00:46:36.360 --> 00:46:39.159
+Al Dungo: Wording very evident and clear to the user.
+
+320
+00:46:39.940 --> 00:46:56.229
+Al Dungo: But here, you know, this is an interesting way of doing it, because just like this, we might have to, you know, implicit… you would think, okay, well, how does the computer just know that 65 is the numeric representation, but I'm actually turning it into a letter? Again, that is with the implicit.
+
+321
+00:46:56.490 --> 00:47:05.609
+Al Dungo: Casting done implicitly. If it wasn't the case, if that wasn't already built into those lower 16 bits, then there might be an expectation to do this.
+
+322
+00:47:06.860 --> 00:47:10.150
+Al Dungo: Right? But you don't have to, as you just saw.
+
+323
+00:47:10.420 --> 00:47:15.049
+Al Dungo: And that will actually come into a very cool, neat example later.
+
+324
+00:47:17.000 --> 00:47:24.909
+Al Dungo: And just to break it, just to break the system a bit, so that you guys can see, like, to a certain extent, we become out of range.
+
+325
+00:47:25.120 --> 00:47:31.169
+Al Dungo: But I… IDK, I don't know what this is.
+
+326
+00:47:31.680 --> 00:47:39.390
+Al Dungo: Let's, let's try implicitly casting character to some big number out of the range of the 16 bits.
+
+327
+00:47:45.890 --> 00:47:46.980
+Al Dungo: Too large.
+
+328
+00:47:56.970 --> 00:48:01.759
+Al Dungo: We're just playing around, we're just experimenting. Hope you guys like that, because it's fun to see things.
+
+329
+00:48:05.090 --> 00:48:08.010
+Al Dungo: So yeah, eventually you get to a point, feel free to break that.
+
+330
+00:48:08.290 --> 00:48:13.910
+Al Dungo: Wherever you feel is fitting. But it's good to, you know, again, see that translation.
+
+331
+00:48:14.720 --> 00:48:20.540
+Al Dungo: Oh, but the cool thing that you can do with this, and this is why the examples are, fun.
+
+332
+00:48:22.870 --> 00:48:29.440
+Al Dungo: Let's go… Here. Yes.
+
+333
+00:48:36.350 --> 00:48:47.300
+Al Dungo: So this is… this is a fun one. Now that you guys kind of know this, and even though you don't know it exactly, let's do sum equals 2 character plus 3 character.
+
+334
+00:48:54.130 --> 00:49:04.670
+Al Dungo: And I'll even do… the… Sum… is… Do some.
+
+335
+00:49:04.820 --> 00:49:11.409
+Al Dungo: And so firsthand, you might think, okay, well, if that was real numbers, then it would be 2 plus 3 is 5.
+
+336
+00:49:11.840 --> 00:49:12.690
+Al Dungo: Right?
+
+337
+00:49:13.580 --> 00:49:25.509
+Al Dungo: But now that you guys are knowing, and this is why, you know, attention to detail is very important, because it's something that's those two pesky little single quotations that turn these into a character, therefore have a certain Unicode…
+
+338
+00:49:25.510 --> 00:49:35.980
+Al Dungo: numeric equivalent behind what that character 2 is, right? Not the numeric value 2, but the character's value of that character 2.
+
+339
+00:49:36.900 --> 00:49:43.470
+Al Dungo: And so whenever you look at this here, you actually see that the sum is 101, and that's because…
+
+340
+00:49:44.900 --> 00:49:46.589
+Al Dungo: Oh, why do I keep doing that?
+
+341
+00:49:47.460 --> 00:49:58.599
+Al Dungo: 2 is 50, and 3 is 51. So whenever you actually perform that math on this integer, that is how we get 101.
+
+342
+00:49:59.330 --> 00:50:14.210
+Al Dungo: Again, very exaggerated, very forced. To what extent you use this is subjective, but one thing that I always ask… I think is fun, and would be interesting to see someone come up with, like, an implementation idea of it, is, like, like, decoding. Like.
+
+343
+00:50:14.330 --> 00:50:26.119
+Al Dungo: Using encoding and math representation to write something in, like, spy code a certain way with these numbers, and actually have it translate into its equivalent, you know, character as such.
+
+344
+00:50:26.490 --> 00:50:31.490
+Al Dungo: Here's a fun one that students tend to like. If I do, like, secret letter.
+
+345
+00:50:32.130 --> 00:50:38.030
+Al Dungo: right, and I say, I don't know, M… plus… 7.
+
+346
+00:50:39.780 --> 00:50:40.670
+Al Dungo: Right?
+
+347
+00:50:40.910 --> 00:50:42.849
+Al Dungo: The letter is…
+
+348
+00:50:44.050 --> 00:51:01.079
+Al Dungo: And I'll do secret letter. So, see how I took… okay, what is adding 7 to M equal? Like, that's… I don't understand. And so, whenever we see this, we're adding 7 to the character M's numeric representation.
+
+349
+00:51:01.360 --> 00:51:06.149
+Al Dungo: And whenever we do that, we can see that what we get is T.
+
+350
+00:51:06.850 --> 00:51:19.190
+Al Dungo: Which, here, that makes sense, because, you know, unless it wasn't something, you know, very clear from looking at it, I just moved 7 spaces to, 7 letters after M.
+
+351
+00:51:19.460 --> 00:51:30.630
+Al Dungo: Right? And because of the way that I was writing it, I wanted it to come out as a character. But see how, again, if we do it like this… well, I don't know what… what… now, if I want to do what T is, since I didn't know what just T is…
+
+352
+00:51:30.630 --> 00:51:40.050
+Al Dungo: it's actually the number 84. So, just, you know, demonstrative examples. I like to go back and forth and just spit it out different ways for you guys.
+
+353
+00:51:40.350 --> 00:51:47.979
+Al Dungo: But if there's anything that I could, explain better, clearer, you know, demonstrate regarding characters, for sure, let me know.
+
+354
+00:51:55.540 --> 00:52:07.959
+Al Dungo: Because now that you can see that there are actual numeric values behind these characters, and, you know, see that there can actually be operation done on them, the more, is that… is this useful?
+
+355
+00:52:07.960 --> 00:52:18.809
+Al Dungo: Maybe, you have to maybe find a specific case scenario for that to be really, you know, used in an applicable situation, which we do have examples for, so hold on to that.
+
+356
+00:52:18.880 --> 00:52:26.629
+Al Dungo: But where this actually comes into even stronger usage, especially whenever we think of it logically in the way that code works and understands.
+
+357
+00:52:26.950 --> 00:52:29.379
+Al Dungo: This is… semi-useful.
+
+358
+00:52:30.450 --> 00:52:31.510
+Al Dungo: I think.
+
+359
+00:52:32.990 --> 00:52:46.580
+Al Dungo: But the power of… Numeric representation is very strong, more so when it allows us to compare characters.
+
+360
+00:52:46.680 --> 00:52:57.269
+Al Dungo: We just learned about comparisons in Chapter 3, you know, less than, greater than, equal to, not equal to. And so that should be what you think of whenever you hear comparison.
+
+361
+00:52:57.270 --> 00:53:11.710
+Al Dungo: comparison operators, relational operators, you're checking the relationship between two values to determine which ones are bigger than another, which ones are equal to each other, which ones are not equal to each other, all of which, as we've seen, result to true or false, and so…
+
+362
+00:53:12.300 --> 00:53:18.709
+Al Dungo: the Unicode… Value of the characters is what's actually compared.
+
+363
+00:53:20.000 --> 00:53:33.050
+Al Dungo: This also… Allows for testing if a character is specifically a letter, digit, or special character.
+
+364
+00:53:35.400 --> 00:53:40.670
+Al Dungo: So let's try it! Let's see what that looks like. Let's… let's demonstrate it and see what the comparison is.
+
+365
+00:54:17.150 --> 00:54:22.009
+Al Dungo: And look at what I wrote here. And look at how the… look at the comparison that I did there.
+
+366
+00:54:22.480 --> 00:54:32.950
+Al Dungo: I'm asking… I'm saying, is C less than D? And even whenever you, like, read it like that for the first time, you're like, how is C less than D? But even whenever we…
+
+367
+00:54:33.300 --> 00:54:38.060
+Al Dungo: did this output, Oops.
+
+368
+00:54:39.470 --> 00:54:43.019
+Al Dungo: Oh, I'm even gonna… I'm gonna break y'all's brain, I'm gonna show y'all something.
+
+369
+00:54:43.320 --> 00:54:45.319
+Al Dungo: Yeah, hint.
+
+370
+00:54:55.990 --> 00:54:57.000
+Al Dungo: Come on.
+
+371
+00:54:58.670 --> 00:55:03.350
+Al Dungo: Ugh, my keyboard is not… Being friendly today.
+
+372
+00:55:24.160 --> 00:55:42.169
+Al Dungo: Just like this. And so, you know, even though we know, hopefully, that C comes before D, again, look at what values are actually being compared whenever we do this here, because relational operators are done on numbers, right? We're checking if certain values are greater, like, less than or equal to one another.
+
+373
+00:55:42.530 --> 00:55:44.900
+Al Dungo: Oh, I didn't do it, where did I do it? Oh.
+
+374
+00:55:45.270 --> 00:55:47.129
+Al Dungo: Oh, silly me.
+
+375
+00:55:52.280 --> 00:56:08.810
+Al Dungo: You can see that C is 99, D is 100, so then we do get, indeed, that C is less than D. Because this is true, we got printed that, you know, Unicode for C is less than D. If I was to, you know, flip it, let's say we do A,
+
+376
+00:56:09.490 --> 00:56:10.770
+Al Dungo: For example.
+
+377
+00:56:17.720 --> 00:56:20.390
+Al Dungo: Is C less than A?
+
+378
+00:56:21.430 --> 00:56:22.250
+Al Dungo: Right?
+
+379
+00:56:22.380 --> 00:56:24.300
+Al Dungo: When we run this, we don't get…
+
+380
+00:56:24.630 --> 00:56:27.479
+Al Dungo: This light of code, because this is not true.
+
+381
+00:56:27.670 --> 00:56:34.840
+Al Dungo: C is not less than A, and as we've seen previously with the way selection flow works, therefore this code is not gonna run, it never happens.
+
+382
+00:56:35.090 --> 00:56:41.020
+Al Dungo: So that's where we really start seeing the, comparison of the characters there.
+
+383
+00:56:41.820 --> 00:56:57.939
+Al Dungo: And yes, yes, there is a Unicode chart in the book. Like I said, there's never going to be an expectation for you guys to… okay, tell me off the top of your head what the Unicode for the capital C is, because it's different. Capital C is different from, lowercase c.
+
+384
+00:56:58.250 --> 00:57:18.019
+Al Dungo: But there is a chart, and, you know, this is all about, you know, just like a lot of these examples do, you are always going to be welcome as a programmer to, you know, refer to your sheet, you know, refer to your references, right? But then knowing how we actually make use and apply them is where I want you guys to feel confident and strong in doing so.
+
+385
+00:57:19.110 --> 00:57:27.290
+Al Dungo: Another, another cool one that is really seen here… used to…
+
+386
+00:57:30.370 --> 00:57:42.520
+Al Dungo: And we have a much more intricate example than the ones I'm showing you here, but as long as we're solidifying our understanding of the characters now, we'll build onto the examples some more.
+
+387
+00:57:42.950 --> 00:57:46.410
+Al Dungo: But, even if I do… no, I won't do it that way.
+
+388
+00:57:52.700 --> 00:57:54.479
+Al Dungo: Oh, yeah.
+
+389
+00:58:35.650 --> 00:58:37.660
+Al Dungo: Take a second and kind of…
+
+390
+00:58:38.530 --> 00:58:51.210
+Al Dungo: look at what I did there. And, you know, now that you understand how the relational operators, how comparing characters work, see if you can really grasp this range that's going on here.
+
+391
+00:58:51.410 --> 00:58:56.479
+Al Dungo: Did I write that wrong? I think I did write it wrong.
+
+392
+00:59:03.200 --> 00:59:05.210
+Al Dungo: Oh, no, I… no, that's good.
+
+393
+00:59:15.490 --> 00:59:30.819
+Al Dungo: A is a capital letter because whenever we do that comparison of what the letter is, it is actually checking that it falls in this range. Is the letter less than, or greater than, or equal to A? Meaning that it is an A or…
+
+394
+00:59:30.820 --> 00:59:44.180
+Al Dungo: between A and Z is what it's doing here, because as long as it is less than or equal to these exact ends of the range, then it's gonna be true, again, hence our relational comparison logical operator.
+
+395
+00:59:44.320 --> 00:59:53.889
+Al Dungo: But then if it's anything outside of that range, such as, you know, before A or after Z, then it doesn't fall under a capital letter. I can do B,
+
+396
+00:59:54.980 --> 01:00:13.970
+Al Dungo: You know, I could do D, I could go all the way to X, even Z itself is still gonna show us that it's a capital letter, but the minute that I… my letter falls outside of that range, again, since we know what range is, and that's why relational operators are so important, that's why our,
+
+397
+01:00:14.740 --> 01:00:27.439
+Al Dungo: Logical operators, where we combine them, are very key to understand what's happening here, because if you didn't understand Java syntax before, you're definitely gonna be like, what the heck is happening here with these comparisons?
+
+398
+01:00:27.440 --> 01:00:36.020
+Al Dungo: Notice how if I do even, like, a letter… if I do a digit 4, nothing happens, because that does not classify in the range of capital letters.
+
+399
+01:00:36.020 --> 01:00:37.929
+Al Dungo: If I do a lowercase x…
+
+400
+01:00:38.130 --> 01:00:45.559
+Al Dungo: Also does not fall into the range of capital letters, therefore never actually, you know, runs into here.
+
+401
+01:00:46.310 --> 01:00:50.350
+Al Dungo: This is… consider this kind of like your behind-the-scenes of it.
+
+402
+01:00:50.600 --> 01:01:08.919
+Al Dungo: Consider this like you're behind the scenes of what's going on here, because now that you grasp that relation comparison at this layer, at this level, whenever we say that we can determine if a letter, digit, or a special character based off of where those range is, now you know that even if we do here.
+
+403
+01:01:09.240 --> 01:01:21.979
+Al Dungo: From letter… and check this out. From letter… A… to Z… Or even just… Actually, I don't wanna…
+
+404
+01:01:22.260 --> 01:01:23.829
+Al Dungo: I'm not confused, you guys.
+
+405
+01:01:29.810 --> 01:01:32.299
+Al Dungo: Oops, just for references.
+
+406
+01:01:40.050 --> 01:01:42.370
+Al Dungo: I'm showing you the lowercase ones now, too.
+
+407
+01:02:04.820 --> 01:02:07.239
+Al Dungo: Also, why don't I just make it simple?
+
+408
+01:02:09.770 --> 01:02:10.650
+Al Dungo: Oops.
+
+409
+01:02:23.300 --> 01:02:32.709
+Al Dungo: A through Z is 97 through 122, and so any numbers that fall in there, 98, 121, that's all the lowercase letters.
+
+410
+01:02:32.820 --> 01:02:37.580
+Al Dungo: Right? And now that you guys… now you guys see that more, especially whenever we write it this way.
+
+411
+01:02:38.510 --> 01:02:44.389
+Al Dungo: So I don't know if we'll have time for it today, but we'll definitely go over it either…
+
+412
+01:02:44.700 --> 01:02:50.080
+Al Dungo: We'll definitely go over it next week. We'll write this here.
+
+413
+01:02:50.560 --> 01:03:05.810
+Al Dungo: What if we could combine what we know about random numbers and use that to generate a random uppercase letter? Random lowercase letter.
+
+414
+01:03:06.090 --> 01:03:19.609
+Al Dungo: How would we do that? We're actually going to write this example later, and explain it, but for now, this is a good take-home exercise, or maybe a good study material in the book itself.
+
+415
+01:03:19.610 --> 01:03:37.229
+Al Dungo: for you to look at this and say, oh, okay, like, if I want specific numbers between 97 to 122, I know how to do that with random numbers, I can make an equation to do that, and the part that I'm gonna come in and help you is how you translate those random numbers into random letters.
+
+416
+01:03:37.480 --> 01:03:48.259
+Al Dungo: So that's a fun exercise to go on, but where we actually end today's Lesson 4 characters is, you know, expanding on this concept a little bit now, and knowing that these ranges are where it falls.
+
+417
+01:03:48.480 --> 01:03:55.159
+Al Dungo: Because you could do this manually to check, okay, whatever I entered is between such and such, or…
+
+418
+01:03:56.150 --> 01:03:58.130
+Al Dungo: We'll write this here.
+
+419
+01:04:05.650 --> 01:04:09.440
+Al Dungo: That is the week of… the sixth?
+
+420
+01:04:16.560 --> 01:04:27.279
+Al Dungo: There are also built-in Java methods from the character class. Remember how we have a math class?
+
+421
+01:04:27.390 --> 01:04:43.590
+Al Dungo: There's actually a character class, and similar to how math has these functions that are already built into theirs, you know, such as, okay, if I plug in these numbers, I can get the power exponent. If I plug in these numbers, I can get the square root. If I plug in these numbers, I can get the minimum of two numbers.
+
+422
+01:04:43.780 --> 01:04:50.750
+Al Dungo: The character class has methods like that as well that allows for you to check certain things when it comes to character.
+
+423
+01:04:51.310 --> 01:04:57.480
+Al Dungo: And I'll show you guys… I'll show you guys here, and this is fun to show you the Java and the notebook here.
+
+424
+01:04:57.700 --> 01:05:03.370
+Al Dungo: And a lot of these are very explanatory, I would hope, too.
+
+425
+01:05:03.830 --> 01:05:05.550
+Al Dungo: Yeah.
+
+426
+01:05:05.730 --> 01:05:14.429
+Al Dungo: So, let's do… system.out.printLine… And then let's do… character.
+
+427
+01:05:15.530 --> 01:05:19.350
+Al Dungo: Remember, because that's our character class, is digit.
+
+428
+01:05:20.700 --> 01:05:25.109
+Al Dungo: And so the way that this one works here is digit X…
+
+429
+01:05:26.120 --> 01:05:29.690
+Al Dungo: Checks if a character is a digit.
+
+430
+01:05:32.660 --> 01:05:36.409
+Al Dungo: And what you pass there is an actual character.
+
+431
+01:05:36.600 --> 01:05:45.809
+Al Dungo: Right, so then if you do… A… You get false.
+
+432
+01:05:46.080 --> 01:05:48.029
+Al Dungo: See that? Also, does it work?
+
+433
+01:05:48.520 --> 01:05:49.919
+Al Dungo: Oh yeah, it does work like that.
+
+434
+01:05:51.100 --> 01:06:00.099
+Al Dungo: I could run this all day, again, to show you that it's true or falseness. Let's do D, let's do Z, and then let's do 9.
+
+435
+01:06:00.420 --> 01:06:15.580
+Al Dungo: Just to show you guys what it's doing, and all… it's very simple, it's very straightforward, isn't this a lot easier than forcing some ranges? It's a very simple callback function that you pass in the parameter, hey, is what I gave you here a digit or not? And it literally tells you true or false.
+
+436
+01:06:22.040 --> 01:06:32.420
+Al Dungo: Oh, oh, oh, okay, okay, so it is… okay. It is… so be mindful of it, because you're either passing the variable itself or the value, and that's what the literal is for.
+
+437
+01:06:33.310 --> 01:06:34.280
+Al Dungo: See there?
+
+438
+01:06:35.200 --> 01:06:40.110
+Al Dungo: And the reason why I'm doing that, too, is because if I do it like this… sorry, I didn't mean to be confusing…
+
+439
+01:06:41.960 --> 01:06:45.169
+Al Dungo: Or even if we do, like, a double. No, we'll do a digit.
+
+440
+01:06:46.270 --> 01:06:48.499
+Al Dungo: Oh, no, it has to be that, I'm sorry.
+
+441
+01:06:55.290 --> 01:06:56.390
+Al Dungo: Like this.
+
+442
+01:06:56.660 --> 01:06:58.370
+Al Dungo: And then you run this…
+
+443
+01:07:00.780 --> 01:07:07.870
+Al Dungo: See? If that is something that the user decided to enter, be like, hey, give me a character, and I'll tell you if it's a digit.
+
+444
+01:07:08.050 --> 01:07:12.210
+Al Dungo: Or whatever, this is the value passed in, and you'll be able to see that it's…
+
+445
+01:07:16.910 --> 01:07:17.670
+Al Dungo: False.
+
+446
+01:07:18.500 --> 01:07:35.759
+Al Dungo: So this is really good, play with this, see these, and just so you guys know, your Jupyter notebooks and Blackboard show this part, as well as the output, and so if you're looking at this and you're, okay, where does false come from? We should know that this is the code that comes with it, and this is the output from it. If that's ever confusing, let me know.
+
+447
+01:07:35.760 --> 01:07:39.700
+Al Dungo: So that I can write it better, but that's what the whole demonstrations are for.
+
+448
+01:07:40.280 --> 01:07:50.759
+Al Dungo: Then we, you know, follow a similar suit, which, especially with the way that these are demonstrated, the rest comes pretty well. Also, let's do character, because X kind of sounds like it's a number.
+
+449
+01:07:51.100 --> 01:07:53.640
+Al Dungo: This is checking if it is a letter.
+
+450
+01:07:54.540 --> 01:07:59.220
+Al Dungo: Right? This one is checking is letter or digit.
+
+451
+01:08:00.140 --> 01:08:06.970
+Al Dungo: Check if a character is a letter or a digit, and then check out what these look like as well.
+
+452
+01:08:07.100 --> 01:08:12.260
+Al Dungo: We've also got one that, if you pull it through, you could do is uppercase.
+
+453
+01:08:18.160 --> 01:08:24.700
+Al Dungo: And then, of course, if we can do uppercase, what's to stop us from doing… Lowercase.
+
+454
+01:08:30.540 --> 01:08:36.410
+Al Dungo: So, just like that, I'll demonstrate some more for you guys here. Let's try one of these.
+
+455
+01:08:39.600 --> 01:08:42.010
+Al Dungo: And look at the way that I'm going to do it. If…
+
+456
+01:09:10.830 --> 01:09:17.489
+Al Dungo: So let's say that my character is going to be… X, or capital Z.
+
+457
+01:09:17.740 --> 01:09:20.480
+Al Dungo: I could be… I keep doing Z, so let's do capital S.
+
+458
+01:09:21.410 --> 01:09:33.539
+Al Dungo: And remembering what these come out to be, right? What the actual expression evaluates to, and then knowing where we combine our selection operator, that knowing that this right here is only going to occur if this is true.
+
+459
+01:09:33.819 --> 01:09:36.039
+Al Dungo: and we know what CH is.
+
+460
+01:09:36.390 --> 01:09:40.060
+Al Dungo: What do we think is going to be… what's going to occur here?
+
+461
+01:09:41.069 --> 01:10:05.000
+Al Dungo: Right? And so, I don't have time to do all the examples, but, you know, you guys saw how the isDigit one works. Is it a letter? Is it a letter or a digit? Uppercase, lowercase, and it follows similar suit, so that's where I encourage you guys to expand on this yourselves, read about it further, and then come back on Monday with questions that you might have, so that we can keep expanding onto this chapter, and really start to see how these are used.
+
+462
+01:10:05.510 --> 01:10:06.180
+Al Dungo: Oh.
+
+463
+01:10:06.660 --> 01:10:09.329
+Al Dungo: Where am I?
+
+464
+01:10:10.100 --> 01:10:12.769
+Al Dungo: If it's lowercase c8.
+
+465
+01:10:14.520 --> 01:10:15.200
+Al Dungo: Oh.
+
+466
+01:10:17.460 --> 01:10:18.360
+Al Dungo: Duh.
+
+467
+01:10:19.020 --> 01:10:20.509
+Al Dungo: Can't forget the call.
+
+468
+01:10:21.840 --> 01:10:31.839
+Al Dungo: And you can see here that nothing happened because capital… that's a capital S. It really recognizes that that's a capital S. But if I do a lowercase s, that's gonna tell me that S is a lowercase letter.
+
+469
+01:10:32.030 --> 01:10:42.690
+Al Dungo: And so, see how we really use those flags to make something happen, and see how that true or falseness is very powerful in determining how code can be checked, continued, and ran.
+
+470
+01:10:44.090 --> 01:10:57.070
+Al Dungo: That is all that we have time for today, guys. So, again, apologies for the delay that we started class, but I think we went through it really well. On Monday, we'll pick up here.
+
+471
+01:10:59.200 --> 01:11:02.710
+Al Dungo: And my keyboard loves to be a problem.
+
+472
+01:11:08.290 --> 01:11:10.500
+Al Dungo: Ugh, this is really annoying me.
+
+473
+01:11:15.730 --> 01:11:25.270
+Al Dungo: On Monday, we'll start here, so review and make sure… You understand?
+
+474
+01:11:26.250 --> 01:11:41.230
+Al Dungo: We will be diving into strings next, which… strings are, you know, they all make up… characters make up strings, right? We put all the different characters together to come up with this elaborate string, so it's really important that we understand how that works now.
+
+475
+01:11:41.350 --> 01:11:58.320
+Al Dungo: But, on that note, guys, that is all that we have time for today. So, we do have lab tonight, which, you know, shifts back to the randomness of Monday, like the literal random function. So, hope to see you guys there. If you guys are heading out for the day, that's fine.
+
+476
+01:11:58.500 --> 01:12:04.650
+Al Dungo: Make sure you watch the video. Otherwise, take a good break, and we will see you guys shortly in lab.
+
+477
+01:12:05.500 --> 01:12:06.869
+Al Dungo: Thanks, everybody!
+
+478
+01:12:08.000 --> 01:12:12.420
+Al Dungo: Oh, Lapstick should be there. I don't know why it keeps doing that, but I will post it now.
+
+479
+01:12:14.130 --> 01:12:15.819
+Al Dungo: I will post it now.
+

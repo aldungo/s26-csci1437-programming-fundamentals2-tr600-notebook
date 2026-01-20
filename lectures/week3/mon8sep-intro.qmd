@@ -1,0 +1,43 @@
+---
+title: "CSCI 1436 – Wednesday, 9/3 Class Recap"
+format: revealjs
+editor: visual
+---
+
+# 📘 CSCI 1436 – Monday, September 8
+
+Welcome! Get started by participating in today's **fun Zoom pol**l:
+
+ACCOUNTABILITY CHECK:
+
+👉 *What's your go-to energy?* (Check the Zoom chat for the poll!)
+
+------------------------------------------------------------------------
+
+## ✅ What We Covered Last Week (9/3 Class Recap)
+
+We continued **Chapter 2 – Elementary Programming** and focused on:
+
+-   Variables, Constants, and Identifiers
+-   Assignment Expressions and Statements
+-   Area of a Circle Example (Scanner, `double`, Output Formatting)
+-   Code Readability, Naming Conventions, and Scope
+-   IPO (Input → Processing → Output) Model
+
+------------------------------------------------------------------------
+
+## 🔔 Reminders
+
+📢 Weekly Zoom announcement was sent THIS MORNING — check it for updates and deadlines\
+📚 All course materials are in **Blackboard** and the **Zoom workspace**\
+📝 Attendance/Participation tracking is active — use the Absence Form if needed
+
+------------------------------------------------------------------------
+
+## ❗ Don’t Forget
+
+✅ **Assignment 1** is available in Blackboard — we’ll introduce it today\
+💻 **Lab 3** is now open — we will work on this on **Wednesday**
+
+-   Lab 2 is technically due tomorrow night (9/9)\
+    ⚠️ Starting with Lab 3 and Lab 4, we’ll follow a more structured and realistic flow

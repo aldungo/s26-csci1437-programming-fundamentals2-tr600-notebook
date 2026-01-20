@@ -1,0 +1,54 @@
+---
+title: "Programming Fundamentals 1 (MW601) Exam Review – Wednesday, September 24"
+format: html
+---
+
+# Wednesday, September 24 - EXAM 1 REVIEW
+
+👋 MAKE SURE YOU COMPLETE THE EXAM IN ONE SITTING!
+
+-   make sure your devices are charged, you went to the bathroom, you ate, etc.
+
+------------------------------------------------------------------------
+
+## ✅ Chapter 1
+
+-   Introduction to Java
+
+-   Basic syntax, know how the class header works, the main method, curly braces, etc.
+
+-   Print statements - we do lots of output!
+
+-   Variable declaration, assignment, initialization
+
+-   Comments, errors
+
+------------------------------------------------------------------------
+
+## ✅ Chapter 2
+
+-   Variable declaration, assignment, initialization
+
+-   Variable DATA types - numeric `int`, `byte`, `double`,
+
+-   Variable naming conventions, Variable **CONSTANTS** using `final`
+
+    -   What is acceptable naming convention for constants?
+
+-   More usage of Strings and concatenating `+`
+
+-   Scanner input! Make sure you know how to import, as well as declare in your main method
+
+------------------------------------------------------------------------
+
+## ✅ Chapter 3
+
+-   Boolean logic, operators, expressions
+
+-   Relational operators
+
+-   Logical Operators (check out the truth table)
+
+-   Selection Flow Logic! `if`, `else`, `else if`
+
+-   Switch Statements

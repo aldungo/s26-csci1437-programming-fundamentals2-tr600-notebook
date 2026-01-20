@@ -1,0 +1,70 @@
+---
+title: "Programming Fundamentals 1 (MW601) Exam 2 Review – Wednesday, October 22"
+format: html
+---
+
+# Wednesday, October 22 - EXAM 2 REVIEW
+
+👋 MAKE SURE YOU COMPLETE THE EXAM IN ONE SITTING!
+
+-   You have 1 hour to complete various formats of questions.
+
+-   Be mindful of the bonus question from the 4 open-ended questions
+
+<!-- -->
+
+-   Make sure your devices are charged, you went to the bathroom, you ate, etc.
+
+## Exam 2 is on Monday, October 27th. Set your alarms!
+
+------------------------------------------------------------------------
+
+## ✅ Chapter 4
+
+-   Mathematical methods - Trigonometric methods, exponent methods, service methods
+
+    -   Service methods - min, max, **random**, absolute, etc.
+
+-   Character and String class methods
+
+    -   IndexOf(), isLowerCase, compareTo, equals, etc.
+
+    -   Unicode
+
+    -   Operator precedence and associativity
+
+-   Escape sequences and Format Specifiers
+
+------------------------------------------------------------------------
+
+## ✅ Chapter 5
+
+------------------------------------------------------------------------
+
+Loops!!!
+
+-   Three types - while, do-while, for
+
+    -   Know the syntax for each
+
+-   Make sure you understand and review ALL loop examples, both from in class and from labs, assignments etc.
+
+-   Sentinel-controlled (Lab 8) vs. counter-controlled (for-loop, such as Lab 9), input validation (do you want to continue?)
+
+-   Understand iterations, and how to be careful of off-by-one errors, infinite loops,
+
+-   You should be able to read loop syntax and know how many times the loop will run, AND/OR, what will make the loop condition false and eventually exit
+
+-   Nested loops (calculate how many iterations!)
+
+-   Pretest vs. posttest
+
+# Semester Project Brainstorm
+
+Games! Randomness, unexpected, menu-driven, card games, dice roll
+
+Inventory Tracking System or Grade Management System (something with data)
+
+"Restaurant" Menu Ordering System
+
+Or think about a problem/something you are really interested in... and go from there to "solve" it or "approach" it

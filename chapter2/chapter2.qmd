@@ -1,0 +1,151 @@
+---
+title: "Chapter 2: Java Basics"
+format: html
+editor: visual
+---
+
+# 📘 **CSCI 1436 – Wednesday, 8/27 Class Recap**
+
+Welcome! Get started by participating in a recap for last week by using this link (also in chat) or the QR Code -\>\
+<https://forms.office.com/r/Pa2b9EqbLE>
+
+## ✅ **What We Covered Last Week**
+
+-   **Finished Chapter 1**
+
+    -   What is Java? Why do we Program? Java History and Tools
+
+    -   Programming Style and Documentation
+
+    -   Indentation and Block-Style Formatting
+
+    -   **Your First Code - Hello, World! program**
+
+        -   Print Statement, Comments, and Syntax (keywords and symbols)
+
+### 🔔 **Reminders**
+
+-   📢 Zoom announcement sent this morning (expect every start of week! Check these OFTEN + Blackboard)
+
+-   📚 All resources are on **Blackboard** and **Zoom** – if you have questions, **ask!**
+
+-   📝 **Attendance/Participation** tracking has started – use the Absence Form if needed
+
+------------------------------------------------------------------------
+
+### ❗ **Don't Forget**
+
+-   ✅ **Submit In-Class/Lab 1 ASAP**
+
+-   💻 **Lab 2 is tonight, from 7 - 8:30 p.m.**
+
+# Chapter 2: Elementary Programming
+
+## Solving Problems with Programming
+
+The first problem you'll solve with CODE is... how to solve the area of a circle!
+
+Ask yourself:
+
+-   What do I need to know to calculate this?
+
+-   What is the "end result"?
+
+-   What do I need to start this problem, how do I go about "solving", then done?
+
+    Algorithm = a list of steps
+
+    As programmers, we design algorithms to help us "step" our way through the problem, then use it to guide us and implement the actual code.
+
+**Input-Processing-Output (IPO)**
+
+-   We need pi \* r "squared", where r is the RADIUS
+
+Input we need is the radius
+
+Then we PROCESS and actually perform the calculation (area of a circle)
+
+Lastly, we display the result\
+\
+\
+For step one,
+
+where do we put the radius? where does it come from?
+
+**variable** - where program values are stored
+
+You must DECLARE a variable in your program, to clearly tell the computer what you will be doing with that variable
+
+In this case, radius is a NUMBER VALUE (possibly has decimals) - this is indicated with a data type called **double**
+
+``` java
+{java}
+double radius, area; // comma separating is allowed (same data type)
+```
+
+This is a proper declaration of a variable
+
+It has two things:
+
+1.  data type - double
+2.  name of the variable (you decide!)
+
+After declaring a variable (make it exist and known in the program), now you need to give it value.\
+
+= is the assignment operator
+
+### Let's take it up a notch...
+
+This example only works for a set radius. As of now, we have to GO INTO THE CODE, change the value of radius, save, compile, then run again to see said area... it is NOT user-friendly\
+
+Let's ACTUALLY take input from the user. Familiarize yourselves with the syntax to do this!
+
+1.  This feature isn't included, so we have to "import the ability to do so"
+    1.  import libraries go at the TOP of the code
+2.  declare a Scanner variable in main method
+    1.  this allows indication within the program telling it that we want keyboard INput used
+
+Tip: when getting input, make sure it is CLEAR what you are asking for :)
+
+### More on Variables...
+
+-   variables have "programmer-defined" names, also known as **identifiers**
+
+    -   variables, but also methods and classes (more on this later)
+
+-   variables can change value throughout the course of a program
+
+-   Rules to Follow :)
+
+    -   variables can have letters, digits, underscores, and \$\$
+
+    -   CANNOT start with a digit
+
+    -   CANNOT be a Java keyword
+
+    -   variables should be DESCRIPTIVE (make it very clear what they are being used for)
+
+    -   they are case sensitive
+
+As you design and write your own programs, we must understand the "scope" of variables - the extent of how a variable is used
+
+For next time...
+
+-   we'll talk more about the different data types
+
+------------------------------------------------------------------------
+
+## Notes
+
+Add your lecture notes, code examples, and explanations here.
+
+------------------------------------------------------------------------
+
+## Example Java Code
+
+```{java}
+// Example: Print a message
+System.out.println("Welcome to Chapter 2!");
+```
+
+How about now?

@@ -1,0 +1,1986 @@
+WEBVTT
+
+1
+00:00:22.100 --> 00:00:36.039
+Al Dungo: Good afternoon, everybody! Happy Monday. It is 5.30, so we are going to go ahead and get started. Welcome to class, everybody. Hopefully you guys had a great weekend and are feeling good going into this week.
+
+2
+00:00:36.040 --> 00:00:59.940
+Al Dungo: Got a lot of Chapter 3 stuff to cover today, but we'll kick things off by not only covering what we went over last week, which was a lot of good stuff, hopefully you guys had the weekend to digest it all, try your hand at Lab 4, which is going to be due this Wednesday, or tomorrow, actually, and then we'll be working on a new one on Wednesday, all of which is to set you up for your first exam that is going to be one week away.
+
+3
+00:00:59.940 --> 00:01:02.270
+Al Dungo: Starting next Monday.
+
+4
+00:01:02.570 --> 00:01:22.149
+Al Dungo: And so, make sure that you check out the weekly Zoom announcement that was sent today. You guys are gonna be getting those every week. They help you stay in track with what's… where we're currently at in the class, such as what chapter we're on, any highlighting things to mention, such as labs and assignments, and, you know, just other things to help you routinely keep up with the class.
+
+5
+00:01:22.150 --> 00:01:33.610
+Al Dungo: So if you're not checking those, make sure that you are, and if you are missing them for some reason, let me know. But they do primarily come out on Zoom. I do put them on Blackboard as well, but those are not meant for,
+
+6
+00:01:33.610 --> 00:01:45.790
+Al Dungo: responses. Think of it more like a bulletin board, just for you guys to see that that's there. And then, of course, any expectation that you guys, are going to respond, have questions, you will direct them,
+
+7
+00:01:45.880 --> 00:01:46.779
+Al Dungo: But to me
+
+8
+00:01:47.220 --> 00:02:11.120
+Al Dungo: So let me know if there's anything that I can do to help you guys, especially as you prepare for Exam 1. I know the first exam can feel a little, iffy, especially new semester, new class, new things that we're learning, but rest assured, I'm here to guide you through it, just as I have been with all chapters 1 through 3. As we are finishing up with 3, that means that Wednesday this week, we'll probably be moving into Chapter 4.
+
+9
+00:02:11.530 --> 00:02:17.410
+Al Dungo: As well as next Monday, whenever you actually take the test as well, which I'll get to the delivery of it in a second.
+
+10
+00:02:17.930 --> 00:02:32.270
+Al Dungo: And then, you know, keeping things moved forward. Remember that Chapter 4 is not on the exam. Chapter 4 is a brand new chapter, so as you… the way you could think about it is if we're actively doing Chapter 4 on Monday, why would we be getting tested on that same day?
+
+11
+00:02:32.270 --> 00:02:47.979
+Al Dungo: So, chapters 1 through 3, your end of chapter 3 content, is most likely gonna be by the end of today, depending on where things go. And even if it bleeds over to Wednesday, that's perfectly fine, but make sure that you are, another way to start off class, which I should have said, is make sure you check out the poll.
+
+12
+00:02:47.980 --> 00:03:01.230
+Al Dungo: That's in chat, because it has some Chapter 3 questions, some logic, you know, reasoning to work your way through, just to get the brain flowing for today's conversation, and just see where you're at with understanding that trueness or falseness.
+
+13
+00:03:02.190 --> 00:03:26.060
+Al Dungo: But other than that, guys, like I said, Assignment 1 is gonna be due this Friday, so make sure you complete that, because it's actually Chapters 1 and 2. Your second assignment should be out by tonight. I am a little behind on Lab 5 being released, so normally they're available by Monday morning, but the delay of that is perfectly fine, because the concept that you actually apply in Lab 5 this week isn't going to be introduced until
+
+14
+00:03:26.070 --> 00:03:28.130
+Al Dungo: Right now, and today in class.
+
+15
+00:03:28.170 --> 00:03:37.210
+Al Dungo: So, everything checks out fine. If you guys have any concerns, definitely let me know, and then do just be mindful of that Lab 4 that's due tomorrow.
+
+16
+00:03:37.260 --> 00:03:56.659
+Al Dungo: But other than that, guys, make sure you're following along with everything in class, make sure that you're attending and participating actively. The notes, the slides, the recordings are all available for you on Blackboard, that's where everything is. If you have main questions, you can ask through Zoom amongst your classmates, and of course, for any official matters only, you can email me.
+
+17
+00:03:56.860 --> 00:04:14.109
+Al Dungo: But again, this is the physical class, so I think by now you guys are kind of getting the swing of how things go. It's pretty much gonna stay consistently like that, you know, we learn these concepts, we use assignments and labs to, enhance our understanding, and then all while having awesome conversations about everything, so…
+
+18
+00:04:14.210 --> 00:04:26.179
+Al Dungo: Again, I continue to emphasize that I'm here to help. I believe all emails and Zoom messages have been answered, but if you are waiting on anything, feel free to, again, ping me, ask me here, or let me know.
+
+19
+00:04:26.290 --> 00:04:46.270
+Al Dungo: But I'm glad that you guys are here today. Thank you so much, for being here. Another quick little mention and some things to keep you guys engaged and hopefully excited about all the things that you're doing in technology as you dive into this field is be mindful of some events that are going on. So, I think ACM is having a general meeting sometime this week.
+
+20
+00:04:46.270 --> 00:04:56.440
+Al Dungo: So, if you aren't following along on JAGSYNC to see all the stuff that goes on, on campus for any organizations that you might want to find yourself involved, there's ACM, AFSEA,
+
+21
+00:04:56.440 --> 00:05:19.999
+Al Dungo: just had, starting to have some social events, so, you know, make sure you're following along with that. There's Wixis, Women in Cybersecurity, there's Viceroy, there's Jagbite, so, you know, school's very busy right now, which is why I actually asked you guys a fun question in there as well in the chat, in the poll, but just because if you're not sure where to insert yourself, if you're, an introvert, if you're kind of weary or scared.
+
+22
+00:05:20.000 --> 00:05:44.410
+Al Dungo: Trust me when I say that this is the place to be. You know, not only is this class, and being with myself, a safe space, but this university as a whole. So you guys are in the time of innovation and technology. As college students from this university and a place that's growing, take advantage of the things that you can while you can, and let me know if there's anything that I can, again, do to support you, you know, encourage you, motivate you.
+
+23
+00:05:44.410 --> 00:05:55.309
+Al Dungo: Or just talk, so that I can allow you guys to step into this, awesome world of tech that we currently live in, all while making sure to have, you know, to your own benefit.
+
+24
+00:05:55.380 --> 00:06:07.350
+Al Dungo: Because that's what this time is for, school, learning, professional development, and, you know, it goes beyond the classroom, in my opinion. So if there's anything that I can answer or, you know, pave way for you guys, just let me know.
+
+25
+00:06:07.980 --> 00:06:27.589
+Al Dungo: But we'll go ahead and get started, because we've got a lot of good stuff to cover, and then we'll wrap up shortly at 6.45. But I appreciate you guys for tuning in, and as per usual, ask questions in the chat, raise your hand, let me know if there's anything that I can answer for you guys, and of course, stay involved, stay engaged, and stay active with the lesson.
+
+26
+00:06:30.210 --> 00:06:47.529
+Al Dungo: I guess one thing that we'll go over first so I can get it out of the way, is just how exam is delivered, so that you guys pay attention closely. We'll start that off so that I don't lose you later throughout the lecture. Let me know if you guys can or can't see this in the screen.
+
+27
+00:06:47.530 --> 00:06:50.979
+Al Dungo: But I did send out… let's see if it lets me…
+
+28
+00:06:54.300 --> 00:07:10.380
+Al Dungo: Okay, it didn't let me. I did send out a, because I'm trying to show, like, the Zoom workspace message. I did send out a message earlier today about how the exam goes, if I could just get it to pull up on my screen.
+
+29
+00:07:16.050 --> 00:07:18.460
+Al Dungo: Wow, my thing is acting up today.
+
+30
+00:07:19.370 --> 00:07:20.520
+Al Dungo: Come on.
+
+31
+00:07:24.970 --> 00:07:25.710
+Al Dungo: Okay.
+
+32
+00:07:26.490 --> 00:07:45.649
+Al Dungo: Anyways, I'm not gonna waste time doing that, because it's being funny. But what I did want to make sure that you guys just feel comfortable, because I always like to make sure that there's plenty of time to hear this, see this, say it, and then, you know, go back to the recording and notes if there's any questions. I did send this out in Zoom, so make sure that you check it. Oh…
+
+33
+00:07:45.770 --> 00:07:48.340
+Al Dungo: That's not the one I wanted to highlight, actually.
+
+34
+00:07:50.550 --> 00:07:59.740
+Al Dungo: Silly me, that wasn't even the one. That one did go out, so make sure that you check that one. But the one that I was trying to highlight for you guys is how the exam is delivered.
+
+35
+00:07:59.910 --> 00:08:08.290
+Al Dungo: So, make sure you read this carefully, know that your date is a week from now. The way that the exam works is that it's taken online in Blackboard.
+
+36
+00:08:08.470 --> 00:08:22.380
+Al Dungo: You can take it at any point during the day, because we still have class that day, so try not to do it at 4.30, right before we start class, or, you know, in the middle of class. But there'll get exams available for the whole day, and the way that it works is that you can start at any time.
+
+37
+00:08:22.380 --> 00:08:29.759
+Al Dungo: As long as you sit down for one hour straight just to finish it. So you have to complete it one sitting, you can't start it, finish it after dinner.
+
+38
+00:08:29.770 --> 00:08:37.280
+Al Dungo: Finish it in one sitting, and the cool thing is that it's available all day, so if you want to study it in the middle of the night at 3am that morning, fine.
+
+39
+00:08:37.280 --> 00:08:57.089
+Al Dungo: If you're an early bird, I'll be honest, one time I did that in college, it was take a test really early online, because I had something else later on that day. So, plan it how you, you know, can, but be in the right mindset. Of course, don't wait until 11pm at night to take it. I sent an announcement that morning, but make sure you have that already set, don't rely on me.
+
+40
+00:08:57.090 --> 00:09:16.040
+Al Dungo: Right? This is your guys' responsibility to know when this is, and we know when to take it. The questions, as mentioned previously, come in different formats, so you might have multiple choice, true or false, some code snippets in there, as well as open-ended, just to really gauge your guys' way of thinking, and see how you apply those understanding concepts for…
+
+41
+00:09:16.400 --> 00:09:30.980
+Al Dungo: this unit. There's actually a bonus question on there, and so the way that you'll actually see it, and this is written all on the exam, is that there's 4 open-ended questions. To get full credit for the open-ended portion, you only have to answer 3 of them.
+
+42
+00:09:31.060 --> 00:09:41.019
+Al Dungo: However, if you answer the fourth one, which could be any of the four, so it's your choosing, if you answer all four, that fourth one is actually an extra 10 points.
+
+43
+00:09:41.400 --> 00:09:46.450
+Al Dungo: It's open, no open book, but an hour goes pretty quick, and I solely encourage
+
+44
+00:09:46.450 --> 00:09:53.240
+Al Dungo: Ask and, you know, state, do not solely rely on flipping through the book and your notes to be able to answer everything.
+
+45
+00:09:53.240 --> 00:10:09.500
+Al Dungo: The questions are not gonna just come out straight from, you know, line for line, word for word. You have to think your way through it, so making sure that you study and understand these concepts. Remember, programming can be asked in a lot of different ways, not just code, not just conceptually. It's not just, you know, what is 4 plus 3?
+
+46
+00:10:09.500 --> 00:10:16.000
+Al Dungo: 7, right? So, you know, be mindful of that, use your resources wisely.
+
+47
+00:10:16.000 --> 00:10:33.150
+Al Dungo: And let me know if I can help you guys anything for test anxiety, any preparation. Again, being reassured that Wednesday's class will go over, you know, a good Chapter 1 through 3 review, all of which is continuing to be used, so if you've been following along, if you've been watching class, if you've been studying, doing the labs.
+
+48
+00:10:33.150 --> 00:10:37.059
+Al Dungo: you'll be just fine. You'll never see anything that you haven't seen before.
+
+49
+00:10:37.180 --> 00:10:40.230
+Al Dungo: And, you know, all the concepts have been covered.
+
+50
+00:10:40.330 --> 00:10:57.990
+Al Dungo: Yeah, crazy that bonus points aren't really done anymore, so I'm glad that you guys liked that. And for term definitions, are we gonna be given exact choice, or are those blended into the multiple choice? You'll be given an exact definition, so you'll be able to match it.
+
+51
+00:10:58.250 --> 00:11:10.249
+Al Dungo: That's how it works. So, as long as you have been following along with the general terms of the class, the vocabulary that you see in the PowerPoint and discussed here, you know, you'll be, you'll be okay.
+
+52
+00:11:10.330 --> 00:11:19.440
+Al Dungo: And even then, even if it was, like, open-ended or, you know, however it's formatted, it'll be pretty clear as to what the definition is gonna be, seen as.
+
+53
+00:11:22.230 --> 00:11:47.139
+Al Dungo: Yeah, so for writing out the code, for sure, definitely write your reasoning through it, that would be… it's actually a great question. Want to see comments? You'll see, I won't spoil the format of it, but whenever you see the way that you'll be asked to do, like, the code snippets, you know, just explain your reasoning. That's something that's changing a little bit more so now, and it's
+
+54
+00:11:47.140 --> 00:11:53.480
+Al Dungo: It's a little difficult, but any way that you guys want to, you know, your opinion as students is really…
+
+55
+00:11:53.570 --> 00:12:07.260
+Al Dungo: heard by myself, and, you know, genuinely curious to know what kind of ways that you guys have really good takeaways. One of those being, you know, in the terms of commenting and doing code.
+
+56
+00:12:07.430 --> 00:12:32.170
+Al Dungo: exams help really see that, you know, it's not just how we throw a lab and say, you know, do all this, right? I won't say that there is something like that in the final exam, so, but that's a long time from now, whenever you guys are experts at this and have all the chapters under your belt. But, you know, yeah, explain your reasoning through comments, and just make sure that it's very clear that you understand why you're writing it the way that you are. Again, emphasizing that it's
+
+57
+00:12:32.170 --> 00:12:36.069
+Al Dungo: Comments are strong there because code can be approached differently.
+
+58
+00:12:37.430 --> 00:12:53.020
+Al Dungo: But, great questions, thanks everyone for asking. Feel free to continue dropping anything there. I'll be happy to answer anything further, or feel free to sit on that. This… this text that you see here is in the Zoom general, so if you guys want to talk about it to, you know, you can…
+
+59
+00:12:53.270 --> 00:13:04.169
+Al Dungo: talk about the delivery and ask basic questions, even so that the other class can see it, or your other classmates here, but just know that, you know, that's what it's, for, so that you guys can discuss all that, so…
+
+60
+00:13:04.170 --> 00:13:16.300
+Al Dungo: Hopefully you guys feel good about that. That really covers, you know, all that I went into regarding the exam. And on a note, let's dive right into the material so that you guys can, you know, focus on the content that, you'll be tested on.
+
+61
+00:13:17.060 --> 00:13:30.200
+Al Dungo: Last time on Chapter 3, what we went over was really just continuing our Boolean data type true or false. We continued our conversation regarding that if and else statement, and so this is where our logic really starts to drive.
+
+62
+00:13:30.200 --> 00:13:43.099
+Al Dungo: We also saw a nested if statement, which we'll talk about a little bit more today, just to make sure that you guys recap it well. Saw the pH example, which is a very good one to see. I could even go back to it here.
+
+63
+00:13:43.100 --> 00:13:51.750
+Al Dungo: Just to emphasize that, depending on, you know, whatever that value is, we were able to quickly see that, you know, we do comparisons here.
+
+64
+00:13:51.990 --> 00:13:54.340
+Al Dungo: And the continuing theme that we see.
+
+65
+00:13:54.480 --> 00:13:58.110
+Al Dungo: So as long as that's true, you know, the code in here will run.
+
+66
+00:13:58.160 --> 00:14:09.540
+Al Dungo: Now we've continued to also see, you know, several examples of this, so I won't dive into it too much because it's, you know, previously, but then obviously, you know, still emphasized very strongly
+
+67
+00:14:09.560 --> 00:14:27.070
+Al Dungo: as we continue Chapter 3. So, do make sure you're following. If you missed last week completely, or if you're looking at this and have no freaking clue what I'm talking about, and we've got an issue, you definitely want to make sure that you're following this logic and understanding it for the exam, so that we can make sure that you guys are tracking.
+
+68
+00:14:27.480 --> 00:14:48.110
+Al Dungo: To emphasize with this as well, the part that I really want to make sure that we go off of, because this is day 3 of chapter 3 now, is your logical operators. So that was fairly new from Wednesday's class, and this is where we see the ability… well, one, did I spelled this wrong? Operators. Combine or negate your Boolean expressions.
+
+69
+00:14:48.220 --> 00:14:55.610
+Al Dungo: And so this is where we got the very strong usage of operators. Not AND, OR and an exclusive OR.
+
+70
+00:14:55.760 --> 00:15:13.979
+Al Dungo: And so, you know, those are actual symbols that we use in the code to, again, either negate or combine. We're not, you know, hopefully it makes sense. It's a single operator, so, you know, whatever a value is, it just causes it to be the opposite of that. That's what NOT means. So not true is false, not false is true, right?
+
+71
+00:15:14.350 --> 00:15:16.479
+Al Dungo: Make sure you check out those…
+
+72
+00:15:17.150 --> 00:15:30.699
+Al Dungo: truth tables, not only in the slides that are available to you, but then also in the book, and then the ones that you guys really want to get comfortable looking at, especially before the exam, just so that you can really start understanding the logic, and that was also the point of…
+
+73
+00:15:30.770 --> 00:15:38.500
+Al Dungo: today's knowledge check, kind of making sure that we can see the comparisons. So, for example, I'll read one off of here.
+
+74
+00:15:38.890 --> 00:15:45.690
+Al Dungo: I think one of the ones on there, if you guys check it out, is… for example, let's do one.
+
+75
+00:15:49.350 --> 00:15:54.260
+Al Dungo: Like this right here
+
+76
+00:15:54.800 --> 00:16:13.180
+Al Dungo: Let's do Monday here, and then we'll do code. If I was to do Boolean isValid equals 5 less than 10, you need to be able to tell what the result of this is. So this is one of the questions, if you guys saw it on here. What is isValid?
+
+77
+00:16:13.490 --> 00:16:24.439
+Al Dungo: And whenever we take a look at this right here, 5 less than 10, is that true, or is that false? And you can see that that is the value that we're gonna get whenever we print it, which is true.
+
+78
+00:16:24.960 --> 00:16:43.770
+Al Dungo: So make sure that you can see that, but then once you familiarize yourself with that, then we add the ability to combine them, and that's where some students get a little lost, but then you need to, again, emphasize where you exaggerate reading what it is, and the first example that we saw there was checking a grade.
+
+79
+00:16:44.140 --> 00:16:50.710
+Al Dungo: Right? So… Even here, remember that, what is a valid grade? And I write that down here.
+
+80
+00:16:53.800 --> 00:16:57.819
+Al Dungo: I like the way that I explained this over, emphasizing this example even more.
+
+81
+00:16:59.410 --> 00:17:03.030
+Al Dungo: What counts as a valid grade?
+
+82
+00:17:04.319 --> 00:17:10.800
+Al Dungo: Right? The number must be… Greater…
+
+83
+00:17:12.290 --> 00:17:21.310
+Al Dungo: greater than zero, right? Because if it's a valid grade, it's higher than zero, or greater than or equal, because you could have a zero as a grade, right?
+
+84
+00:17:22.839 --> 00:17:24.160
+Al Dungo: And…
+
+85
+00:17:27.190 --> 00:17:38.950
+Al Dungo: It must also be less than 100. Because, sure, if your number is greater than zero, okay, that's one constraint to have, but then what if the number is 244?
+
+86
+00:17:39.140 --> 00:17:54.080
+Al Dungo: Technically, that is still greater than zero, but it is not a perfect range, because you didn't have that constraint on the other side. So that's where ranges become very powerful, and where you're really gonna see it, and also emphasizing that on Wednesday's lab.
+
+87
+00:17:54.080 --> 00:18:02.000
+Al Dungo: Your whole code starts by checking what number the user entered, and if it's not in the range that is instructed.
+
+88
+00:18:02.060 --> 00:18:05.100
+Al Dungo: The whole code shouldn't run, technically.
+
+89
+00:18:05.330 --> 00:18:11.609
+Al Dungo: But remember to be mindful of exactly how logic is written.
+
+90
+00:18:12.190 --> 00:18:31.489
+Al Dungo: Because equally as such, and this is not meant to be confusing, I actually used to not emphasize this greatly before, but then I remembered that some people are left-brained and right-brained, and some people just process the way things are read differently. And so, you know, however you go about it is fine, just remember that you follow logical suit.
+
+91
+00:18:31.800 --> 00:18:41.640
+Al Dungo: So because equally as such, a valid grade could also be… Not less than zero.
+
+92
+00:18:42.360 --> 00:18:48.470
+Al Dungo: Or… also not greater than… 100.
+
+93
+00:18:48.920 --> 00:18:55.100
+Al Dungo: And the reason why I emphasize that so much is because here we wrote, grade is less than zero.
+
+94
+00:18:55.580 --> 00:18:59.529
+Al Dungo: Or, greater than 100, and if that is the case…
+
+95
+00:18:59.930 --> 00:19:10.609
+Al Dungo: then you want to make sure that you tell it that it's not a valid grade, and that's why logic matters, right? Because OR greater than zero, sorry, less than 0, or greater than 100, that's not valid.
+
+96
+00:19:10.810 --> 00:19:17.139
+Al Dungo: Otherwise, it's valid, but then look at the equally right way of putting this. If I do grade check.
+
+97
+00:19:17.810 --> 00:19:27.010
+Al Dungo: and I do, you know, 75, for example, if the grade is greater than 0, And…
+
+98
+00:19:27.380 --> 00:19:30.899
+Al Dungo: The grade is less than 100.
+
+99
+00:19:31.970 --> 00:19:44.919
+Al Dungo: then we would follow suit and make sure to write correctly, and read that out loud, right? Read that carefully, write it down in the comments, that's what that's for. If the grade is greater than zero.
+
+100
+00:19:45.580 --> 00:19:51.790
+Al Dungo: And… Grade is less than 100.
+
+101
+00:19:52.460 --> 00:19:59.770
+Al Dungo: again, make it make sense. Make sure that it's logically following suit, because if that is the case, this is a valid grade.
+
+102
+00:20:01.000 --> 00:20:08.690
+Al Dungo: Otherwise, you know, if that is false, and this is also an interesting time to take where we look at our operators here.
+
+103
+00:20:09.240 --> 00:20:17.869
+Al Dungo: with our AND, our NOT, and our ORs, because whenever we look at our OR, and we look at our AND,
+
+104
+00:20:18.280 --> 00:20:22.530
+Al Dungo: It's interesting to remember here, Here's a little hint.
+
+105
+00:20:23.150 --> 00:20:29.460
+Al Dungo: I'll write that down here. A hint for and… and OR…
+
+106
+00:20:30.260 --> 00:20:34.379
+Al Dungo: Remember that AND, ALL must be true.
+
+107
+00:20:34.580 --> 00:20:39.920
+Al Dungo: Otherwise, you know… The whole result is false.
+
+108
+00:20:40.290 --> 00:20:44.810
+Al Dungo: for OR, As long as 1 is true.
+
+109
+00:20:45.020 --> 00:20:58.580
+Al Dungo: then it's all true. And you can kind of… the reason why I say shortcut, which, if you think it this way, cool, and if you don't, that's fine. Just remembering to make it easier for yourselves here, because let's say that the grade was…
+
+110
+00:20:58.820 --> 00:21:00.750
+Al Dungo: Negative 4.
+
+111
+00:21:01.400 --> 00:21:08.509
+Al Dungo: Or, that's even right here, negative 4, right? Negative 4. Negative 4 greater than 0 is already false.
+
+112
+00:21:09.120 --> 00:21:20.990
+Al Dungo: Right? That's already false. And so, sometimes what's… and I say this too because it's also in the book, sometimes what is really useful to see here is kind of like a shorthand, because remember that with ANDs.
+
+113
+00:21:21.890 --> 00:21:27.550
+Al Dungo: With AND, as long… the minute that one of them is false, you're already gonna get a false.
+
+114
+00:21:27.650 --> 00:21:43.599
+Al Dungo: And so even whenever we look at our code here, let's say that negative 4 greater than 0 is false, well, immediately, that should already tell us that 1 is false, so do you even have to check this right here? Sure, if you do, it is, technically true.
+
+115
+00:21:43.600 --> 00:21:48.379
+Al Dungo: Negative 4 is less than 100, but that doesn't even matter anymore.
+
+116
+00:21:48.380 --> 00:22:00.080
+Al Dungo: That doesn't even matter anymore, because whenever you see here, oh, well, one of them is false, so immediately, that's what AND means. AND is very inclusive. Whereas OR, on the other hand, as you can see here with OR,
+
+117
+00:22:00.650 --> 00:22:03.259
+Al Dungo: As long as one of them is true, you're good.
+
+118
+00:22:03.550 --> 00:22:14.669
+Al Dungo: Right? One is true, true. One is true, true. One is true, true. The only time that an OR result would be false is if everything is completely false. So OR is, you know.
+
+119
+00:22:14.940 --> 00:22:18.390
+Al Dungo: Consider it, but not that very hard set.
+
+120
+00:22:18.610 --> 00:22:35.649
+Al Dungo: So remember that shortcut that is in there for you guys to be able to see that, and that way you're able to, you know, not read it through quickly, that's not what I'm saying, but then just start to familiarize yourself with the logic and having that distinction between your ANDs and your ORs.
+
+121
+00:22:36.340 --> 00:22:37.999
+Al Dungo: So you can make it easier on yourself.
+
+122
+00:22:38.750 --> 00:22:50.230
+Al Dungo: But those are how our logical operators work. I definitely want to show you guys a couple more examples on there, but I will pause just to make sure that we are taking that away good from last Wednesday.
+
+123
+00:22:52.280 --> 00:23:05.880
+Al Dungo: You'll be asked that on your second assignment, just so that you can make sure that we're tracking and following along conceptually. But for sure, if there's anything that I can clarify further in class, let me know, or… or ask questions.
+
+124
+00:23:07.470 --> 00:23:17.799
+Al Dungo: One way that this is good to be able to see here is, remember how we did a nested if statement, where we first checked that a number wasn't zero?
+
+125
+00:23:18.050 --> 00:23:24.349
+Al Dungo: So, you know, make sure that the number is greater than zero first, not 0. Then, determine if it's even or odd.
+
+126
+00:23:24.630 --> 00:23:40.739
+Al Dungo: We saw that with an if statement. Remember, that's how nested IF works, because you won't even get to checking the divisibility unless you don't have a zero number, which is why you would end up there in the first place. Consider another example here.
+
+127
+00:23:41.150 --> 00:23:44.020
+Al Dungo: Consider one more example.
+
+128
+00:23:44.170 --> 00:23:55.259
+Al Dungo: Of logical operators… Previously modifying an older example, which also is kind of small, right guys?
+
+129
+00:23:58.040 --> 00:23:59.119
+Al Dungo: Let's see 18.
+
+130
+00:24:00.660 --> 00:24:01.629
+Al Dungo: There we go.
+
+131
+00:24:05.300 --> 00:24:07.809
+Al Dungo: And then we'll do this here.
+
+132
+00:24:08.850 --> 00:24:09.650
+Al Dungo: Okay.
+
+133
+00:24:10.340 --> 00:24:19.659
+Al Dungo: Markdown… Good, okay. So, let's say we do if, right? We're gonna do some kind of check.
+
+134
+00:24:19.820 --> 00:24:23.619
+Al Dungo: Code here only executes if true, and then we'll do else.
+
+135
+00:24:23.920 --> 00:24:29.899
+Al Dungo: The else is actually going to be very similar to what we had previously. I'm gonna show different ways of thinking.
+
+136
+00:24:30.290 --> 00:24:35.159
+Al Dungo: Num… oops, num1 is…
+
+137
+00:24:43.940 --> 00:24:44.690
+Al Dungo: Odd.
+
+138
+00:24:46.510 --> 00:24:47.710
+Al Dungo: Actually, no.
+
+139
+00:24:48.230 --> 00:24:49.730
+Al Dungo: I just realized I put that.
+
+140
+00:24:51.280 --> 00:25:04.020
+Al Dungo: Okay, so what we're gonna do here is if-else. And again, how you approach it is subjective to your problem. Just do things logically. If you want to imagine something being done in the same swoop of it.
+
+141
+00:25:04.020 --> 00:25:13.869
+Al Dungo: that's where your Boolean logical operators come in handy, because as you can see, you can combine the statements. Now, if you want things sequentially to happen in a certain order.
+
+142
+00:25:13.870 --> 00:25:22.319
+Al Dungo: Make sure you're being mindful of, you know, whether a nested if statement is more fitting. Again, keeping in mind how the overall logic is going to work.
+
+143
+00:25:22.320 --> 00:25:35.819
+Al Dungo: Because differently from what I'm doing here, that I'm just gonna show you guys briefly, is that instead of checking first that the number is not zero, then determining the evenness, here's another example of doing it at the same time.
+
+144
+00:25:36.230 --> 00:25:38.800
+Al Dungo: If… and I'll put number… number 1.
+
+145
+00:25:40.020 --> 00:25:41.200
+Al Dungo: Oops, sorry.
+
+146
+00:25:41.420 --> 00:25:42.750
+Al Dungo: Oh, I put number.
+
+147
+00:25:45.820 --> 00:25:47.489
+Al Dungo: We'll do 86.
+
+148
+00:25:47.800 --> 00:25:59.970
+Al Dungo: If num1 is not equal to 0, and… Num 1 is… Mod… 2…
+
+149
+00:26:00.420 --> 00:26:07.890
+Al Dungo: is equal to 0. Remember that this is divisibility, right? This is equality operator, so we're checking
+
+150
+00:26:07.970 --> 00:26:24.190
+Al Dungo: Does the result of modding by 2 have a remainder or not? Because that gives us evenness. Here, make it make sense. Since it's done at the same time, the number was not 0, and it is even.
+
+151
+00:26:24.450 --> 00:26:36.760
+Al Dungo: Otherwise, you know, we would put that it's odd. Of course, if we run this here, it's gonna say that the number was not 0 and that it is even, but then, you know, you always want to just be careful, because let's say I do 7,
+
+152
+00:26:36.880 --> 00:26:44.900
+Al Dungo: Right? Then I get that the number 1 is odd. That's great, that's all fine, that's all work. And see that whenever I even do 0,
+
+153
+00:26:45.720 --> 00:26:47.329
+Al Dungo: What's gonna happen here?
+
+154
+00:26:49.020 --> 00:26:58.670
+Al Dungo: Figure out, you know, even just looking at your ANDs, even just looking at this combined operator, you know, what is going to be the actual result of it.
+
+155
+00:27:03.530 --> 00:27:17.690
+Al Dungo: And again, whether this is technically true is subjective, but then that's where your logical reasoning comes into play, and where things such as logic errors could come out. Again, just being mindful of how you actually wrote it.
+
+156
+00:27:17.690 --> 00:27:26.649
+Al Dungo: And so here, I'm getting put that the number 1 is odd, which we should know that 0 isn't technically an odd number. So that's where this kind of defaults and…
+
+157
+00:27:26.650 --> 00:27:33.639
+Al Dungo: Breaks a little bit, but just another emphasis of showing you guys how that… the combined operators work.
+
+158
+00:27:36.500 --> 00:27:44.370
+Al Dungo: Any questions on that before we start diving into some real, cool examples of all of this?
+
+159
+00:27:45.820 --> 00:27:50.960
+Al Dungo: I'll save this, and just pause while I get my other notes up.
+
+160
+00:27:52.440 --> 00:27:54.080
+Al Dungo: Let's see here…
+
+161
+00:28:00.540 --> 00:28:01.380
+Al Dungo: Okay.
+
+162
+00:28:04.200 --> 00:28:22.259
+Al Dungo: Alright, so… nothing further. Again, make sure you look at those logical operators closely. Let me… we'll have some more exercises on it on Wednesday, whenever we finalize the review for Chapter 3, but do make sure that you have good takeaways from logical operators, which were discussed today and last Wednesday.
+
+163
+00:28:23.830 --> 00:28:37.860
+Al Dungo: Okay, so we're gonna go over a pretty solid example here, that I want to show you guys. This one's really fun, everyone tends to like this one, and it does really good at demonstrating, logical operators.
+
+164
+00:28:38.810 --> 00:28:41.120
+Al Dungo: Let me just find it…
+
+165
+00:28:42.830 --> 00:28:57.240
+Al Dungo: Oh, another example, too, before we do this one, just to make sure that we're clear on the whole if-else and seeing that as well. Don't forget that we went over this example, too, where we saw how we can enter a grade.
+
+166
+00:28:57.240 --> 00:29:03.449
+Al Dungo: and determine which of these print statements ran. Again, being mindful of these operators here.
+
+167
+00:29:03.550 --> 00:29:12.540
+Al Dungo: So know where you can find those, just so that you guys can have them under your belt, see them clearly, and then we'll continue on with some more examples.
+
+168
+00:29:13.850 --> 00:29:32.539
+Al Dungo: Okay. So, this one here, this one's a fun one, this one's really cool, this one is pretty good for kind of seeing what you are supposed to be doing for Lab 4, and then continuing to just set you up for Lab 5. This program will take user input, obtaining the weight in pounds.
+
+169
+00:29:32.710 --> 00:29:35.580
+Al Dungo: And… height in inches.
+
+170
+00:29:35.950 --> 00:29:42.140
+Al Dungo: The program will then calculate the user's BMI,
+
+171
+00:29:42.300 --> 00:29:45.530
+Al Dungo: and show the results, so BMI is a number.
+
+172
+00:29:46.190 --> 00:30:01.000
+Al Dungo: Lastly, the program will perform selection flow, right, if or else, that's what we call it, control, to show a respective print statement on whether the BMI falls under
+
+173
+00:30:01.000 --> 00:30:12.790
+Al Dungo: One of the categories, of which we have, in certain ranges, underweight, normal, overweight… And… obese.
+
+174
+00:30:14.020 --> 00:30:34.080
+Al Dungo: So, this is, again, great examples that keep things flowing. You guys are gonna see how it's more complex than just showing the area of a circle, but then where it's awesome is because it's tracked a little bit more because you guys now know how to grab input. You guys probably know everything up until, okay, well, what do we do about the equation? How do we do the math?
+
+175
+00:30:34.080 --> 00:30:56.670
+Al Dungo: Which is something I'll always help with, and that's what the demonstrations are for. So don't get too worked up on that, because the book even has this example itself. The book modifies this example a little bit, so I actually encourage to go study it and look at it apart from what we're gonna do here. But do look at it closely to see that you are understanding the calculations being done, the thought process, the approach, the solving of the problem.
+
+176
+00:30:56.750 --> 00:30:58.509
+Al Dungo: to that solution.
+
+177
+00:30:58.630 --> 00:31:17.600
+Al Dungo: even from what I gave you here, you know, like I said, you guys could probably get, okay, well, once you get to a certain calculation, that's great, and then now the new thing that I've learned this week, or this chapter, is how do I use if, else, if, and those logic to make something happen, and then we kind of just enhance that more.
+
+178
+00:31:18.430 --> 00:31:35.209
+Al Dungo: So, follow closely, let me know if there's anything that confuses you guys or, doesn't make sense, but you guys know what we take user input, so we need to make sure that we always have our ability to do so. Now I want to declare 3 variables to hold decimal numbers.
+
+179
+00:31:35.930 --> 00:31:52.850
+Al Dungo: Right? And as seen in your labs, always, you know, follow along that convention closely, but then do be mindful of the actual storage that you're using, in which this case, I want the height, I want the weight, and then I also want that end result of being able to get the user's BMI.
+
+180
+00:31:54.000 --> 00:32:06.890
+Al Dungo: Now, let's ask the user for this information, right? Two prompts. High and weight. Again, remembering that BMI is not something you ask for, it's something that you calculate.
+
+181
+00:32:08.040 --> 00:32:12.580
+Al Dungo: So I'll go through this part, and this is also a great time to ask questions.
+
+182
+00:32:12.860 --> 00:32:28.269
+Al Dungo: Let me know if there's anything I can help you guys understand better, and remember that your engagement in this and, you know, really applying and seeing how it's done, and then doing it yourself in the lab, is what really makes it strong for you guys.
+
+183
+00:32:29.440 --> 00:32:36.850
+Al Dungo: So, of course, we tell the user, give me your weight in pounds, and the next thing that is inputted to be followed is their… the weight.
+
+184
+00:32:36.850 --> 00:32:43.649
+Al Dungo: Again, another reminder check to be very close-minded to your… and pay attention to your syntax.
+
+185
+00:32:43.650 --> 00:32:57.150
+Al Dungo: As you guys have seen, this is technically incorrect, even though nothing looks wrong or of the indication. Capitalization matters, your semicolons matter, your curly braces matter, so always be checking that.
+
+186
+00:32:57.670 --> 00:33:01.590
+Al Dungo: Then we want to tell the user to enter your height in inches.
+
+187
+00:33:02.660 --> 00:33:04.260
+Al Dungo: Prompting them again.
+
+188
+00:33:05.660 --> 00:33:09.429
+Al Dungo: And then, of course, the height is what is input.
+
+189
+00:33:17.460 --> 00:33:18.480
+Al Dungo: Then.
+
+190
+00:33:18.550 --> 00:33:36.449
+Al Dungo: Now, we can perform the BMI calculation. This part is always going to be subject to the exact problem you're solving. This is where you, you know, take your testing and experimentation as a programmer, depending on what solution that is that you're looking for here, or trying to figure out what BMI is.
+
+191
+00:33:36.450 --> 00:34:00.269
+Al Dungo: I won't bore you with the details of the exact math, and again, emphasize that the book does it a different approach, because I think it does it, like, in metric. So it's actually a bit more complicated than the one that I'm showing you guys here. Of course, take it how you want to, dive into it as you feel fitting, and make sure that you follow along with any complexity that there is, and then, you know, direct any questions that you have to
+
+192
+00:34:00.270 --> 00:34:01.570
+Al Dungo: further understanding.
+
+193
+00:34:01.980 --> 00:34:18.249
+Al Dungo: But what we have here, this is, again, just to emphasize that we write out a whole calculation, and all of those operations are performed mathematically, and THEN it is assigned to the variable as the value. So just a reminder on what an expression is.
+
+194
+00:34:18.489 --> 00:34:30.020
+Al Dungo: In our case here, we can take the weight of a person, and if we divide it by what is the height squared.
+
+195
+00:34:31.230 --> 00:34:40.880
+Al Dungo: And then… Yeah, divide that by the height squared, all of which is multiplied times 703,
+
+196
+00:34:41.280 --> 00:34:45.149
+Al Dungo: that we were able to calculate the BMI.
+
+197
+00:34:46.710 --> 00:34:50.119
+Al Dungo: 8 metapho, high 2… okay.
+
+198
+00:34:52.650 --> 00:35:15.709
+Al Dungo: Another emphasis to be made here that you guys can see is that I don't mean to confuse anyone with the parentheses, but also just making it clear that whatever… making sure that you guys see that however it's written, you're very aware of what's gonna happen first, which in this case, the weight is going to divide this before multiplying by 703.
+
+199
+00:35:15.710 --> 00:35:22.299
+Al Dungo: Make sure that you know that more so for the sake of order of operations, so that there's no confusion there.
+
+200
+00:35:23.900 --> 00:35:41.709
+Al Dungo: But once we have this, this is what you guys have seen previously, you know, it's very simple, just like the area of a circle, just like, oh, what's the pH scale? Oh, what's the temperature, here's your answer, whatever that may be. You know, you could stop right there and just say your BMI is just the BMI, right? You print your results.
+
+201
+00:35:42.300 --> 00:35:50.299
+Al Dungo: But, let's take it up a notch, and let's categorize against this BMI result.
+
+202
+00:35:50.540 --> 00:36:04.370
+Al Dungo: So remember that there's four… did I say 4? 4 categories, right? They out even right here. If… if BMI is less than 18.5, you are underweight.
+
+203
+00:36:06.440 --> 00:36:17.379
+Al Dungo: Between… and this is inclusive, so when I say inclusive, that means equal to as well. 19 to 5 and,
+
+204
+00:36:17.490 --> 00:36:23.019
+Al Dungo: But less… Then 25 is normal.
+
+205
+00:36:24.670 --> 00:36:35.660
+Al Dungo: Same here, 20… 20… wait, did I say 25? Oh yeah, 25… Inclusive, or less than 30?
+
+206
+00:36:36.370 --> 00:36:39.120
+Al Dungo: And I'm sorry, am I putting OR? Oh, yeah.
+
+207
+00:36:42.980 --> 00:36:49.960
+Al Dungo: to less… Then 30, and then of course, lastly, otherwise, obese.
+
+208
+00:36:50.380 --> 00:37:10.309
+Al Dungo: So even just taking that, even looking at how I wrote it in blatant English, how we would categorize those, consider how we're going to write a very important but, you know, useful selective flow to determine which of these print statements is going to be what actually shows based off of the BMI result.
+
+209
+00:37:11.470 --> 00:37:12.599
+Al Dungo: And so, again.
+
+210
+00:37:12.880 --> 00:37:36.720
+Al Dungo: Let me know if I've lost you guys at any point, this is really crucial to see how this works, and I'd be happy to emphasize it, because after this, not after this, but you guys can see here that this is really just print statements, as far as you've been seeing it. Make sure that you are understanding that it's not just that, it's just knowing that logic that could fall, and that your Lab 4 is a great example of it, right? If the user chooses
+
+211
+00:37:36.720 --> 00:37:41.390
+Al Dungo: this number. If the input that they actually put is 1 exactly.
+
+212
+00:37:41.620 --> 00:37:46.209
+Al Dungo: Then the math that is done is for a 10% tip.
+
+213
+00:37:46.780 --> 00:37:50.919
+Al Dungo: If it's a 2, 15% tip. If it's a 3, 20% tip.
+
+214
+00:37:51.210 --> 00:37:55.739
+Al Dungo: And a little hint that I emphasize to those who inquire further about the lab is.
+
+215
+00:37:55.850 --> 00:38:04.829
+Al Dungo: You are not wrong, but you are doing more than you need to be if you put your print statement into each of the choices.
+
+216
+00:38:05.160 --> 00:38:15.020
+Al Dungo: And the reason for that, and I'm talking about this as Lab 4 as a whole, is because don't you calculate the result, round it, and print it to the screen anyways?
+
+217
+00:38:15.220 --> 00:38:19.640
+Al Dungo: So why would you repeatedly put it into 3 different branches?
+
+218
+00:38:19.670 --> 00:38:37.660
+Al Dungo: Yes, you will have different paths, but remember the code doesn't stop in the branch. The branch is solely just to be, okay, are we going this way, this way, or this way? And the code within of those are different, right? That's how you make an if-then-else. But then remember that there's still an exit point that follows after.
+
+219
+00:38:37.690 --> 00:38:47.190
+Al Dungo: So just a little tip, let me know if that makes sense, not overthinking it, but of course, just to enhance and make sure that you guys are using code reuse properly.
+
+220
+00:38:48.070 --> 00:38:58.259
+Al Dungo: If… hopefully you've been able to think about this, example a little bit, but what you can see here is that if I do the BMI… actually, I just realized, too, I could do this here.
+
+221
+00:38:59.250 --> 00:39:05.210
+Al Dungo: If the BMI is less than 18.5, Right?
+
+222
+00:39:05.450 --> 00:39:11.590
+Al Dungo: Then we would put here that your BMI is underweight.
+
+223
+00:39:14.270 --> 00:39:26.010
+Al Dungo: Right? And follow suit. Another condition that we can check, because remember, that's only how the else-if works, if we got 19.5, and it's less than or equal to the BMI, and…
+
+224
+00:39:26.060 --> 00:39:37.190
+Al Dungo: Remember, this is how we're checking for ranges, right? We're ensuring that this BMI is greater than 19.5, as well as still being under 25.
+
+225
+00:39:37.810 --> 00:39:54.879
+Al Dungo: So, again, pay close mind to your ranges, see how that is working here, and how we ensure that something actually falls between this range. Be mindful of how these are written against your relational operator, and also knowing how we combine that.
+
+226
+00:39:55.010 --> 00:40:11.939
+Al Dungo: And then lastly, you see lots of Chapter 3 stuff here, honestly, because you're seeing your less than sign, you're seeing your less than or equal to. It can be 19.5, and it will fall under here. But if you have 25 exactly, you are already out of range.
+
+227
+00:40:12.100 --> 00:40:16.210
+Al Dungo: So, be careful with that, and pay close mind to it, for sure.
+
+228
+00:40:16.720 --> 00:40:22.679
+Al Dungo: But you can hopefully see how the rest of these would go, because we get that the BMI is normal.
+
+229
+00:40:23.450 --> 00:40:30.599
+Al Dungo: Right? One more check here. If we've got 25, and that is what it's greater than or equal to…
+
+230
+00:40:30.970 --> 00:40:36.960
+Al Dungo: then that's good. We're just being mindful of this range that we have here.
+
+231
+00:40:38.920 --> 00:40:49.330
+Al Dungo: In which our… oops… system.out.printLine is… your BMI is overweight.
+
+232
+00:40:50.260 --> 00:40:52.630
+Al Dungo: And then last night… and then lastly.
+
+233
+00:40:52.880 --> 00:41:06.420
+Al Dungo: Yes, we could, and this is, again, more emphasis, and I hope you guys take it well whenever I show you, like, the same snippet, but in two different ways. I try to do that to be inclusive of the many ways that everyone thinks.
+
+234
+00:41:06.420 --> 00:41:20.480
+Al Dungo: never meant to be confusing, but also allowing you to expand, because I think that actually helped a lot when it comes to reading your own code, reading my code, and also understanding how, you know, some of that might be for comparing your code against others one day.
+
+235
+00:41:20.730 --> 00:41:36.869
+Al Dungo: I could just write else, and that actually is shorter code, because otherwise, if it doesn't fall into any of those ranges, then of course, then your BMI is obese. As you guys know, you know, how you write this part logically is up to your own making sense.
+
+236
+00:41:37.210 --> 00:41:41.450
+Al Dungo: Another example of that is, again, reference to Lab 4.
+
+237
+00:41:41.600 --> 00:41:53.949
+Al Dungo: You can write else for option 3 to tip, but then remember that that also means that 4, 5, 6, and every other number besides 3, or 1 and 2, is gonna be picked for…
+
+238
+00:41:54.330 --> 00:42:02.129
+Al Dungo: option 3. Versus if you do else if, then only if it is option 3 that it will…
+
+239
+00:42:02.290 --> 00:42:20.990
+Al Dungo: run. So, be mindful of that. That one, actually, now that I think about it and say it out loud, could use, could have not points taken off, but just a clear distinction between both. But then also, you know, understanding at the end of the day, I don't mean to… I don't ever try to be so strict and anal about one specific solution. This is programming.
+
+240
+00:42:20.990 --> 00:42:24.250
+Al Dungo: For crying out loud, there's gonna be lots of different ways to do it, so…
+
+241
+00:42:25.180 --> 00:42:35.200
+Al Dungo: Let me know what you guys think of what we have here. I'm going to go ahead and run it, but then also just make sure that there's not any questions about an awesome example that we have.
+
+242
+00:42:35.450 --> 00:42:39.330
+Al Dungo: Java C…
+
+243
+00:42:39.540 --> 00:42:47.280
+Al Dungo: September, Monday, job. Okay, everything is working fine and dandy, so let's go ahead and run it.
+
+244
+00:42:47.370 --> 00:43:04.040
+Al Dungo: hopefully my math checks out. Enter the weight in pounds, let's say someone is, you know, this is all just test data, let's go with 100 pounds, and let's say they're short, we'll do 60 inches, and you'll see that your BMI is normal.
+
+245
+00:43:04.510 --> 00:43:18.290
+Al Dungo: And, you know, BMI, as you can see, 19… oh, that's a good one, too. 19.5, check that out. I didn't mean to do that, but I actually did 19.52, and see how that falls right above the range, so your BMI is normal.
+
+246
+00:43:18.710 --> 00:43:35.550
+Al Dungo: Alright, again, you know, let's do, 500 pounds, and we'll do, you know, 70 inches, then you get put that your BMI is obese. As you can see, everything that is above 30, because it doesn't fall under this anymore, is just gonna be obese.
+
+247
+00:43:36.050 --> 00:43:44.810
+Al Dungo: One more time, just to get another number in, let's do 200, and then we'll do, 65…
+
+248
+00:43:45.070 --> 00:43:46.279
+Al Dungo: I still got obese.
+
+249
+00:43:47.610 --> 00:43:54.929
+Al Dungo: I wasn't trying to, but… Let's do 175 and 65… Wow, I'm still forcing it.
+
+250
+00:43:55.190 --> 00:43:59.610
+Al Dungo: 150? Oh, actually, I did normal already. I was trying to do over… wait, sorry.
+
+251
+00:43:59.740 --> 00:44:01.790
+Al Dungo: 65?
+
+252
+00:44:02.320 --> 00:44:12.770
+Al Dungo: Anyways, you guys get the point, you can see where the numbers are falling through. That's another one, I don't know how I'm doing it off the ranges, barely off of normal, but you can see where it really falls right under. So…
+
+253
+00:44:12.970 --> 00:44:26.920
+Al Dungo: Great example, again, found straight out of the book. Let me know if that helps you guys, especially with your ranges, but this is an excellent one to really see how logical operators help drive that, and see how it works there.
+
+254
+00:44:29.920 --> 00:44:31.040
+Al Dungo: Okay.
+
+255
+00:44:38.010 --> 00:44:48.200
+Al Dungo: I do want to go over a, keep moving forward. Doesn't seem like there's any questions, but for sure, ask if you have any. Also, make sure that you do fill out that poll that's in the chat.
+
+256
+00:44:48.290 --> 00:45:07.109
+Al Dungo: Because at the end of it, it also just asks and open-ended to you guys if there's anything that you liked about Chapter 3, if there's anything you don't like that you're still not understanding. We are around the part of finishing it, either today or Wednesday, but remember that those are your guys' opportunities to let me know, you know, what is making sense, what is not, and so if you don'
+
+257
+00:45:07.250 --> 00:45:23.020
+Al Dungo: you know, you should be here in class, right? That's what I'm checking to see that you're participating in those polls and stuff, but then also, you know, what opportunity do you guys often have to really just, you know, state how it is that you're feeling, and I like to do those check-ins, you know, as the class is moving along.
+
+258
+00:45:23.680 --> 00:45:34.969
+Al Dungo: So do speak out, do let me know. Otherwise, I don't assume that you guys keep understanding, because, you know, I expect you to ask. Otherwise, I just keep things moving along in class.
+
+259
+00:45:37.120 --> 00:45:49.550
+Al Dungo: But, no further questions, I've got 2 more solid examples regarding… or maybe 3, 4, chapter 3, but they're awesome because you also kind of start to see patterns of them and see how they really work, later…
+
+260
+00:45:50.420 --> 00:45:52.240
+Al Dungo: Later on throughout the semester.
+
+261
+00:45:54.100 --> 00:46:01.430
+Al Dungo: Any… and also, this is also a great question, is there any other questions about if-else that you guys aren't grasping, or anything that I could clarify further?
+
+262
+00:46:01.490 --> 00:46:14.649
+Al Dungo: Because I'm going to introduce switch statements, and if you are not tracking along how that logic works already, switch statements are gonna be, oof, a little weird. Some people like them more, and they're like, oh, okay, I'm gonna do switch statements all the time.
+
+263
+00:46:14.720 --> 00:46:22.019
+Al Dungo: And I'll tell you when that works and when that doesn't, but just making sure that you guys, are able to follow that closely.
+
+264
+00:46:22.720 --> 00:46:30.909
+Al Dungo: Because switches, as you can see here, switch statements, or as we call it, switches… oh, that's code. Love it.
+
+265
+00:46:31.290 --> 00:46:45.579
+Al Dungo: Fun fact to you guys, what's funny is that for some reason, every Thursday, whenever I'm on Thursday class, Monday, or Tuesday at least, the notebook that you guys see here always works. For some reason, whenever I log in on Thursday, the notebook just stops working.
+
+266
+00:46:45.780 --> 00:46:53.370
+Al Dungo: And so I just thought that was funny, and I was teasing them against you guys, and I was like, that never happens with the Wednesday class, it always works Monday and Wednesday. So…
+
+267
+00:46:53.510 --> 00:46:54.930
+Al Dungo: I'm just grateful for that.
+
+268
+00:46:55.720 --> 00:46:58.610
+Al Dungo: Is this still marked down? Okay, there it is, sorry.
+
+269
+00:47:00.480 --> 00:47:08.620
+Al Dungo: Switches! The reason why switches are important to make sure that you grasp if-else already is because switches are alternatives
+
+270
+00:47:08.740 --> 00:47:10.809
+Al Dungo: to if-else.
+
+271
+00:47:11.920 --> 00:47:13.630
+Al Dungo: If-else statements.
+
+272
+00:47:17.110 --> 00:47:20.050
+Al Dungo: Simpler, easier to understand.
+
+273
+00:47:20.290 --> 00:47:21.460
+Al Dungo: Yes…
+
+274
+00:47:22.050 --> 00:47:33.559
+Al Dungo: But with some limitations. So, yes, it's mostly substitutable for if-else in most instances, but there are parts that they're not. I will say that
+
+275
+00:47:34.190 --> 00:47:41.469
+Al Dungo: for the BMI one, I wouldn't really consider that to be interchangeable, and you'll see why, because switches…
+
+276
+00:47:43.350 --> 00:47:49.960
+Al Dungo: have 4… Oh my gosh, main components.
+
+277
+00:47:50.730 --> 00:47:52.400
+Al Dungo: Four main components.
+
+278
+00:47:52.830 --> 00:48:02.259
+Al Dungo: And do remember that. What that looks like is a test expression, a case… A break statement.
+
+279
+00:48:03.070 --> 00:48:06.129
+Al Dungo: And a default section.
+
+280
+00:48:06.360 --> 00:48:20.709
+Al Dungo: I'll explain what each and every one of those are in a second, but just like I show you guys… oh, that's marked down, sorry. Just like I show you guys this, and kind of have, like, your layer of it…
+
+281
+00:48:20.980 --> 00:48:26.030
+Al Dungo: As such… Which, let me even do one more else.
+
+282
+00:48:26.370 --> 00:48:33.679
+Al Dungo: Right? You guys get this, you guys have seen how the order matters, the logic matters, be mindful of what…
+
+283
+00:48:34.120 --> 00:48:46.440
+Al Dungo: logic and code that you put in to follow once it's true. What a switch statement looks like, and I'm only putting that there so that you guys can see it, and then I'll erase it. Switch is a actual keyword, as you can see here.
+
+284
+00:48:46.550 --> 00:48:58.179
+Al Dungo: But the way that it works is, once you open up into the switch case, or the switch statement, you are then presented with cases. Case 1, case 2, case 3.
+
+285
+00:48:58.900 --> 00:49:03.799
+Al Dungo: And so what this looks like is your test expression is what's right here.
+
+286
+00:49:05.440 --> 00:49:07.100
+Al Dungo: Test expression.
+
+287
+00:49:07.470 --> 00:49:19.160
+Al Dungo: These right here are your cases. Your test expression is the value that is being… Compared. Often a variable.
+
+288
+00:49:19.670 --> 00:49:29.290
+Al Dungo: your cases… are the… cases… Are what the value
+
+289
+00:49:29.580 --> 00:49:34.909
+Al Dungo: From text expression is being compared against.
+
+290
+00:49:35.140 --> 00:49:36.630
+Al Dungo: Always constant.
+
+291
+00:49:39.970 --> 00:49:42.839
+Al Dungo: And the way that this works is, if…
+
+292
+00:49:43.270 --> 00:49:51.230
+Al Dungo: The case matches, or as we say, is true, then the code here executes.
+
+293
+00:49:51.800 --> 00:49:55.930
+Al Dungo: you can find, like I said, a lot of simplicity, a lot of,
+
+294
+00:49:56.900 --> 00:50:04.439
+Al Dungo: what do you call it? Like, condense your code a lot here, and I will stay, and this is also… I'll write… I'll erase this now.
+
+295
+00:50:04.920 --> 00:50:11.420
+Al Dungo: You will be doing a switch statement in Lab 5.
+
+296
+00:50:12.120 --> 00:50:16.520
+Al Dungo: You actually do it twice, but it just repeats.
+
+297
+00:50:19.050 --> 00:50:33.870
+Al Dungo: So, you know, you'll have your familiarity with it, but this is where we introduce it, setting you guys up for that lab. And the way that this works here is, let's say we have, number… or let's do int. Int number is…
+
+298
+00:50:34.390 --> 00:50:35.210
+Al Dungo: 1?
+
+299
+00:50:36.370 --> 00:50:43.370
+Al Dungo: Right? You're… remember that number has a value in it, right? Number.
+
+300
+00:50:43.500 --> 00:50:51.879
+Al Dungo: And so this is your test expression here. What does… why are you doing that? What does number match against here?
+
+301
+00:50:52.120 --> 00:50:56.969
+Al Dungo: And so we can… that's where we would write, that, the number is 1.
+
+302
+00:50:58.610 --> 00:51:09.229
+Al Dungo: Here… the number… is 2… And then here… The number is 3.
+
+303
+00:51:09.600 --> 00:51:17.200
+Al Dungo: What… but about this, remember how there are 4 important parts, so don't forget all of this, because you will see a switch on your exam next week.
+
+304
+00:51:17.410 --> 00:51:19.270
+Al Dungo: Is a break statement.
+
+305
+00:51:19.760 --> 00:51:34.089
+Al Dungo: A break statement indicates the end of a case. Make sure you use these accordingly. Now, I'll show you what it looks like without it, but first, you always want to make sure that your case ends with it.
+
+306
+00:51:34.250 --> 00:51:46.169
+Al Dungo: You're stating, okay, the case is over, now, you know, either keep checking if one of the cases is true, or if it is that case, then it allows it to actually exit the switch.
+
+307
+00:51:46.610 --> 00:51:53.069
+Al Dungo: And so, what you'll see here is if I run this, you see that I get the number is 1.
+
+308
+00:51:54.480 --> 00:51:58.040
+Al Dungo: Right? If I do 2… The number is 2.
+
+309
+00:51:58.680 --> 00:52:00.310
+Al Dungo: If I do 3…
+
+310
+00:52:01.430 --> 00:52:09.650
+Al Dungo: Oh, I put 4. Well, 4. As you can see, nothing happened because I didn't get 3, and the, you know, whatever, all that.
+
+311
+00:52:09.950 --> 00:52:11.140
+Al Dungo: the switch…
+
+312
+00:52:11.330 --> 00:52:25.550
+Al Dungo: As ended, see how this code still ran. Again, I only put that there so that you guys can emphasize and really clearly see where your switch starts and ends. Same thing with your if-else statements. That's why I do it.
+
+313
+00:52:25.780 --> 00:52:32.439
+Al Dungo: And the last part I want to show you guys here is the default case is actually a lot like your else.
+
+314
+00:52:33.240 --> 00:52:36.680
+Al Dungo: Similar to else, only occurs…
+
+315
+00:52:36.810 --> 00:52:46.869
+Al Dungo: or only executes if all else above was false. Or all cases, I'll write that better, if all cases above were false.
+
+316
+00:52:47.390 --> 00:52:51.179
+Al Dungo: And so, just like I didn't put, anything there.
+
+317
+00:52:51.530 --> 00:52:54.280
+Al Dungo: You didn't choose 1 through 3.
+
+318
+00:52:56.430 --> 00:52:59.920
+Al Dungo: And so, if I do 4, you can see that by default.
+
+319
+00:53:00.070 --> 00:53:03.740
+Al Dungo: I didn't choose 1 to 3, switch ended, see how this code still ran.
+
+320
+00:53:04.320 --> 00:53:11.610
+Al Dungo: And so, I'm gonna show you guys more, examples of Switch. I'll just pause there for you guys to see it. For some reason.
+
+321
+00:53:11.610 --> 00:53:30.149
+Al Dungo: And I would love to, you know, understand further what about it from the first initial look is confusing to you guys, especially in against the if-else statements, because it's supposed to have very similar logic. As you can see, it's still a selective flow. Only the case that is true, that matches against this, turns out to be what is RAM.
+
+322
+00:53:30.440 --> 00:53:43.840
+Al Dungo: And so that's where it's, like, a little bit different, because it is, like, literal, and that's another part that I'm gonna get to, because here, your number has to exactly be this case in order for this to occur.
+
+323
+00:53:46.770 --> 00:53:48.909
+Al Dungo: Yes, I can gladly go up.
+
+324
+00:53:50.120 --> 00:54:02.860
+Al Dungo: And, your notes from last week are printed, and I think that they look really nice. I think they actually look nicer than I've done before, so all of this should be uploaded by today, if not Wednesday, for you guys to be able to see exactly this.
+
+325
+00:54:16.090 --> 00:54:19.770
+Al Dungo: Let's do…
+
+326
+00:54:21.640 --> 00:54:28.730
+Al Dungo: While you guys are kind of taking that in, I'm gonna do a duplicate of this for… my note.
+
+327
+00:54:32.090 --> 00:54:37.489
+Al Dungo: The other day, I was so proud of my notes… or actually, it was earlier today, but I was so proud of my notes.
+
+328
+00:54:37.730 --> 00:54:42.549
+Al Dungo: From last week's… or I think it's Chapter 3 notes that I think look pretty nice.
+
+329
+00:54:42.820 --> 00:54:46.429
+Al Dungo: I was like, dang.
+
+330
+00:54:48.390 --> 00:54:51.940
+Al Dungo: That is pretty handy. Okay, so Monday, number 2, okay.
+
+331
+00:54:52.450 --> 00:54:54.199
+Al Dungo: Just making sure I'm checking this…
+
+332
+00:54:58.140 --> 00:55:10.509
+Al Dungo: So, no questions about the switch statements. Let me show you guys some more examples on here, and then also show you some follow-through behavior so that we're clear, actually, to make sure that we implement this correctly on Wednesday's lab.
+
+333
+00:55:10.650 --> 00:55:16.600
+Al Dungo: Not anything crazy that I'm gonna do here, I'm actually gonna steal this, because I'm not lazy.
+
+334
+00:55:16.840 --> 00:55:22.870
+Al Dungo: I'm just keeping it the same, and also making sure that you guys can… C…
+
+335
+00:55:26.850 --> 00:55:31.710
+Al Dungo: One thing that I also need to do, Mark, I feel like sometimes we, like, books…
+
+336
+00:55:32.190 --> 00:55:35.219
+Al Dungo: Overused print statements.
+
+337
+00:55:35.420 --> 00:55:43.820
+Al Dungo: So, but the emphasis that needs to be made there before print statements are actually, like, overused is that print statements are…
+
+338
+00:55:43.900 --> 00:55:58.139
+Al Dungo: driven by you guys as the coder, as the programmer, and so something is only going to print if you intend for it to, and so what I often learned early on is that sometimes print statements are really just able to
+
+339
+00:55:58.140 --> 00:56:08.169
+Al Dungo: spit out something on the screen, especially values, right? That's why that's one of the first ways that you can use a variable. And so if you are curious about what something is at a certain point in the code, print it out!
+
+340
+00:56:08.340 --> 00:56:13.760
+Al Dungo: Right? And then if it's not the case, and you want to keep checking it, you know, use it to, like, to that advantage.
+
+341
+00:56:14.580 --> 00:56:23.770
+Al Dungo: This is a very simple one that we're doing here. We're just gonna do… this is just for demonstration purposes, enter a rating.
+
+342
+00:56:24.970 --> 00:56:31.160
+Al Dungo: Right, and then the user's going to do an int rating, and that's going to be… the input.
+
+343
+00:56:33.470 --> 00:56:43.719
+Al Dungo: And so here, again, always make sure that this is, like I said, usually a variable, but then always, you know, the variable has to have value so that it can then be compared against the cases here.
+
+344
+00:56:44.480 --> 00:56:49.750
+Al Dungo: You know, even if I did 10, 20, 30…
+
+345
+00:56:51.220 --> 00:56:59.059
+Al Dungo: 40. Again, emphasizing what we have there, I'm just doing some basic, you know, rating to show you guys.
+
+346
+00:56:59.290 --> 00:57:00.299
+Al Dungo: Okay, stand, oh.
+
+347
+00:57:00.520 --> 00:57:01.960
+Al Dungo: Oh yeah, I'll cycle that.
+
+348
+00:57:04.960 --> 00:57:08.740
+Al Dungo: poor. So if they gave the rating a 10, then that's a poor rating.
+
+349
+00:57:08.890 --> 00:57:12.720
+Al Dungo: If they give it a 20, then we're gonna say okay rating.
+
+350
+00:57:14.310 --> 00:57:18.120
+Al Dungo: If they give it a 30, then we're gonna say that that's good.
+
+351
+00:57:18.920 --> 00:57:23.969
+Al Dungo: And then if they do a 40, We'll say that that's great.
+
+352
+00:57:24.460 --> 00:57:31.250
+Al Dungo: And then if they do 50, They will say that that's… Excellent.
+
+353
+00:57:32.950 --> 00:57:42.580
+Al Dungo: Then, by default, if we don't get any of that, we could say you did not enter a valid rating between 10…
+
+354
+00:57:43.420 --> 00:57:48.540
+Al Dungo: 20, 30, 40… Or… 50.
+
+355
+00:57:49.090 --> 00:58:01.300
+Al Dungo: This example actually just has zeros added onto it. It doesn't normally just do 1 through 5, but I'm just being extra to, again, show you guys that it's not, like, 1 through 5, right? It's that this value…
+
+356
+00:58:01.790 --> 00:58:04.179
+Al Dungo: Actually, this right here.
+
+357
+00:58:04.550 --> 00:58:10.369
+Al Dungo: And so, always making sure that our brakes are there, which I'll show you guys what happens if they're not there.
+
+358
+00:58:10.500 --> 00:58:15.529
+Al Dungo: But any questions about this, kind of further made example?
+
+359
+00:58:16.300 --> 00:58:17.979
+Al Dungo: And why do I got errors?
+
+360
+00:58:20.870 --> 00:58:21.200
+Al Dungo: Doop?
+
+361
+00:58:31.020 --> 00:58:31.700
+Al Dungo: Oh.
+
+362
+00:58:33.450 --> 00:58:35.039
+Al Dungo: I guess I'm missing one.
+
+363
+00:58:35.380 --> 00:58:37.259
+Al Dungo: Oh, I am missing one, like, hello?
+
+364
+00:58:37.780 --> 00:58:40.739
+Al Dungo: Be careful with your curly braces, guys! Yeah, I almost did that.
+
+365
+00:58:41.290 --> 00:58:42.529
+Al Dungo: Okay.
+
+366
+00:58:43.170 --> 00:58:46.480
+Al Dungo: So, no questions, this is a really good example.
+
+367
+00:58:46.950 --> 00:58:48.060
+Al Dungo: Let's…
+
+368
+00:58:52.160 --> 00:58:53.249
+Al Dungo: Oh, I did it wrong.
+
+369
+00:58:55.200 --> 00:58:56.189
+Al Dungo: Where we at?
+
+370
+00:58:56.660 --> 00:58:57.580
+Al Dungo: 38.
+
+371
+00:59:03.590 --> 00:59:04.979
+Al Dungo: Oh, did I not save?
+
+372
+00:59:06.100 --> 00:59:07.460
+Al Dungo: There you go. Okay.
+
+373
+00:59:07.770 --> 00:59:11.230
+Al Dungo: Oh, not the right one… stop.
+
+374
+00:59:38.310 --> 00:59:45.540
+Al Dungo: Okay, enter rating. So if I do 10, you'll see that I get poor. If I do 20, I get okay.
+
+375
+00:59:47.520 --> 00:59:51.880
+Al Dungo: for you guys, sorry. If I do… 50…
+
+376
+00:59:52.400 --> 01:00:09.439
+Al Dungo: I get excellent, and see how that's very precise? See how I'm doing exactly 50, and I'm getting it there? Notice how if I do anything besides that, even numbers that aren't specifically… it's not a range, right? It's specifically in here, so if I do 44, I didn't enter a valid rating.
+
+377
+01:00:09.780 --> 01:00:19.449
+Al Dungo: And that's just an exaggerated example of me adding… making these tens numbers instead of 1, 2, 3, 4, 5. It's very specific, which brings me to my next point about switch statements.
+
+378
+01:00:20.010 --> 01:00:21.179
+Al Dungo: Let me see, there's a question.
+
+379
+01:00:22.240 --> 01:00:37.580
+Al Dungo: Yes, I am needing to post the coding files, I just haven't yet, so if you guys are trying to find them back, you can look into the examples, like, from class itself, but, I need to upload a repository with all of these, like.
+
+380
+01:00:37.580 --> 01:00:44.889
+Al Dungo: single-file examples, so that you guys can have them. So thank you for asking, and I will definitely get those to you guys before the exam.
+
+381
+01:00:46.120 --> 01:00:53.840
+Al Dungo: With your switches, and where you want to be mindful of it here… some rolls.
+
+382
+01:00:54.380 --> 01:00:56.630
+Al Dungo: Oh, also on that note, too…
+
+383
+01:00:56.920 --> 01:01:02.540
+Al Dungo: That one's a good example, but then let's do this… well… No, I'm here.
+
+384
+01:01:03.400 --> 01:01:04.530
+Al Dungo: I'll do it next.
+
+385
+01:01:07.680 --> 01:01:09.920
+Al Dungo: Actually, no, this goes here, my bad.
+
+386
+01:01:13.070 --> 01:01:19.109
+Al Dungo: A test expression must be a variable or a literal.
+
+387
+01:01:19.370 --> 01:01:25.470
+Al Dungo: The type must be character, byte, short, int, or string.
+
+388
+01:01:27.120 --> 01:01:30.099
+Al Dungo: Cannot be floating point.
+
+389
+01:01:32.400 --> 01:01:35.320
+Al Dungo: And obviously that goes for the cases as well.
+
+390
+01:01:35.570 --> 01:01:38.379
+Al Dungo: Cases cannot be decimals.
+
+391
+01:01:38.980 --> 01:01:43.099
+Al Dungo: They must be a constant or a literal.
+
+392
+01:01:43.580 --> 01:01:51.260
+Al Dungo: And the reason for that is because… yeah, great question. When would you use, switch statements instead of if-else?
+
+393
+01:01:51.280 --> 01:02:08.729
+Al Dungo: Multiple choices, yeah, is for sure one of them, but this is where, really, this is your only, like, disclaimer for when they're considered interchangeable, because, that's really the only constraint that you have here, is that they have to be…
+
+394
+01:02:08.730 --> 01:02:16.010
+Al Dungo: A character or… they have to be a non-decimal number or variable, because if you have
+
+395
+01:02:16.020 --> 01:02:35.079
+Al Dungo: 1.2377777, or even, like, 1.0, like, 1.0004, for some reason, right? To some, that could technically be 1, right? But in math, that's very exaggerated for it to be 1, and so decimal points are not allowed.
+
+396
+01:02:35.980 --> 01:02:37.350
+Al Dungo: Do… oop.
+
+397
+01:02:38.250 --> 01:02:39.200
+Al Dungo: Hello.
+
+398
+01:02:42.830 --> 01:02:43.839
+Al Dungo: That was weird.
+
+399
+01:02:44.950 --> 01:02:46.590
+Al Dungo: Why is my code being weird?
+
+400
+01:02:55.050 --> 01:02:55.830
+Al Dungo: That's weird.
+
+401
+01:02:58.910 --> 01:03:02.389
+Al Dungo: Due to inaccuracy, so no decimals!
+
+402
+01:03:02.890 --> 01:03:08.610
+Al Dungo: So, like, if you do this here, if you were to do… Double.
+
+403
+01:03:09.120 --> 01:03:12.110
+Al Dungo: Right? For… Clamp.
+
+404
+01:03:13.330 --> 01:03:16.350
+Al Dungo: I'm all explaining it whenever I can just do it, right?
+
+405
+01:03:17.330 --> 01:03:20.050
+Al Dungo: You can see here that it's not allowed.
+
+406
+01:03:20.870 --> 01:03:25.309
+Al Dungo: You can't do that. You can't have… oh, well, actually…
+
+407
+01:03:26.540 --> 01:03:28.959
+Al Dungo: That would be better, too, right?
+
+408
+01:03:30.570 --> 01:03:33.530
+Al Dungo: Selector type double is not allowed.
+
+409
+01:03:34.350 --> 01:03:41.710
+Al Dungo: So, be mindful of that, remember that it has to be a literal or a constant, meaning that it's a very set number.
+
+410
+01:03:41.940 --> 01:03:57.560
+Al Dungo: Cases as well, as you can see there. Break statements, as you can see. So that's, again, where you would, you know, have a little bit of a difference between it. Now, in terms of it being interchangeable, you know, if you want to do multiple choices and lots of different outcomes with if-else.
+
+411
+01:03:57.560 --> 01:04:05.240
+Al Dungo: Sometimes your logic is going to direct you to do it that way because it's very precise. If else, have… allow for very specific selections.
+
+412
+01:04:05.320 --> 01:04:19.729
+Al Dungo: Whereas switches are, yes, alternatives, but as you can see, there are some limitations, such as only using constants and literals, so sometimes you won't be able to use it. But that's where, you know, you see the ability to do so, and then understand that this is the case.
+
+413
+01:04:21.620 --> 01:04:22.310
+Al Dungo: Right.
+
+414
+01:04:25.160 --> 01:04:44.140
+Al Dungo: So hopefully that answers your question, Jay, and you know, let me know if that doesn't help. Again, emphasizing that you see both in Lab 5, but it's… it's one… it's for two different reasons. Your if-else statement is solely determining that the number entered into the code
+
+415
+01:04:44.170 --> 01:04:50.850
+Al Dungo: To start with is within range of desire, whereas the next part is a switch statement.
+
+416
+01:04:50.920 --> 01:05:01.449
+Al Dungo: And after doing some math calculation, whatever that result is determines certain, outcome of the code.
+
+417
+01:05:01.930 --> 01:05:10.249
+Al Dungo: So, I'll have you guys walk through that example very well, don't worry. Another… here…
+
+418
+01:05:10.900 --> 01:05:15.700
+Al Dungo: You guys are awesome with the questions, thank you, I love whenever you guys ask questions.
+
+419
+01:05:17.250 --> 01:05:20.530
+Al Dungo: See, this is where… this is where I tell myself to not be lazy.
+
+420
+01:05:21.080 --> 01:05:23.990
+Al Dungo: Okay, cool. We still got time, we still got time.
+
+421
+01:05:24.130 --> 01:05:28.770
+Al Dungo: I'm going to… Double it again…
+
+422
+01:05:30.840 --> 01:05:35.119
+Al Dungo: here. Also, I'm laughing at myself, too.
+
+423
+01:05:35.340 --> 01:05:39.150
+Al Dungo: Week 5, September 2nd, Monday, part 3?
+
+424
+01:05:41.180 --> 01:05:52.399
+Al Dungo: I don't know why I think that's written funny. Where I'm changing this to for you guys to see it, and even though we haven't really introduced, like, characters yet or anything,
+
+425
+01:05:56.090 --> 01:06:08.980
+Al Dungo: I just thought of something fun. Even though we haven't done characters yet or anything, you guys grasp basic variable declaration and input, and then now comparison and cases, so we'll add this one as an example as well.
+
+426
+01:06:09.110 --> 01:06:13.789
+Al Dungo: Let's kind of, like, it's kind of like the flip of the other one, where, remember how we did…
+
+427
+01:06:13.940 --> 01:06:14.940
+Al Dungo: Where is it?
+
+428
+01:06:17.970 --> 01:06:21.740
+Al Dungo: Here. If your grade is this, this, this, right?
+
+429
+01:06:22.140 --> 01:06:26.070
+Al Dungo: And this is also… this is cool, this is good, this also might help Jay's question.
+
+430
+01:06:26.760 --> 01:06:34.440
+Al Dungo: Whatever we have here, enter a… Letter grade…
+
+431
+01:06:35.060 --> 01:06:38.060
+Al Dungo: Now, what we're gonna do is a character…
+
+432
+01:06:38.500 --> 01:06:45.690
+Al Dungo: Now we're going to do letter, and then don't worry about this part, because it's not what you guys have.
+
+433
+01:06:49.320 --> 01:06:56.349
+Al Dungo: Now, you can see some different usage of it, and notice how we're using the letter here. This is also useful for…
+
+434
+01:06:56.500 --> 01:06:57.680
+Al Dungo: Well, no, kind of.
+
+435
+01:06:57.780 --> 01:06:59.949
+Al Dungo: Let's say I do A.
+
+436
+01:07:01.100 --> 01:07:18.750
+Al Dungo: Right, so if I do system… if I do… if a person enters A, like, remember that's what letter is, that's what they're entering. If they enter A, depending on these cases here, and it matches, right, that's how cases work, then we can be told that your grade…
+
+437
+01:07:19.570 --> 01:07:21.629
+Al Dungo: Is 90 or above.
+
+438
+01:07:22.320 --> 01:07:40.619
+Al Dungo: See what we did there? See how we did… now it's a letter comparison, and, you know, an A is an A. A can't be subjectively a decimal point. And so some more use case examples of seeing how, that works. And also, just for fun, let's say, you know… no…
+
+439
+01:07:41.930 --> 01:07:44.650
+Al Dungo: I did let it grade, right? Okay, no, no, no, we won't make it complicated.
+
+440
+01:07:45.700 --> 01:07:48.670
+Al Dungo: B, I will copy and paste this for time's sake.
+
+441
+01:07:48.810 --> 01:08:05.479
+Al Dungo: Just so that we can get, some more movement going. But this is also a great chance to ask questions as I finish out the rest of this code, and let me know if there's anything about this that I can clarify further for you guys in terms of using this.
+
+442
+01:08:05.630 --> 01:08:06.660
+Al Dungo: So…
+
+443
+01:08:07.030 --> 01:08:26.130
+Al Dungo: you could, Jay, to answer your question, imagine, you can use that as an exercise, right? You could write this exact switch state… switch statement as an if-else, right? If what the user input is exactly a letter or said number, then write, you know, as we did earlier.
+
+444
+01:08:26.240 --> 01:08:31.260
+Al Dungo: But again, that is subject to design, and what you actually…
+
+445
+01:08:32.420 --> 01:08:34.110
+Al Dungo: Are intending for it to do.
+
+446
+01:08:34.880 --> 01:08:37.120
+Al Dungo: You did not enter… oh.
+
+447
+01:08:45.240 --> 01:08:52.379
+Al Dungo: And that's actually not a good representation, because it's not or above 70 to 79.
+
+448
+01:08:53.140 --> 01:08:57.579
+Al Dungo: Sixty… 2… 69 a month.
+
+449
+01:08:59.090 --> 01:09:04.630
+Al Dungo: Any questions on that, guys? Great example of seeing how this is used here.
+
+450
+01:09:09.109 --> 01:09:12.279
+Al Dungo: I'll run it just for you guys to be able to see it.
+
+451
+01:09:13.260 --> 01:09:15.289
+Al Dungo: No, we're on part 3. Ugh.
+
+452
+01:09:20.180 --> 01:09:25.679
+Al Dungo: Day Part 3… That was silly.
+
+453
+01:09:28.180 --> 01:09:29.010
+Al Dungo: That's right.
+
+454
+01:09:36.350 --> 01:09:37.040
+Al Dungo: Oh.
+
+455
+01:09:38.350 --> 01:09:43.379
+Al Dungo: I just realized… I did character lines…
+
+456
+01:09:43.790 --> 01:10:03.539
+Al Dungo: Oh, I just realized, too, this is… don't mind the complexity of this, this is actually something I realized I did preconceivingly for… before we get into Chapter 4. So, for now, take away the complication of a character, and you'll know that, as we saw earlier, that a string works just as a character works.
+
+457
+01:10:03.540 --> 01:10:10.140
+Al Dungo: for simplicity purposes, I'm just showing you guys that the person enters a string, as you guys have seen before, you know.
+
+458
+01:10:10.140 --> 01:10:17.769
+Al Dungo: enter something that you want to type in. And in this case, a string works, because whenever we do the actual comparison here…
+
+459
+01:10:18.660 --> 01:10:20.049
+Al Dungo: I did save it.
+
+460
+01:10:22.860 --> 01:10:23.880
+Al Dungo: Come on.
+
+461
+01:10:26.410 --> 01:10:27.080
+Al Dungo: There.
+
+462
+01:10:30.350 --> 01:10:38.020
+Al Dungo: Sorry about that, guys. Did not mean to be confusing. Enter a letter grade, let's see if I do A, right? A, my grade is 90 or above.
+
+463
+01:10:38.640 --> 01:10:43.229
+Al Dungo: Let's do B… My grade is 80 to 89.
+
+464
+01:10:43.800 --> 01:10:52.099
+Al Dungo: C, see how it's falling in there exactly? And then, of course, if I do, you know, a T, for example… Oh!
+
+465
+01:10:52.860 --> 01:10:53.840
+Al Dungo: T…
+
+466
+01:10:54.650 --> 01:11:11.609
+Al Dungo: Is that right? Subjective, but you guys can get how that just works, and how your other behavior works. One thing to be mindful of that I realized I didn't show you is your break statements are important to indicate when the end of a case is, because if you actually don't have them.
+
+467
+01:11:12.010 --> 01:11:22.519
+Al Dungo: let's say I take out the break, or I just got ahead of myself and forgot to put them in for the last 3, but I did for A, so did I forget it? Who knows?
+
+468
+01:11:23.190 --> 01:11:29.449
+Al Dungo: Let's compile… Whenever I do this, you see, okay, I do A, sure, I get an idea or above.
+
+469
+01:11:29.570 --> 01:11:34.709
+Al Dungo: Our code ends, nothing else, nothing more.
+
+470
+01:11:35.460 --> 01:11:50.789
+Al Dungo: Whenever I do B, the reason why your break is very important is because whenever you do it, and you take it, and you don't have it, your code doesn't recognize that your case is over, and therefore does what we call fall-through behavior.
+
+471
+01:11:50.790 --> 01:11:56.239
+Al Dungo: Because then it does all of them until either it reaches the end, or another break.
+
+472
+01:11:56.400 --> 01:11:59.949
+Al Dungo: And so even if I put break here where D is.
+
+473
+01:12:00.370 --> 01:12:08.459
+Al Dungo: You'll see how here I ended up at my default. If you… the brake exits the switch.
+
+474
+01:12:08.810 --> 01:12:11.150
+Al Dungo: So if I do it like I did earlier.
+
+475
+01:12:11.400 --> 01:12:28.609
+Al Dungo: I do B, you'll see that I get B, C, and D, but then it was at D, where my grade is 60 to 69, where I finally reached a break in the code, and therefore, it didn't run the default. So, the break is important, that's why we emphasize that those are all the important parts of a switch statement.
+
+476
+01:12:30.190 --> 01:12:36.269
+Al Dungo: And then, of course, don't forget your default is if none of those cases above matched, then that is your default case.
+
+477
+01:12:41.210 --> 01:12:59.259
+Al Dungo: Any questions on that, guys? We have a few minutes left, and there's actually just two major concepts left of Chapter 3. So we won't finish, you know, like, the whole conversation today, but then, that sets up Wednesday very well, because we'll start class with a review.
+
+478
+01:12:59.470 --> 01:13:17.339
+Al Dungo: Of chapters 1 through 3. Usually takes, you know, maybe the first half, if not, even if that, it really… and this… oh, you know what I'll say here. Wednesday's class review for chapters 1 through 3, preparing for Monday's exam, is actually driven a lot by you guys.
+
+479
+01:13:17.340 --> 01:13:29.229
+Al Dungo: So, I've had many instances of class reviews where, like, a discussion goes long because students are asking questions and genuinely want to ask, or I've had, class reviews where they're pretty short and we move on to Chapter 4.
+
+480
+01:13:29.230 --> 01:13:35.539
+Al Dungo: I again emphasize to you that make sure you use the form in today's poll, make sure you ask questions.
+
+481
+01:13:35.540 --> 01:13:59.969
+Al Dungo: email me, Zoom me, anything that you guys want to highlight from chapters 1 through 3 that was confusing, because I will happily go over an example again and re-emphasize that concept on Wednesday. Never will I, of course, just tell you an answer, but giving you guys examples, answering further questions, anything to help you solidify your answer is where I can for sure help you. And I won't know what you guys are
+
+482
+01:13:59.970 --> 01:14:02.550
+Al Dungo: are or aren't grasping, unless you tell me.
+
+483
+01:14:03.090 --> 01:14:14.060
+Al Dungo: So, you know, I think it's pretty graceful to go over an entire, you know, chapters 1 through 3. But then, of course, just so you guys know, the whole class doesn't take, you know, that whole time of class.
+
+484
+01:14:14.060 --> 01:14:24.769
+Al Dungo: you'll be doing what we're doing here for Lab 5 on Wednesday night, but then by the end of class on Wednesday, we'll be talking about Chapter 4 already.
+
+485
+01:14:25.110 --> 01:14:35.650
+Al Dungo: So, make sure you keep that in mind, those are my takeaways for you guys today. Where I'm actually going to emphasize is what we have here, is for Wednesday.
+
+486
+01:14:36.390 --> 01:14:39.610
+Al Dungo: Which is our last day of chapter 3.
+
+487
+01:14:40.400 --> 01:14:43.310
+Al Dungo: We will finish with the below.
+
+488
+01:14:44.130 --> 01:14:46.860
+Al Dungo: conditional operator.
+
+489
+01:14:47.140 --> 01:14:49.689
+Al Dungo: and operator, presidents…
+
+490
+01:14:50.240 --> 01:15:01.289
+Al Dungo: Which is important to know, right? And also, you guys have already been seeing this, you're just kind of… not conditional operator, but precedence and associativity, they're just more enhanced concepts, right?
+
+491
+01:15:01.680 --> 01:15:06.970
+Al Dungo: Bring questions about chapters 1 through 3 if you have them.
+
+492
+01:15:07.540 --> 01:15:11.890
+Al Dungo: We will be reviewing for Monday's exam.
+
+493
+01:15:13.900 --> 01:15:17.640
+Al Dungo: Then we will dive into Chapter 4.
+
+494
+01:15:18.150 --> 01:15:42.029
+Al Dungo: So, that is all the time that we have for today, guys. Thank you so much for coming in. Hopefully you guys enjoyed today's lesson. Great job on Chapter 3. Remember that this is pretty much the end of it, so check out your book for these last aspects. We'll go over the examples for conditional operator and operator precedence and associativity, have you guys super prepared for Monday's exam, and then, you know, keep things moving along in this class.
+
+495
+01:15:42.030 --> 01:15:53.539
+Al Dungo: So, thank you guys so much for coming in, we'll see you on Wednesday at the same time to also have lab after that. You guys have a great rest of your day, great rest of your week, and let me know if I can answer anything further for you guys.
+
+496
+01:15:53.880 --> 01:15:55.510
+Al Dungo: Thanks guys, see you later.
+

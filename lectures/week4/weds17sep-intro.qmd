@@ -1,0 +1,40 @@
+---
+title: "📘 CSCI 1436 – Monday, September 15"
+format: html
+---
+
+# Programming Fundamentals – Wednesday, Sep. 15
+
+## 👋 Welcome! Check out the fun poll in chat (:
+
+## ❗EXAM 1 IS TWO WEEKS AWAY, on September 29❗
+
+------------------------------------------------------------------------
+
+## ✅ What We Covered Last Time (Monday, 9/15)
+
+We started **Chapter 3 – Selections** and focused on:
+
+-   **Boolean data type -** true or false
+
+-   **if statement** - code only executes IF a Boolean expression is true, otherwise...
+
+-   **else statement**
+
+------------------------------------------------------------------------
+
+## 🔔 Reminders
+
+-   📢 Weekly Zoom announcement sent Monday!
+-   📚 All course materials are in **Blackboard** and the **Zoom workspace**
+-   📝 Attendance/Participation tracking is active — use the **Absence Form** if needed
+
+------------------------------------------------------------------------
+
+## ❗ Don’t Forget
+
+-   ✅ **Assignment 1** is available in Blackboard — complete by NEXT Friday (9/26)
+
+-   💻 **Lab 4** is now open — we’ll work on this during **lab tonight**
+
+-   ⏰ **Lab 3** was due yesterday (9/16)

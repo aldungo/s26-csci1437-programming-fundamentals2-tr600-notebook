@@ -1,0 +1,190 @@
+---
+title: "Chapter 1: Introduction to Programming"
+format: html
+editor: visual
+---
+
+# Chapter 1: Introduction to Programming
+
+## 📚 Lecture Overview
+
+-   Overview of programming fundamentals
+-   Introduction to Java and development environments
+-   Setting up GitHub Codespaces
+-   What is a program?
+-   Java syntax and structure
+-   Compilation and execution process
+-   Variables and data types
+
+---
+title: "👋 Welcome to Programming Fundamentals I – Tuesday Kickoff"
+format: html
+editor: visual
+---
+
+# 👋 Programming Fundamentals! Welcome!
+
+## 🚀 Tuesday Kickoff – What We Covered
+
+✅ Introductions & Course Overview\
+- Who is Professor Dungo?\
+- What this class is all about\
+- Your mission: Learn Java, solve problems, and have fun
+
+## As far as we're concerned, Lab is on TUESDAYS (7 - 8:30 p).. sorry!
+
+I'll still be online and go "through" the lab tonight for those who can tune in. For those who cannot, that's okay! There will be TWO recordings to help you complete Lab 1, and it is mostly on testing if you can complete a lab start to finish, like we will be doing on a weekly basis!
+
+------------------------------------------------------------------------
+
+## 🧠 What is Programming?
+
+-   Developing software applications
+-   Solving problems with code
+-   Technology was designed to help people!
+-   In this class, we’ll explore how to use **coding solutions** to tackle real-world challenges
+
+💡 **Hint:** One of the first “problems” you’ll solve is:\
+\> *How do you calculate the area of a circle?*\
+→ **Solve it with the Java language!**
+
+------------------------------------------------------------------------
+
+## 💬 Why Do We Program?
+
+-   To build tools that help people
+-   To automate tasks and solve problems
+-   To express logic and creativity through code
+
+------------------------------------------------------------------------
+
+## 🧪 Programming Languages & Syntax
+
+-   There are many programming languages
+-   Each has its own **syntax** (rules and structure)
+-   We’ll focus on **Java** this semester
+
+```{java}
+public class HelloWorld {
+    public static void main(String[] args) 
+    {
+        System.out.println("Hello World");
+    }
+}
+```
+
+# Thursday August 28 - Chapter 1: Introduction to Programming
+
+## 📚
+
+This is a programming class - where we solve problems with code.
+
+Specifically, we'll be learning Java. There are many different languages
+
+-   Programming is an art and a science
+
+    -   Science = analysis, testing, variables - "a right way to code", meaning that there are a set of "rules" to follow -\> which is what we call SYNTAX, very strict rules of the language
+
+    -   Art? -\> no SPECIFIC way to code... meaning this is where you make it your own!
+
+In this class, we write GOOD CODE! We'll learn good habits, and the preferred/right ways of programming :)
+
+### History...
+
+Computers understand programs, and it's pretty basic "language" known as **MACHINE LANGUAGE.** This is what computers natively UNDERSTAND, written as binary code.
+
+Do us humans understand binary code/machine language?
+
+-   IT'S ACTUALLY VERY TEDIOUS AND ERROR-PRONE
+
+-   Low-level language = assembly
+
+Now where do we/this class come in?
+
+**High-level language -** developed in the 1950's
+
+-   that's what us humans write, develop, code, debug, run - and understand!
+
+-   each line is a statement of code
+
+-   LOTS OF BENEFITS - can be ran on many different machines, easier to read, etc.
+
+-   how does the computer understand what we write, if it's "high-level?"
+
+    -   high-level language is TRANSLATED using an interpreter or compiler
+
+## IDE - Integrated Development Environment
+
+-   an IDE can be a software application, physically downloaded onto your computer device (intelliJ IDEA)
+
+-   The IDE that we use in this class (cloud-based) in Github Codespaces/Visual Studio Code
+
+-   IDEs are so modern and useful these days! (but be careful) however they've always allowed us to edit, compile, build, develop, and debug the code all in one nice looking interface :)
+
+## Your First Code Example!
+
+-   Line 1 - class header, defines the class
+
+    -   required in every java file! Every Java program has at least one class
+
+    -   Notice how the class name is the same as the file name
+
+    -   See the opening curly brace? this indicates the beginning of the class
+
+-   Line 3 - the main method
+
+    -   where the magic happens! A Java program MUST have a main method... consider it the "entry way" of the program
+
+    -   notice the curly braces that encapsulate the MAIN method
+
+Java has keywords (syntax) and symbols (characters) with very specific meanings that make it work and run the way it's supposed to.
+
+Keyword examples - public, class, static, void...
+
+RESERVED words by Java. You can't use them for yourself, must be spelled correctly, and case matters!
+
+[**Comments are extremely important when coding!**]{.underline}
+
+-   There are THREE types of comments in Java
+
+    -   // Single line comments
+
+    -   /\* \*/ - multi line comment
+
+    -   /\*\* \*/ - documentation comments
+
+Lines of code are considered statements, each line is a code statement. For example, Line 9 is a print statement. It printed the words in the terminal! The sentence written is information within the double quotations.
+
+VERY IMPORTANT! Don't forget to end your statements with a semicolon
+
+Now that we wrote some code... how the heck does the computer understand what we're doing?
+
+## Java Application Program Interface (Java API)
+
+this has prebuilt classes, also known as the Java library
+
+-   the Java language and API define "the rules" of Java programming
+
+-   Java program has a certain of commands that allow for it to compile (put code together to where computer can understand), then be ran, and also debugged and tested in this Java environment
+
+## Three Steps in Developing Programs (high-level)
+
+1.  create and edit the source code (high-level language program code that YOU write in the IDE)
+2.  COMPILE so the computer can understand and have it translated/interpreted for it
+3.  Execute/run the program, and see it do what you want!
+
+## Style - how a program LOOKS
+
+This is important! Better style = better readability - which programmers need!
+
+Documentation is also important, to indicate to other programmers/users WHAT'S going on
+
+-   Implement the above by having comments, making sure to explain at the top what the code does, explain the steps, etc.
+
+Things that help with Style!!!
+
+-   indentation - shows structure of program
+
+    -   helps noticeably see where BLOCKS of code start and end, usually by curly braces
+
+-   spacing - separation of words, characters, lines of code

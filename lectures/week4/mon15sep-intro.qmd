@@ -1,0 +1,58 @@
+---
+title: "📘 CSCI 1436 – Monday, September 15"
+format: html
+---
+
+# Programming Fundamentals – Monday, Sep. 15
+
+## 👋 Welcome! Please start by answering the fun poll in chat (:
+
+## ❗EXAM 1 IS TWO WEEKS AWAY, on September 29❗
+
+------------------------------------------------------------------------
+
+## ✅ What We Covered Last Time (Wednesday, 9/10)
+
+We continued **Chapter 2 – Elementary Programming** and focused on:
+
+-   **Division in Java**: What is the result of `int num = 5 / 2;`
+
+-   **Logic Errors vs. Compile Errors**: Understanding how correct syntax can still produce incorrect results
+
+-   **Numeric Data Types & Literals**: Memory ranges for `byte`, `short`, `int`, `long`, `float`, and `double`, and how to use suffixes like `L` and `F`
+
+-   **Scientific Notation**: Using `E` notation for large/small numbers and how Java interprets it
+
+-   **Math Operations & PEMDAS**: Applying order of operations in Java expressions and using parentheses for clarity
+
+-   **Assignment & Augmented Assignment Operators**: Using `+=`, `-=`, `*=`, `/=`, and `%=` for cleaner code
+
+-   **Modulo (%)**: Calculating remainders and understanding its role in logic and lab exercises
+
+-   **Increment/Decrement Operators**: Prefix vs. postfix notation and how they affect expression evaluation
+
+-   **Type Conversion**:
+
+    -   **Widening (automatic)**: e.g., `byte` → `int`
+
+    -   **Narrowing (manual)**: e.g., `double` → `int` via casting
+
+    -   **Integer Overflow**: What happens when values exceed their data type limits
+
+------------------------------------------------------------------------
+
+## 🔔 Reminders
+
+-   📢 Weekly Zoom announcement NOT sent yet - be on the look out for tonight!
+-   📚 All course materials are in **Blackboard** and the **Zoom workspace**
+-   📝 Attendance/Participation tracking is active — use the **Absence Form** if needed
+
+------------------------------------------------------------------------
+
+## ❗ Don’t Forget
+
+-   ✅ **Assignment 1** is available in Blackboard — complete by NEXT Friday
+
+-   💻 **Lab 4** is now open — we’ll work on this during **Wednesday lab**
+
+-   ⏰ **Lab 3** is due tomorrow (9/16)

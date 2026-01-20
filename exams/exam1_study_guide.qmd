@@ -1,0 +1,78 @@
+---
+title: "Exam 1 Study Guide – Programming Fundamentals I"
+format: html
+---
+
+## 🧠 Exam Date
+
+-   **MW601** – Monday, **September 29**\
+-   **TR602** – Thursday, **October 2**
+
+------------------------------------------------------------------------
+
+## 📘 Exam Structure
+
+-   Available all day in Blackboard (from morning until 11:59 p.m.)
+-   You may begin the exam at any time during that window
+-   Once started, you must complete it in one sitting — **1 hour** time limit
+-   Question types:
+    -   Term definitions
+    -   Multiple choice
+    -   True/False
+    -   Fill-in-the-blank
+    -   Short-answer (open-ended)
+-   Total points: **110** (including bonus)
+-   **Open-book and open-note**
+
+------------------------------------------------------------------------
+
+## 📗 Chapter 1: Introduction & Basics
+
+-   What is Java? (general-purpose, object-oriented, platform-independent)
+-   Structure of a Java program: `class`, `main` method, statements
+-   Output: `System.out.println()`
+-   Variables: declaration, types (`int`, `double`, `String`, `boolean`)
+-   Assignment and initialization
+-   Comments: `//` (single-line), `/* ... */` (multi-line)
+-   Basic arithmetic: `+`, `-`, `*`, `/`, `%`
+-   Input using `Scanner` (if covered)
+-   Naming conventions: identifiers, case sensitivity
+
+------------------------------------------------------------------------
+
+## 📘 Chapter 2: Variables, Data Types, and Expressions
+
+-   Primitive types: `int`, `double`, `char`, `boolean`
+-   Type conversion: implicit (widening), explicit (casting)
+-   Constants: `final` keyword
+-   Expressions and operator precedence
+-   String concatenation
+-   Input with `Scanner`: `nextInt()`, `nextDouble()`, `nextLine()`
+-   Common errors: type mismatch, input mismatch
+
+------------------------------------------------------------------------
+
+## 📙 Chapter 3: Selections (Decision Making)
+
+-   Relational operators: `==`, `!=`, `<`, `>`, `<=`, `>=`
+-   Logical operators: `&&`, `||`, `!`
+-   `if` statements: basic, nested, `if-else`, `if-else-if`
+-   `switch` statement: syntax, `case`, `break`, `default`
+-   Boolean expressions and truth tables
+-   Common patterns: grading, min/max, comparisons
+-   Input validation
+-   Short-circuit evaluation
+
+------------------------------------------------------------------------
+
+## ✅ General Tips
+
+-   Know how to write and trace simple Java programs
+-   Be able to explain and use variables, data types, and operators
+-   Understand how to get input and produce output
+-   Practice writing selection statements (`if`, `switch`)
+-   Be ready to debug and fix common syntax errors
+
+------------------------------------------------------------------------
+
+We’ll thoroughly review these concepts in class this week — bring your questions and stay engaged. You’ve got this!
