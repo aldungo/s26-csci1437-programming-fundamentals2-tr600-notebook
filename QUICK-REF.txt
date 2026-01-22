@@ -7,6 +7,9 @@
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+CHECK YOUR STATUS ANYTIME:
+  .\check-status.ps1
+
 AFTER MONDAY LECTURE:
   .\save-work.ps1 "Monday Ch10 intro"
 
