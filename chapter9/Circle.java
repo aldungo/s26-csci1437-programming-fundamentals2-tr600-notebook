@@ -1,6 +1,6 @@
 public class Circle 
 {
-// fields
+    // fields
     private double radius; 
 
     // methods~behaviors

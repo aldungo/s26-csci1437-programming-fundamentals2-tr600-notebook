@@ -17,7 +17,6 @@ public class Chapter9_pt1
 
     System.out.println("Circle 1 (default constructor):");
 
-    System.out.println("myCircle: " + myCircle.radius);
     System.out.println("  Radius: " + myCircle.getRadius()); // 1
     System.out.println("  Area: " + myCircle.getArea()); // 
     System.out.println("  Perimeter: " + myCircle.getPerimeter());
