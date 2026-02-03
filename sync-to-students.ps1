@@ -31,5 +31,5 @@ git push origin main
 Write-Host "`n↩️  Returning to instructor branch..." -ForegroundColor Yellow
 git checkout instructor
 
-Write-Host "`n✅ Done! Students can now see: $CommitMessage" -ForegroundColor Green
-Write-Host "   View at: https://github.com/[your-repo-url]" -ForegroundColor Gray
+Write-Host ""
+Write-Host "Done! Students can now see: $CommitMessage" -ForegroundColor Green
