@@ -1,157 +1,159 @@
+# 🎓 CSCI 1437 - Programming Fundamentals II
 
-# Programming Fundamentals 1 - Public Class Repository
+**Spring 2026 | Live Course Repository**
 
-Welcome to the official public-facing repository for CSCI 1436 Programming Fundamentals 1! This repository is always up-to-date and available for students to:
-- View lecture code and examples
-- Explore demo programs
-- Practice with non-graded exercises
-- Familiarize themselves with GitHub
-
-**No graded solutions or answer keys are ever included.**
-
-## Repository Organization
-
-- `lectures/` — Code and materials from class lectures
-- `examples/` — Example programs and snippets
-- `demos/` — Demo projects and interactive code
-- `README.md` — Overview and instructions
-- `.gitignore` — Prevents build/IDE files from being committed
-- `CONTRIBUTING.md` — Guidelines for contributing
-
-## How to Use This Repository
-
-Students can browse, clone, or fork this repository to:
-- Review class material
-- Experiment with code
-- Prepare for labs and assignments
-
-**Do not submit assignments or graded work here.**
-
-## Getting Started with GitHub
-
-This repository is a great way to learn GitHub basics:
-- Clone or download the repository
-- Open code in VS Code or your favorite IDE
-- Run and modify examples to learn
-
-## Contributing
-
-See `CONTRIBUTING.md` for details on how to add new examples, demos, or lecture code.
+Welcome! This repository contains **live examples, lecture code, and demonstrations** from our class sessions. It's updated continuously throughout the semester.
 
 ---
 
-Below is a sample lab assignment for reference. Actual graded assignments are distributed separately.
+## 🚀 How to Use This Repository
 
-## Understanding Variables
+### Option 1: View Online (Read-Only)
+Just browse the files here on GitHub! Click through folders to see code examples and lecture materials.
 
-**In-Class 1:** Variables are used to hold values in your programs. This allows you to set the value once and use that value many times later. For example, a String variable is used to hold a sequence of characters (think of it like a string of words). Instead of rewriting that sequence of characters repeatedly, you only need to use the variable.
+### Option 2: Run Code in the Cloud (Recommended!)
+Click the button below to open a **free cloud workspace** where you can run all the Java examples:
 
-To make this String variable, you must declare it. This variable declaration looks like the following:
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/aldungo/s26-csci1437-programming-fundamentals2-tr600-notebook?quickstart=1)
 
-```java
-String message;
+**🎯 Important:** 
+- Create **ONE** Codespace and reuse it all semester
+- Your work is private - only you can see it
+- Free tier: 60 hours/month (plenty for our class!)
+- Changes you make DON'T affect the original repo
+
+### Option 3: Clone to Your Computer
+If you prefer working locally:
+```bash
+git clone https://github.com/aldungo/s26-csci1437-programming-fundamentals2-tr600-notebook.git
 ```
 
-This includes the String type, the name of the variable, and the terminating semi-colon. There are rules about variable names to learn later, but you can effectively name the variable whatever you like. To give this variable a value, you must assign that value to it. This variable assignment looks like the following:
+---
 
-```java
-message = "Welcome to Java!";
+## 📂 Repository Structure
+
+```
+📦 s26-csci1437-programming-fundamentals2-tr600-notebook
+├── 📓 Chapter9.ipynb              ← Jupyter notebooks with theory
+├── 📓 Chapter10.ipynb
+├── 📁 chapter9/                   ← Runnable code examples
+│   ├── Circle.java
+│   └── README.md
+├── 📁 lectures/                   ← Weekly lecture materials
+│   ├── lecture_02_jan22_chapter9/
+│   │   ├── README.md             ← What we covered
+│   │   └── student/              ← Code you can run
+│   ├── lecture_03_jan27_chapter10_part1/
+│   └── lecture_04_jan29_chapter10_part2/
+└── 📁 exams/                      ← Study guides (no answers!)
 ```
 
-The equals sign is known as the assignment operator. The variable is placed on the left-hand side, and the value is placed on the right-hand side. Also notice that you do not specify the String type. That type only ever needs to be stated when you declare the variable. Once this variable has a value, you can now use it. The simplest use-case for a String is to print it:
+---
 
-```java
-System.out.println(message);
+## 💻 Running Java Code
+
+### In Codespaces (Cloud):
+1. Click the Codespaces badge above
+2. Wait for workspace to load (~30 seconds)
+3. Navigate to a lecture folder: `cd lectures/lecture_04_jan29_chapter10_part2/student`
+4. Compile: `javac *.java`
+5. Run: `java MainClassName`
+
+### On Your Computer:
+1. Make sure Java JDK is installed
+2. Navigate to the folder with `.java` files
+3. Compile: `javac FileName.java`
+4. Run: `java FileName`
+
+---
+
+## 📚 What's Included
+
+✅ **Lecture code** - Examples demonstrated in class  
+✅ **Working programs** - Fully functional code you can run  
+✅ **Practice exercises** - Starter code for you to complete  
+✅ **Study guides** - Exam prep materials  
+
+❌ **NOT included:** Assignment solutions, quiz answers, or graded work
+
+---
+
+## 🔄 Updates
+
+This repository is updated **after each class session**. Pull the latest changes regularly:
+
+**In Codespaces:**
+```bash
+git pull origin main
 ```
 
-Variables are placed into statements in order to use them, such as the placement of the message variable in this print statement. You will learn more about the rules for placing variables into statements later. And again, remember that you do not specify the String type when using a variable.
-
-
-## Sample Lab Assignment Instructions
-
-### Task Overview
-Create a Java file named `Lab1_FirstName_LastName.java` (replace FirstName and LastName with your actual name).
-
-**Example:** If your name is John Smith, create `Lab1_John_Smith.java`
-
-### Step-by-Step Instructions for Lab1.java
-
-#### Step 1: Create Your Java File
-
-#### Step 2: Add File Header and Class Structure
-
-#### Step 3: Declare a String Variable
-
-#### Step 4: Assign a String Value
-
-#### Step 5: Display the Variable
-
-### Sample Program Structure
-```java
-/**
- * Name: [Your Name]
- * Date: [Today's Date]
- * Purpose: Lab 1 - Introduction to Variables and GitHub Classroom
- */
-
-public class Lab1_YourFirstName_YourLastName 
-{
-    public static void main(String[] args) 
-    {
-        // Declare a String variable
-        
-        // Assign your personal statement to the variable
-        
-        // Print the variable to the console
-    }
-}
+**On Your Computer:**
+```bash
+cd s26-csci1437-programming-fundamentals2-tr600-notebook
+git pull
 ```
 
-## Running Your Program
+---
 
-### Method 1: Using the Terminal
-1. Open the terminal in your codespace (Terminal → New Terminal)
-2. Compile your program:
-   ```bash
-   javac Lab1_YourFirstName_YourLastName.java
-   ```
-3. Run your program:
-   ```bash
-   java Lab1_YourFirstName_YourLastName
-   ```
+## ⚠️ Important Notes
 
-### Method 2: Using VS Code's Run Button
-1. Open your Java file
-2. Look for the "Run" button that appears above your main method
-3. Click it to compile and run your program automatically
+### Your Codespace is YOUR Workspace
+- It's **private** - only you can see it
+- Changes you make **don't affect** the main repository
+- You can experiment, break things, and learn safely!
+- Reuse the same Codespace all semester (don't create multiples!)
 
-## Testing Your Program
+### Getting Fresh Code
+If you mess something up and want the original:
+```bash
+git checkout main
+git pull origin main
+```
 
-### What Should Happen
+### Codespace Limits
+- **Free tier:** 60 hours/month (about 2 hours per class day)
+- **Stop your Codespace** when done to save hours
+- **Delete old Codespaces** you're not using
 
-### Troubleshooting Common Issues
+---
 
+## 🆘 Need Help?
 
-## Sample InClass Assignment Instructions
+### Running Code Issues
+- Check you're in the right directory (`pwd` to see where you are)
+- Make sure file names match exactly (Java is case-sensitive!)
+- Compile before running (`javac` then `java`)
 
-### Task: Create InClass1.java
-Following the same pattern as Lab1, create a file named `InClass1_FirstName_LastName.java` for practice during class time.
+### Codespace Issues
+- If it's slow, close unused tabs
+- If it won't start, delete old Codespaces from your GitHub account
+- Out of hours? Use local install or wait for monthly reset
 
-**Requirements:**
+### General Questions
+- Check the lecture README files first
+- Ask in class or office hours
+- Post on discussion board (no code solutions please!)
 
+---
 
-## Need Help?
+## 📖 Learning Resources
 
-Ask questions in class, open an issue, or contact your instructor. This repository is here to help you learn and succeed!
+- **Textbook:** Available in Blackboard
+- **IDE Setup:** VS Code recommended (built into Codespaces!)
+- **Java Docs:** [https://docs.oracle.com/en/java/](https://docs.oracle.com/en/java/)
 
-## Getting Help
+---
 
-### During Class
+## 📋 Quick Start Checklist
 
-### Outside of Class
+- [ ] Click the Codespaces badge to create your workspace
+- [ ] Explore the `lectures/` folder
+- [ ] Try running an example program
+- [ ] Bookmark this repository for easy access
+- [ ] Pull updates after each class
 
-### Common Resources
+---
 
+**Questions?** Ask in class or see me during office hours!
 
-
-**Remember:** This repository is for learning and practice. Explore, experiment, and ask questions!
+**Last Updated:** February 3, 2026

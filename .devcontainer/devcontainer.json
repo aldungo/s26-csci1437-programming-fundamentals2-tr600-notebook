@@ -1,0 +1,36 @@
+{
+  "name": "Java Development Environment - CSCI 1437",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": "true"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "redhat.java"
+      ],
+      "settings": {
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-21",
+            "path": "/usr/local/sdkman/candidates/java/current"
+          }
+        ],
+        "java.server.launchMode": "Standard",
+        "editor.fontSize": 14,
+        "terminal.integrated.fontSize": 14
+      }
+    }
+  },
+
+  "postCreateCommand": "echo '🎓 Java environment ready! Try: cd lectures/lecture_04_jan29_chapter10_part2/student && javac *.java && ls'",
+
+  "remoteUser": "vscode"
+}
