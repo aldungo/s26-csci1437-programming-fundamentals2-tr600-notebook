@@ -1,2 +1,0 @@
-export PATH="/Users/dungo/Library/CloudStorage/OneDrive-TexasA&MUniversity-SanAntonio/github-projects/f25/csci1436-programming-fundamentals1-tr602-class-repo_f25/.venv/bin:$PATH"
-export PATH="$HOME/apache-maven/apache-maven-3.9.6/bin:$PATH"
