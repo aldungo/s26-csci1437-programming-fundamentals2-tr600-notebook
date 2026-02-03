@@ -1,5 +1,5 @@
 # Quick Sync to Students Script
-# Run this after lectures to push clean content to main branch
+# Run this after lectures to push clean content to student branch
 # Usage: .\sync-to-students.ps1 "Your commit message"
 
 param(
@@ -15,17 +15,19 @@ git add .
 git commit -m "Instructor prep: $CommitMessage"
 git push origin instructor
 
-# Switch to main branch
-Write-Host "`n🔄 Switching to student-facing main branch..." -ForegroundColor Yellow
-git checkout main
+# Switch to student branch
+Write-Host "`n🔄 Switching to student-facing branch..." -ForegroundColor Yellow
+git checkout student
 
-# Merge instructor content (gitignore will filter out private stuff)
-Write-Host "`n🔀 Merging student-safe content..." -ForegroundColor Yellow
-git merge instructor --no-edit -m "Student update: $CommitMessage"
+# Cherry-pick only student-safe files from instructor
+Write-Host "`n🔀 Updating student-safe content..." -ForegroundColor Yellow
+git checkout instructor -- .devcontainer/ .github/ chapter9/ lectures/ README.md WORKFLOW.md QUICK-REF.txt
+git add .
+git commit -m "Update: $CommitMessage" --allow-empty
 
 # Push to students
-Write-Host "`n🚀 Pushing to main (students will see this)..." -ForegroundColor Green
-git push origin main
+Write-Host "`n🚀 Pushing to student branch (students will see this)..." -ForegroundColor Green
+git push origin student
 
 # Return to instructor branch
 Write-Host "`n↩️  Returning to instructor branch..." -ForegroundColor Yellow
