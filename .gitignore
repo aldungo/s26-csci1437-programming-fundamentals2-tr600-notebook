@@ -24,7 +24,7 @@ build/
 Thumbs.db
 
 # Instructor-only materials (hidden from main/student branch)
-# NOTE: .instructor/ is tracked on instructor branch, ignored on main
+.instructor/
 **/INSTRUCTOR-ONLY/
 **/*-KEY.ipynb
 **/*-TEACHER*.ipynb
