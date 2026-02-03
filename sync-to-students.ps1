@@ -22,6 +22,11 @@ git checkout student
 # Cherry-pick only student-safe files from instructor
 Write-Host "`n🔀 Updating student-safe content..." -ForegroundColor Yellow
 git checkout instructor -- .devcontainer/ .github/ chapter9/ lectures/ README.md WORKFLOW.md QUICK-REF.txt
+
+# Remove instructor subdirectories from lectures
+Write-Host "🧹 Removing instructor materials..." -ForegroundColor Yellow
+Get-ChildItem -Path lectures -Recurse -Directory -Filter "instructor" | Remove-Item -Recurse -Force
+
 git add .
 git commit -m "Update: $CommitMessage" --allow-empty
 
