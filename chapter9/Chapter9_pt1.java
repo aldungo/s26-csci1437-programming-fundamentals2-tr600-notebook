@@ -37,11 +37,14 @@ public class Chapter9_pt1
     System.out.println(); // blank line
 
 
-    /* MAKE SURE YOU COPY OBJECTS CORRECTLY
+    // MAKE SURE YOU COPY OBJECTS CORRECTLY
     
-    Circle copyCircle = myCircle; THIS WOULD NOT BE CORRECT 
+    Circle copyCircle = myCircle; //THIS WOULD NOT BE CORRECT 
+    System.out.println(copyCircle.getRadius());
     
-    */
+    myCircle.setRadius(10000); // this would ALSO change copyCircle
+    System.out.println("copyCircle = " + copyCircle.getRadius());
+    
 
     // i want to make an exact copy of CircleTwo
     Circle CircleCopy = new Circle(CircleTwo.getRadius());
@@ -51,8 +54,19 @@ public class Chapter9_pt1
     // here i will use the static method to calculate perimeter of a circle
 
     System.out.println("The circumference of a circle with radius 25 is: " + Circle.calcPerimeter(25));
+  
+    System.out.println("Doubling a radius by calling on the method...");
+    CircleTwo = doubleRadius(CircleTwo);
+    System.out.println("CircleTwo Radius = " + CircleTwo.getRadius());
   }
 
+  public static Circle doubleRadius(Circle cir)
+  {
+    Circle cirCopy = new Circle(cir.getRadius()); // CREATE A COPY FIRST SO YOU DON'T MESS UP WHAT WAS PASSED IN!!!!
+    // after the above line, cirCopy now has a radius of 200 (like the cir passed in)
+    cirCopy.setRadius(2 * cirCopy.getRadius());
+    return cirCopy; // cirCopy is what's sent back, which has a radius of 400
+  }
 }
   
 
