@@ -1,0 +1,107 @@
+Event-Driven Programming
+▪Imagine the user clicking a button
+• Button is an event source object (Button class)
+• Event from user clicking the button is also an object (ActionEventclass)
+• Handler to respond to this event is a third object (EventHandlerclass)
+▪Events are signals to the program that something has happened
+▪Must implement a handler and register handler to source
+▪Event-driven programming is programming reliant on firing events
+• Firing an event describes process of creating and handling an event
+Events and Event Sources
+▪Handlers (or listeners) must be an instance of an event-handling interface
+• EventHandler<T extends Event>
+• Handler interface provides the abstract method handle(T event)
+▪Handlers must be registered with event source objects
+• For ActionEventobjects, use setOnActionmethod
+Registering Handlers and Handling Events
+▪Implementing an event handler
+public class ColorHandlerimplements EventHandler<ActionEvent> {
+public void handle(ActionEvente) {
+circlePane.setFill(Color.GREEN);
+}
+}
+Registering Handlers and Handling Events
+▪Registering an event handler
+// class-level scope
+private CirclePanecirclePane= new CirclePane();
+// start method
+Button btColor= new Button(“Color”);
+colorBtn.setOnAction(new ColorHandler());
+Registering Handlers and Handling Events
+▪Inner (nested) classes are defined within other classes
+▪Useful implementation of event handler classes
+▪Inner classes can reference fields and methods of the outer class
+• Recommended to keep inner classes private to ensure fields are also kept private
+▪Useful for combining dependent classes into a primary class
+▪Handler classes are exclusively for a GUI component in the outer class
+Private Inner Classes
+▪Anonymous inner classes can handle both
+• Defining a subclass
+• Constructing an object
+public interface Calculator {
+public double calculate(double num1, double num2);
+}
+Calculator add = new Calculator() {
+public double calculate(double num1, double num2) {
+return num1 + num2;
+}
+};
+Anonymous Inner Classes
+▪Notice that the constructor call refers to the interface
+▪The object constructed has no class associated with it
+▪No class name means this is an anonymous class
+Anonymous Inner Classes
+▪Must always extend a superclass or implement an interface
+• No explicit extends or implements clause though
+▪Must implement all abstract methods from superclass or interface
+▪Always uses no-argsconstructor for superclass or Object() for interface
+Anonymous Inner Classes
+▪Anonymous inner classes reduce the code needed for event handlers
+• Implementing handle method and registering handler done at once
+btColor.setOnAction(new EventHandler<ActionEvent>() {
+public void handle(ActionEventactionEvent) {
+circlePane.setFill(Color.GREEN);
+}
+});
+Anonymous Inner Class Handlers
+▪Functional interfaces are interfaces that have exactly one abstract method
+▪Lambda expressions are used to implement functional interfaces
+public interface Calculator {
+public double calculate(double num1, double num2);
+}
+Calculator add = (num1, num2) -> num1 + num2;
+Calculator subtract = (num1, num2) -> num1 –num2;
+Functional Interfaces and Lambda Expressions
+▪Functional interfaces have very exact specifications
+▪Lambda expressions make several assumptions as a result
+• Data types of arguments are already known
+• Given one line of a value-returning method, that line must be a return statement
+▪Arrow syntax is used to separate arguments and method body
+▪Parentheses are optional if one argument is given
+▪Curly braces are optional if body has one line
+Functional Interfaces and Lambda Expressions
+▪Lambda expressions further reduce the code needed for event handlers
+• Event handlers are functional interfaces
+btColor.setOnAction(e -> circlePane.setFill(Color.GREEN));
+Simplifying Event Handling Using Lambda Expressions
+▪Implements an interface with exactly one abstract method
+• Functional interface or single abstract method (SAM) interface
+▪Implicitly understands which interface is used given context of 
+setOnActionmethod
+▪Data types of parameters, method name, and return value are also 
+implied
+Simplifying Event Handling Using Lambda Expressions
+▪Private inner classes require the most code but provide the most structure 
+for distinguishing an event handler from the rest of the program
+• Possible best fit for a single complex functionality
+▪Anonymous inner classes help reduce code but provide less structure
+• Possible best fit for a single or a few simpler functionalities
+▪Lambda expressions reduce code further but provide the least structure
+• Possible best fit for a single or several very simple functionalities
+Deciding on an Event Handler Implementation
+▪For each of the following scenarios, what is the likely best approach for 
+implementing the event handler(s)?
+• Several buttons that each have a unique but simple functionality
+• One button to submit all of the input in a large form
+• A few buttons that each have a unique but slightly complex functionality
+Deciding on an Event Handler Implementation

@@ -1,0 +1,184 @@
+JavaFX Basics
+▪JavaFX applications inherit from the Application class
+▪Application class includes launch and start methods
+▪launch method is a static method for launching a JavaFX application
+▪Abstract start method is overridden to create a specific GUI
+import javafx.application.Application;
+public class MyFirstGUIextends Application { … }
+The Basic Structure of a JavaFX Program
+▪Stage object called primaryStageis passed to start method
+public static void main(String[] args) {
+launch(args);
+}
+public void start(Stage primaryStage) {
+primaryStage.setTitle(“My First GUI Application”);
+primaryStage.show();
+}
+The Basic Structure of a JavaFX Program
+▪JavaFX uses a theater analogy to describe GUI applications
+▪Stage class represents the application window
+▪Scene class represents the collection of nodes (actors) for the application
+▪Nodes represent various visual elements for the application
+The Basic Structure of a JavaFX Program
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+// other imports and code for MyFirstGUI
+public void start(Stage primaryStage) {
+Label myLabel= new Label(“Welcome to JavaFX!”);
+Scene scene= new Scene(myLabel); // myLabel is root node   
+primaryStage.setTitle(“My First GUI Application”);
+primaryStage.show();
+}
+The Basic Structure of a JavaFX Program
+▪Panes are container classes to position other nodes in a scene
+▪Nodes are visual components, such as panes, UI controls, and shapes
+▪Shapes include circles, rectangles, lines, etc.
+▪UI controls include labels, buttons, text fields, etc.
+Panes, UI Controls, and Shapes
+Panes, UI Controls, and Shapes
+public void start(Stage primaryStage) {
+Circle circle= new Circle();
+circle.setCenterX(100);
+circle.setCenterY(100);
+circle.setRadius(50);
+circle.setStroke(Color.BLACK);
+circle.setFill(Color.WHITE);
+// remainder of start method
+Pane pane= new Pane();
+pane.getChildren().add(circle);
+Scene scene= new Scene(pane, 200, 200);
+primaryStage.setScene(scene);
+primaryStage.setTitle(“Show Circle”);
+primaryStage.show();
+}
+▪Previous program shows how you can set up most JavaFX applications
+▪Implement individual nodes first
+▪Then implement containers to put nodes into
+▪Then implement scene object
+▪Then prepare stage
+Panes, UI Controls, and Shapes
+▪Access properties of nodes to modify style and bind elements
+• Fields of many JavaFX classes include binding properties
+▪Style is set using cascading style sheets (CSS)
+• Styling language with a separate syntax from Java
+▪JavaFX includes style properties for setting the CSS
+• https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html
+circle.setStyle(“-fx-stroke: black; -fx-fill: red;”);
+Common Properties and Methods for Nodes
+▪May also include CSS files to specify style
+• Useful for keeping Java code and CSS code separated
+• CSS files are located in same directory as Java files by default
+circle.getStyleClasses().add(“circle”);
+scene.getStylesheets().add(this.getClass().getResource("style.css").toExternalForm());
+.circle {-fx-stroke: black;-fx-fill: red;
+}
+Common Properties and Methods for Nodes
+▪Panes are containers for holding nodes
+▪Focus here on FlowPane, GridPane, HBox, and VBox
+▪Obtain ObservableListof nodes in a pane using getChildren() method
+• Allows you to add or remove nodes
+• ObservabeListwill be discussed further with more advanced UI controls
+▪For fields of type ObjectProperty<T>
+• Value getter gets T type
+• Property getter gets ObjectProperty<T> type
+Layout Panes
+Layout Panes
+// some nodes to add to container
+FlowPaneflowPane=
+new FlowPane();
+flowPane.getChildren().add(node1);
+flowPane.getChildren()
+.addAll(node2, node3);
+Layout Panes
+// some nodes to add to container
+GridPanegridPane= new GridPane();
+gridPane.add(node1, 0, 0);
+gridPane.add(node2, 1, 0);
+gridPane.add(node3, 0, 1);
+Layout Panes
+// some nodes to add to container
+HBoxhbox=
+new HBox(node1, node2, node3);
+▪node1 would be to the left
+▪node2 would be in the middle
+▪node3 would be to the right
+Layout Panes
+// some nodes to add to container
+VBoxvbox=
+new VBox(node1, node2, node3);
+▪node1 would be at the top
+▪node2 would be in the middle
+▪node3 would be at the bottom
+▪Adding images to JavaFX requires two classes: Image and ImageView
+▪Image class used to load image files into a program
+• Relative file path from project directory using file protocol
+• http protocol to load images from a webpage
+▪ImageViewclass used to create nodes for displaying images
+• Dimensions of images specified through ImageViewobjects
+• To keep dimensions consistent, be sure to preserve the aspect ratio
+The Image and ImageViewClasses
+The Image and ImageViewClasses
+Image imageFromFile= new Image(“file:myImage.png”);
+Image imageFromWeb= new Image(“https://someimage.png”);
+ImageViewfileIV= new ImageView(imageFromFile);
+ImageViewwebIV= new ImageView(imageFromWeb);
+imageView.setPreserveRatio(true);
+imageView.setFitHeight(100);
+imageView.setFitWidth(100);
+The Image and ImageViewClasses
+Shapes
+Shapes
+Shapes
+Shapes
+▪Color constructor uses RGBA model
+• Red, green, blue, and alpha for opacity
+• Color color= new Color(red, green, blue, alpha);
+▪May also use static color methods to specify a color
+▪And may use a standard color constant
+• BLACK, BLUE, GREEN, RED, WHITE
+The Color Class
+The Color Class
+Label myLabel= new Label(“My Colorful Application”);
+myLabel.setTextFill(Color.rgb(255, 0, 0, 1.0));
+.label {-fx-text-fill: rgb(255, 0, 0);
+}
+The Color Class
+▪Use Font class to specify
+• Font family
+• Font size
+• Font weight
+• Font style
+▪Get a list of possible fonts with getFontNames
+The Font Class
+The Font Class
+Font font= new Font(“SansSerif”, 16);
+Label label= new Label(“Circle”);
+label.setFont(font);
+The Font Class
+▪Property binding binds target object to source object
+▪Target is binding object or binding property
+▪Source is bindable object or observable object
+circle.centerXProperty().bind(pane.widthProperty().divide(2));
+circle.centerYProperty().bind(pane.heightProperty().divide(2));
+Property Binding
+▪bind method is defined in Property interface
+• Binding property is an instance of Property interface
+▪Observable source object is instance of ObservableValueinterface
+▪Common binding properties include DoubleProperty, IntegerProperty, etc.
+Property Binding
+▪Binding properties include getter and setter methods
+• Getter and setter methods for binding property’s value (value getter and value 
+setter)
+• Getter method for binding property itself (property getter)
+▪centerXProperty() returns an object of the DoublePropertytype
+▪getCenterX() returns a double value
+▪Numeric binding property classes contain add, subtract, divide, and 
+multiply
+• Return a new observable property
+Property Binding
+▪Example of Circle and window is unidirectional binding
+• Changes are only observed in one direction
+▪May also require bidirectional binding
+• Changes in either object are observed by the other
+• Use bindBidirectionalmethod
+Property Binding

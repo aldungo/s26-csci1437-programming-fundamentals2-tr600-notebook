@@ -1,0 +1,2413 @@
+Objectives
+■ To create graphical user interfaces with various user-interface controls 
+(§§16.2–16.11).
+■ To create a label with text and graphic using the Label class and 
+explore properties in the abstract Labeled class (§16.2).
+■ To create a button with text and graphic using the Button class 
+and set a handler using the setOnAction method in the abstract 
+ButtonBase class (§16.3).
+■ To create a check box using the CheckBox class (§16.4).
+■ To create a radio button using the RadioButton class and group radio 
+buttons using a ToggleGroup (§16.5).
+■ To enter data using the TextField class and password using the 
+PasswordField class (§16.6).
+■ To enter data in multiple lines using the TextArea class (§16.7).
+■ To select a single item using ComboBox (§16.8).
+■ To select a single or multiple items using ListView (§16.9).
+■ To select a range of values using ScrollBar (§16.10).
+■ To select a range of values using Slider and explore differences 
+betweenScrollBar and Slider (§16.11).
+■ To develop a tic-tac-toe game (§16.12).
+■ To view and play video and audio using the Media,MediaPlayer,
+andMediaView (§16.13).
+■ To develop a case study for showing the national flag and playing 
+anthem (§16.14).
+CHAPTER
+16
+630 Chapter 16  JavaFX UI Controls and Multimedia
+16.1 Introduction
+Key
+Point
+GUI
+Node
+Parent
+JavaFX provides many UI controls for developing a comprehensive user interface.
+A graphical user interface (GUI) makes a system user-friendly and easy to use. Creating a 
+GUI requires creativity and knowledge of how UI controls work. Since the UI controls in 
+JavaFX are very flexible and versatile, you can create a wide assortment of useful user inter
+faces for rich Internet applications.
+Oracle provides tools for visually designing and developing GUIs. This enables the program
+mer to rapidly assemble the elements of a GUI with minimum coding. Tools, however, cannot 
+do everything. You have to modify the programs they produce. Consequently, before you begin 
+to use the visual tools, you must understand the basic concepts of JavaFX GUI programming. 
+Previous chapters used UI controls such as Button, Label, and TextField. This chapter 
+introduces the frequently used UI controls in detail (see Figure 16.1). 
+Control
+ImageView Covered in
+Chapter 14
+MediaView
+Labeled
+ScrollBar
+Slider
+TextInputControl
+ListView
+ComboBoxBase
+FIGURE 16.1 These UI controls are frequently used to create user interfaces.
+naming convention 
+for controls
+Note
+Button
+ButtonBase
+Label
+CheckBox
+ToggleButton
+TextArea
+TextField
+RadioButton
+PasswordField
+ComboBox
+Throughout this book, the prefixes lbl, bt, chk, rb, tf, pf, ta, cbo, lv, scb,
+sld, and mp are used to name reference variables for Label, Button, CheckBox,
+RadioButton,TextField,PasswordField,TextArea,ComboBox,ListView,
+ScrollBar, Slider, and MediaPlayer.
+16.2 Labeled and Label
+Alabel is a display area for a short text, a node, or both. It is often used to label other controls 
+(usually text fields). Labels and buttons share many common properties. These common prop
+erties are defined in the Labeled class, as shown in Figure 16.2.
+ALabel can be constructed using one of the three constructors as shown in Figure 16.3.
+Thegraphic property can be any node such as a shape, an image, or a control. Listing 16.1 
+gives an example that displays several labels with text and images in the label, as shown in 
+Figure 16.4.
+LISTING 16.1 LabelWithGraphic.java
+ 1
+ 2
+ 3
+ 4
+ 5
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.Label;
+16.2 Labeled and Label 631
+ 6 import javafx.scene.image.Image;
+ 7 import javafx.scene.image.ImageView;
+ 8 import javafx.scene.layout.HBox;
+ 9 import javafx.scene.layout.StackPane;
+10 import javafx.scene.paint.Color;
+11 import javafx.scene.shape.Circle;
+12 import javafx.scene.shape.Rectangle;
+13 import javafx.scene.shape.Ellipse;
+14
+15 public class LabelWithGraphic extends Application {
+16    @Override // Override the start method in the Application class
+17 public void start(Stage primaryStage) {
+18      ImageView us = new ImageView(new Image("image/us.gif"));
+19 Label lb1 = new Label("US\n50 States", us);
+20      lb1.setStyle("-fx-border-color: green; -fx-border-width: 2");
+21      lb1.setContentDisplay(ContentDisplay.BOTTOM); 
+22      lb1.setTextFill(Color.RED);
+23
+24 Label lb2 = new Label("Circle", new Circle(50,50,25));
+25      lb2.setContentDisplay(ContentDisplay.TOP);
+26      lb2.setTextFill(Color.ORANGE); 
+27
+28 Label lb3 = new Label("Retangle",new Rectangle(10,10,50,25));
+29      lb3.setContentDisplay(ContentDisplay.RIGHT);
+30
+31 Label lb4 = new Label("Ellipse", new Ellipse(50,50,50,25));
+32      lb4.setContentDisplay(ContentDisplay.LEFT);
+33
+create a label
+set node position
+create a label
+set node position
+create a label
+create a label
+FIGURE 16.2 Labeled defines common properties for Label,Button,CheckBox, and RadioButton.-alignment: ObjectProperty<Pos>-contentDisplay:
+   ObjectProperty<ContentDisplay>-graphic: ObjectProperty<Node>-graphicTextGap: DoubleProperty-textFill: ObjectProperty<Paint>-text: StringProperty-underline: BooleanProperty-wrapText: BooleanProperty
+javafx.scene.control.Labeled
+Specifies the alignment of the text and node in the labeled.
+Specifies the position of the node relative to the text using the constants
+TOP,BOTTOM,LEFT,andRIGHT defined in ContentDisplay.
+A graphic for the labeled.
+The gap between the graphic and the text.
+The paint used to fill the text.
+A text for the labeled.
+Whether text should be underlined.
+Whether text should be wrapped if the text exceeds the width.
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class,but omitted in the UML diagram for brevity.
+FIGURE 16.3 Label is created to display a text or a node, or both.
+javafx.scene.control.Label
++Label()
++Label(text: String)
++Label(text: String, graphic: Node)
+javafx.scene.control.Labeled
+Creates an empty label.
+Creates a label with the specified text.
+Creates a label with the specified text and graphic.
+632 Chapter 16  JavaFX UI Controls and Multimedia
+create a label
+add labels to pane
+34      Ellipse ellipse = new Ellipse(50, 50, 50, 25);
+35      ellipse.setStroke(Color.GREEN);
+36      ellipse.setFill(Color.WHITE);
+37      StackPane stackPane = new StackPane();
+38      stackPane.getChildren().addAll(ellipse, new Label("JavaFX"));
+39
+Label lb5 = new Label("A pane inside a label", stackPane);
+40      lb5.setContentDisplay(ContentDisplay.BOTTOM);
+41
+42      HBox pane = new HBox(20);
+43      pane.getChildren().addAll(lb1, lb2, lb3, lb4, lb5); 
+44
+45
+// Create a scene and place it in the stage
+46      Scene scene = new Scene(pane, 450, 150);
+47      primaryStage.setTitle("LabelWithGraphic"); // Set the stage title
+48      primaryStage.setScene(scene); // Place the scene in the stage
+49      primaryStage.show(); // Display the stage
+50    }
+60  }
+FIGURE 16.4 The program displays labels with texts and nodes.
+The program creates a label with a text and an image (line 19). The text is US\n50 States
+so it is displayed in two lines. Line 21 specifies that the image is placed at the bottom of the 
+text.
+The program creates a label with a text and a circle (line 24). The circle is placed on top of 
+the text (line 25). The program creates a label with a text and a rectangle (line 28). The rectan
+gle is placed on the right of the text (line 29). The program creates a label with a text and an 
+ellipse (line 31). The ellipse is placed on the left of the text (line 32). 
+The program creates an ellipse (line 34), places it along with a label to a stack pane 
+(line 38), and creates a label with a text and the stack pane as the node (line 39). As seen from 
+this example, you can place any node in a label. 
+The program creates an HBox (line 42) and places all five labels into the HBox (line 43).
+✓ Check
+✓Point
+16.1 How do you create a label with a node without a text?
+16.2 How do you place a text on the right of the node in a label?
+16.3 Can you display multiple lines of text in a label? 
+16.4 Can the text in a label be underlined?
+16.3 Button
+A button is a control that triggers an action event when clicked. JavaFX provides regular 
+buttons, toggle buttons, check box buttons, and radio buttons. The common features of these 
+buttons are defined in ButtonBase and Labeled classes as shown in Figure 16.5.
+The Labeled class defines the common properties for labels and buttons. A button is just 
+like a label except that the button has the onAction property defined in the ButtonBase
+class, which sets a handler for handling a button’s action.
+16.3 Button 633
+Listing 16.2 gives a program that uses the buttons to control the movement of a text, as 
+shown in Figure 16.6.
+LISTING 16.2 ButtonDemo.java
+ 1 import javafx.application.Application;
+ 2 import javafx.stage.Stage;
+ 3 import javafx.geometry.Pos;
+ 4 import javafx.scene.Scene;
+ 5 import javafx.scene.control.Button;
+ 6 import javafx.scene.image.ImageView;
+ 7 import javafx.scene.layout.BorderPane;
+ 8 import javafx.scene.layout.HBox;
+ 9 import javafx.scene.layout.Pane;
+10 import javafx.scene.text.Text;
+11
+12 public class ButtonDemo extends Application {
+13 protected Text text = new Text(50, 50,"JavaFX Programming");
+14
+15 protected BorderPane getPane() {
+16      HBox paneForButtons = new HBox(20);
+17 Button btLeft = new Button("Left",
+18 new ImageView("image/left.gif"));
+19 Button btRight = new Button("Right",
+20 new ImageView("image/right.gif"));
+21      paneForButtons.getChildren().addAll(btLeft, btRight); 
+22      paneForButtons.setAlignment(Pos.CENTER);
+23      paneForButtons.setStyle("-fx-border-color: green");
+24
+25      BorderPane pane = new BorderPane();
+26      pane.setBottom(paneForButtons); 
+27
+28      Pane paneForText = new Pane();
+29      paneForText.getChildren().add(text);
+30      pane.setCenter(paneForText);
+31
+32 btLeft.setOnAction(e -> text.setX(text.getX() - 10));
+33 btRight.setOnAction(e -> text.setX(text.getX() + 10));
+34
+35 return pane; 
+create a button
+add buttons to pane
+create a border pane
+add buttons to the bottom
+add an action handler
+return a pane
+FIGURE 16.5 ButtonBase extends Labeled and defines common features for all buttons.
+javafx.scene.control.ButtonBase-onAction: ObjectProperty<EventHandler
+    <ActionEvent>>
+javafx.scene.control.Labeled
+javafx.scene.control.Button
++Button()
++Button(text: String)
++Button(text: String, graphic: Node)
+Defines a handler for handling a button’s action.
+Creates an empty button.
+Creates a button with the specified text.
+Creates a button with the specified text and graphic.
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class,but omitted in the UML diagram for brevity.
+634 Chapter 16  JavaFX UI Controls and Multimedia
+36    }
+37
+38    @Override // Override the start method in the Application class
+39
+public void start(Stage primaryStage) {
+40
+set pane to scene
+getPane() protected
+✓ Check
+✓Point
+// Create a scene and place it in the stage
+41      Scene scene = new Scene(getPane(), 450, 200);
+42      primaryStage.setTitle("ButtonDemo"); // Set the stage title
+43      primaryStage.setScene(scene); // Place the scene in the stage
+44      primaryStage.show(); // Display the stage
+45    }
+46  }
+FIGURE 16.6 The program demonstrates using buttons.
+The program creates two buttons btLeft and btRight with each button containing a 
+text and an image (lines 17–20). The buttons are placed in an HBox (line 21) and the HBox is 
+placed in the bottom of a border pane (line 26). A text is created in line 13 and is placed in the 
+center of the border pane (line 30). The action handler for btLeft moves the text to the left 
+(line 32). The action handler for btRight moves the text to the right (line 33).
+The program purposely defines a protected getPane() method to return a pane 
+(line 15). This method will be overridden by subclasses in the upcoming examples to add 
+more nodes in the pane. The text is declared protected so that it can be accessed by sub
+classes (line 13). 
+16.5 How do you create a button with a text and a node? Can you apply all the methods for 
+Labeled to Button?
+16.6 Why is the getPane() method protected in Listing 16.2? Why is the data field text
+protected?
+16.7 How do you set a handler for processing a button-clicked action?
+16.4 CheckBox
+ACheckBox is used for the user to make a selection. Like Button, CheckBox inherits all the 
+properties such as onAction, text, graphic, alignment, graphicTextGap, textFill,
+contentDisplay from ButtonBase and Labeled, as shown in Figure 16.7. Additionally, 
+it provides the selection property to indicate whether a check box is selected.
+Here is an example of a check box with text US, a graphic image, green text color, and 
+black border, and initially selected. 
+CheckBox chkUS = new CheckBox("US");
+chkUS.setGraphic(new ImageView("image/usIcon.gif"));
+chkUS.setTextFill(Color.GREEN);
+chkUS.setContentDisplay(ContentDisplay.LEFT);
+chkUS.setStyle("-fx-border-color: black");
+chkUS.setSelected(true);
+chkUS.setPadding(new Insets(5, 5, 5, 5));
+16.4 CheckBox 635
+javafx.scene.control.Labeled
+javafx.scene.control.ButtonBase-onAction: ObjectProperty<EventHandler
+    <ActionEvent>>
+javafx.scene.control.CheckBox-selected: BooleanProperty
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
+Defines a handler for handling a button’s action.
+Indicates whether this check box is checked.
++CheckBox()
++CheckBox(text: String)
+Creates an empty check box.
+Creates a check box with the specified text.
+FIGURE 16.7 CheckBox contains the properties inherited from ButtonBase and Labeled.
+When a check box is clicked (checked or unchecked), it fires an ActionEvent. To see if 
+a check box is selected, use the isSelected() method.
+We now write a program that adds two check boxes named Bold and Italic to the pre
+ceding example to let the user specify whether the message is in bold or italic, as shown in 
+Figure 16.8.
+FIGURE 16.8 The program demonstrates check boxes.
+There are at least two approaches to writing this program. The first is to revise the preced
+ing ButtonDemo class to insert the code for adding the check boxes and processing their 
+events. The second is to define a subclass that extends ButtonDemo. Please implement the 
+first approach as an exercise. Listing 16.3 gives the code to implement the second approach.
+LISTING 16.3 CheckBoxDemo.java
+ 1
+import javafx.event.ActionEvent;
+VBox
+containing
+two check
+boxes
+Application
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.scene.control.CheckBox;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
+10
+11 public class CheckBoxDemo extends ButtonDemo {
+12    @Override // Override the getPane() method in the super class
+13
+protected BorderPane getPane() {
+14      BorderPane pane = super.getPane();
+ButtonDemo
+CheckBoxDemo
+override getPane()
+invoke super.getPane()
+636 Chapter 16  JavaFX UI Controls and Multimedia
+15
+16      Font fontBoldItalic = Font.font("Times New Roman",
+17        FontWeight.BOLD, FontPosture.ITALIC, 20);
+18      Font fontBold = Font.font("Times New Roman",
+19        FontWeight.BOLD, FontPosture.REGULAR, 20);
+20      Font fontItalic = Font.font("Times New Roman",
+21        FontWeight.NORMAL, FontPosture.ITALIC, 20);
+22      Font fontNormal = Font.font("Times New Roman",
+23        FontWeight.NORMAL, FontPosture.REGULAR, 20);
+24
+25      text.setFont(fontNormal);
+26
+27      VBox paneForCheckBoxes = new VBox(20);
+28      paneForCheckBoxes.setPadding(new Insets(5,5,5,5));
+29      paneForCheckBoxes.setStyle("-fx-border-color: green");
+30 CheckBox chkBold = new CheckBox("Bold");
+31 CheckBox chkItalic = new CheckBox("Italic");
+32      paneForCheckBoxes.getChildren().addAll(chkBold, chkItalic);
+33      pane.setRight(paneForCheckBoxes);
+34
+35      EventHandler<ActionEvent> handler = e -> { 
+36 if (chkBold.isSelected() && chkItalic.isSelected()) {
+37          text.setFont(fontBoldItalic); // Both check boxes checked
+38        }
+39 else if (chkBold.isSelected()) {
+40          text.setFont(fontBold); // The Bold check box checked
+41        }
+42 else if (chkItalic.isSelected()) {
+43          text.setFont(fontItalic); // The Italic check box checked
+44        }
+45 else {
+46          text.setFont(fontNormal); // Both check boxes unchecked
+47        }
+48      };
+49
+50 chkBold.setOnAction(handler);
+51 chkItalic.setOnAction(handler);
+52
+53 return pane; // Return a new pane
+54    }
+55  }
+CheckBoxDemo extends ButtonDemo and overrides the getPane() method (line 13). 
+The new getPane()method invokes the super.getPane() method from the ButtonDemo
+class to obtain a border pane that contains the buttons and a text (line 14). The check boxes are 
+created and added to paneForCheckBoxes (lines 30–32). paneForCheckBoxes is added to 
+the border pane (lines 33).
+The handler for processing the action event on check boxes is created in lines 35–48. It sets 
+the appropriate font based on the status of the check boxes.
+Thestart method for this JavaFX program is defined in ButtonDemo and inherited 
+inCheckBoxDemo. So when you run CheckBoxDemo, the start method in ButtonDemo
+is invoked. Since the getPane() method is overridden in CheckBoxDemo, the method in 
+CheckBoxDemo is invoked from line 41 in Listing 16.2, ButtonDemo.java. 
+16.8 How do you test if a check box is selected?
+16.9 Can you apply all the methods for Labeled to CheckBox?
+16.10 Can you set a node for the graphic property in a check box?
+create fonts
+pane for check boxes
+create check boxes
+create a handler
+set handler for action
+return a pane
+main method omitted
+✓Point
+✓ Check
+16.5 RadioButton 637
+16.5 RadioButton
+Radio buttons, also known as option buttons, enable the user to choose a single item from a 
+group of choices. In appearance radio buttons resemble check boxes, but check boxes display 
+a square that is either checked or blank, whereas radio buttons display a circle that is either 
+filled (if selected) or blank (if not selected).
+RadioButton is a subclass of ToggleButton. The difference between a radio button 
+and a toggle button is that a radio button displays a circle, but a toggle button is rendered 
+similar to a button. The UML diagrams for ToggleButton and RadioButton are shown in 
+Figure 16.9.
+javafx.scene.control.ToggleButton-selected: BooleanProperty-toggleGroup:
+   ObjectProperty<ToggleGroup>
+option buttons
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
+Indicates whether the button is selected.
+Specifies the button group to which the button belongs.
++ToggleButton()
++ToggleButton(text: String)
++ToggleButton(text: String, graphic: Node)
+javafx.scene.control.RadioButton
+Creates an empty toggle button.
+Creates a toggle button with the specified text.
+Creates a toggle button with the specified text and graphic.
++RadioButton()
++RadioButton(text: String)
+Creates an empty radio button.
+Creates a radio button with the specified text.
+FIGURE 16.9 ToggleButton and RadioButton are specialized buttons for making selections.
+Here is an example of a radio button with text US, a graphic image, green text color, and 
+black border, and initially selected. 
+RadioButton rbUS = new RadioButton("US");
+rbUS.setGraphic(new ImageView("image/usIcon.gif"));
+rbUS.setTextFill(Color.GREEN);
+rbUS.setContentDisplay(ContentDisplay.LEFT);
+rbUS.setStyle("-fx-border-color: black");
+rbUS.setSelected(true);
+rbUS.setPadding(new Insets(5, 5, 5,));
+To group radio buttons, you need to create an instance of ToggleGroup and set a radio 
+button’s toggleGroup property to join the group, as follows:
+  ToggleGroup group = new ToggleGroup();
+  rbRed.setToggleGroup(group);
+  rbGreen.setToggleGroup(group);
+  rbBlue.setToggleGroup(group);
+This code creates a button group for radio buttons rbRed, rbGreen, and rbBlue so that 
+buttons rbRed, rbGreen, and rbBlue are selected mutually exclusively. Without grouping, 
+these buttons would be independent.
+When a radio button is changed (selected or deselected), it fires an ActionEvent. To see 
+if a radio button is selected, use the isSelected() method.
+638 Chapter 16  JavaFX UI Controls and Multimedia
+We now give a program that adds three radio buttons named Red, Green, and Blue to the 
+preceding example to let the user choose the color of the message, as shown in Figure 16.10.
+FIGURE 16.10 The program demonstrates using radio buttons.
+VBox
+containing
+threeradio
+buttons
+Again there are at least two approaches to writing this program. The first is to revise the 
+precedingCheckBoxDemo class to insert the code for adding the radio buttons and process
+ing their events. The second is to define a subclass that extends CheckBoxDemo. Listing 16.4 
+gives the code to implement the second approach.
+LISTING 16.4 RadioButtonDemo.java
+ 1 import javafx.geometry.Insets;
+ 2 import javafx.scene.control.RadioButton;
+ 3 import javafx.scene.control.ToggleGroup;
+ 4 import javafx.scene.layout.BorderPane;
+ 5 import javafx.scene.layout.VBox;
+ 6 import javafx.scene.paint.Color;
+ 7
+ 8 public class RadioButtonDemo extends CheckBoxDemo {
+ 9    @Override // Override the getPane() method in the super class
+10 protected BorderPane getPane() {
+11      BorderPane pane = super.getPane();
+12
+13      VBox paneForRadioButtons = new VBox(20);
+14      paneForRadioButtons.setPadding(new Insets(5,5, 5, 5));
+15      paneForRadioButtons.setStyle("-fx-border-color: green");
+16      paneForRadioButtons.setStyle
+17        ("-fx-border-width: 2px; -fx-border-color: green");
+18 RadioButton rbRed = new RadioButton("Red");
+19 RadioButton rbGreen = new RadioButton("Green");
+20 RadioButton rbBlue = new RadioButton("Blue");
+21      paneForRadioButtons.getChildren().addAll(rbRed, rbGreen, rbBlue);
+22 pane.setLeft(paneForRadioButtons);
+23
+24 ToggleGroup group = new ToggleGroup();
+25 rbRed.setToggleGroup(group);
+26 rbGreen.setToggleGroup(group);
+27 rbBlue.setToggleGroup(group);
+28
+29      rbRed.setOnAction(e -> {
+30 if (rbRed.isSelected()) {
+31          text.setFill(Color.RED);
+32        }
+33      });
+34
+35      rbGreen.setOnAction(e -> {
+36 if (rbGreen.isSelected()) {
+37          text.setFill(Color.GREEN);
+overridegetPane()
+invokesuper.getPane()
+pane for radio buttons
+create radio buttons
+add to border pane
+group radio buttons
+handle radio button
+Application
+ButtonDemo
+CheckBoxDemo
+RadioButtonDemo
+16.6 TextField 639
+38        }
+39      });
+40
+41      rbBlue.setOnAction(e -> {
+42
+if (rbBlue.isSelected()) {
+43          text.setFill(Color.BLUE);
+44        }
+45      });
+46
+47
+return pane;
+48    }
+49  }
+RadioButtonDemo extends CheckBoxDemo and overrides the getPane() method (line 
+10). The new getPane() method invokes the getPane() method from the CheckBoxDemo
+class to create a border pane that contains the check boxes, buttons, and a text (line 11). This 
+border pane is returned from invoking super.getPane(). The radio buttons are created and 
+added to paneForRadioButtons (lines 18–21). paneForRadioButtons is added to the 
+border pane (lines 22).
+The radio buttons are grouped together in lines 24–27. The handlers for processing the 
+action event on radio buttons are created in lines 29–45. It sets the appropriate color based on 
+the status of the radio buttons.
+The start method for this JavaFX program is defined in ButtonDemo and inherited in 
+CheckBoxDemo and then in RadioButtonDemo. So when you run RadioButtonDemo,
+the start method in ButtonDemo is invoked. Since the getPane() method is overrid
+den in RadioButtonDemo, the method in RadioButtonDemo is invoked from line 41 in 
+Listing 16.2, ButtonDemo.java.
+16.11 How do you test if a radio button is selected?
+16.12 Can you apply all the methods for Labeled to RadioButton?
+16.13 Can you set any node in the graphic property in a radio button?
+16.14 How do you group radio buttons?
+16.6 TextField
+A text field can be used to enter or display a string. TextField is a subclass of 
+TextInputControl. Figure 16.11 lists the properties and constructors in TextField.
+Here is an example of creating a noneditable text field with red text color, a specified font, 
+and right horizontal alignment: 
+TextField tfMessage = new TextField("T-Strom");
+tfMessage.setEditable(false);
+tfMessage.setStyle("-fx-text-fill: red");
+tfMessage.setFont(Font.font("Times", 20));
+tfMessage.setAlignment(Pos.BASELINE_RIGHT);
+When you move the cursor in the text field and press the Enter key, it fires an ActionEvent.
+Listing 16.5 gives a program that adds a text field to the preceding example to let the user 
+set a new message, as shown in Figure 16.12.
+LISTING 16.5 TextFieldDemo.java
+ 1
+ 2
+import javafx.geometry.Insets;
+return border pane
+main method omitted
+✓ Check
+✓Point
+import javafx.geometry.Pos;
+640 Chapter 16  JavaFX UI Controls and Multimedia
+ 3 import javafx.scene.control.Label;
+ 4 import javafx.scene.control.TextField; 
+ 5 import javafx.scene.layout.BorderPane;
+ 6
+ 7 public class TextFieldDemo extends RadioButtonDemo {
+ 8    @Override // Override the getPane() method in the super class
+ 9 protected BorderPane getPane() {
+10      BorderPane pane = super.getPane();
+11
+12      BorderPane paneForTextField = new BorderPane();
+13      paneForTextField.setPadding(new Insets(5, 5,5, 5));
+14      paneForTextField.setStyle("-fx-border-color: green");
+15      paneForTextField.setLeft(new Label("Enter a new message: "));
+16
+17 TextField tf = new TextField();
+18      tf.setAlignment(Pos.BOTTOM_RIGHT);
+19      paneForTextField.setCenter(tf);
+20      pane.setTop(paneForTextField); 
+21
+22 tf.setOnAction(e -> text.setText(tf.getText()));
+23
+24 return pane; 
+25    }
+26  }
+overridegetPane()
+invokesuper.getPane()
+pane for label and text field
+create text field
+add to border pane
+handle text field action
+return border pane
+main method omitted
+FIGURE 16.12 The program demonstrates using text fields.
+FIGURE 16.11 TextField enables the user to enter or display a string.
+javafx.scene.control.TextInputControl-text: StringProperty-editable: BooleanProperty
+javafx.scene.control.TextField-alignment: ObjectProperty<Pos>-prefColumnCount: IntegerProperty-onAction:
+   ObjectProperty<EventHandler<ActionEvent>>
+The text content of this control.
+Indicates whether the text can be edited by the user.
+Specifies how the text should be aligned in the text field.
+Specifies the preferred number of columns in the text field.
+Specifies the handler for processing the action event on the
+     text field.
+Creates an empty text field.
+Creates a text field with the specified text.
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class,but omitted in the UML diagram for brevity.
++TextField()
++TextField(text: String)
+Application
+ButtonDemo
+CheckBoxDemo
+RadioButtonDemo
+TextFieldDemo
+16.6 TextArea 641
+TextFieldDemo extends RadioButtonDemo (line 7) and adds a label and a text field to 
+let the user enter a new text (lines 12–19). After you set a new text in the text field and press 
+the Enter key, a new message is displayed (line 22). Pressing the Enter key on the text field 
+triggers an action event. 
+Note
+If a text field is used for entering a password, use PasswordField to replace 
+TextField. PasswordField extends TextField and hides the input text with 
+echo characters ******.
+16.15 Can you disable editing of a text field?
+16.16 Can you apply all the methods for TextInputControl to TextField?
+16.17 Can you set a node as the graphic property in a text field?
+16.18 How do you align the text in a text field to the right?
+16.7 TextArea
+A TextArea enables the user to enter multiple lines of text.
+If you want to let the user enter multiple lines of text, you may create several instances of 
+TextField. A better alternative, however, is to use TextArea, which enables the user to 
+enter multiple lines of text. Figure 16.13 lists the properties and constructors in TextArea.
+javafx.scene.control.TextInputControl
+PasswordField
+✓ Check
+✓Point
+Key
+Point
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.-text: StringProperty-editable: BooleanProperty
+javafx.scene.control.TextArea-prefColumnCount: IntegerProperty-prefRowCount: IntegerProperty -wrapText: BooleanProperty
+The text content of this control.
+Indicates whether the text can be edited by the user.
+Specifies the preferred number of text columns.
+Specifies the preferred number of text rows.
+Specifies whether the text is wrapped to the next line.
++TextArea()
++TextArea(text: String)
+Creates an empty text area.
+Creates a text area with the specified text.
+FIGURE 16.13 TextArea enables the user to enter or display multiple lines of characters.
+Here is an example of creating a text area with 5 rows and 20 columns, wrapped to the next 
+line, red text color, and Courier font 20 pixels.
+TextArea taNote = new TextArea("This is a text area");
+taNote.setPrefColumnCount(20);
+taNote.setPrefRowCount(5);
+taNote.setWrapText(true);
+taNote.setStyle("-fx-text-fill: red");
+taNote.setFont(Font.font("Times", 20));
+642 Chapter 16  JavaFX UI Controls and Multimedia
+TextArea provides scrolling, but often it is useful to create a ScrollPane object to hold an 
+instance of TextArea and let ScrollPane handle scrolling for TextArea, as follows:
+// Create a scroll pane to hold text area
+ScrollPane scrollPane = new ScrollPane(taNote);
+ScrollPane
+Tip
+You can place any node in a ScrollPane. ScrollPane provides vertical and 
+horizontal scrolling automatically if the control is too large to fit in the viewing area.
+We now give a program that displays an image and a short text in a label, and a long text 
+in a text area, as shown in Figure 16.14.
+A label
+showing an
+image and a
+text
+DescriptionPane
+A text area
+inside a
+scroll pane
+FIGURE 16.14 The program displays an image in a label, a title in a label, and text in the text area.
+Here are the major steps in the program:
+1. Define a class named DescriptionPane that extends BorderPane, as shown 
+in Listing 16.6. This class contains a text area inside a scroll pane, and a label for 
+displaying an image icon and a title. The class DescriptionPane will be reused in 
+later examples.
+2. Define a class named TextAreaDemo that extends Application, as shown in 
+Listing 16.7. Create an instance of DescriptionPane and add it to the scene. The rela
+tionship between DescriptionPane and TextAreaDemo is shown in Figure 16.15.
+javafx.scene.layout.BorderPane
+DescriptionPane
+javafx.application.Application-lblImageTitle: Label-taDescription: TextArea
++setImageView(im: ImageView)
++setDescription(text: String)
+1 1 TextAreaDemo
+FIGURE 16.15 TextAreaDemo uses DescriptionPane to display an image, title, and text 
+description of a national flag.
+LISTING 16.6 DescriptionPane.java
+ 1
+ 2
+ 3
+import javafx.geometry.Insets;
+import javafx.scene.control.Label;
+import javafx.scene.control.ContentDisplay;
+ 4 import javafx.scene.control.ScrollPane;
+ 5 import javafx.scene.control.TextArea;
+ 6 import javafx.scene.image.ImageView;
+ 7 import javafx.scene.layout.BorderPane;
+ 8 import javafx.scene.text.Font;
+ 9
+10 public class DescriptionPane extends BorderPane {
+11 /** Label for displaying an image and a title */
+12 private Label lblImageTitle = new Label();
+13
+14 /** Text area for displaying text */
+15 private TextArea taDescription = new TextArea();
+16
+17 public DescriptionPane() {
+18 // Center the icon and text and place the text under the icon
+19      lblImageTitle.setContentDisplay(ContentDisplay.TOP); 
+20      lblImageTitle.setPrefSize(200, 100);
+21
+22 // Set the font in the label and the text field
+23      lblImageTitle.setFont(new Font("SansSerif",16));
+24      taDescription.setFont(new Font("Serif",14));
+25
+26      taDescription.setWrapText(true);
+27      taDescription.setEditable(false);
+28
+29 // Create a scroll pane to hold the text area
+30 ScrollPane scrollPane = new ScrollPane(taDescription);
+31
+32 // Place label and scroll pane in the border pane
+33      setLeft(lblImageTitle);
+34 setCenter(scrollPane);
+35      setPadding(new Insets(5, 5, 5, 5));
+36    }
+37
+38 /** Set the title */
+39 public void setTitle(String title) {
+40      lblImageTitle.setText(title);
+41    }
+42
+43 /** Set the image view */
+44 public void setImageView(ImageView icon) {
+45      lblImageTitle.setGraphic(icon);
+46    }
+47
+48 /** Set the text description */
+49 public void setDescription(String text) {
+50      taDescription.setText(text);
+51    }
+52  }
+The text area is inside a ScrollPane (line 30), which provides scrolling functions for the 
+text area. 
+ThewrapText property is set to true (line 26) so that the line is automatically wrapped 
+when the text cannot fit in one line. The text area is set as noneditable (line 27), so you cannot 
+edit the description in the text area.
+It is not necessary to define a separate class for DescriptionPane in this example. How
+ever, this class was defined for reuse in the next section, where you will use it to display a 
+description pane for various images.
+label
+text area
+label properties
+wrap text
+read only
+scroll pane
+16.6 TextArea 643
+644 Chapter 16  JavaFX UI Controls and Multimedia
+LISTING 16.7 TextAreaDemo.java
+ 1 import javafx.application.Application;
+ 2 import javafx.stage.Stage;
+ 3 import javafx.scene.Scene;
+ 4 import javafx.scene.image.ImageView;
+ 5
+ 6 public class TextAreaDemo extends Application {
+ 7    @Override // Override the start method in the Application class
+ 8 public void start(Stage primaryStage) {
+ 9 // Declare and create a description pane
+10 DescriptionPane descriptionPane = new DescriptionPane();
+11
+12 // Set title, text, and image in the description pane
+13      descriptionPane.setTitle("Canada");
+14      String description = "The Canadian national flag ...";
+15      descriptionPane.setImageView(new ImageView("image/ca.gif"));
+16      descriptionPane.setDescription(description);
+17
+18 // Create a scene and place it in the stage
+19      Scene scene = new Scene(descriptionPane, 450,200);
+20      primaryStage.setTitle("TextAreaDemo"); // Set the stage title
+21      primaryStage.setScene(scene); // Place the scene in the stage
+22      primaryStage.show(); // Display the stage
+23    }
+24  }
+The program creates an instance of DescriptionPane (line 10), and sets the title (line 13), 
+image (line 15), and text in the description pane (line 16). DescriptionPane is a subclass of 
+Pane.DescriptionPane contains a label for displaying an image and a title, and a text area 
+for displaying a description of the image.
+16.19How do you create a text area with 10 rows and 20 columns? 
+16.20How do you obtain the text from a text area? 
+16.21 Can you disable editing of a text area?
+16.22What method do you use to wrap text to the next line in a text area?
+16.8 ComboBox
+A combo box, also known as a choice list or drop-down list, contains a list of items 
+from which the user can choose.
+A combo box is useful for limiting a user’s range of choices and avoids the cumbersome vali
+dation of data input. Figure 16.16 lists several frequently used properties and constructors in 
+ComboBox.ComboBox is defined as a generic class. The generic type T specifies the element 
+type for the elements stored in a combo box.
+The following statements create a combo box with four items, red color, and value set to 
+the first item. 
+createdescriptionPane
+set title
+set image
+adddescriptionPane
+to scene
+✓Point
+✓ Check
+Key
+Point
+ComboBox<String> cbo = new ComboBox<>();
+cbo.getItems().addAll("Item 1", "Item 2",
+"Item 3", "Item 4");
+cbo.setStyle("-fx-color: red");
+cbo.setValue("Item 1");
+16.8 ComboBox 645
+javafx.scene.control.ComboBoxBase<T>-value: ObjectProperty<T>-editable: BooleanProperty-onAction:
+   ObjectProperty<EventHandler<ActionEvent>>
+javafx.scene.control.ComboBox<T>-items: ObjectProperty<ObservableList<T>> -visibleRowCount: IntegerProperty
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
+The value selected in the combo box.
+Specifies whether the combo box allows user input.
+Specifies the handler for processing the action event.
++ComboBox()
++ComboBox(items: ObservableList<T>)
+The items in the combo box popup.
+The maximum number of visible rows of the items in the
+     combo box popup.
+Creates an empty combo box.
+Creates a combo box with the specified items.
+FIGURE 16.16 ComboBox enables the user to select an item from a list of items.
+ComboBox inherits from ComboBoxBase. ComboBox can fire an ActionEvent.
+Whenever an item is selected, an ActionEvent is fired. ObservableList is a 
+subinterface of java.util.List. So you can apply all the methods defined in List
+for an ObservableList. For convenience, JavaFX provides the static method 
+FXCollections.observableArrayList(arrayOfElements) for creating an 
+ObservableList from an array of elements.
+Listing 16.8 gives a program that lets the user view an image and a description of a coun
+try’s flag by selecting the country from a combo box, as shown in Figure 16.17.
+ComboBox
+DescriptionPane
+FIGURE 16.17 Information about a country, including an image and a description of its flag, 
+is displayed when the country is selected in the combo box.
+Here are the major steps in the program:
+1. Create the user interface.
+Create a combo box with country names as its selection values. Create a DescriptionPane
+object (the DescriptionPane class was introduced in the preceding section). Place 
+the combo box at the top of the border pane and the description pane in the center of the 
+border pane.
+2. Process the event.
+Create a handler for handling action event from the combo box to set the flag title, 
+image, and text in the description pane for the selected country name.
+646 Chapter 16  JavaFX UI Controls and Multimedia
+LISTING 16.8 ComboBoxDemo.java
+ 1 import javafx.application.Application;
+ 2 import javafx.stage.Stage;
+ 3 import javafx.collections.FXCollections;
+ 4 import javafx.collections.ObservableList;
+ 5 import javafx.scene.Scene;
+ 6 import javafx.scene.control.ComboBox;
+ 7 import javafx.scene.control.Label;
+ 8 import javafx.scene.image.ImageView;
+ 9 import javafx.scene.layout.BorderPane;
+10
+11 public class ComboBoxDemo extends Application {
+12 // Declare an array of Strings for flag titles
+13 private String[] flagTitles = {"Canada","China","Denmark",
+14 "France", "Germany","India","Norway","United Kingdom",
+15 "United States of America"};
+16
+17 // Declare an ImageView array for the national flags of 9 countries
+18 private ImageView[] flagImage = {new ImageView("image/ca.gif"),
+19 new ImageView("image/china.gif"),
+20 new ImageView("image/denmark.gif"),
+21 new ImageView("image/fr.gif"),
+22 new ImageView("image/germany.gif"),
+23 new ImageView("image/india.gif"),
+24 new ImageView("image/norway.gif"),
+25 new ImageView("image/uk.gif"), new ImageView("image/us.gif")};
+26
+27 // Declare an array of strings for flag descriptions
+28 private String[] flagDescription = new String[9];
+29
+30 // Declare and create a description pane
+31 private DescriptionPane descriptionPane = new DescriptionPane();
+32
+33 // Create a combo box for selecting countries
+34 private ComboBox<String> cbo = new ComboBox<>(); // flagTitles;
+35
+36    @Override // Override the start method in the Application class
+37 public void start(Stage primaryStage) {
+38 // Set text description
+39      flagDescription[0] = "The Canadian national flag ...";
+40      flagDescription[1] = "Description for China ... ";
+41      flagDescription[2] = "Description for Denmark ... ";
+42      flagDescription[3] = "Description for France ... ";
+43      flagDescription[4] = "Description for Germany ... ";
+44      flagDescription[5] = "Description for India ... ";
+45      flagDescription[6] = "Description for Norway ... ";
+46      flagDescription[7] = "Description for UK ... ";
+47      flagDescription[8] = "Description for US ... ";
+48
+49 // Set the first country (Canada) for display
+50      setDisplay(0);
+51
+52 // Add combo box and description pane to the border pane
+53      BorderPane pane = new BorderPane();
+54
+55      BorderPane paneForComboBox = new BorderPane();
+56      paneForComboBox.setLeft(new Label("Select a country: "));
+57      paneForComboBox.setCenter(cbo);
+58      pane.setTop(paneForComboBox);
+countries
+image views
+description
+combo box
+16.9 ListView 647
+59      cbo.setPrefWidth(400);
+60      cbo.setValue("Canada");
+61
+62 ObservableList<String> items =
+63 FXCollections.observableArrayList(flagTitles);
+64      cbo.getItems().addAll(items); 
+65      pane.setCenter(descriptionPane);
+66
+67 // Display the selected country
+68 cbo.setOnAction(e -> setDisplay(items.indexOf(cbo.getValue())));
+69
+70 // Create a scene and place it in the stage
+71      Scene scene = new Scene(pane, 450,170);
+72      primaryStage.setTitle("ComboBoxDemo"); // Set the stage title
+73      primaryStage.setScene(scene); // Place the scene in the stage
+74      primaryStage.show(); // Display the stage
+75    }
+76
+77 /** Set display information on the description pane */
+78 public void setDisplay(int index) {
+79      descriptionPane.setTitle(flagTitles[index]);
+80      descriptionPane.setImageView(flagImage[index]);
+81      descriptionPane.setDescription(flagDescription[index]);
+82    }
+83  }
+The program stores the flag information in three arrays: flagTitles,flagImage, and 
+flagDescription (lines 13–28). The array flagTitles contains the names of nine coun
+tries, the array flagImage contains image views of the nine countries’ flags, and the array 
+flagDescription contains descriptions of the flags.
+The program creates an instance of DescriptionPane (line 31), which was presented 
+in Listing 16.6, DescriptionPane.java. The program creates a combo box with values from 
+flagTitles (lines 62–63). The getItems() method returns a list from the combo box (line 
+64) and the addAll method adds multiple items into the list.
+When the user selects an item in the combo box, the action event triggers the execution of 
+the handler. The handler finds the selected index (line 68) and invokes the setDisplay(int
+index) method to set its corresponding flag title, flag image, and flag description on the pane 
+(lines 78–82).
+16.23How do you create a combo box and add three items to it?
+16.24How do you retrieve an item from a combo box? How do you retrieve a selected item 
+from a combo box?
+16.25How do you get the number of items in a combo box? How do you retrieve an item at 
+a specified index in a combo box?
+16.26What events would a ComboBox fire upon selecting a new item?
+16.9 ListView
+A list view is a control that basically performs the same function as a combo box, but 
+it enables the user to choose a single value or multiple values.
+Figure 16.18 lists several frequently used properties and constructors in ListView. ListView
+is defined as a generic class. The generic type T specifies the element type for the elements 
+stored in a list view.
+set combo box value 
+observable list
+add to combo box
+✓Point
+✓ Check
+Key
+Point
+VideoNote
+UseListView
+648 Chapter 16  JavaFX UI Controls and Multimedia
+javafx.scene.control.ListView<T>-items: ObjectProperty<ObservableList<T>> -orientation: BooleanProperty-selectionModel:
+   ObjectProperty<MultipleSelectionModel<T>>
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
++ListView()
++ListView(items: ObservableList<T>)
+The items in the list view.
+Indicates whether the items are displayed horizontally or vertically
+     in the list view.
+Specifies how items are selected. The SelectionModel is also used
+     to obtain the selected items.
+Creates an empty list view.
+Creates a list view with the specified items.
+FIGURE 16.18 ListView enables the user to select one or multiple items from a list of items.
+The getSelectionModel() method returns an instance of SelectionModel, which 
+contains the methods for setting a selection mode and obtaining selected indices and items. 
+The selection mode is defined in one of the two constants SelectionMode.MULTIPLE and 
+SelectionMode.SINGLE, which indicates whether a single item or multiple items can be 
+selected. The default value is SelectionMode.SINGLE. Figure 16.19a shows a single selec
+tion and Figure 16.19b–c show multiple selections. 
+(a) Single selection 
+(b) Multiple selection
+(c) Multiple selection
+FIGURE 16.19 SelecitonMode has two selection modes: single selection and multiple
+interval selection.
+The following statements create a list view of six items with multiple selections allowed. 
+    ObservableList<String> items = 
+      FXCollections.observableArrayList("Item 1", "Item 2",
+"Item 3", "Item 4", "Item 5", "Item 6");
+    ListView<String> lv = new ListView<>(items);
+    lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+The selection model in a list view has the selectedItemProperty property, which is an 
+instance of Observable. As discussed in Section 15.10, you can add a listener to this prop
+erty for handling the property change as follows: 
+    lv.getSelectionModel().selectedItemProperty().addListener(
+new InvalidationListener() {
+        public void invalidated(Observable ov) {
+          System.out.println("Selected indices: "
+            + lv.getSelectionModel().getSelectedIndices());
+16.9 ListView 649
+          System.out.println("Selected items: "
+            + lv.getSelectionModel().getSelectedItems());
+        }
+      });
+This anonymous inner class can be simplified using a lambda expression as follows:
+    lv.getSelectionModel().selectedItemProperty().addListener(ov -> {
+      System.out.println("Selected indices: "
+        + lv.getSelectionModel().getSelectedIndices());
+      System.out.println("Selected items: "
+        + lv.getSelectionModel().getSelectedItems());
+    });
+Listing 16.9 gives a program that lets users select the countries in a list view and displays 
+the flags of the selected countries in the image views. Figure 16.20 shows a sample run of the 
+program.
+ListView
+inside a
+scroll pane
+FlowPane
+AnImageView
+is displayed
+FIGURE 16.20 When the countries in the list view are selected, corresponding images 
+of their flags are displayed in the image views.
+Here are the major steps in the program:
+1. Create the user interface.
+Create a list view with nine country names as selection values, and place the list view 
+inside a scroll pane. Place the scroll pane on the left of a border pane. Create nine image 
+views to be used to display the countries’ flag images. Create a flow pane to hold the 
+image views and place the pane in the center of the border pane.
+2. Process the event.
+Create a listener to implement the invalidated method in the 
+InvalidationListener interface to place the selected countries’ flag image views 
+in the pane.
+LISTING 16.9 ListViewDemo.java
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.collections.FXCollections;
+import javafx.scene.Scene;
+import javafx.scene.control.ListView;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+10 import javafx.scene.layout.FlowPane;
+11
+12 public class ListViewDemo extends Application {
+650 Chapter 16  JavaFX UI Controls and Multimedia
+13 // Declare an array of Strings for flag titles
+14 private String[] flagTitles = {"Canada","China","Denmark",
+15 "France", "Germany","India","Norway","United Kingdom",
+16 "United States of America"};
+17
+18 // Declare an ImageView array for the national flags of 9 countries
+19 private ImageView[] ImageViews = {
+20 new ImageView("image/ca.gif"),
+21 new ImageView("image/china.gif"),
+22 new ImageView("image/denmark.gif"),
+23 new ImageView("image/fr.gif"),
+24 new ImageView("image/germany.gif"),
+25 new ImageView("image/india.gif"),
+26 new ImageView("image/norway.gif"),
+27 new ImageView("image/uk.gif"),
+28 new ImageView("image/us.gif")
+29    };
+30
+31    @Override // Override the start method in the Application class
+32 public void start(Stage primaryStage) {
+33 ListView<String> lv = new ListView<>
+34 (FXCollections.observableArrayList(flagTitles));
+35      lv.setPrefSize(400,400);
+36 lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+37
+38 // Create a pane to hold image views
+39      FlowPane imagePane = new FlowPane(10, 10);
+40      BorderPane pane = new BorderPane();
+41 pane.setLeft(new ScrollPane(lv));
+42      pane.setCenter(imagePane);
+43
+44 lv.getSelectionModel().selectedItemProperty().addListener(
+45 ov -> {
+46 imagePane.getChildren().clear();
+47 for (Integer i: lv.getSelectionModel().getSelectedIndices()) {
+48 imagePane.getChildren().add(ImageViews[i]);
+49 }
+50 });
+51
+52 // Create a scene and place it in the stage
+53      Scene scene = new Scene(pane, 450,170);
+54      primaryStage.setTitle("ListViewDemo"); // Set the stage title
+55      primaryStage.setScene(scene); // Place the scene in the stage
+56      primaryStage.show(); // Display the stage
+57    }
+58  }
+The program creates an array of strings for countries (lines 14–16) and an array of nine 
+image views for displaying flag images for nine countries (lines 19–29) in the same order 
+as in the array of countries. The items in the list view are from the array of countries 
+(line 34). Thus, the index 0 of the image view array corresponds to the first country in 
+the list view.
+The list view is placed in a scroll pane (line 41) so that it can be scrolled when the number 
+of items in the list extends beyond the viewing area.
+By default, the selection mode of the list view is single. The selection mode for the list 
+view is set to multiple (line 36), which allows the user to select multiple items in the list 
+view. When the user selects countries in the list view, the listener’s handler (lines 44–50) is 
+executed, which gets the indices of the selected items and adds their corresponding image 
+views to the flow pane.
+create a list view
+set list view properties
+place list view in pane
+listen to item selected
+add image views of selected 
+items
+16.10 ScrollBar 651
+16.27 How do you create an observable list with an array of strings?
+16.28 How do you set the orientation in a list view? 
+16.29 What selection modes are available for a list view? What is the default selection 
+mode? How do you set a selection mode?
+16.30 How do you obtain the selected items and selected indices?
+16.10 ScrollBar
+ScrollBar is a control that enables the user to select from a range of values.
+Figure 16.21 shows a scroll bar. Normally, the user changes the value of a scroll bar by mak
+ing a gesture with the mouse. For example, the user can drag the scroll bar’s thumb, click on 
+the scroll bar track, or the scroll bar’s left or right buttons. 
+Minimal value
+Track
+Left button
+Maximal value
+Thumb
+Right button
+FIGURE 16.21 A scroll bar represents a range of values graphically.
+ScrollBar has the following properties, as shown in Figure 16.22.
+javafx.scene.control.ScrollBar-blockIncrement: DoubleProperty -max: DoubleProperty-min: DoubleProperty-unitIncrement: DoubleProperty
+✓ Check
+✓Point
+Key
+Point
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
+The amount to adjust the scroll bar if the track of the bar is clicked (default: 10).
+The maximum value represented by this scroll bar (default: 100).
+The minimum value represented by this scroll bar (default: 0).
+The amount to adjust the scroll bar when the increment() and decrement()
+     methods are called (default: 1).-value: DoubleProperty-visibleAmount: DoubleProperty-orientation: ObjectProperty<Orientation>
++ScrollBar()
++increment()
++decrement()
+Current value of the scroll bar (default: 0).
+The width of the scroll bar (default: 15).
+Specifies the orientation of the scroll bar (default: HORIZONTAL).
+Creates a default horizontal scroll bar.
+Increments the value of the scroll bar by unitIncrement.
+Decrements the value of the scroll bar by unitIncrement.
+FIGURE 16.22 ScrollBar enables the user to select from a range of values.
+Note
+The width of the scroll bar’s track corresponds to max + visibleAmount. When a 
+scroll bar is set to its maximum value, the left side of the bubble is at max, and the right 
+side is at max + visibleAmount.
+652 Chapter 16  JavaFX UI Controls and Multimedia
+When the user changes the value of the scroll bar, it notifies the listener of the change. You 
+can register a listener on the scroll bar’s valueProperty for responding to this change as 
+follows:
+    ScrollBar sb = new ScrollBar();
+    sb.valueProperty().addListener(ov -> {
+      System.out.println("old value: " + oldVal);
+      System.out.println("new value: " + newVal);
+    });
+Listing 16.10 gives a program that uses horizontal and vertical scroll bars to move a text 
+displayed on a pane. The horizontal scroll bar is used to move the text to the left and the right, 
+and the vertical scroll bar to move it up and down. A sample run of the program is shown in 
+Figure 16.23.
+Text
+Vertical scroll
+bar
+Horizontal scroll
+bar
+FIGURE 16.23 The scroll bars move the message on a pane horizontally and vertically.
+Here are the major steps in the program:
+1. Create the user interface.
+Create a Text object and place it in the center of the border pane. Create a vertical scroll 
+bar and place it on the right of the border pane. Create a horizontal scroll bar and place 
+it at the bottom of the border pane.
+2. Process the event.
+Create listeners to move the text according to the bar movement in the scroll bars upon 
+the change of the value property.
+LISTING 16.10 ScrollBarDemo.java
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.geometry.Orientation;
+import javafx.scene.Scene;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
+10 public class ScrollBarDemo extends Application {
+11    @Override // Override the start method in the Application class
+12
+public void start(Stage primaryStage) {
+13      Text text = new Text(20, 20, "JavaFX Programming");
+14
+horizontal scroll bar
+vertical scroll bar
+15
+16
+ScrollBar sbHorizontal = new ScrollBar();
+ScrollBar sbVertical = new ScrollBar();
+17      sbVertical.setOrientation(Orientation.VERTICAL);
+18
+19
+// Create a text in a pane
+16.10 ScrollBar 653
+20      Pane paneForText = new Pane();
+21      paneForText.getChildren().add(text); 
+22
+23 // Create a border pane to hold text and scroll bars
+24      BorderPane pane = new BorderPane();
+25      pane.setCenter(paneForText);
+26      pane.setBottom(sbHorizontal);
+27      pane.setRight(sbVertical);
+28
+29 // Listener for horizontal scroll bar value change
+30 sbHorizontal.valueProperty().addListener(ov ->
+31 text.setX(sbHorizontal.getValue() * paneForText.getWidth() /
+32 sbHorizontal.getMax()));
+33
+34 // Listener for vertical scroll bar value change
+35 sbVertical.valueProperty().addListener(ov ->
+36 text.setY(sbVertical.getValue() * paneForText.getHeight() /
+37 sbVertical.getMax()));
+38
+39 // Create a scene and place it in the stage
+40      Scene scene = new Scene(pane, 450,170);
+41      primaryStage.setTitle("ScrollBarDemo"); // Set the stage title
+42      primaryStage.setScene(scene); // Place the scene in the stage
+43      primaryStage.show(); // Display the stage
+44    }
+45  }
+The program creates a text (line 13) and two scroll bars (sbHorizontalandsbVertical)
+(lines 15–16). The text is placed in a pane (line 21) that is then placed in the center of the border 
+pane (line 25). If the text were directly placed in the center of the border pane, the position of the 
+text cannot be changed by resetting its x and y properties. The sbHorizontal and sbVertical
+are placed on the right and at the bottom of the border pane (lines 26–27), respectively.
+You can specify the properties of the scroll bar. By default, the property value is 100 for 
+max,0 for min,10 for blockIncrement, and 15 for visibleAmount.
+A listener is registered to listen for the sbHorizontalvalue property change (lines 
+30–32). When the value of the scroll bar changes, the listener is notified by invoking the han
+dler to set a new x value for the text that corresponds to the current value of sbHorizontal
+(lines 31–32). 
+A listener is registered to listen for the sbVerticalvalue property change (lines 35–37). 
+When the value of the scroll bar changes, the listener is notified by invoking the handler to set 
+a new y value for the text that corresponds to the current value of sbVertical (lines 36–37). 
+Alternatively, the code in lines 30–37 can be replaced by using binding properties as 
+follows:
+    text.xProperty().bind(sbHorizontal.valueProperty().
+      multiply(paneForText.widthProperty()).
+      divide(sbHorizontal.maxProperty())); 
+    text.yProperty().bind(sbVertical.valueProperty().multiply(
+      paneForText.heightProperty().divide(
+      sbVertical.maxProperty())));
+16.31How do you create a horizontal scroll bar? How do you create a vertical scroll bar? 
+16.32How do you write the code to respond to the value property change of a scroll bar?
+16.33How do you get the value from a scroll bar? How do you get the maximum value 
+from a scroll bar?
+add text to a pane
+border pane
+set new location for text 
+set new location for text 
+✓Point
+✓ Check
+654 Chapter 16  JavaFX UI Controls and Multimedia
+16.11 Slider
+Key
+Point
+VideoNote
+Use Slider
+Slider is similar to ScrollBar, but Slider has more properties and can appear in 
+many forms.
+Figure 16.24 shows two sliders. Slider lets the user graphically select a value by sliding 
+a knob within a bounded interval. The slider can show both major tick marks and minor 
+tick marks between them. The number of pixels between the tick marks is specified by the 
+majorTickUnit and minorTickUnit properties. Sliders can be displayed horizontally or 
+vertically, with or without ticks, and with or without labels.
+Text
+Vertical slider
+Horizontal slider
+FIGURE 16.24 The sliders move the message on a pane horizontally and vertically.
+The frequently used constructors and properties in Slider are shown in Figure 16.25.
+javafx.scene.control.Slider-blockIncrement: DoubleProperty -max: DoubleProperty-min: DoubleProperty-value: DoubleProperty-orientation: ObjectProperty<Orientation>-majorTickUnit: DoubleProperty-minorTickCount: IntegerProperty-showTickLabels: BooleanProperty-showTickMarks: BooleanProperty
++Slider()
++Slider(min: double, max: double,
+   value: double)
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
+The amount to adjust the slider if the track of the bar is clicked (default: 10).
+The maximum value represented by this slider (default: 100).
+The minimum value represented by this slider (default: 0).
+Current value of the slider (default: 0).
+Specifies the orientation of the slider (default: HORIZONTAL).
+The unit distance between major tick marks.
+The number of minor ticks to place between two major ticks.
+Specifies whether the labels for tick marks are shown.
+Specifies whether the tick marks are shown.
+Creates a default horizontal slider.
+Creates a slider with the specified min, max, and value.
+FIGURE 16.25 Slider enables the user to select from a range of values.
+Note
+The values of a vertical scroll bar increase from top to bottom, but the values of a vertical 
+slider decrease from top to bottom.
+You can add a listener to listen for the value property change in a slider in the same way 
+as in a scroll bar. We now rewrite the program in the preceding section using the sliders to 
+move a text displayed on a pane in Listing 16.11. A sample run of the program is shown in 
+Figure 16.24.
+LISTING 16.11 SliderDemo.java
+16.11 Slider 655
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.geometry.Orientation;
+import javafx.scene.Scene;
+import javafx.scene.control.Slider;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
+10 public class SliderDemo extends Application {
+11    @Override // Override the start method in the Application class
+12
+public void start(Stage primaryStage) {
+13      Text text = new Text(20, 20, "JavaFX Programming");
+14
+15
+Slider slHorizontal = new Slider();
+16      slHorizontal.setShowTickLabels(true);
+17      slHorizontal.setShowTickMarks(true);
+18
+19
+Slider slVertical = new Slider();
+20      slVertical.setOrientation(Orientation.VERTICAL); 
+21      slVertical.setShowTickLabels(true);
+22      slVertical.setShowTickMarks(true);
+23      slVertical.setValue(100);
+24
+25
+// Create a text in a pane
+26      Pane paneForText = new Pane();
+27      paneForText.getChildren().add(text); 
+28
+29
+// Create a border pane to hold text and scroll bars
+30      BorderPane pane = new BorderPane();
+31      pane.setCenter(paneForText);
+32      pane.setBottom(slHorizontal);
+33      pane.setRight(slVertical);
+34
+35
+slHorizontal.valueProperty().addListener(ov ->
+36        text.setX(slHorizontal.getValue() * paneForText.getWidth() /
+37          slHorizontal.getMax()));
+38
+39
+slVertical.valueProperty().addListener(ov ->
+40        text.setY((slVertical.getMax() - slVertical.getValue())
+41          * paneForText.getHeight() / slVertical.getMax()));
+42
+43
+// Create a scene and place it in the stage
+44      Scene scene = new Scene(pane, 450, 170);
+45      primaryStage.setTitle("SliderDemo"); // Set the stage title
+46      primaryStage.setScene(scene); // Place the scene in the stage
+47      primaryStage.show(); // Display the stage
+48    }
+49  }
+Slider is similar to ScrollBar but has more features. As shown in this example, you can 
+specify labels, major ticks, and minor ticks on a Slider (lines 16–17). 
+A listener is registered to listen for the slHorizontal value property change (lines 
+35–37) and another one is for the sbVertical value property change (lines 39–41). When 
+the value of the slider changes, the listener is notified by invoking the handler to set a new posi
+tion for the text (lines 36–37, 40–41). Note that since the value of a vertical slider decreases 
+from top to bottom, the corresponding y value for the text is adjusted accordingly.
+horizontal slider
+set slider properties
+vertical slider
+set slider properties
+add text to a pane
+border pane
+set new location for text 
+set new location for text 
+656 Chapter 16  JavaFX UI Controls and Multimedia
+The code in lines 35–41 can be replaced by using binding properties as follows:
+    text.xProperty().bind(slHorizontal.valueProperty().
+      multiply(paneForText.widthProperty()).
+      divide(slHorizontal.maxProperty())); 
+    text.yProperty().bind((slVertical.maxProperty().subtract(
+      slVertical.valueProperty()).multiply(
+      paneForText.heightProperty().divide(
+      slVertical.maxProperty()))));
+Listing 15.17 gives a program that displays a bouncing ball. You can add a slider to control 
+the speed of the ball movement as shown in Figure 16.26. The new program is given in 
+Listing 16.12.
+FIGURE 16.26 You can increase or decrease the speed of the ball using a slider.
+LISTING 16.12 BounceBallSlider.java
+ 1 import javafx.application.Application;
+ 2 import javafx.stage.Stage;
+ 3 import javafx.scene.Scene;
+ 4 import javafx.scene.control.Slider;
+ 5 import javafx.scene.layout.BorderPane;
+ 6
+ 7 public class BounceBallSlider extends Application {
+ 8    @Override // Override the start method in the Application class
+ 9 public void start(Stage primaryStage) {
+10      BallPane ballPane = new BallPane();
+11 Slider slSpeed = new Slider();
+12      slSpeed.setMax(20);
+13 ballPane.rateProperty().bind(slSpeed.valueProperty());
+14
+15      BorderPane pane = new BorderPane();
+16      pane.setCenter(ballPane); 
+17      pane.setBottom(slSpeed); 
+18
+19 // Create a scene and place it in the stage
+20      Scene scene = new Scene(pane, 250,250);
+21      primaryStage.setTitle("BounceBallSlider");// Set the stage title
+22      primaryStage.setScene(scene); // Place the scene in the stage
+23      primaryStage.show(); // Display the stage
+24    }
+25  }
+The BallPane class defined in Listing 15.17 animates a ball bouncing in a pane. 
+The rateProperty() method in BallPane returns a property value for animation rate. 
+create a ball pane
+create a slider
+set max value for slider
+bind rate with slider value
+create a border pane
+add ball pane to center
+add slider to the bottom
+16.12 Case Study: Developing a Tic-Tac-Toe Game  657
+The animation stops if the rate is 0. If the rate is greater than 20, the animation will be too fast. 
+So, we purposely set the rate to a value between 0 and 20. This value is bound to the slider 
+value (line 13). So the slider max value is set to 20 (line 12).
+16.34 How do you create a horizontal slider? How do you create a vertical slider? 
+16.35 How do you add a listener to handle the property value change of a slider?
+16.36 How do you get the value from a slider? How do you get the maximum value from a 
+slider?
+16.12 Case Study: Developing a Tic-Tac-Toe Game
+This section develops a program for playing tic-tac-toe.
+From the many examples in this and earlier chapters you have learned about objects, classes, 
+arrays, class inheritance, GUI, and event-driven programming. Now it is time to put what you 
+have learned to work in developing comprehensive projects. In this section, we will develop 
+a JavaFX program with which to play the popular game of tic-tac-toe. 
+Two players take turns marking an available cell in a 3 * 3 grid with their respective 
+tokens (either X or O). When one player has placed three tokens in a horizontal, vertical, or 
+diagonal row on the grid, the game is over and that player has won. A draw (no winner) occurs 
+when all the cells on the grid have been filled with tokens and neither player has achieved a 
+win. Figure 16.27 shows the representative sample runs of the game.
+✓ Check
+✓Point
+Key
+Point
+VideoNote
+TicTacToe
+(a) The X player won the game
+(b) Draw — no winners
+FIGURE 16.27 Two players play a tic-tac-toe game.
+(c) The O player won the game
+All the examples you have seen so far show simple behaviors that are easy to model with 
+classes. The behavior of the tic-tac-toe game is somewhat more complex. To define classes 
+that model the behavior, you need to study and understand the game.
+Assume that all the cells are initially empty, and that the first player takes the X token and 
+the second player the O token. To mark a cell, the player points the mouse to the cell and 
+clicks it. If the cell is empty, the token (X or O) is displayed. If the cell is already filled, the 
+player’s action is ignored.
+From the preceding description, it is obvious that a cell is a GUI object that handles 
+the mouse-click event and displays tokens. There are many choices for this object. We 
+will use a pane to model a cell and to display a token (X or O). How do you know the 
+state of the cell (empty, X, or O)? You use a property named token of the char type in 
+the Cell class. The Cell class is responsible for drawing the token when an empty cell 
+is clicked, so you need to write the code for listening to the mouse-clicked action and 
+for painting the shapes for tokens X and O. The Cell class can be defined as shown in 
+Figure 16.28.
+658 Chapter 16  JavaFX UI Controls and Multimedia
+javafx.scene.layout.Pane
+Cell-token: char
++getToken(): char
++setToken(token: char): void-handleMouseClick(): void
+Token used in the cell (default: '  ').
+Returns the token in the cell.
+Sets a new token in the cell.
+Handles a mouse click event.
+FIGURE 16.28 The Cell class displays the token in a cell.
+The tic-tac-toe board consists of nine cells, created using new Cell[3][3]. To determine 
+which player’s turn it is, you can introduce a variable named whoseTurn of the char type. 
+whoseTurn is initially 'X', then changes to 'O', and subsequently changes between 'X' and 
+'O' whenever a new cell is occupied. When the game is over, set whoseTurn to ' '.
+How do you know whether the game is over, whether there is a winner, and who the 
+winner, if any? You can define a method named isWon(char token) to check whether a 
+specified token has won and a method named isFull() to check whether all the cells are 
+occupied.
+Clearly, two classes emerge from the foregoing analysis. One is the Cell class, which 
+handles operations for a single cell; the other is the TicTacToe class, which plays the whole 
+game and deals with all the cells. The relationship between these two classes is shown in 
+Figure 16.29.
+Cell
+9
+javafx.application.Application
+1
+TicTacToe-whoseTurn: char-cell: Cell[][] -lblStatus: Label
++TicTacToe()
++isFull(): boolean
++isWon(token: char): boolean
+FIGURE 16.29 The TicTacToe class contains nine cells.
+Indicates which player has the turn, initially X.
+A 3 
+ 3, two-dimensional array for cells.
+A label to display game status.
+Constructs the TicTacToe user interface.
+Returns true if all cells are filled.
+Returns true if a player with the specified token has won.
+Since the Cell class is only to support the TicTacToe class, it can be defined as an inner 
+class in TicTacToe. The complete program is given in Listing 16.13.
+LISTING 16.13 TicTacToe.java
+  1
+  2
+  3
+  4
+  5
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+16.12Case Study: Developing a Tic-Tac-Toe Game  659
+  6 import javafx.scene.layout.GridPane;
+  7 import javafx.scene.layout.Pane;
+  8 import javafx.scene.paint.Color;
+  9 import javafx.scene.shape.Line;
+ 10 import javafx.scene.shape.Ellipse;
+ 11
+ 12 public class TicTacToe extends Application {
+ 13 // Indicate which player has a turn, initially it is the X player
+ 14 private char whoseTurn = 'X';
+ 15
+ 16 // Create and initialize cell
+ 17 private Cell[][] cell = new Cell[3][3];
+ 18
+ 19 // Create and initialize a status label
+ 20 private Label lblStatus = new Label("X's turn to play");
+ 21
+ 22    @Override // Override the start method in the Application class
+ 23 public void start(Stage primaryStage) {
+ 24 // Pane to hold cell
+ 25      GridPane pane = new GridPane();
+ 26 for (int i = 0; i < 3; i++)
+ 27 for (int j = 0; j < 3; j++)
+ 28          pane.add(cell[i][j] = new Cell(), j, i); 
+ 29
+ 30      BorderPane borderPane = new BorderPane();
+ 31      borderPane.setCenter(pane); 
+ 32      borderPane.setBottom(lblStatus); 
+ 33
+ 34 // Create a scene and place it in the stage
+ 35      Scene scene = new Scene(borderPane, 450,170);
+ 36      primaryStage.setTitle("TicTacToe"); // Set the stage title
+ 37      primaryStage.setScene(scene); // Place the scene in the stage
+ 38      primaryStage.show(); // Display the stage
+ 39    }
+ 40
+ 41 /** Determine if the cell are all occupied */
+ 42 public boolean isFull() {
+ 43 for (int i = 0; i < 3; i++)
+ 44 for (int j = 0; j < 3; j++)
+ 45 if (cell[i][j].getToken() == ' ')
+ 46 return false;
+ 47
+ 48 return true;
+ 49    }
+ 50
+ 51 /** Determine if the player with the specified token wins */
+ 52 public boolean isWon(char token) {
+ 53 for (int i = 0; i < 3; i++)
+ 54 if (cell[i][0].getToken() == token
+ 55            && cell[i][1].getToken() == token
+ 56            && cell[i][2].getToken() == token) {
+ 57 return true;
+ 58        }
+ 59
+ 60 for (int j = 0; j < 3; j++)
+ 61 if (cell[0][j].getToken() ==  token
+ 62            && cell[1][j].getToken() == token
+ 63            && cell[2][j].getToken() == token) {
+ 64 return true;
+ 65        }
+main class TicTacToe
+hold nine cells
+create a cell
+tic-tac-toe cells in center
+label at bottom
+checkisFull
+check rows
+check columns
+660 Chapter 16  JavaFX UI Controls and Multimedia
+ 66
+ 67 if (cell[0][0].getToken() == token 
+ 68          && cell[1][1].getToken() == token
+ 69          && cell[2][2].getToken() == token) {
+ 70 return true;
+ 71      }
+ 72
+ 73 if (cell[0][2].getToken() == token
+ 74          && cell[1][1].getToken() == token
+ 75          && cell[2][0].getToken() == token) {
+ 76 return true;
+ 77      }
+ 78
+ 79 return false;
+ 80    }
+ 81
+ 82 // An inner class for a cell
+ 83 public class Cell extends Pane {
+ 84 // Token used for this cell
+ 85 private char token = ' ';
+ 86
+ 87 public Cell() {
+ 88        setStyle("-fx-border-color: black");
+ 89 this.setPrefSize(2000,2000);
+ 90 this.setOnMouseClicked(e -> handleMouseClick());
+ 91      }
+ 92
+ 93 /** Return token */
+ 94 public char getToken() {
+ 95 return token;
+ 96      }
+ 97
+ 98 /** Set a new token */
+ 99 public void setToken(char c) {
+100        token = c;
+101
+102 if (token == 'X') {
+103          Line line1 = new Line(10,10,
+104 this.getWidth() - 10, this.getHeight() - 10);
+105          line1.endXProperty().bind(this.widthProperty().subtract(10));
+106          line1.endYProperty().bind(this.heightProperty().subtract(10));
+107          Line line2 = new Line(10,this.getHeight() - 10,
+108 this.getWidth() - 10, 10);
+109          line2.startYProperty().bind(
+110 this.heightProperty().subtract(10));
+111          line2.endXProperty().bind(this.widthProperty().subtract(10));
+112
+113 // Add the lines to the pane
+114 this.getChildren().addAll(line1, line2); 
+115        }
+116 else if (token == 'O') {
+117          Ellipse ellipse = new Ellipse(this.getWidth() / 2,
+118 this.getHeight() / 2, this.getWidth() / 2 - 10,
+119 this.getHeight() / 2 - 10);
+120          ellipse.centerXProperty().bind(
+121 this.widthProperty().divide(2));
+122          ellipse.centerYProperty().bind(
+123 this.heightProperty().divide(2));
+124          ellipse.radiusXProperty().bind(
+125 this.widthProperty().divide(2).subtract(10));
+check major diagonal
+check subdiagonal
+inner class Cell
+register listener
+display X
+display O
+16.12 Case Study: Developing a Tic-Tac-Toe Game  661
+126          ellipse.radiusYProperty().bind(
+127
+this.heightProperty().divide(2).subtract(10));
+128          ellipse.setStroke(Color.BLACK);
+129          ellipse.setFill(Color.WHITE);
+130
+131          getChildren().add(ellipse); // Add the ellipse to the pane
+132        }
+133      }
+134
+135
+/* Handle a mouse click event */
+136
+137
+138
+private void handleMouseClick() {
+// If cell is empty and game is not over
+if (token == ' ' && whoseTurn != ' ') {
+139          setToken(whoseTurn); // Set token in the cell
+140
+141
+142
+// Check game status
+if (isWon(whoseTurn)) {
+143            lblStatus.setText(whoseTurn + " won! The game is over");
+144            whoseTurn = ' '; // Game is over
+145          }
+146
+else if (isFull()) {
+147            lblStatus.setText("Draw! The game is over");
+148            whoseTurn = ' '; // Game is over
+149          }
+150
+else {
+151
+// Change the turn
+152            whoseTurn = (whoseTurn == 'X') ? 'O' : 'X';
+153
+// Display whose turn
+154            lblStatus.setText(whoseTurn + "'s turn");
+155          }
+156        }
+157      }
+158    }
+159  }
+The TicTacToe class initializes the user interface with nine cells placed in a grid pane (lines 
+25–28). A label named lblStatus is used to show the status of the game (line 20). The varia
+ble whoseTurn (line 14) is used to track the next type of token to be placed in a cell. The meth
+ods isFull (lines 42–49) and isWon (lines 52–80) are for checking the status of the game.
+Since Cell is an inner class in TicTacToe, the variable (whoseTurn) and methods 
+(isFull and isWon) defined in TicTacToe can be referenced from the Cell class. The 
+inner class makes programs simple and concise. If Cell were not defined as an inner class of 
+TicTacToe, you would have to pass an object of TicTacToe to Cell in order for the vari
+ables and methods in TicTacToe to be used in Cell.
+The listener for the mouse-click action is registered for the cell (line 90). If an empty cell is 
+clicked and the game is not over, a token is set in the cell (line 138). If the game is over, whoseTurn
+is set to ' ' (lines 144, 148). Otherwise, whoseTurn is alternated to a new turn (line 152). 
+Tip
+Use an incremental approach in developing and testing a Java project of this kind. For 
+example, this program can be divided into five steps:
+1.
+2.
+3.
+4.
+5.
+Lay out the user interface and display a fixed token X on a cell.
+Enable the cell to display a fixed token X upon a mouse click.
+Coordinate between the two players so as to display tokens X and O alternately.
+Check whether a player wins, or whether all the cells are occupied without a winner.
+handle mouse click
+incremental development and 
+testing
+Implement displaying a message on the label upon each move by a player.
+662 Chapter 16  JavaFX UI Controls and Multimedia
+✓ Check
+✓Point
+Key
+Point
+VideoNote
+Use Media, MediaPlayer, 
+and MediaView
+16.37 When the game starts, what value is in whoseTurn? When the game is over, what 
+value is in whoseTurn?
+16.38 What happens when the user clicks on an empty cell if the game is not over? What 
+happens when the user clicks on an empty cell if the game is over?
+16.39 How does the program check whether a player wins? How does the program check 
+whether all cells are filled? 
+16.13 Video and Audio 
+You can use the Media class to obtain the source of the media, the MediaPlayer
+class to play and control the media, and the MediaView class to display the video.
+Media (video and audio) is essential in developing rich Internet applications. JavaFX provides 
+the Media, MediaPlayer, and MediaView classes for working with media. Currently, JavaFX 
+supports MP3, AIFF, WAV, and MPEG-4 audio formats and FLV and MPEG-4 video formats.
+TheMedia class represents a media source with properties duration,width, and height,
+as shown in Figure 16.30. You can construct a Media object from an Internet URL string. 
+javafx.scene.media.Media-duration: ReadOnlyObjectProperty
+   <Duration>
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.-width: ReadOnlyIntegerProperty-height: ReadOnlyIntegerProperty
++Media(source: String)
+The durations in seconds of the source media.
+The width in pixels of the source video.
+The height in pixels of the source video.
+Creates a Media from  a URL source.
+FIGURE 16.30 Media represents a media source such as a video or an audio.
+The MediaPlayer class plays and controls the media with properties such as autoPlay,
+currentCount, cycleCount,mute,volume, and totalDuration, as shown in Figure 16.31. 
+You can construct a MediaPlayer object from a media and use the pause() and play()
+method to pause and resume playing.
+javafx.scene.media.MediaPlayer-autoPlay: BooleanProperty -currentCount: ReadOnlyIntegerProperty-cycleCount: IntegerProperty-mute: BooleanProperty-volume: DoubleProperty-totalDuration:
+   ReadOnlyObjectProperty<Duration>
++MediaPlayer(media: Media)
++play(): void
++pause(): void
++seek(): void
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
+Specifies whether the playing should start automatically.
+The number of completed playback cycles.
+Specifies the number of time the media will be played.
+Specifies whether the audio is muted.
+The volume for the audio.
+The amount of time to play the media from start to finish.
+Creates a player for a specified media.
+Plays the media.
+Pauses the media.
+Seeks the player to a new playback time.
+FIGURE 16.31 MediaPlayer plays and controls a media.
+16.13 Video and Audio 663
+The MediaView class is a subclass of Node that provides a view of the Media being played 
+by a MediaPlayer. The MediaView class provides the properties for viewing the media, as 
+shown in Figure 16.32.
+javafx.scene.media.MediaView-x: DoubleProperty -y: DoubleProperty-mediaPlayer:
+   ObjectProperty<MediaPlayer>-fitWidth: DoubleProperty-fitHeight: DoubleProperty
+The getter and setter methods for property
+values and a getter for property itself are provided
+in the class, but omitted in the UML diagram for brevity.
++MediaView()
++MediaView(mediaPlayer: MediaPlayer)
+Specifies the current x-coordinate of the media view.
+Specifies the current y-coordinate of the media view.
+Specifies a media player for the media view.
+Specifies the width of the view for the media to fit.
+Specifies the height of the view for the media to fit.
+Creates an empty media view.
+Creates a media view with the specified media player.
+FIGURE 16.32 MediaView provides the properties for viewing the media.
+Listing 16.14 gives an example that displays a video in a view, as shown in Figure 16.33. You 
+can use the play/pause button to play or pause the video and use the rewind button to restart 
+the video, and use the slider to control the volume of the audio.
+FIGURE 16.33 The program controls and plays a video.
+LISTING 16.14 MediaDemo.java
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+10 import javafx.scene.layout.Region;
+11 import javafx.scene.media.Media;
+664 Chapter 16  JavaFX UI Controls and Multimedia
+12 import javafx.scene.media.MediaPlayer;
+13 import javafx.scene.media.MediaView;
+14 import javafx.util.Duration;
+15
+16 public class MediaDemo extends Application {
+17
+private static final String MEDIA_URL =
+18
+19
+"http://cs.armstrong.edu/liang/common/sample.mp4";
+20    @Override // Override the start method in the Application class
+21
+public void start(Stage primaryStage) {
+create a media
+create a media player
+create a media view
+create a play/pause button
+add handler for button action
+play media
+pause media
+create a rewind button
+create a handler for rewinding
+create a slider for volume
+set current volume
+bind volume with slider
+add buttons, slider to hBox
+place media view in a pane
+22
+23
+24
+25
+Media media = new Media(MEDIA_URL);
+MediaPlayer mediaPlayer = new MediaPlayer(media);
+MediaView mediaView = new MediaView(mediaPlayer);
+26      Button playButton = new Button(">");
+27      playButton.setOnAction(e -> {
+28
+if (playButton.getText().equals(">")) {
+29
+mediaPlayer.play();
+30          playButton.setText("||");
+31        } else {
+32
+mediaPlayer.pause();
+33          playButton.setText(">");
+34        }
+35      });
+36
+37      Button rewindButton = new Button("<<");
+38      rewindButton.setOnAction(e -> mediaPlayer.seek(Duration.ZERO));
+39
+40      Slider slVolume = new Slider();
+41      slVolume.setPrefWidth(150);
+42      slVolume.setMaxWidth(Region.USE_PREF_SIZE);
+43      slVolume.setMinWidth(30);
+44      slVolume.setValue(50);
+45      mediaPlayer.volumeProperty().bind(
+46        slVolume.valueProperty().divide(100));
+47
+48      HBox hBox = new HBox(10);
+49      hBox.setAlignment(Pos.CENTER);
+50      hBox.getChildren().addAll(playButton, rewindButton, 
+51
+new Label("Volume"), slVolume);
+52
+53      BorderPane pane = new BorderPane();
+54      pane.setCenter(mediaView); 
+55      pane.setBottom(hBox);
+56
+57
+// Create a scene and place it in the stage
+58      Scene scene = new Scene(pane, 650, 500);
+59      primaryStage.setTitle("MediaDemo"); // Set the stage title
+60      primaryStage.setScene(scene); // Place the scene in the stage
+61      primaryStage.show(); // Display the stage
+62    }
+63  }
+The source of the media is a URL string defined in lines 17 and 18. The program creates a 
+Media object from this URL (line 22), a MediaPlayer from the Media object (line 23), and 
+a MediaView from the MediaPlayer object (line 24). The relationship among these three 
+objects is shown in Figure 16.34.
+16.14 Case Study: National Flags and Anthems  665
+media: Media
+mediaPlayer: MediaPlayer
+mediaView: MediaView
+FIGURE 16.34 The media represents the source, the media player controls the playing, and the media view displays the video.
+AMedia object supports live streaming. You can now download a large media file and play it 
+in the same time. A Media object can be shared by multiple media players and different views 
+can use the same MediaPlayer object.
+A play button is created (line 26) to play/pause the media (line 29). The button’s text is 
+changed to || (line 30) if the button’s current text is > (line 28). If the button’s current text is 
+||, it is changed to > (line 33) and the player is paused (line 32). 
+A rewind button is created (line 37) to reset the playback time to the beginning of the media 
+stream by invoking seek(Duration.ZERO) (line 38). 
+A slider is created (line 40) to set the volume. The media player’s volume property is bound 
+to the slider (lines 45 and 46).
+The buttons and slider are placed in an HBox (lines 48–51) and the media view is placed in the 
+center of the border pane (line 54) and the HBox is placed at the bottom of the border pane (line 55).
+16.40 How do you create a Media from a URL?  How do you create a MediaPlayer?
+How do you create a MediaView?
+16.41 If the URL is typed as cs.armstrong.edu/liang/common/sample.mp4 without http:// in 
+front of it, will it work?
+16.42 Can you place a Media in multiple MediaPlayers? Can you place a MediaPlayer
+in multiple MediaViews? Can you place a MediaView in multiple Panes?
+16.14 Case Study: National Flags and Anthems
+This case study presents a program that displays a nation’s flag and plays its anthem.
+The images for seven national flags, named flag0.gif, flag1.gif, . . . , flag6.gif for Denmark,
+Germany, China, India, Norway, United Kingdom, and United States are stored under 
+www.cs.armstrong.edu/liang/common/image. The audio consists of national anthems for these 
+seven nations, named anthem0.mp3, anthem1.mp3, . . . , and anthem6.mp3. They are stored 
+under www.cs.armstrong.edu/liang/common/audio.
+The program enables the user to select a nation from a combo box and then displays its flag 
+and plays its anthem. The user can suspend the audio by clicking the || button and resume it 
+by clicking the < button, as shown in Figure 16.35.
+✓ Check
+✓Point
+Key
+Point
+FIGURE 16.35 The program displays a national flag and plays its anthem.
+666 Chapter 16  JavaFX UI Controls and Multimedia
+The program is given in Listing 16.15.
+LISTING 16.15 FlagAnthem.java
+ 1 import javafx.application.Application;
+ 2 import javafx.collections.FXCollections;
+ 3 import javafx.collections.ObservableList;
+ 4 import javafx.stage.Stage;
+ 5 import javafx.geometry.Pos;
+ 6 import javafx.scene.Scene;
+ 7 import javafx.scene.control.Button;
+ 8 import javafx.scene.control.ComboBox;
+ 9 import javafx.scene.control.Label;
+10 import javafx.scene.image.Image;
+11 import javafx.scene.image.ImageView;
+12 import javafx.scene.layout.BorderPane;
+13 import javafx.scene.layout.HBox;
+14 import javafx.scene.media.Media;
+15 import javafx.scene.media.MediaPlayer;
+16
+17 public class FlagAnthem extends Application {
+18 private final static int NUMBER_OF_NATIONS = 7;
+19 private final static String URLBase =
+20 "http://cs.armstrong.edu/liang/common";
+21 private int currentIndex = 0;
+22
+23    @Override // Override the start method in the Application class
+24 public void start(Stage primaryStage) {
+25 Image[] images = new Image[NUMBER_OF_NATIONS];
+26 MediaPlayer[] mp = new MediaPlayer[NUMBER_OF_NATIONS];
+27
+28 // Load images and audio
+29 for (int i = 0; i < NUMBER_OF_NATIONS; i++) {
+30        images[i] = new Image(URLBase + "/image/flag" + i + ".gif");
+31        mp[i] = new MediaPlayer(new Media(
+32          URLBase + "/audio/anthem/anthem" + i + ".mp3"));
+33      }
+34
+35      Button btPlayPause = new Button(">");
+36      btPlayPause.setOnAction(e -> {
+37 if (btPlayPause.getText().equals(">")) {
+38          btPlayPause.setText("||");
+39 mp[currentIndex].pause();
+40        } else {
+41          btPlayPause.setText(">");
+42 mp[currentIndex].play();
+43        }
+44      });
+45
+46      ImageView imageView = new ImageView(images[currentIndex]);
+47      ComboBox<String> cboNation = new ComboBox<>();
+48      ObservableList<String> items = FXCollections.observableArrayList
+49        ("Denmark","Germany","China","India","Norway","UK","US");
+50      cboNation.getItems().addAll(items);
+51      cboNation.setValue(items.get(0));
+52      cboNation.setOnAction(e -> {
+53        mp[currentIndex].stop();
+54        currentIndex = items.indexOf(cboNation.getValue());
+55        imageView.setImage(images[currentIndex]);
+56        mp[currentIndex].play();
+57      });
+Audio and image
+VideoNote
+URLBase for image and audio
+track current image/audio
+image array
+media player array
+load image
+load audio
+create play button
+handle button action
+pause audio
+play audio
+create image view
+create combo box
+create observable list
+process combo selection
+choose a new nation
+play audio
+58
+Chapter Summary  667
+59      HBox hBox = new HBox(10);
+60      hBox.getChildren().addAll(btPlayPause, 
+61
+new Label("Select a nation: "), cboNation);
+62      hBox.setAlignment(Pos.CENTER);
+63
+64
+// Create a pane to hold nodes 
+65      BorderPane pane = new BorderPane();
+66      pane.setCenter(imageView);
+67      pane.setBottom(hBox);
+68
+69
+// Create a scene and place it in the stage
+70      Scene scene = new Scene(pane, 350, 270);
+71      primaryStage.setTitle("FlagAnthem"); // Set the stage title
+72      primaryStage.setScene(scene); // Place the scene in the stage
+73      primaryStage.show(); // Display the stage
+74    }
+75  }
+The program loads the image and audio from the Internet (lines 29–33). A play/pause button is 
+created to control the playing of the audio (line 35). When the button is clicked, if the button’s 
+current text is > (line 37), its text is changed to || (line 38) and the player is paused (line 39); 
+If the button’s current text is ||, it is changed to > (line 41) and the player is paused (line 42). 
+An image view is created to display a flag image (line 46). A combo box is created for 
+selecting a nation (line 47–49). When a new country name in the combo box is selected, the 
+current audio is stopped (line 53) and the newly selected nation’s image is displayed (line 55) 
+and the new anthem is played (line 56).
+JavaFX also provides the AudioClip class for creating auto clips. An AudioClip
+object can be created using new AudioClip(URL). An audio clip stores the audio in 
+memory. AudioClip is more efficient for playing a small audio clip in the program than 
+using MediaPlayer. AudioClip has the similar methods as in the MediaPlayer class. 
+16.43 In Listing 16.15, which code sets the initial image icon and which code plays the 
+audio?
+16.44 In Listing 16.15, what does the program do when a new nation is selected in the 
+combo box?
+CHAPTER SUMMARY
+1. The abstract Labeled class is the base class for Label, Button, CheckBox, and 
+RadioButton. It defines properties alignment, contentDisplay, text, graphic,
+graphicTextGap, textFill, underline, and wrapText.
+2. The abstract ButtonBase class is the base class for Button, CheckBox, and 
+RadioButton. It defines the onAction property for specifying a handler for action events.
+3. The abstract TextInputContorl class is the base class for TextField and TextArea.
+It defines the properties text and editable.
+4. A TextField fires an action event when clicking the Enter key with the text field 
+focused. A TextArea is often used for editing a multiline text.
+5. ComboBox<T> and ListView<T> are generic classes for storing elements of type T.
+The elements in a combo box or a list view are stored in an observable list.
+✓ Check
+✓Point
+668 Chapter 16  JavaFX UI Controls and Multimedia
+6. AComboBox fires an action event when a new item is selected. 
+7. You can set a single item or multiple item selection for a ListView and add a listener 
+for processing selected items. 
+8. You can use a ScrollBar or Slider to select a range of values and add a listener to 
+the value property to respond to the change of the value. 
+9. JavaFX provides the Media class for loading a media, the MediaPlayer class for con
+trolling a media, and the MediaView for displaying a media.
+QUIZ
+Answer the quiz for this chapter online at www.cs.armstrong.edu/liang/intro10e/quiz.html.
+PROGRAMMING EXERCISES
+Sections 16.2–16.5
+*16.1 (Use radio buttons) Write a GUI program as shown in Figure 16.36a. You can 
+use buttons to move the message to the left and right and use the radio buttons to 
+change the color for the message displayed.
+(a)
+StackPane
+HBox
+(b)
+FIGURE 16.36 (a) The 6= and = 7 buttons move the message, and the radio buttons change the color for the message. 
+(b) The program displays a circle, rectangle, and ellipse when you select a shape type.
+*16.2 (Select geometric figures) Write a program that draws various figures, as shown 
+in Figure 16.36b. The user selects a figure from a radio button and uses a check 
+box to specify whether it is filled. 
+**16.3 (Traffic lights) Write a program that simulates a traffic light. The program lets 
+the user select one of three lights: red, yellow, or green. When a radio but
+ton is selected, the light is turned on. Only one light can be on at a time (see 
+Figure 16.37a). No light is on when the program starts.
+Programming Exercises  669
+(a)
+(b) (
+c)
+FIGURE 16.37 (a) The radio buttons are grouped to let you turn only one light on at a time. (b) The program converts 
+miles to kilometers, and vice versa. (c) The program converts between decimal, hex, and binary numbers.
+*16.4 (Create a miles/kilometers converter) Write a program that converts miles and 
+kilometers, as shown in Figure 16.37b. If you enter a value in the Mile text field 
+and press the Enter key, the corresponding kilometer measurement is displayed 
+in the Kilometer text field. Likewise, if you enter a value in the Kilometer text 
+field and press the Enter key, the corresponding miles is displayed in the Mile 
+text field.
+*16.5 (Convert numbers) Write a program that converts between decimal, hex, and binary 
+numbers, as shown in Figure 16.37c. When you enter a decimal value in the decimal
+value text field and press the Enter key, its corresponding hex and binary numbers are 
+displayed in the other two text fields. Likewise, you can enter values in the other fields 
+and convert them accordingly. (Hint: Use the Integer.parseInt(s, radix)
+method to parse a string to a decimal and use Integer.toHexString(decimal)
+and Integer.toBinaryString(decimal) to obtain a hex number or a binary 
+number from a decimal.)
+*16.6 (Demonstrate TextField properties) Write a program that sets the horizontal
+alignment and column-size properties of a text field dynamically, as shown in 
+Figure 16.38a.
+(a)
+(b)
+FIGURE 16.38 (a) You can set a text field’s properties for the horizontal alignment and col
+umn size dynamically. (b) The program displays the time specified in the text fields.
+VideoNote
+Use radio buttons 
+and text fields
+670 Chapter 16  JavaFX UI Controls and Multimedia
+*16.7 (Set clock time) Write a program that displays a clock and sets the time with the 
+input from three text fields, as shown in Figure 16.38b. Use the ClockPane in 
+Listing 14.21. Resize the clock to the center of the pane.
+**16.8 (Geometry: two circles intersect?) Write a program that enables the user to 
+specify the location and size of the circles and displays whether the two circles 
+intersect, as shown in Figure 16.39a. Enable the user to point the mouse inside a 
+circle and drag it. As the circle is being dragged, the circle’s center coordinates 
+in the text fields are updated.
+(a)
+(b)
+FIGURE 16.39 Check whether two circles and two rectangles are overlapping.
+**16.9 (Geometry: two rectangles intersect?) Write a program that enables the user to 
+specify the location and size of the rectangles and displays whether the two rec
+tangles intersect, as shown in Figure 16.39b. Enable the user to point the mouse 
+inside a rectangle and drag it. As the rectangle is being dragged, the rectangle’s 
+center coordinates in the text fields are updated.
+Sections 16.6–16.8
+**16.10 (Text viewer) Write a program that displays a text file in a text area, as shown 
+in Figure 16.40a. The user enters a file name in a text field and clicks the View
+button; the file is then displayed in a text area.
+(a)
+(b)
+FIGURE 16.40 (a) The program displays the text from a file in a text area. (b) The program 
+displays a histogram that shows the occurrences of each letter in the file.
+Programming Exercises  671
+**16.11 (Create a histogram for occurrences of letters) Write a program that reads a 
+file and displays a histogram to show the occurrences of each letter in the file, 
+as shown in Figure 16.40b. The file name is entered from a text field. Pressing 
+the Enter key on the text field causes the program to start to read and process 
+the file and displays the histogram. The histogram is displayed in the center of the 
+window. Define a class named Histogram that extends Pane. The class con
+tains the property counts that is an array of 26 elements. counts[0] stores the 
+number of A, counts[1] the number of B, and so on. The class also contains a 
+setter method for setting a new counts and displaying the histogram for the new 
+counts.
+*16.12 (Demonstrate TextArea properties) Write a program that demonstrates the 
+properties of a text area. The program uses a check box to indicate whether the 
+text is wrapped onto next line, as shown in Figure 16.41a. 
+(a)
+(b)
+FIGURE 16.41 (a) You can set the options to enable text editing and text wrapping. (b) The program displays a table for 
+monthly payments and total payments on a given loan based on various interest rates.
+*16.13 (Compare loans with various interest rates) Rewrite Programming Exercise 
+5.21 to create a GUI, as shown in Figure 16.41b. Your program should let the 
+user enter the loan amount and loan period in the number of years from text 
+fields, and it should display the monthly and total payments for each interest 
+rate starting from 5 percent to 8 percent, with increments of one-eighth, in a 
+text area.
+**16.14 (Select a font) Write a program that can dynamically change the font of a text 
+in a label displayed on a stack pane. The text can be displayed in bold and 
+italic at the same time. You can select the font name or font size from combo 
+boxes, as shown in Figure 16.42a. The available font names can be obtained 
+using Font.getFamilies(). The combo box for the font size is initialized 
+with numbers from 1 to 100.
+VideoNote
+Set fonts
+(a) (
+b)
+FIGURE 16.42 You can dynamically set the font for the message. (b) You can set the alignment and text-position properties 
+of a label dynamically.
+672 Chapter 16  JavaFX UI Controls and Multimedia
+**16.15 (Demonstrate Label properties) Write a program to let the user dynamically 
+set the properties contentDisplay and graphicTextGap, as shown in 
+Figure 16.42b.
+*16.16 (Use ComboBox and ListView) Write a program that demonstrates selecting 
+items in a list. The program uses a combo box to specify a selection mode, as 
+shown in Figure 16.43a. When you select items, they are displayed in a label 
+below the list.
+(a)
+(b)
+(c)
+FIGURE 16.43 (a) You can choose single or multiple selection mode in a list. (b) The color changes in the text as you 
+adjust the scroll bars. (c) The program simulates a running fan.
+Sections 16.6–16.8
+**16.17 (Use ScrollBar and Slider) Write a program that uses scroll bars or slid
+ers to select the color for a text, as shown in Figure 16.43b. Four horizontal 
+scroll bars are used for selecting the colors: red, green, blue, and opacity 
+percentages.
+**16.18 (Simulation: a running fan) Rewrite Programming Exercise 15.28 to add a slider 
+to control the speed of the fan, as shown in Figure 16.43c. 
+**16.19 (Control a group of fans) Write a program that displays three fans in a group, 
+with control buttons to start and stop all of them, as shown in Figure 16.44.
+FIGURE 16.44 The program runs and controls a group of fans.
+*16.20 (Count-up stopwatch) Write a program that simulates a stopwatch, as shown 
+in Figure 16.45a. When the user clicks the Start button, the button’s label is 
+changed to Pause, as shown in Figure 16.45b. When the user clicks the Pause
+Programming Exercises  673
+button, the button’s label is changed to Resume, as shown in Figure 16.45c. The 
+Clear button resets the count to 0 and resets the button’s label to Start.
+(a)
+(b)
+(c) (
+d)
+FIGURE 16.45 (a–c) The program counts up the time. (d) The program counts down the time.
+*16.21 (Count-down stopwatch) Write a program that allows the user to enter time in 
+seconds in the text field and press the Enter key to count down the seconds, 
+as shown in Figure 16.45d. The remaining seconds are redisplayed every 
+one second. When the seconds are expired, the program starts to play music 
+continuously.
+16.22 (Play, loop, and stop a sound clip) Write a program that meets the following 
+requirements:
+ ■ Get an audio file from the class directory using AudioClip.
+ ■ Place three buttons labeled Play, Loop, and Stop, as shown in Figure 16.46a.
+ ■ If you click the Play button, the audio file is played once. If you click the 
+Loop button, the audio file keeps playing repeatedly. If you click the Stop
+button, the playing stops.
+(a)
+(b)
+FIGURE 16.46 (a) Click Play to play an audio clip once, click Loop to play an audio repeatedly, and click Stop to termi
+nate playing.  (b) The program lets the user specify image files, an audio file, and the animation speed.
+674 Chapter 16  JavaFX UI Controls and Multimedia
+**16.23 (Create an image animator with audio) Create animation in Figure 16.46b to 
+meet the following requirements:
+ ■ Allow the user to specify the animation speed in a text field.
+ ■ Get the number of iamges and image’s file-name prefix from the user. For 
+example, if the user enters n for the number of images and L for the image 
+prefix, then the files are L1.gif, L2.gif, and so on, to Ln.gif. Assume that the 
+images are stored in the image directory, a subdirectory of the program’s 
+class directory. The animation displays the images one after the other.
+ ■ Allow the user to specify an audio file URL. The audio is played while the 
+animation runs.
+**16.24 (Revise Listing 16.14 MediaDemo.java) Add a slider to enable the user to set the 
+current time for the video and a label to display the current time and the total 
+time for the video. As shown in Figure 16.47a, the total time is 5 minutes and 3 
+seconds and the current time is 3 minutes and 58 seconds. As the video plays, the 
+slider value and current time are continuously updated.
+(a)
+(b)
+FIGURE 16.47 (a) A slider for current video time and a label to show the current time and total time are added. (b) You 
+can set the speed for each car.
+**16.25 (Racing cars) Write a program that simulates four cars racing, as shown in 
+Figure 16.47b. You can set the speed for each car, with maximum 100.
+**16.26 (Simulation: raise flag and play anthem) Write a program that displays a flag 
+rising up, as shown in Figure 15.14. As the national flag rises, play the national 
+anthem. (You may use a flag image and anthem audio file from Listing 16.15.)
+Comprehensive
+**16.27 (Display country flag and flag description) Listing 16.4, ComboBoxDemo.java, 
+gives a program that lets the user view a country’s flag image and description 
+by selecting the country from a combo box. The description is a string coded 
+in the program. Rewrite the program to read the text description from a file. 
+Suppose that the descriptions are stored in the files description0.txt, . . . , and 
+Programming Exercises  675
+description8.txt under the text directory for the nine countries Canada, China, 
+Denmark, France, Germany, India, Norway, United Kingdom, and United States, 
+in this order.
+**16.28 (Slide show) Programming Exercise 15.30 developed a slide show using images. 
+Rewrite that program to develop a slide show using text files. Suppose ten text 
+files named slide0.txt, slide1.txt, . . . , and slide9.txt are stored in the text direc
+tory. Each slide displays the text from one file. Each slide is shown for one sec
+ond, and the slides are displayed in order. When the last slide finishes, the first 
+slide is redisplayed, and so on. Use a text area to display the slide.
+***16.29 (Display a calendar) Write a program that displays the calendar for the cur
+rent month. You can use the Prior and Next buttons to show the calendar of the 
+previous or next month. Display the dates in the current month in black and 
+display the dates in the previous month and next month in gray, as shown in 
+Figure 16.48.
+FIGURE 16.48 The program displays the calendar for the current month.
+**16.30 (Pattern recognition: consecutive four equal numbers) Write a GUI program for 
+Programming Exercise 8.19, as shown in Figure 16.49a–b. Let the user enter the 
+numbers in the text fields in a grid of 6 rows and 7 columns. The user can click 
+the Solve button to highlight a sequence of four equal numbers, if it exists. Ini
+tially, the values in the text fields are filled with numbers from 0 to 9 randomly.
+(a)
+(b)
+(c)
+FIGURE 16.49 (a–b) Clicking the Solve button highlights the four consecutive numbers in a row, a column, or a diagonal.
+(c) The program enables two players to play the connect-four game.
+676 Chapter 16  JavaFX UI Controls and Multimedia
+***16.31 (Game: connect four) Programming Exercise 8.20 enables two players to play 
+the connect-four game on the console. Rewrite a GUI version for the program, 
+as shown in Figure 16.49c. The program enables two players to place red and 
+yellow discs in turn. To place a disk, the player needs to click an available cell. 
+An available cell is unoccupied and its downward neighbor is occupied. The 
+program flashes the four winning cells if as

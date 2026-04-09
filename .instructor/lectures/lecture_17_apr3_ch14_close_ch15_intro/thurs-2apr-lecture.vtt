@@ -1,0 +1,2178 @@
+WEBVTT
+
+1
+00:00:21.500 --> 00:00:31.580
+Al Dungo: Hello, everybody. Class is being recorded, and we can go ahead and get started. We've got a small group, so I'll probably give it a couple of minutes so that that way I don't…
+
+2
+00:00:31.580 --> 00:00:49.690
+Al Dungo: have to repeat myself for any announcements, but thank you guys for being here. I know you guys are usually the solid few that are consistently here, so appreciate it, and make sure you do answer the poll as you're coming in, kind of just read where we're at with things. Today is gonna be more of a working day, because…
+
+3
+00:00:49.790 --> 00:00:56.749
+Al Dungo: JavaFX is just something that we all have to do, and now tonight's labs.
+
+4
+00:00:57.060 --> 00:01:06.200
+Al Dungo: sorry, tonight's lab, as well as the next 3 weeks, technically, of labs, are gonna be exactly that, with more working through the Java FX.
+
+5
+00:01:06.200 --> 00:01:21.799
+Al Dungo: So, setup is important for one, and then two, you know, just any questions, because as you guys saw from Tuesday, very demonstrative, from what we, you know, normally have, a lot of with the assumptions and understanding that, you know, we can look into the code itself and start to…
+
+6
+00:01:21.800 --> 00:01:44.460
+Al Dungo: dive into the understanding a bit more, on our own, because, like, you know, we mentioned on Tuesday, can't go over every single line of code for JavaFX, lots of different pieces for that, so today is gonna be very demonstrated. Yeah, and Lab 10 isn't technically uploaded, but I am actually gonna cover a little bit of that today, so that you guys know where you can work on things, and from here on out, labs are gonna work a little bit differently.
+
+7
+00:01:44.460 --> 00:01:48.010
+Al Dungo: But the concept is pretty much not too far off.
+
+8
+00:01:48.010 --> 00:01:52.180
+Al Dungo: The main thing that you want to do, that you don't have to wait on is…
+
+9
+00:01:52.250 --> 00:02:10.890
+Al Dungo: Remember, as we talked about Tuesday, so, you know, if you're coming to class and showing up, you're not going to be doing your labs in Codespace anymore. You're not going to be going here and hitting this button to launch it and have it open in the browser itself. Rather, you're going to be working according to these instructions here to have it, locally on your device.
+
+10
+00:02:11.670 --> 00:02:24.500
+Al Dungo: And I think that was something that we… that was something that we talked about briefly on Tuesday. And so, tonight's lab is… I'm actually gonna make mentions to lab right now during class, but then lab itself at 5… or sorry, at 5 is gonna be…
+
+11
+00:02:24.500 --> 00:02:37.780
+Al Dungo: Come as you need to, ask for questions… help for questions regarding the IDE setup, so that's just where the struggle is, and then as long as you start getting an app running, then from there, you should be able to…
+
+12
+00:02:38.590 --> 00:02:40.870
+Al Dungo: You know, get your lab done, so…
+
+13
+00:02:41.500 --> 00:03:05.659
+Al Dungo: Thank you guys for being here, like I said. We've got a few more folks coming in, but looking like it's gonna be a fairly small group, so… a lot of this is gonna be demonstrative. I don't want to get too deep into Chapter 15 yet, but I will definitely show good parts of it, and depending on the attendance today, and just because this is being recorded, I might just kick you guys off on that anyways, because, like I said, really just picture April, and even as you're
+
+14
+00:03:05.660 --> 00:03:08.859
+Al Dungo: Diving into Exam 3.
+
+15
+00:03:09.520 --> 00:03:27.229
+Al Dungo: Yeah, old labs are still going to be submitted through GitHub. So everything from labs 1 through 9, you're still going to do it the normal route, where you are in Codespaces on the web browser, you hit that upload button, or the commit and push button, and then you still submit your link to Blackboard.
+
+16
+00:03:31.550 --> 00:03:42.179
+Al Dungo: Yeah, so you're good if you have Visual Studio Code installed, but you do want to try to get to the point where you can actually run these examples successfully like we do in class, so that whenever you do your labs.
+
+17
+00:03:42.330 --> 00:03:45.319
+Al Dungo: You're able to kind of grasp it more, so…
+
+18
+00:03:45.810 --> 00:04:02.800
+Al Dungo: Now's a great time, like I said, guys, we're kind of letting you drive a lot of this, because I want to just have a general feel as to where everyone's at. You guys come to class because you care to show up, and so you always know that you're more than welcome to reach, chime out and say, you know, hey, I can't get mine running, how's everyone else doing it?
+
+19
+00:04:02.800 --> 00:04:14.810
+Al Dungo: you know, I grasp the content… the syntax, and I want to create my .java files, but I need the tools to do so. Don't let that be a blocker, that's where a lot of the communication is going to be really important to emphasize.
+
+20
+00:04:15.230 --> 00:04:19.229
+Al Dungo: And then, of course, you know, your, your guys' doing,
+
+21
+00:04:19.370 --> 00:04:36.739
+Al Dungo: But I will say, like I said, before I dive into the last bits of Chapter 14 today, that I do want to make sure is covered, like I said, ask any questions. For the most part, you should be tracking everything. I know some of this was created before this morning, so, could use some updating. Your Exam 2 grades are available.
+
+22
+00:04:37.060 --> 00:04:43.979
+Al Dungo: the overall weight for the class isn't, broken down yet, but you should be able to see that second exam grade, so check that out.
+
+23
+00:04:44.650 --> 00:04:53.840
+Al Dungo: Lab 10 is not graded, but it is available, and you also technically have Lab 11 stage. So, a lot of this is, again.
+
+24
+00:04:53.900 --> 00:05:08.969
+Al Dungo: able to choose at your own pace, you're, you know, no longer babied like you were in Programming Fundamentals 1, and especially with that semester project that you guys have, I want you to take that seriously, because that GUI concept that you create, and even just, you know, some of the power that you saw from
+
+25
+00:05:08.970 --> 00:05:32.029
+Al Dungo: Java FX both last week and Tuesday, is really neat to be able to use, and we're gonna continue on to that. So chapters 14, 15, and 16 are going to be, like, the entirety of your exam 3, so you want to still understand the stuff conceptually, that's why the notes, the textbook, the lectures, the assignments, the labs are there for you. But then also, as you see, you're going to apply that stuff actually in your semester project. Now, I know it's on… oh, okay.
+
+26
+00:05:32.480 --> 00:05:36.400
+Al Dungo: Okay, so we got simple tests to work, Okay
+
+27
+00:05:37.080 --> 00:05:56.319
+Al Dungo: And that's, a lot of that, was gonna be for you guys to ask during office hours or during lab time itself, and you'll actually come to find that, like I said, labs are gonna be very working sessions, so you guys are all, like I said, always welcome to come during that lab time from 5 to 6.30 to, you know, ask these questions and kind of hash it out.
+
+28
+00:06:09.830 --> 00:06:11.380
+Al Dungo: Hmm, okay.
+
+29
+00:06:12.300 --> 00:06:36.189
+Al Dungo: So, one thing I did want to show you guys, because I know mine weren't working the way that I wanted to on Friday, I mean, Tuesday, and that was just because I didn't have correct configurations and just, some bugs on my end that I was working through. But where we finished on Tuesday, and really where we got close to the end of Chapter 14, was emphasizing these examples regarding your image and image view.
+
+30
+00:06:37.130 --> 00:06:38.040
+Al Dungo: Right?
+
+31
+00:06:38.320 --> 00:06:47.090
+Al Dungo: And then we also dove into, like, you know, your other types of nodes besides images. So as you saw from here, you can still use shapes, fonts.
+
+32
+00:06:47.550 --> 00:06:57.419
+Al Dungo: color, text, etc. And remember, this is all just, the JavaFX basics, right? We're gonna still continue on to the chapters.
+
+33
+00:06:57.970 --> 00:06:59.299
+Al Dungo: Oh, nice!
+
+34
+00:06:59.790 --> 00:07:23.590
+Al Dungo: Nice, I'm excited to… I hope you guys are excited about creating these things in Java, and that's exactly where I want your excitement to stem, and like I said, we give all the tools, especially for JavaFX during class, but it's all built up to this point, and so if you are struggling to, you know, feel like you're ready to implement a semester project, let me know, because it's ongoing, right? And I think the part I was gonna say was, I know I haven't hit a checkbox
+
+35
+00:07:23.590 --> 00:07:44.929
+Al Dungo: approved for some of your semester projects, but that is in… that is for sure… certain tonight. Again, you still are probably at the point where you're getting your actual environment set up. You need something… you need… one way that you can kind of think of it, too, is that you want to just try those examples from class, because you don't have to think about that code anyways. That's how you, for sure, know that
+
+36
+00:07:45.050 --> 00:07:49.440
+Al Dungo: your… Javafx is working.
+
+37
+00:07:49.560 --> 00:07:56.909
+Al Dungo: Right, if you're able to run something successfully. Now, one thing I do want to try, let's try showing you guys some examples.
+
+38
+00:07:58.200 --> 00:08:03.310
+Al Dungo: Like I said, pretty small class today, so it's nice, I'm glad to hear that they worked.
+
+39
+00:08:03.380 --> 00:08:21.499
+Al Dungo: That's… that's good. So, if one student can do it, we can definitely vouch and justify that everyone should be able to do it, so I'm glad to hear that there was a success. And once you know that those are working good, then you can create, you know, your own .java files and get them running to, you know, pertain to your semester project specifically.
+
+40
+00:08:21.500 --> 00:08:29.290
+Al Dungo: Now, the emphasis, again, is that don't use AI to generate your code for you, that is what will cause for, you know, bad…
+
+41
+00:08:29.660 --> 00:08:40.769
+Al Dungo: bad ethics, bad morality, that's, you shouldn't be using GenAI to actually create the code, but rather just help you in terms of, like, the running and the compiling of the actual folder.
+
+42
+00:08:40.870 --> 00:08:44.810
+Al Dungo: Otherwise, everything you're gonna actually create, like, yourself, okay?
+
+43
+00:08:45.010 --> 00:08:46.399
+Al Dungo: Oops.
+
+44
+00:08:46.940 --> 00:09:10.830
+Al Dungo: Okay, so then the examples I wanted to show you that weren't working the best on Tuesday, but I… they should be working today. Anyone have any questions in general about the syntax of JavaFX before we move on to the last bit of it? Again, last week, we went over some… or last Tuesday, we went over the rest of it, which is not repetitive, but once you grasp how nodes and, like, you know, a label or just text is placed.
+
+45
+00:09:10.900 --> 00:09:21.120
+Al Dungo: The rest, you know, you kind of take from other examples, or just, like, the syntax in general. And so, where you really just need the strength for tonight's lab.
+
+46
+00:09:21.120 --> 00:09:34.399
+Al Dungo: for Lab 10, is because you're going to be using these to just start playing around with JavaFX, which is really the best way to just get into it, and that's where your Lab 10 is your starting point. It is going to be hard due on Wednesday next week.
+
+47
+00:09:34.400 --> 00:09:44.390
+Al Dungo: But that is, again, just for the sake of getting you prepared to do Lab 11, which is already available to you, even though we don't know how to do that just yet, as well as how you implement semester projects.
+
+48
+00:09:44.750 --> 00:09:45.980
+Al Dungo: That's awesome.
+
+49
+00:09:46.340 --> 00:09:47.610
+Al Dungo: That's awesome.
+
+50
+00:09:49.930 --> 00:09:50.760
+Al Dungo: Okay.
+
+51
+00:09:50.950 --> 00:09:57.549
+Al Dungo: Any questions about image, image view? I'm gonna run this one, because this is the one that was giving me problems last time. So let's do CD…
+
+52
+00:09:58.060 --> 00:10:04.660
+Al Dungo: Inspector… Let's cross our fingers, because it was working last time.
+
+53
+00:10:07.600 --> 00:10:16.270
+Al Dungo: And… And then, I was doing… Let's do… Oh.
+
+54
+00:10:23.200 --> 00:10:23.910
+Al Dungo: No.
+
+55
+00:10:26.670 --> 00:10:27.440
+Al Dungo: Okay.
+
+56
+00:10:27.660 --> 00:10:39.050
+Al Dungo: So, here is one way that our little duck that we got from last time was gonna work. So, demo image. One thing to highlight, especially as you're working through this through today's lab.
+
+57
+00:10:39.170 --> 00:10:51.750
+Al Dungo: is you have to be mindful of the directory that it's in, for one, and so demoImage.jp jpeg, you're able to see that I'm referring to it exactly like this.
+
+58
+00:10:52.390 --> 00:10:53.220
+Al Dungo: Right?
+
+59
+00:10:53.430 --> 00:11:04.970
+Al Dungo: And this is just a matter of saying, hey, in this Java file where I'm launching this, I want to use this one specifically, and that is, again, your emphasis between image and image view.
+
+60
+00:11:05.170 --> 00:11:16.700
+Al Dungo: Okay, and then once that is an actual object, now you can start manipulating it to be within the Java code itself. And you can see here that the image came from this demo image that you have.
+
+61
+00:11:16.710 --> 00:11:28.749
+Al Dungo: So if you're going to be downloading local images to your device, which is kind of the idea for Lab 10, you know, this is a great reference for you. Now, I will say that this Image Demo Basic is not in…
+
+62
+00:11:28.780 --> 00:11:35.010
+Al Dungo: your repose just yet, but, oh, oh, wrong screen? Sorry, sorry, sorry, sorry.
+
+63
+00:11:35.120 --> 00:11:36.600
+Al Dungo: Thank you for letting me know.
+
+64
+00:11:41.060 --> 00:12:00.239
+Al Dungo: Gabriella, I'm probably gonna, direct you to this if it helps, because the idea is whenever I update this guy right here, or, sorry, when I update some files on the JavaFX one, there's a button that you should be able to push that shouldn't mess with anything that you have.
+
+65
+00:12:00.240 --> 00:12:10.049
+Al Dungo: But then rather, like, we'll use Gabriella's for an example. Once I have these examples in your Java FX book, when she pushes sync.
+
+66
+00:12:10.120 --> 00:12:22.839
+Al Dungo: then immediately, even on her device locally, she should be able to see the other example. So, image demo basic and sizing and all of that is not there yet, but I will have those by tonight's lab, especially because it's going to be a working session.
+
+67
+00:12:22.840 --> 00:12:34.739
+Al Dungo: But even this right here, if you guys get a screenshot of this, for anyone who wants to jump ahead and really hash out lab, this right here is a great, code example for how you do lab itself. And that's just…
+
+68
+00:12:35.100 --> 00:12:39.870
+Al Dungo: throwing an image onto a screen, right? You can see there, nice little duck.
+
+69
+00:12:45.080 --> 00:12:49.609
+Al Dungo: Let's try… this one.
+
+70
+00:12:50.040 --> 00:12:53.340
+Al Dungo: Now I'm gonna do this one, and I wanna do…
+
+71
+00:12:56.630 --> 00:12:57.520
+Al Dungo: Strange.
+
+72
+00:13:05.950 --> 00:13:09.289
+Al Dungo: Now, let's try one I haven't run successfully yet.
+
+73
+00:13:14.320 --> 00:13:15.579
+Al Dungo: Oh, hold on.
+
+74
+00:13:15.870 --> 00:13:17.790
+Al Dungo: I don't think my duck is there.
+
+75
+00:13:18.790 --> 00:13:19.639
+Al Dungo: Hold on.
+
+76
+00:13:19.910 --> 00:13:25.110
+Al Dungo: Demo image, JPEG… Image… okay.
+
+77
+00:13:30.200 --> 00:13:32.110
+Al Dungo: I wanna make it… Okay.
+
+78
+00:13:39.940 --> 00:13:43.849
+Al Dungo: Okay, the duck didn't show up on that one, but why not?
+
+79
+00:13:44.220 --> 00:13:49.980
+Al Dungo: And also, for… let's see… probably should be able to show you guys all the different options, too.
+
+80
+00:13:50.610 --> 00:13:51.460
+Al Dungo: Let's see…
+
+81
+00:13:56.980 --> 00:14:02.680
+Al Dungo: These are compiling successfully, but I can't get my, oh.
+
+82
+00:14:03.180 --> 00:14:04.719
+Al Dungo: I think it… oh, that's why.
+
+83
+00:14:05.720 --> 00:14:06.750
+Al Dungo: It's JPEG.
+
+84
+00:14:09.940 --> 00:14:12.699
+Al Dungo: So, that's a great error to be mindful of.
+
+85
+00:14:18.310 --> 00:14:19.370
+Al Dungo: It's a nutshell.
+
+86
+00:14:19.720 --> 00:14:24.210
+Al Dungo: MLMH… Pretty sad.
+
+87
+00:14:24.750 --> 00:14:27.159
+Al Dungo: Oh, I'm dumb, hold on.
+
+88
+00:14:27.400 --> 00:14:29.610
+Al Dungo: This literally needs to be literal.
+
+89
+00:14:37.830 --> 00:14:40.210
+Al Dungo: There we go. Okay, so…
+
+90
+00:14:40.630 --> 00:14:50.019
+Al Dungo: As you can see, there's not too much difference between your basic and sizing, but something that I want to finish off with your Chapter 14,
+
+91
+00:14:50.060 --> 00:15:07.310
+Al Dungo: It's something that we call property binding, and as well as, just, like I said, the usages of images in here. And so, what's cool about this one, too, is that even compared to how it was previously… let me go back to the other one, actually, too. Let's do Java Basic.
+
+92
+00:15:07.370 --> 00:15:09.069
+Al Dungo: Okay, so we have this guy here.
+
+93
+00:15:10.850 --> 00:15:11.690
+Al Dungo: Right.
+
+94
+00:15:11.850 --> 00:15:18.679
+Al Dungo: Can't really see too much with it whenever we resize the window. But then let's do sizing…
+
+95
+00:15:19.850 --> 00:15:23.079
+Al Dungo: And then, even if we resize the window.
+
+96
+00:15:23.350 --> 00:15:42.339
+Al Dungo: you know, there's different ways to make the image kind of be manipulated, and that's exactly the experimentation that you guys are going to be doing with tonight's lab. But really, the whole goal of lab is that you're able to tie in just what we've learned with Java FX so far, and be able to, you know, have this launched successfully.
+
+97
+00:15:42.340 --> 00:15:52.820
+Al Dungo: Because Lab 11 is going to increase in difficulty, and is even the two-week… it's a two-week lab. And of course, all the aspects and components that you might want to do for
+
+98
+00:15:52.960 --> 00:15:59.579
+Al Dungo: your semester project come into play. But the Chapter 14 examples we went over were pretty thorough, and you guys should have all of those, so…
+
+99
+00:15:59.700 --> 00:16:07.460
+Al Dungo: When it comes to… Putting things onto the screen, text, labels, boxes, images, putting colors and whatnot.
+
+100
+00:16:07.630 --> 00:16:17.079
+Al Dungo: Refer to all your examples to do so, but like I mentioned, now is a great time to ask any questions about JavaFX code, specifically, if you… excuse me, if you have one.
+
+101
+00:16:18.300 --> 00:16:24.669
+Al Dungo: Some more, image examples. Again, all of these will be provided to you just to emphasize how image works.
+
+102
+00:16:25.390 --> 00:16:30.900
+Al Dungo: an image view, right? And then therefore using its respective methods to, you know.
+
+103
+00:16:31.250 --> 00:16:33.370
+Al Dungo: Decide how you put your images.
+
+104
+00:16:33.970 --> 00:16:50.860
+Al Dungo: And now, while you guys have any questions… if you guys have any questions, now's a great time to ask before I do one last Chapter 14 example, but I do want to show you one, one thing where all of this just ties into, so that I can ensure there's no questions. All of this will be, you know.
+
+105
+00:16:51.060 --> 00:17:10.599
+Al Dungo: applied and directed to you guys for completion of Lab 10 tonight, but this lecture during class is where, you know, you see how the image view came into actual play, so you have something to refer back to whenever you are going over this lesson, kind of watching how it works, and again, applying it to whatever it is that you'll be doing.
+
+106
+00:17:11.970 --> 00:17:25.209
+Al Dungo: Okay, so the part that I want to show you where this applicability comes into play, and I'll make sure that this is written clearly, but the way that labs work from, and this is emphasized, from Lab 10 on, so that's tonight.
+
+107
+00:17:25.329 --> 00:17:28.889
+Al Dungo: You're only gonna be… you're not gonna be doing individual…
+
+108
+00:17:29.650 --> 00:17:42.240
+Al Dungo: assignment acceptances like you did previously. And the reason for that is because once you have this working and set up locally on your device, so I think I went through the motions of it last time.
+
+109
+00:17:42.960 --> 00:17:50.199
+Al Dungo: Once you have all of this set up on your device locally, the idea is that you keep coming back to here.
+
+110
+00:17:50.510 --> 00:18:04.370
+Al Dungo: in Codespace and on the online browser, you were in a new project each time, which is why the files, you know, kept on changing, pretty small, you know, only for what you needed for that lab specifically. But this is gonna work different, because here.
+
+111
+00:18:04.440 --> 00:18:14.019
+Al Dungo: Once you have… so, let's take Gabriella's, for example. Gabriella has it working on her device, locally, and is able to run all the examples.
+
+112
+00:18:14.510 --> 00:18:26.510
+Al Dungo: if she was to open… if she was to do a new project, or do, you know, something like this, and do, like, a new area with none of this that she pulled from GitHub from me, you'd have to go through the JavaFX setup again.
+
+113
+00:18:27.020 --> 00:18:34.690
+Al Dungo: And I don't want you guys to have to do that for each project, so the way that's gonna work is that you can think of this notebook as, like, your JavaFX hub.
+
+114
+00:18:34.720 --> 00:18:48.240
+Al Dungo: Right? Obviously, as you do with any, Word docs with everything, always make sure that you save your work before you X out of the program. But the way that this is gonna work is that you have, you know, free reign to try these examples yourself.
+
+115
+00:18:48.240 --> 00:18:59.999
+Al Dungo: you could, you know, this is where you use your IAI to help you, but not do it for you, is, you know, I want to do my first JavaFX project.java, and…
+
+116
+00:19:00.050 --> 00:19:11.350
+Al Dungo: have at it, you know, take one of these examples and see if you can make something, you know, crazy happen with it, or maybe you want to start messing with the shapes, and you want to see, okay, well, I'm grasping how this is.
+
+117
+00:19:11.350 --> 00:19:20.700
+Al Dungo: I cannot emphasize enough to you guys that understanding, you know, Programming Fundamentals 2 and this GUI and this Java FX stuff is not gonna just be handed to you.
+
+118
+00:19:20.700 --> 00:19:24.860
+Al Dungo: Right? A lot of it is genuinely where you really get to play around.
+
+119
+00:19:24.860 --> 00:19:32.399
+Al Dungo: create it, do it, make it your own. Of course, you'll be directed to specific examples and ways to do things, but again.
+
+120
+00:19:32.420 --> 00:19:36.810
+Al Dungo: This is where art really starts to come into play, because you're gonna create something of your own.
+
+121
+00:19:37.050 --> 00:19:54.220
+Al Dungo: Yeah, we need that repository. Basically, it has two back-end scripts to get everything, yeah. Every… basically, it has everything to get you guys running, and so as long as you're able to, you know, have a program come up specifically like I did in my other notebook, then that's the goal. From there, you should kind of be able to work through it yourselves.
+
+122
+00:19:54.220 --> 00:20:05.469
+Al Dungo: Now, where I'll make sure the lab mentions are highlighted and where it kind of directs it differently, but you're not going to be leaving anywhere besides this, again, because it's all built so that you can have everything run smoothly.
+
+123
+00:20:05.470 --> 00:20:10.530
+Al Dungo: For your labs, you'll see that you actually have both in there for you already.
+
+124
+00:20:11.130 --> 00:20:22.669
+Al Dungo: Here's your lab 10, here is your Lab 11, and so even just to, like, kind of tie lab and lecture together and to show you guys where this image view stuff really comes into play with what you're doing here.
+
+125
+00:20:22.770 --> 00:20:37.099
+Al Dungo: Lab 10 tonight, you're basically gonna be creating a image gallery where you take 6 pic… take 6 images, right, of your own, you can download them from the internet, you can save a picture that you created yourself, whatever it may be.
+
+126
+00:20:37.100 --> 00:20:51.599
+Al Dungo: And you gen… all you need to do is get 6 images displayed correctly onto the screen. So, you know how I had that duck over… I'll go back to it, but I had that duck. Imagine if I had 5 other animals, and it was just, you know, a total of 6 pictures total.
+
+127
+00:20:51.670 --> 00:21:00.040
+Al Dungo: The whole goal is that you load those into your project, and that you get them successfully showed onto a grid pane, because that is how you just…
+
+128
+00:21:00.610 --> 00:21:11.310
+Al Dungo: start with something, right? These are your exact instructions to say, hey, I'm gonna create something in Java, and I want to be certain that this is running. And that's all that Lab 10 is going to entail, so…
+
+129
+00:21:11.360 --> 00:21:30.169
+Al Dungo: You can see how right now is a great time to ask questions if you haven't tried the setup already. If you are going to be coming to lab tonight or not, it's optional, but if you need help getting this set up, then that's what that time is meant to be for. But all of this is genuinely initiated by you guys, so that you can make your own implementations.
+
+130
+00:21:31.390 --> 00:21:39.479
+Al Dungo: Students get real fun and creative with it, like, sometimes they'll choose, like, 6 pictures of, like, 6 video games that they like, just to show, like, a little collage.
+
+131
+00:21:39.490 --> 00:21:54.719
+Al Dungo: Some people did, 6, you know, Pokemon that they wanted to highlight, 1, 2, 3, 4, 5, 6, however it may be. But the whole goal is just really getting your hands dirty with these Java FX examples, so that you can really start seeing how they work. It's all…
+
+132
+00:21:54.750 --> 00:22:07.899
+Al Dungo: you know, objects and class creation like you've already done before previously. Now it's just a matter of exact placement, customization, colors, aligning that, you know, you guys are going to create.
+
+133
+00:22:09.900 --> 00:22:24.349
+Al Dungo: Yeah, and honestly, this is a, like, this is y'all's notebook, so, like, you can't break anything that I'm showing you here, and I want you guys to have that familiarity with GitHub, because even no matter what it is that you do in programming beyond this course, GitHub is just one of the most
+
+134
+00:22:24.700 --> 00:22:37.300
+Al Dungo: use developer tools, and so familiarizing with VS Code, again, I can show you and write the manuals and the how-tos and allow you to experiment with it, but I can't express it enough how much, in programming in general.
+
+135
+00:22:37.780 --> 00:22:41.809
+Al Dungo: It's really just gonna… it's really guided by how you decide to tinker with it.
+
+136
+00:22:41.990 --> 00:22:57.610
+Al Dungo: like, genuinely key is tinker. Tinker, practice, kind of familiar… familiarize, and like I said, from there, whether you're here for the grade or not, or you guys are trying to really create something, just let me know where I can help you so that it is even… even better.
+
+137
+00:22:58.230 --> 00:23:14.569
+Al Dungo: Where I do want to, emphasize, like, the direction that we're going, that we will talk a little bit about today, but I don't want to get into heavy detail, because it's not that it's pointless to show you guys now. If anything, it could almost seem early, and even just looking at the poll…
+
+138
+00:23:15.580 --> 00:23:33.300
+Al Dungo: A good chunk of you guys, which I know this isn't the whole class group here yet, haven't tried to do this, and so not much too moving… not much moving can be made without that, but tonight's lab working session, it will be really good for that, so that you guys can make sure that is, like, the case of understanding.
+
+139
+00:23:33.640 --> 00:23:44.110
+Al Dungo: And just to preview it to you guys, where, the direction that we're going is, okay, Lab 10, let's just put some pictures onto the screen, right?
+
+140
+00:23:44.720 --> 00:23:46.120
+Al Dungo: Next week's lab…
+
+141
+00:23:46.120 --> 00:24:06.709
+Al Dungo: Which is also Chapter 15, and that's how you just continue to see big picture, right? So, none of this is ever to overwhelm you guys. This is genuinely, I mean, this is a college course. You should already have an expectation as to what is to come in this month of April, but as it being an online course, and yes, synchronous, there are some parts on it where you guys can still take your own initiative, where you don't have to wait on me.
+
+142
+00:24:06.710 --> 00:24:10.920
+Al Dungo: Right? Or your other classmates, this all information is there for you guys.
+
+143
+00:24:10.970 --> 00:24:25.409
+Al Dungo: But the direction you're eventually going to get to is if, let's not be, overwhelmed or taken aback by taking a peep at what Lab 11 is going to entail. For one, you're going to be doing this one for two weeks, so there's gonna be… not next week's lab.
+
+144
+00:24:25.490 --> 00:24:31.050
+Al Dungo: But the week after that, you're gonna have, another free-for-all lab where you…
+
+145
+00:24:31.730 --> 00:24:44.279
+Al Dungo: are able to kind of just ask questions, and honestly, you guys know that lab is always like that. But, you know, for those who have the initiative to really dive into this and understand, you know how… where that goes.
+
+146
+00:24:47.720 --> 00:24:54.820
+Al Dungo: And so, the way that… what you kind of get towards with this, and I won't reveal it till next week, but just to imagine.
+
+147
+00:24:55.180 --> 00:25:06.280
+Al Dungo: where we're gonna tie a pretty big program, and then you're gonna put the pieces together, is that you're basically gonna get to where you run a JavaFX program, and you'll be able to type text.
+
+148
+00:25:06.390 --> 00:25:13.960
+Al Dungo: Save it to a file, open it, you know, create a new one, and actually be able to click buttons
+
+149
+00:25:13.960 --> 00:25:29.969
+Al Dungo: to do a file handler. And so, like I said, don't overwhelm yourself with that just yet, but just a direction that you can see, and that's a little bit hint of how we're gonna be doing it today. You're literally gonna have four buttons that allow you to make a file, read from a file, write to a file, and delete a file. And yes!
+
+150
+00:25:30.080 --> 00:25:40.730
+Al Dungo: That actually brings back some of the stuff that you just did in Chapter 12 with the, file class, right? Where you write to text, where you read from text, and all that, vice versa.
+
+151
+00:25:40.980 --> 00:25:47.590
+Al Dungo: So think of this, like, kind of like a mini sem… not… I don't want to call it mini semester project, because it's not, it's a lab.
+
+152
+00:25:47.670 --> 00:26:02.550
+Al Dungo: But it does, you know, go into all the technical parts that you really want to dive into to understanding GUI at its basics, including clicking… the user clicking on items, and then from there, like, it just enhances what you're able to do more.
+
+153
+00:26:02.650 --> 00:26:13.519
+Al Dungo: So if you guys remember from PF1, where you did that big lab with, the arrays and the dice roll, how it was kind of like that last lab that tied pretty much everything together that you've done so far.
+
+154
+00:26:13.520 --> 00:26:24.270
+Al Dungo: you can imagine that this is how Lab 11 looks, and it's already available to you in that notebook, so no matter where you're at in your understanding of JavaFX now up until this point, you already
+
+155
+00:26:24.270 --> 00:26:39.710
+Al Dungo: have an idea of what you're going to be needing to do along with the semester project, so I… that's why I emphasize, I know it can seem like the last month feels like a lot, but that's why I appreciate every single one of you coming to class, asking questions, you know, and doing your part, because, you know, those expectations were…
+
+156
+00:26:39.710 --> 00:26:48.219
+Al Dungo: You know, set whenever you come… came to this class at the beginning, you know, the hours that you have to put into it, and coming to lecture. And so, again, emphasizing that
+
+157
+00:26:48.360 --> 00:27:04.289
+Al Dungo: you know, don't be afraid to ask for help. That's also why you have group members for those who are doing the projects with others, and then also just Zoom to openly discuss anyone who's having issues, right? So use those resources, guys, right? Use those tools, use that stuff that's available to you to be able to do so.
+
+158
+00:27:04.290 --> 00:27:16.429
+Al Dungo: Yeah, the print writer and the file writer, you're gonna be going back to using that, but then there's gonna be some GUI aspects to it, so instead of just manually typing everything into the code like we were previously in Chapter 12,
+
+159
+00:27:16.430 --> 00:27:31.120
+Al Dungo: Which was even just a small hint. Imagine actually clicking through buttons and interfaces to get it working, which I'll demonstrate for you guys next week. We won't get ahead of ourselves. I want to show you how we get to that a little bit first with, you know, lecture material.
+
+160
+00:27:33.310 --> 00:27:39.029
+Al Dungo: Which… like I said, a lot of this is just demonstrative examples, but…
+
+161
+00:27:40.140 --> 00:27:42.399
+Al Dungo: Let me show you… oops, okay.
+
+162
+00:27:43.280 --> 00:27:49.699
+Al Dungo: I want to… so, let's go a little bit backwards, because I think you guys are getting pretty hyped with, like, this stuff, and sometimes I'm just like…
+
+163
+00:27:49.700 --> 00:28:12.240
+Al Dungo: Hope I'm not boring with you guys… boring you guys with all the talk, talk, talk, and here's this example, and read it line by line so that you grasp all of this, right? It's not meant to blend together, but, like, you guys genuinely… it's supposed to be a turning point, like, you guys are at this end of Program Fundamentals 2, where it's meant to be a turning point that you're moving on to what could be next in terms of your development, right?
+
+164
+00:28:12.240 --> 00:28:14.070
+Al Dungo: And that's, like, programming development.
+
+165
+00:28:14.540 --> 00:28:16.679
+Al Dungo: So I want to show you…
+
+166
+00:28:16.960 --> 00:28:20.469
+Al Dungo: Let's show… I'm gonna show you a random one, and then we can go back and dissect it.
+
+167
+00:28:23.560 --> 00:28:29.130
+Al Dungo: So kind of going into Chapter 5… okay, actually, let's… let's… let's introduce this first, and then I'll show you guys.
+
+168
+00:28:30.110 --> 00:28:30.920
+Al Dungo: Oops.
+
+169
+00:28:32.240 --> 00:28:38.419
+Al Dungo: Chapters 14, 15, and 16 are all very Java FX.
+
+170
+00:28:38.780 --> 00:28:39.690
+Al Dungo: Heavy.
+
+171
+00:28:39.930 --> 00:28:58.909
+Al Dungo: Right? Yes, you can expect to be, tested on this for exam 3, but also keep in mind your assignments that help you conceptually understand labs that let you apply, which is Lab 10 and 11.
+
+172
+00:28:59.250 --> 00:29:04.520
+Al Dungo: As well as… Textbook slash PowerPoints.
+
+173
+00:29:06.240 --> 00:29:10.429
+Al Dungo: Or code examples, libraries, and examples.
+
+174
+00:29:11.300 --> 00:29:15.930
+Al Dungo: Right. This is the part of programming fundamentals
+
+175
+00:29:18.190 --> 00:29:21.899
+Al Dungo: Where it really starts to tie all together.
+
+176
+00:29:22.020 --> 00:29:33.089
+Al Dungo: even before… adding… incorporating a visual GUI, which again, stands for Graphical User Interface Elements.
+
+177
+00:29:34.280 --> 00:29:40.949
+Al Dungo: Programming Design and class design.
+
+178
+00:29:41.740 --> 00:29:46.720
+Al Dungo: Object-oriented programming, Etc.
+
+179
+00:29:47.230 --> 00:29:50.050
+Al Dungo: Still used extremely.
+
+180
+00:29:51.820 --> 00:29:59.719
+Al Dungo: So, you know, keep syntax in mind, be clean with code, mindful of logic.
+
+181
+00:30:00.000 --> 00:30:04.050
+Al Dungo: And all that other good stuff that programmers do.
+
+182
+00:30:13.540 --> 00:30:14.230
+Al Dungo: Hello?
+
+183
+00:30:18.530 --> 00:30:23.370
+Al Dungo: I was like, probably would have checked. Okay, and so… Chapter 14,
+
+184
+00:30:23.870 --> 00:30:32.270
+Al Dungo: introduced the basics, right? That's why it's called Java FX Basics, right? Just how it works.
+
+185
+00:30:33.800 --> 00:30:37.409
+Al Dungo: What visual elements are possible?
+
+186
+00:30:40.370 --> 00:30:51.630
+Al Dungo: And if you need to redirect, I don't know if I've made the Chapter 4 slide… the Chapter 14 slides available, but, let's just revert to the book very quickly, just so that we are reminded.
+
+187
+00:30:51.870 --> 00:31:03.739
+Al Dungo: JavaFX, right, just a lot of the different shapes, which even if we go into here, text… I don't even go into great detail of this, but if you genuinely want to see, because, like, one thing that we haven't gotten over is, like.
+
+188
+00:31:04.080 --> 00:31:09.160
+Al Dungo: Well, we even did a rectangle class ourselves, but, like, an ellipse. That's, like, a different shape to show you guys.
+
+189
+00:31:10.000 --> 00:31:14.929
+Al Dungo: Even though we didn't go over to it, if you, for some reason, are gonna have ellipse in your,
+
+190
+00:31:15.440 --> 00:31:18.809
+Al Dungo: Semester projects, then, great thing to refer to, right?
+
+191
+00:31:19.260 --> 00:31:31.489
+Al Dungo: And not that it's any different, and that's how, you know, your fundamental and foundational learning of classes and class design is important, because if you can grasp how the circle was working and showing things onto the screen like we did here.
+
+192
+00:31:32.620 --> 00:31:36.170
+Al Dungo: 14… sorry.
+
+193
+00:31:38.790 --> 00:31:39.690
+Al Dungo: Got lost.
+
+194
+00:31:42.310 --> 00:31:53.879
+Al Dungo: example… circle, sorry. If you can grasp how this one was working here, which is, again, is available to you in your notebook, but we've gone into great detail from Tuesday's class, and straight going back to the book.
+
+195
+00:31:53.880 --> 00:32:04.519
+Al Dungo: Then you could probably… what you're meant to feel comfortable doing, and what I hope that I've taught you so far, is, okay, what if I want to do this exact thing, but with an ellipse instead?
+
+196
+00:32:04.750 --> 00:32:10.889
+Al Dungo: And so, what's to stop you from going into your notebook instead? Your local notebook instead?
+
+197
+00:32:10.890 --> 00:32:24.779
+Al Dungo: and creating a different file and saying, huh, let me see if I can get a ellipse running just like, you know, the teacher did during class, except he did a circle. I want to just experiment further and make this a blue ellipse with a yellow outline and see if I can just get it
+
+198
+00:32:24.920 --> 00:32:26.440
+Al Dungo: Slapped onto the screen.
+
+199
+00:32:26.720 --> 00:32:27.560
+Al Dungo: Right?
+
+200
+00:32:28.060 --> 00:32:35.659
+Al Dungo: So that's kind of the idea that we're kind of coming with there, and I mean, if you really want to come up with this one, you could show this.
+
+201
+00:32:36.040 --> 00:32:38.690
+Al Dungo: I mean, ugh, I hate that it does that.
+
+202
+00:32:39.330 --> 00:32:49.869
+Al Dungo: The thing that… the part that's annoying about the book, I'll be completely honest, is that whenever you copy and paste it… I don't know if anyone has the electronic version of the book, but,
+
+203
+00:32:49.990 --> 00:33:00.809
+Al Dungo: the part that's annoying about this, if you guys have it, is if you… I'll even show it to you guys right now, just to pretend like I'm you guys, so that you keep seeing your emphasis on how this is fun to play with.
+
+204
+00:33:01.170 --> 00:33:07.569
+Al Dungo: So, I'm gonna… you can't just copy it, you actually have to let them know that you're copying it so I can grab it.
+
+205
+00:33:08.160 --> 00:33:23.610
+Al Dungo: Now, I'm gonna show… let's try to see some useful, not harmful AI, where this is coming straight out of the book, but just to emphasize it further. So let's… I know that this is not your notebook, but I'm just pretending like I'm you guys, right? Let's say I want to do…
+
+206
+00:33:25.480 --> 00:33:30.100
+Al Dungo: Chapter 14, my example.
+
+207
+00:33:30.800 --> 00:33:32.120
+Al Dungo: Got Java.
+
+208
+00:33:33.170 --> 00:33:33.920
+Al Dungo: Damn.
+
+209
+00:33:34.090 --> 00:33:44.780
+Al Dungo: the part that's gonna be super annoying is that, like, okay, sir, well, I'm trying to dive into this further and do what you do, but this is what happens when I keep copy from the book, which… there's no harm in actually quoting it out yourself.
+
+210
+00:33:45.220 --> 00:33:51.910
+Al Dungo: Right, because that will help you learn even more. But that is pretty annoying to see how…
+
+211
+00:33:52.640 --> 00:33:54.399
+Al Dungo: This looks, right?
+
+212
+00:33:54.700 --> 00:34:03.869
+Al Dungo: And then one thing I also want to do is… let's go… Actually, Let me just take this.
+
+213
+00:34:04.500 --> 00:34:14.980
+Al Dungo: Because I was gonna… I was gonna AI it with you guys, to where I was gonna tell the AI to remove all the line numbers, but I don't want to get too detailed into prompt… prompting right now, because…
+
+214
+00:34:15.060 --> 00:34:27.860
+Al Dungo: I want you guys to be mindful and careful of your usage of it in a way that's still effective for you. But, like I said, that's why I'm trying to make you see how the examples provided to you on your notebook is… oops.
+
+215
+00:34:28.110 --> 00:34:29.300
+Al Dungo: hopefully…
+
+216
+00:34:29.610 --> 00:34:34.899
+Al Dungo: Now, am I going to be able to get this to actually run? I don't know, I'm just trying to… because I have lots of examples.
+
+217
+00:34:36.909 --> 00:34:37.649
+Al Dungo: Let's see.
+
+218
+00:34:41.500 --> 00:34:43.000
+Al Dungo: I hope that was, though.
+
+219
+00:34:43.260 --> 00:34:44.429
+Al Dungo: a line number.
+
+220
+00:34:45.320 --> 00:34:50.130
+Al Dungo: These are dashes… I mean, minuses, not dashes… Okay.
+
+221
+00:34:51.500 --> 00:34:52.860
+Al Dungo: Now…
+
+222
+00:34:53.400 --> 00:35:01.749
+Al Dungo: Let's see… like I said, no guarantee, I'm kind of just going off a whim here. I'm trying to just emphasize your guys'…
+
+223
+00:35:02.520 --> 00:35:05.100
+Al Dungo: Experimentation desire.
+
+224
+00:35:05.780 --> 00:35:07.870
+Al Dungo: So let's do… oops.
+
+225
+00:35:08.470 --> 00:35:17.939
+Al Dungo: Feedback blank cells. I wonder if… This one's work.
+
+226
+00:35:21.280 --> 00:35:22.400
+Al Dungo: Oop, okay.
+
+227
+00:35:22.680 --> 00:35:26.909
+Al Dungo: Oh, it's looking for another class, that's why it's not gonna work.
+
+228
+00:35:27.480 --> 00:35:31.970
+Al Dungo: I need… What is it extending?
+
+229
+00:35:32.690 --> 00:35:35.360
+Al Dungo: Extends application… oh, pain is pain.
+
+230
+00:35:39.150 --> 00:35:41.020
+Al Dungo: It's even here…
+
+231
+00:35:49.710 --> 00:35:50.500
+Al Dungo: Oh.
+
+232
+00:35:50.770 --> 00:35:51.810
+Al Dungo: Silly me.
+
+233
+00:35:52.270 --> 00:35:56.879
+Al Dungo: That would actually be a lot. So, as you can see, imports are really important.
+
+234
+00:35:57.030 --> 00:35:59.249
+Al Dungo: Can't forget that. Oops.
+
+235
+00:36:00.520 --> 00:36:03.240
+Al Dungo: Also, even then… look, check this out.
+
+236
+00:36:04.030 --> 00:36:07.909
+Al Dungo: Y'all saw how I tried to copy that? Didn't even look to it, right?
+
+237
+00:36:20.990 --> 00:36:22.130
+Al Dungo: Share that one more time.
+
+238
+00:36:22.910 --> 00:36:24.680
+Al Dungo: What do we think? We think it's gonna work?
+
+239
+00:36:26.280 --> 00:36:27.140
+Al Dungo: That's it.
+
+240
+00:36:28.600 --> 00:36:29.340
+Al Dungo: Oops.
+
+241
+00:36:33.200 --> 00:36:47.199
+Al Dungo: I'm also just trying to emphasize to you guys how, like, this isn't meant to be some trivial, extremely difficult thing for you to run examples, and how useful and fun it is, so that you guys can get excited and try doing this yourselves for whatever it is that you're gonna create. Yo!
+
+242
+00:36:47.550 --> 00:36:53.610
+Al Dungo: Where am I, where am I, where am I? Show lips…
+
+243
+00:37:01.060 --> 00:37:03.890
+Al Dungo: That one… Okay.
+
+244
+00:37:06.820 --> 00:37:10.590
+Al Dungo: I don't be too pressed, like I said, I was just trying to demonstrate something for you guys.
+
+245
+00:37:18.270 --> 00:37:19.450
+Al Dungo: That works.
+
+246
+00:37:29.610 --> 00:37:30.630
+Al Dungo: Oh, okay.
+
+247
+00:37:33.080 --> 00:37:35.320
+Al Dungo: Let me try one more thing.
+
+248
+00:37:44.850 --> 00:37:47.379
+Al Dungo: Where are we? They tweeted in here.
+
+249
+00:37:59.870 --> 00:38:05.340
+Al Dungo: Okay, we'll come back to that one. Like I said, I don't want to get fixed out, and that was really just a demonstration one to show you guys.
+
+250
+00:38:05.340 --> 00:38:14.839
+Al Dungo: where I wanted to emphasize further is, the elements, right? Because even Chapter 14, this is all just being able to show you, like, that's cool, and, like, even this one that you guys haven't seen.
+
+251
+00:38:14.840 --> 00:38:35.390
+Al Dungo: Like, look at… look at all these different examples that come from the book, and the code is right there for you. And so if you wanted to try, I will… I will give kudos to anyone who can get this book working out of the example. Not that it won't, because it will, but it's a matter of translating it from what's in the book itself and these ugly line numbers, and then going into your local to just experiment with it.
+
+252
+00:38:35.460 --> 00:38:40.449
+Al Dungo: Well, the whole goal and point that I'm trying to show you guys is, to the direction that you're going towards.
+
+253
+00:38:41.020 --> 00:38:47.250
+Al Dungo: We can see how shapes, text, color, fonts.
+
+254
+00:38:47.650 --> 00:38:51.779
+Al Dungo: And more can be customized to however we want.
+
+255
+00:38:52.010 --> 00:38:54.889
+Al Dungo: Again, it's just… it's gonna take time, right? It doesn't just come…
+
+256
+00:38:55.170 --> 00:38:58.239
+Al Dungo: Flat out like it does. Now, what is Chapter 15?
+
+257
+00:38:58.790 --> 00:39:00.590
+Al Dungo: What is Chapter 15 about?
+
+258
+00:39:01.580 --> 00:39:09.599
+Al Dungo: Chapter 15, Introduces the, concept of what's called event handling.
+
+259
+00:39:10.110 --> 00:39:18.500
+Al Dungo: Meaning that when… in layman's terms, when something happens…
+
+260
+00:39:18.720 --> 00:39:26.180
+Al Dungo: what does the code do? This might be clicking, button pressing,
+
+261
+00:39:27.300 --> 00:39:38.550
+Al Dungo: dragging, sliding, etc, but it's that action of something occurring that I want you guys to see, and then the code is therefore affected. And that's gonna take specific logic to be able to do so.
+
+262
+00:39:39.080 --> 00:39:48.559
+Al Dungo: And I want to emphasize that more to you guys, so that's kind of the way that we're gonna head that direction. And fingers crossed, because I don't know why that… that…
+
+263
+00:39:48.910 --> 00:39:51.740
+Al Dungo: That short example was just not working, but…
+
+264
+00:39:52.210 --> 00:39:59.970
+Al Dungo: Let's try to do one so that we can show you the cool parts of it, and then get the… oops, oh my gosh… to get the…
+
+265
+00:40:00.770 --> 00:40:03.260
+Al Dungo: Demonstrations and the definitions going.
+
+266
+00:40:06.070 --> 00:40:15.680
+Al Dungo: Fingers crossed… I gotta… I gotta upload these examples for you guys, but… 15… Let's do this… okay.
+
+267
+00:40:16.230 --> 00:40:23.289
+Al Dungo: Let's do… Let me see if I can get this one, okay.
+
+268
+00:40:24.170 --> 00:40:28.150
+Al Dungo: Please work. He was literally working right before class.
+
+269
+00:40:37.770 --> 00:40:54.609
+Al Dungo: Gosh, okay. So, up a notch a little bit, and that's why, like, even whenever we move past Chapter 14, you're still going to be using these concepts that we have here, even whenever I show you this code for this, what made this run. Now, where we really start to add some fun into it is whenever you open this guy here.
+
+270
+00:40:55.000 --> 00:40:58.730
+Al Dungo: It's my little window, right? Also, just double checking that you guys can see it.
+
+271
+00:40:58.960 --> 00:40:59.710
+Al Dungo: Okay.
+
+272
+00:41:00.360 --> 00:41:06.890
+Al Dungo: it's not… obviously, this is not always gonna be like that, but just kind of emphasizing the direction that we're going. If I hit this… I'm literally clicking on this button.
+
+273
+00:41:07.480 --> 00:41:24.890
+Al Dungo: And the code that's actively running recognizes that I'm pressing the OK button. Cancel? Okay. Cancel, okay. And so it's that triggering, as you'll hear that word, the event handling, that when I click this button, how does the code recognize to say, okay.
+
+274
+00:41:25.400 --> 00:41:27.370
+Al Dungo: You know, say that it ran.
+
+275
+00:41:27.610 --> 00:41:31.200
+Al Dungo: Now, if that's not cool, which is… It's pretty… it's alright.
+
+276
+00:41:31.770 --> 00:41:37.540
+Al Dungo: Alright, let's do… Oh, this one's a fun one.
+
+277
+00:41:37.660 --> 00:41:45.369
+Al Dungo: We're gonna go over all of these so that you guys can see the code, but I'm just getting you excited, so that if you're not already trying to get these examples working, you need to.
+
+278
+00:41:45.540 --> 00:41:47.819
+Al Dungo: So that you can start doing this yourself.
+
+279
+00:41:48.980 --> 00:41:50.839
+Al Dungo: Oh, that's not it, oh yeah.
+
+280
+00:41:55.900 --> 00:41:59.489
+Al Dungo: Okay, those are working fine. Now, this one… This is fun.
+
+281
+00:41:59.730 --> 00:42:11.699
+Al Dungo: Now, nothing's gonna show up on the… oh, actually, I'm not sure. I, something may or may not show up on here, but that's actually the point, because, like I said, big whoop, you're pressing buttons. Now, how you actually make it come up to…
+
+282
+00:42:15.190 --> 00:42:22.690
+Al Dungo: to show something physically, right? Because remember, we're all talking about graphical user interface. This is how we're getting things to show up onto the screen.
+
+283
+00:42:22.860 --> 00:42:25.329
+Al Dungo: Right? So, you guys can see that, right? Okay.
+
+284
+00:42:25.520 --> 00:42:27.499
+Al Dungo: Look at this.
+
+285
+00:42:31.830 --> 00:42:32.710
+Al Dungo: Huh?
+
+286
+00:42:32.990 --> 00:42:33.990
+Al Dungo: drinking.
+
+287
+00:42:35.900 --> 00:42:46.030
+Al Dungo: All with JavaFX, so that's what Chapter 15… if there was something to summarize how Chapter 15 is gonna go, it is grasping the code that allows for that magic to happen.
+
+288
+00:42:46.170 --> 00:42:46.990
+Al Dungo: Right?
+
+289
+00:42:47.300 --> 00:42:53.129
+Al Dungo: So let's dive into it. Pretty cool, right? I could just… we could just spend the rest of class just showing those examples.
+
+290
+00:42:54.020 --> 00:42:57.970
+Al Dungo: Oh, not that one. Okay.
+
+291
+00:43:09.750 --> 00:43:12.459
+Al Dungo: Sorry, I tried to switch over my notes.
+
+292
+00:43:16.490 --> 00:43:21.050
+Al Dungo: So, even whenever we dive into this a bit here, Oops.
+
+293
+00:43:25.320 --> 00:43:26.520
+Al Dungo: Or, actually.
+
+294
+00:43:28.170 --> 00:43:33.090
+Al Dungo: Examples, so… User clicks a button.
+
+295
+00:43:33.640 --> 00:43:36.260
+Al Dungo: then what happens? Right?
+
+296
+00:43:37.400 --> 00:43:42.719
+Al Dungo: In code, the kind of way that we can kind of imagine it happening behind is that button?
+
+297
+00:43:43.350 --> 00:43:44.980
+Al Dungo: a button?
+
+298
+00:43:45.110 --> 00:43:50.770
+Al Dungo: Is just an object from the button class.
+
+299
+00:43:50.980 --> 00:43:53.960
+Al Dungo: But it is what we call…
+
+300
+00:43:54.150 --> 00:44:06.509
+Al Dungo: an event source objects. Why is it called that? Well, it's because that is the source that an event occurs, because upon the button being clicked.
+
+301
+00:44:07.440 --> 00:44:16.090
+Al Dungo: an event… Occurs, which is technically also an object itself.
+
+302
+00:44:17.450 --> 00:44:28.720
+Al Dungo: And that's why you're, really starting to see object-oriented programming come into really strong light here in all of our understanding so far. But even whenever we try to go backwards and just show the end result of it.
+
+303
+00:44:28.720 --> 00:44:39.379
+Al Dungo: And then, like I said, work backwards, and you can see, okay, that's how all the parts that we're understanding so far are coming into play here. And lastly, you have an event, you also have a handler.
+
+304
+00:44:41.510 --> 00:44:44.180
+Al Dungo: Responds to the event.
+
+305
+00:44:45.970 --> 00:44:47.400
+Al Dungo: Which is also not linked.
+
+306
+00:44:48.100 --> 00:45:02.270
+Al Dungo: And that's not the point, right? I'm just emphasizing this to you guys so that whenever you see the code, you're still having that object mentality, but then, just like we were doing with things previously, they're just gonna be talking and working with, one another, right?
+
+307
+00:45:04.330 --> 00:45:07.609
+Al Dungo: an event… Wait, that's fine.
+
+308
+00:45:08.790 --> 00:45:14.330
+Al Dungo: encode… in a program, as a signal
+
+309
+00:45:15.010 --> 00:45:18.990
+Al Dungo: that something happened, which is why I say, like, oh, the event occurred.
+
+310
+00:45:19.220 --> 00:45:29.140
+Al Dungo: Right? And… but just like with anything, you know, all the different pieces are to this, again, that event is going to therefore be handled, and then told how to do something specifically.
+
+311
+00:45:29.300 --> 00:45:36.550
+Al Dungo: And so this actually is a lot of how your semester projects are going to work, of course, ideally.
+
+312
+00:45:36.680 --> 00:45:41.340
+Al Dungo: But this is what we call… event-driven programming.
+
+313
+00:45:41.450 --> 00:45:52.420
+Al Dungo: This is when programming occurs reliant on firing events, which is a different way to approach it, right? If you think about it.
+
+314
+00:45:53.860 --> 00:46:05.170
+Al Dungo: quite different from the way we've been running programs all this time, right? Because, yeah, we compile and run, then the code
+
+315
+00:46:05.170 --> 00:46:16.599
+Al Dungo: executes, as you might call, sequentially. That is, of course, branching and flowing and selection and, you know, all of that aside. Did the code execute sequentially as
+
+316
+00:46:16.670 --> 00:46:17.700
+Al Dungo: Written?
+
+317
+00:46:18.280 --> 00:46:22.679
+Al Dungo: With this, the way that it kind of takes a little bit of a different shift is.
+
+318
+00:46:22.990 --> 00:46:29.900
+Al Dungo: Kind of like our examples, right? I press this button, I do this one thing, then what happens?
+
+319
+00:46:30.270 --> 00:46:32.379
+Al Dungo: Right? And so you'll often hear us
+
+320
+00:46:32.720 --> 00:46:40.039
+Al Dungo: Refer to the term fire and event is the process of creating and handling events.
+
+321
+00:46:41.990 --> 00:46:46.809
+Al Dungo: And like I said, you guys might start to get kind of bored with my textbook definitions, but…
+
+322
+00:46:46.990 --> 00:46:50.560
+Al Dungo: Really, like I said, the meat is all in the code itself.
+
+323
+00:46:52.050 --> 00:46:55.419
+Al Dungo: And then how you translate and decide to applicably use it.
+
+324
+00:46:55.710 --> 00:46:56.800
+Al Dungo: It's up to you.
+
+325
+00:47:03.850 --> 00:47:08.510
+Al Dungo: So, let's do… let me show you… let me just show you a very simple one.
+
+326
+00:47:08.620 --> 00:47:12.950
+Al Dungo: And then we can kind of break down the… Syntax behind it.
+
+327
+00:47:13.130 --> 00:47:15.780
+Al Dungo: So this is… oops, oh my gosh.
+
+328
+00:47:16.820 --> 00:47:19.049
+Al Dungo: Well, that was cool, and I could do that.
+
+329
+00:47:19.660 --> 00:47:21.700
+Al Dungo: Oh, nice, you can split it completely.
+
+330
+00:47:23.700 --> 00:47:30.669
+Al Dungo: Check… okay, this is check… okay, and then… let's, let's look at what a firing event looks like.
+
+331
+00:47:31.080 --> 00:47:38.029
+Al Dungo: 17, and then we'll do… Basic event template.
+
+332
+00:47:41.580 --> 00:47:46.129
+Al Dungo: So this as well as the one with just the OK and the cancel, okay?
+
+333
+00:47:46.940 --> 00:47:51.640
+Al Dungo: Now, before we even dive into the parts of…
+
+334
+00:47:56.970 --> 00:48:04.220
+Al Dungo: Well, actually, I'll just… I'll pause there for you guys to take a look at. I'll let you take a look at that while I write some definitions on the side.
+
+335
+00:48:07.010 --> 00:48:07.870
+Al Dungo: Oops.
+
+336
+00:48:10.040 --> 00:48:10.810
+Al Dungo: Gosh.
+
+337
+00:48:29.790 --> 00:48:31.639
+Al Dungo: Okay, I was like, why…
+
+338
+00:48:52.950 --> 00:48:57.100
+Al Dungo: Hold on, guys, sorry, my slides are all, like, they're freezing for some reason.
+
+339
+00:48:57.760 --> 00:48:59.410
+Al Dungo: I can't get it to…
+
+340
+00:49:09.670 --> 00:49:11.349
+Al Dungo: Okay, that was weird, sorry.
+
+341
+00:49:16.780 --> 00:49:22.830
+Al Dungo: handlers… also called… Listeners…
+
+342
+00:49:27.880 --> 00:49:45.160
+Al Dungo: are an instance of, and check this out, event handling interface. So, interfaces! Wasn't that just something that we talked about previously, and how that, abstraction allows us to have flexibility and customization in our code itself?
+
+343
+00:49:45.160 --> 00:49:52.100
+Al Dungo: Well, lo and behold, here is a instance of an interface, right? So, interfaces like the ability to…
+
+344
+00:49:52.110 --> 00:49:54.930
+Al Dungo: do something. You can see here that
+
+345
+00:49:55.020 --> 00:50:00.010
+Al Dungo: Event Handler actually extends that, event ability.
+
+346
+00:50:00.570 --> 00:50:05.560
+Al Dungo: But where this comes into play is showing how we handle it here.
+
+347
+00:50:05.920 --> 00:50:09.539
+Al Dungo: And so, let me switch over to this one.
+
+348
+00:50:10.490 --> 00:50:11.600
+Al Dungo: I can see something.
+
+349
+00:50:21.000 --> 00:50:29.409
+Al Dungo: And so, this right here is the aspect of implementing the event handler, right? So, even for…
+
+350
+00:50:29.540 --> 00:50:38.240
+Al Dungo: for our okay… Cancel, JavaFX example.
+
+351
+00:50:38.430 --> 00:50:43.160
+Al Dungo: This is just pulled straight from it so that you guys can kind of see how this looks.
+
+352
+00:50:43.520 --> 00:50:44.610
+Al Dungo: So, oops.
+
+353
+00:50:45.620 --> 00:50:47.669
+Al Dungo: You can have it here…
+
+354
+00:50:52.640 --> 00:50:56.799
+Al Dungo: First… We must implement the…
+
+355
+00:50:57.080 --> 00:51:10.959
+Al Dungo: events handler. And so, kind of what's happening here is, you can see, keeping all of that assumption that we made previously, right, class design, cohesiveness, cleanliness, and just organizing our code, this
+
+356
+00:51:11.240 --> 00:51:13.389
+Al Dungo: Class, right here, specifically.
+
+357
+00:51:13.570 --> 00:51:21.429
+Al Dungo: This little, this little, method only handles the cancel.
+
+358
+00:51:21.550 --> 00:51:34.419
+Al Dungo: This one only handles the okay, and doesn't… and even then, it's changed quite a bit. That is how we continue to keep object-oriented programming in mind, sorry, object-oriented programming in mind.
+
+359
+00:51:34.740 --> 00:51:50.940
+Al Dungo: So that, again, if there's anything wrong with that button specifically, we know where it's exactly tied to as the logic happening. So here, we just worry about handling the event, right? As you can see, parameters are going to be passed in as such, but this actually goes into how
+
+360
+00:51:51.090 --> 00:51:53.689
+Al Dungo: What was coming up onto the screen, okay?
+
+361
+00:51:54.310 --> 00:51:56.639
+Al Dungo: Now, this is different from…
+
+362
+00:51:59.850 --> 00:52:00.590
+Al Dungo: Oops.
+
+363
+00:52:01.020 --> 00:52:02.360
+Al Dungo: Go side to side.
+
+364
+00:52:06.600 --> 00:52:12.170
+Al Dungo: Once implemented, kind of just like how methods Just, almost…
+
+365
+00:52:12.500 --> 00:52:17.049
+Al Dungo: How, almost like when we…
+
+366
+00:52:17.350 --> 00:52:21.919
+Al Dungo: Implement methods, but still need to call?
+
+367
+00:52:22.240 --> 00:52:24.139
+Al Dungo: On them to use.
+
+368
+00:52:24.600 --> 00:52:28.910
+Al Dungo: We also have to, what is called, register.
+
+369
+00:52:29.050 --> 00:52:31.109
+Al Dungo: the event handler.
+
+370
+00:52:31.310 --> 00:52:40.270
+Al Dungo: And so even if you look back over here, let's try to trace exactly where this cancel handler class is registered.
+
+371
+00:52:40.580 --> 00:52:45.190
+Al Dungo: And so whenever we go up to Maine, and more so specifically.
+
+372
+00:52:45.610 --> 00:52:56.910
+Al Dungo: not even just main, but the application where it's actually running, right? We know that main just kind of launches things now, but then start is where we put all the code to have the application run.
+
+373
+00:52:57.330 --> 00:53:07.820
+Al Dungo: Visually, you can put two and two together just from the understanding of JavaFX aspects, that here's your button, right? And we just are placing it onto the screen.
+
+374
+00:53:07.940 --> 00:53:16.640
+Al Dungo: Right? And even if we ignore all of this aside, because that's all the new code, I want to even erase it for a second. This is just… this right here is chapter 14.
+
+375
+00:53:16.730 --> 00:53:27.999
+Al Dungo: Even without the rest that comes after this, this is just Chapter 14, because we took our buttons, our nodes, we put them into an H box, and we allowed them to show onto the scene.
+
+376
+00:53:29.210 --> 00:53:40.299
+Al Dungo: Right, so the layering and the step up towards the different kind of programs that we're going to work on evolved to this direction, but then whenever you look here, again, okay.
+
+377
+00:53:40.490 --> 00:53:42.269
+Al Dungo: Object class creation.
+
+378
+00:53:42.760 --> 00:53:46.640
+Al Dungo: Right? OK handler class… is right here.
+
+379
+00:53:47.520 --> 00:53:51.300
+Al Dungo: Right? That's the one that we instantiated an object from it.
+
+380
+00:53:51.740 --> 00:53:53.960
+Al Dungo: Right, and we just called it Handler what?
+
+381
+00:53:54.450 --> 00:54:01.110
+Al Dungo: So this is not anything un-new to, like, what we've done previously, but as you can see here, this is just the class type.
+
+382
+00:54:01.440 --> 00:54:07.180
+Al Dungo: The name of that object that we're gonna create, and then the constructor.
+
+383
+00:54:08.200 --> 00:54:17.699
+Al Dungo: Right? Very slimly put to be shown here, and that is what… that is what occurs whenever we call on this handler.
+
+384
+00:54:22.020 --> 00:54:29.790
+Al Dungo: Now, a key thing here is… let's also do… this… Here…
+
+385
+00:54:49.670 --> 00:54:54.700
+Al Dungo: Notice… the set… oops.
+
+386
+00:54:54.810 --> 00:55:03.090
+Al Dungo: Set on action… button, or sorry, method… that allows…
+
+387
+00:55:03.250 --> 00:55:11.940
+Al Dungo: The button to be handled by its Again, the parameter argument…
+
+388
+00:55:12.170 --> 00:55:14.789
+Al Dungo: Passed in, as you can see here.
+
+389
+00:55:15.450 --> 00:55:16.470
+Al Dungo: And they're white.
+
+390
+00:55:17.160 --> 00:55:29.890
+Al Dungo: And so that is… even… that's why I start with that example, so that you guys can see the basic functionality of it, but it's really important to take the time to see how all of these tie together, because this isn't as nearly as long as it could be.
+
+391
+00:55:30.090 --> 00:55:34.840
+Al Dungo: But… key things here.
+
+392
+00:55:35.550 --> 00:55:40.730
+Al Dungo: Also, again, this isn't as… Im… well, okay, that's not true.
+
+393
+00:55:41.190 --> 00:55:47.760
+Al Dungo: this is how it ties together to recognize that whenever I press this OK button, which is, you know.
+
+394
+00:55:47.880 --> 00:55:49.709
+Al Dungo: Class… What do you call it?
+
+395
+00:55:49.900 --> 00:55:55.810
+Al Dungo: Identified by this button, By clicking on button OK, what happens?
+
+396
+00:55:56.190 --> 00:56:11.649
+Al Dungo: What happens upon that action? Well, all that code is written here, and that is why it runs at the bottom where it shows… it's just simple print statements, which is pretty elementary if you think about it, because, you know, you want to grasp how those parts tie together, and just, I click this.
+
+397
+00:56:11.850 --> 00:56:14.990
+Al Dungo: Print, our text display.
+
+398
+00:56:15.060 --> 00:56:25.450
+Al Dungo: You can imagine how it evolves beyond that. And think about what you did a long time ago. Before, for you, it was just, okay, I can hit run, and that's crazy that something comes up on the screen here.
+
+399
+00:56:25.490 --> 00:56:38.829
+Al Dungo: That was way back when you first ran your first Java code. Now, we have evolved, which I hope that you guys feel that you've reached that point, that now I'm pressing a button, and something is showing up onto the screen beyond that.
+
+400
+00:56:39.180 --> 00:56:48.360
+Al Dungo: And one thing that's important to see is that this is just, one way to show how we implement this event handler through this,
+
+401
+00:56:48.540 --> 00:56:52.399
+Al Dungo: in your class.
+
+402
+00:56:53.730 --> 00:56:56.310
+Al Dungo: This is an internet… an inner class.
+
+403
+00:56:56.440 --> 00:57:02.079
+Al Dungo: Which, I want to… let me see if I can show you this example, or if it goes into another one.
+
+404
+00:57:02.400 --> 00:57:03.210
+Al Dungo: Hell yeah.
+
+405
+00:57:06.110 --> 00:57:09.400
+Al Dungo: Actually, I don't think I ran this one. I should run this one.
+
+406
+00:57:09.840 --> 00:57:10.910
+Al Dungo: Let me run this one.
+
+407
+00:57:11.120 --> 00:57:23.559
+Al Dungo: So we can… and also, great time to pause if there's any questions about that one, because that is your first, look at event handling. Again, it kind of just goes up from there as to how we're gonna… oh, not that one.
+
+408
+00:57:24.150 --> 00:57:27.089
+Al Dungo: I want… oh yeah, example 2.
+
+409
+00:57:29.160 --> 00:57:31.450
+Al Dungo: Inner class member.
+
+410
+00:57:32.340 --> 00:57:33.100
+Al Dungo: Oh!
+
+411
+00:57:35.080 --> 00:57:36.940
+Al Dungo: Oh, sorry, I didn't do that one minute.
+
+412
+00:57:38.580 --> 00:57:39.520
+Al Dungo: Yes.
+
+413
+00:57:44.530 --> 00:57:46.460
+Al Dungo: Pretty neat, right? I think it's neat.
+
+414
+00:57:46.660 --> 00:57:51.269
+Al Dungo: Hopefully you guys do, too, and you can see the… Usefulness of this.
+
+415
+00:57:52.530 --> 00:57:53.480
+Al Dungo: Okay.
+
+416
+00:57:54.710 --> 00:58:04.979
+Al Dungo: Now, before I even run this one, I'll give you guys a fair chance to look at the code, and start to try and, deduce and put… see how you…
+
+417
+00:58:05.750 --> 00:58:23.189
+Al Dungo: how it looks compared to it. So, I'll show you the start, because now you recognize that even if I have these handlers for what happens on pressing this button, where you're probably more tripped up is how it translates into what is exactly being done, and that's probably more of the action that you care about.
+
+418
+00:58:23.660 --> 00:58:25.679
+Al Dungo: Okay, here.
+
+419
+00:58:26.600 --> 00:58:28.539
+Al Dungo: So I'll show you that here.
+
+420
+00:58:29.120 --> 00:58:42.370
+Al Dungo: And then I'll give you guys a second. So now's a great time to ask questions, that's what this is for, and that's what I emphasize on kind of telling you guys. I'll have chapters 14 and 15 slides posted for you, because I'll be honest, chapter 15 slides is, like, only 16 slides.
+
+421
+00:58:42.560 --> 00:58:53.589
+Al Dungo: And so that's why, you know, I don't read off of slides during class, but then, I'll be happy to direct you towards anywhere else that might be of use. And this is… this is really neat stuff, guys.
+
+422
+00:58:53.930 --> 00:59:11.840
+Al Dungo: And so before we even run it here, like, before we even… because last time I did it backwards, where I just showed you how it ran, and then we looked into the code. Here, this is a lot like what we were just doing with the example 1 that we just had, right? I've got these classes that I so-called create, and the object… or the object creation and the constructor usage of it.
+
+423
+00:59:12.220 --> 00:59:27.529
+Al Dungo: Right? I've done that before. Okay, now I grasp that we need to tie that actual button to the action, because when I click on it, this occurs, this method happens. Whenever I click on this, this method happens.
+
+424
+00:59:27.810 --> 00:59:30.699
+Al Dungo: whenever I click on this button, this method happens.
+
+425
+00:59:31.320 --> 00:59:42.840
+Al Dungo: Right? And then if you're still familiarizing yourself with, like, how things are placed, that's Chapter 14 stuff, but that's where your, you know, simple vertical box pane alignment comes into play here.
+
+426
+00:59:50.650 --> 00:59:53.280
+Al Dungo: Okay, no questions on that, let's see what the code looks like.
+
+427
+00:59:53.760 --> 00:59:59.909
+Al Dungo: So if I go into here, very, very similar to before, you can see how each of these are classes within.
+
+428
+01:00:00.100 --> 01:00:06.749
+Al Dungo: Which also, let me double check… This one… Okay, private… okay.
+
+429
+01:00:08.460 --> 01:00:09.190
+Al Dungo: Okay.
+
+430
+01:00:09.440 --> 01:00:10.949
+Al Dungo: That's good, that's good. Oh wait.
+
+431
+01:00:11.930 --> 01:00:13.290
+Al Dungo: Public exit.
+
+432
+01:00:15.910 --> 01:00:17.119
+Al Dungo: Okay, that's okay.
+
+433
+01:00:19.180 --> 01:00:31.959
+Al Dungo: There is a very slight difference between this one and this one, and that's actually a definition that I'm going to show to you guys. And all of this, again, it's for your further exploration, even outside of what we talk about here. But what's, well, not…
+
+434
+01:00:32.120 --> 01:00:37.460
+Al Dungo: not without too much reveal just yet. Pretty similar to what we had before, right? We just have a class.
+
+435
+01:00:37.590 --> 01:00:42.560
+Al Dungo: We show that it is implementing the interface, right, the ability to handle an event.
+
+436
+01:00:42.780 --> 01:00:45.619
+Al Dungo: Right? Kind of think of, like, remember the ability to clone?
+
+437
+01:00:45.930 --> 01:00:54.549
+Al Dungo: Clonable, comparable. This is the ability to handle events, as you can see. And again, even here, just…
+
+438
+01:00:55.320 --> 01:00:57.590
+Al Dungo: That implementation of the interface.
+
+439
+01:00:57.940 --> 01:01:14.470
+Al Dungo: you override it, you have a handle in there, and then the action event itself is, like, your generic type that allows you to do so. But then whenever you look at what happens here, okay, now I can see that I have this global barrier click count, okay? Where is click count? Like, where does that even come from?
+
+440
+01:01:19.570 --> 01:01:22.570
+Al Dungo: Which email number I have here… oh, we're here.
+
+441
+01:01:23.220 --> 01:01:24.939
+Al Dungo: I was like, why can't they see it? Look at it.
+
+442
+01:01:25.160 --> 01:01:39.170
+Al Dungo: Notice how, for one, this is within the… this… this is where the curly brace starts for your application, right? Remember, this is where all the magic is happening and start? Well, it starts right here. Here's your application itself, but look, check this out. Clink Cal.
+
+443
+01:01:39.470 --> 01:01:49.169
+Al Dungo: you can see that I'm still in this same class right here, and notice how this increment handler is nested within that.
+
+444
+01:01:49.300 --> 01:02:08.119
+Al Dungo: this private class is inside this application, okay? I want you to notice that, for one. Two, look at how you're able to, you know, it's a global variable, it's in the right scope, which is, you know, something that we should be able to recognize. And notice how, okay, you're telling me that when I click on increment.
+
+445
+01:02:08.120 --> 01:02:11.970
+Al Dungo: I'm actually going to increase this variable.
+
+446
+01:02:12.830 --> 01:02:23.630
+Al Dungo: Okay, so if I go up here, okay, well, it starts at zero, so then now I can see, okay, well, now what else? I can also set text and, you know, display it as such.
+
+447
+01:02:24.310 --> 01:02:35.529
+Al Dungo: And I'll leave the rest for you to kind of figure out, because just kind of walking you guys through how that works. But what I… what I will say is that with this, for example…
+
+448
+01:02:37.490 --> 01:02:52.360
+Al Dungo: 2… Notice the key part… notice the key aspect that the handler Classes… Are within the same…
+
+449
+01:02:52.850 --> 01:02:54.599
+Al Dungo: Where you put here.
+
+450
+01:02:55.130 --> 01:02:57.349
+Al Dungo: Well, they're one within the same…
+
+451
+01:02:57.660 --> 01:03:01.009
+Al Dungo: class itself. Like, this is the actual class?
+
+452
+01:03:01.860 --> 01:03:03.160
+Al Dungo: Same class.
+
+453
+01:03:03.680 --> 01:03:11.809
+Al Dungo: And the difference I'm making between that is because, look here, your application ends here, which, as you can see, both ways, it works.
+
+454
+01:03:12.120 --> 01:03:21.490
+Al Dungo: it works. This is a pretty verbose approach. You can see that it works, right? That's where it ends. The handlers are of its own
+
+455
+01:03:22.290 --> 01:03:25.800
+Al Dungo: they stand on its own, right? That's why it's just a class.
+
+456
+01:03:25.910 --> 01:03:32.069
+Al Dungo: Here, the key thing about where this one is called is that this is what's called… Class?
+
+457
+01:03:34.380 --> 01:03:44.460
+Al Dungo: That's why they begin with private class, because remember, private can only be accessed within the class itself, and this is actually something that we call…
+
+458
+01:03:45.440 --> 01:03:46.210
+Al Dungo: Oops.
+
+459
+01:03:46.990 --> 01:03:48.480
+Al Dungo: This is a key definition.
+
+460
+01:03:48.760 --> 01:03:51.869
+Al Dungo: Inter nested Classes.
+
+461
+01:03:54.450 --> 01:04:00.319
+Al Dungo: These are defined within other classes, as kind of like what you saw here.
+
+462
+01:04:00.900 --> 01:04:05.690
+Al Dungo: Which is useful implementation for event handler classes.
+
+463
+01:04:06.190 --> 01:04:14.730
+Al Dungo: This is, inner classes can reference fields and methods of the outer class.
+
+464
+01:04:20.220 --> 01:04:24.260
+Al Dungo: Very useful for combining Oops.
+
+465
+01:04:34.360 --> 01:04:36.319
+Al Dungo: And they're nested classes.
+
+466
+01:04:39.650 --> 01:04:40.490
+Al Dungo: Oops.
+
+467
+01:04:44.870 --> 01:04:51.859
+Al Dungo: And I'll also, I'll show you guys while we have it. So, here is this, and then it's still running.
+
+468
+01:04:52.180 --> 01:05:07.400
+Al Dungo: So there's also one thing I would like to emphasize to you guys is that there is a difference between what comes up on the terminal versus what comes up on the actual scene itself, because that's what was, you know, purposely, intentfully coded to do so. You can see here, I could increment…
+
+469
+01:05:08.670 --> 01:05:09.809
+Al Dungo: Let's fun…
+
+470
+01:05:12.940 --> 01:05:27.950
+Al Dungo: And one thing that you can also notice, too, here, whenever we even look into the code further, that there's a difference between the text that is actually showing onto the screen, which you can see here is message text, and I'm deciding that upon clicking this button, I'm changing that text.
+
+471
+01:05:27.950 --> 01:05:34.939
+Al Dungo: And sure enough, whenever I look here, where does message text show? Well, message text is a part of this pane right here.
+
+472
+01:05:34.940 --> 01:05:41.460
+Al Dungo: I want it to be updated every time that button is clicked, and that's how you can see these talking to one another.
+
+473
+01:05:42.310 --> 01:05:43.160
+Al Dungo: Right?
+
+474
+01:05:43.360 --> 01:05:44.739
+Al Dungo: Of course, you can exit.
+
+475
+01:05:44.880 --> 01:05:50.430
+Al Dungo: Make it end completely. And then lastly, run it one more time.
+
+476
+01:05:50.780 --> 01:05:58.979
+Al Dungo: This is good for, like, you know how whenever you keep track of how many laps you ran, or how many people walked into a grocery store, or, a public place, it just…
+
+477
+01:06:01.860 --> 01:06:03.129
+Al Dungo: They're all clicks.
+
+478
+01:06:05.250 --> 01:06:07.580
+Al Dungo: And then you want to reset, right down to zero.
+
+479
+01:06:10.760 --> 01:06:30.680
+Al Dungo: And so, that is our, like, introduction to how event handling is going to work. Let me show you some definitions from the book in case you want to expand further from what we're doing. I'll make sure that these are updated for you guys, but I don't want to overwhelm you with the event-driven yet, because as you can see, you're going to get lots of practice, more than two weeks of that in Lab 11.
+
+480
+01:06:30.680 --> 01:06:39.689
+Al Dungo: For now, don't get overwhelmed. Definitely make sure that you're still focused on knowing how to at least get through the basics of JavaFX, which is where Lab 10 will allow you to shine.
+
+481
+01:06:40.080 --> 01:06:52.710
+Al Dungo: But you do now have everything that you need to do Lab 10, and so, besides these examples that are listed directly here, I will, again, emphasize my point that Lab's optional to come to tonight.
+
+482
+01:06:52.710 --> 01:07:00.170
+Al Dungo: If you guys want to hash things out, get your Java FX working, I definitely recommend you guys to. I'll be in the room… the room will be open.
+
+483
+01:07:00.170 --> 01:07:15.170
+Al Dungo: For anyone who wants to come in and maybe hash out breakout rooms, talk about some things, I'll be going… I'll be parsing through the semester project ideas while I'm in there, so that if anyone who is there wants to be like, oh, okay, my idea's cool, my idea's good, cool, let's… let's start diving into…
+
+484
+01:07:15.260 --> 01:07:17.129
+Al Dungo: The creation of it all.
+
+485
+01:07:17.280 --> 01:07:27.860
+Al Dungo: But you actually learn about 3 different ways to handle these events, and even if you look at the objectives here, the one that we just did was Inner Classes.
+
+486
+01:07:28.090 --> 01:07:40.299
+Al Dungo: But then you'll see other ways to handle these events and have code occur dependent on what's called firing an event, and those are your other definitions of an anonymous in your class.
+
+487
+01:07:40.510 --> 01:07:52.789
+Al Dungo: and lambda expressions. And again, more so on the syntax of those, and how you might want to write them a certain way, depending on what it is that you need your code to do, or the visual elements in your code.
+
+488
+01:07:53.500 --> 01:08:00.499
+Al Dungo: And then the rest will be for you to kind of, comment, and… You know.
+
+489
+01:08:01.120 --> 01:08:03.069
+Al Dungo: Code how you need it to.
+
+490
+01:08:06.260 --> 01:08:20.640
+Al Dungo: Any questions so far? Like I said, I'm not gonna get into anonymous in your classes just yet till Tuesday, but I wanted to at least start introducing the idea of event handling to you guys, so then you can imagine, even whenever we… let me try another example. Let's do…
+
+491
+01:08:21.200 --> 01:08:25.050
+Al Dungo: I'll do the anonymous inner one, but I'm not gonna show you what the code is.
+
+492
+01:08:26.760 --> 01:08:29.850
+Al Dungo: Because, again,
+
+493
+01:08:35.600 --> 01:08:36.430
+Al Dungo: Oops.
+
+494
+01:08:37.100 --> 01:08:38.229
+Al Dungo: That's not what it's called.
+
+495
+01:08:38.370 --> 01:08:39.539
+Al Dungo: And your class headline.
+
+496
+01:08:40.170 --> 01:08:41.289
+Al Dungo: Silly me.
+
+497
+01:08:45.080 --> 01:08:49.580
+Al Dungo: Actually, Now that I'm thinking about it, Oh, wait.
+
+498
+01:08:50.819 --> 01:08:52.419
+Al Dungo: Oh, it was called an Alexis.
+
+499
+01:08:52.830 --> 01:08:53.870
+Al Dungo: Oh, gosh.
+
+500
+01:09:02.060 --> 01:09:04.319
+Al Dungo: Anonymous…
+
+501
+01:09:07.580 --> 01:09:09.510
+Al Dungo: Oh, I spelled anonymous wrong, that's what I…
+
+502
+01:09:16.850 --> 01:09:18.120
+Al Dungo: Still spotted wrong.
+
+503
+01:09:31.010 --> 01:09:38.450
+Al Dungo: And so, funnily enough, This is a different… Example…
+
+504
+01:09:38.580 --> 01:09:55.760
+Al Dungo: But you can see, same concept still applies in how it works functionally. Now, do you see that? No, but behind the scenes, as a coder, you can know and understand that, hey, it's probably handling it a bit different to how it was in this example, which is exactly correct.
+
+505
+01:09:56.210 --> 01:10:02.799
+Al Dungo: But let me… do… Oh yeah, pregnant plus… oh yeah.
+
+506
+01:10:09.470 --> 01:10:12.240
+Al Dungo: Also, does this one have… wait, that one is preset.
+
+507
+01:10:20.030 --> 01:10:24.470
+Al Dungo: Let's also do… Okay.
+
+508
+01:10:27.450 --> 01:10:39.360
+Al Dungo: And so, this is the slight direction, kind of just giving you guys a little preview, again, not to be overwhelmed. Same exact concept, but then you can see where Chapter 15 just starts to,
+
+509
+01:10:40.050 --> 01:10:57.469
+Al Dungo: have similar energy, but then you can, as a programmer, kind of up to you to decide. And I will say that a part of Chapter 15 that we actually end on is when it's better to use your handlers just like this on the outside versus what's called anonymous and actually placing it within.
+
+510
+01:10:57.900 --> 01:10:59.190
+Al Dungo: As you can see.
+
+511
+01:10:59.460 --> 01:11:06.010
+Al Dungo: Again, subject to design, but for now, just a good introductory to you guys and to the direction that we're heading.
+
+512
+01:11:06.650 --> 01:11:19.519
+Al Dungo: I'll stop with that for Chapter 15. Are there any pressing questions that you guys have about JavaFX, or at least the image view, and the notes, and the… all the visual parts of Chapter 14 that anyone might be wondering before?
+
+513
+01:11:19.780 --> 01:11:21.410
+Al Dungo: We finished class today.
+
+514
+01:11:22.090 --> 01:11:23.929
+Al Dungo: Thumbs up, thank you, thank you.
+
+515
+01:11:25.450 --> 01:11:35.799
+Al Dungo: Pretty cool stuff, right, guys? Hopefully, you're feeling excited to implement that of your own, and where I will also go back to… well…
+
+516
+01:11:36.830 --> 01:11:48.430
+Al Dungo: I'll make sure the 14 and 15 slides are available after today, but even then, like I said, 15 is early, and you still also have the book to dive into the great detail of what it is, all that you'll be learning here.
+
+517
+01:11:50.100 --> 01:12:01.779
+Al Dungo: I'm trying to think what else. Yeah, Chapter 14. One thing that I will finish on, let me see if I can get this example running before we finish today, and then we can call it a day.
+
+518
+01:12:02.650 --> 01:12:08.569
+Al Dungo: Let's do… This one… ugh.
+
+519
+01:12:13.000 --> 01:12:15.370
+Al Dungo: Oh my god, oops, oh my gosh.
+
+520
+01:12:17.670 --> 01:12:18.740
+Al Dungo: Not mean to do that.
+
+521
+01:12:23.320 --> 01:12:29.100
+Al Dungo: I want to do… Example… okay.
+
+522
+01:12:29.440 --> 01:12:31.340
+Al Dungo: This, whoops, this one.
+
+523
+01:12:31.790 --> 01:12:33.709
+Al Dungo: I don't think I did this one yet.
+
+524
+01:12:33.950 --> 01:12:38.820
+Al Dungo: Let's try a… Property binding…
+
+525
+01:12:49.890 --> 01:12:51.320
+Al Dungo: Don't you like the label?
+
+526
+01:12:52.140 --> 01:12:53.750
+Al Dungo: Oh, okay.
+
+527
+01:12:54.090 --> 01:13:17.430
+Al Dungo: The last thing that I want to show you guys, and this is just a part of it, is, something that is called property binding in JavaFX. So this is the last bit of chapter 14, and even with all your, you know, visual elements that we talked about here, you guys now know that you can have labels, text, shapes, images, and whatnot. And an aspect that you will be able to customize, or kind of
+
+528
+01:13:17.430 --> 01:13:22.580
+Al Dungo: Play around with and experiment to your own choosing is the properties of those nodes itself.
+
+529
+01:13:22.720 --> 01:13:26.960
+Al Dungo: And so, where did it go?
+
+530
+01:13:34.680 --> 01:13:39.409
+Al Dungo: I just saw it, where'd it go?
+
+531
+01:13:51.030 --> 01:13:52.669
+Al Dungo: Oh, here it is. I was like, what?
+
+532
+01:13:57.080 --> 01:14:03.010
+Al Dungo: Especially with images, Especially with images, Oops.
+
+533
+01:14:04.060 --> 01:14:06.119
+Al Dungo: Let me just say here real quick, huh?
+
+534
+01:14:08.800 --> 01:14:17.099
+Al Dungo: With property binding, you can bind a target to a source object, so if you are looking to actually, you know.
+
+535
+01:14:17.570 --> 01:14:29.780
+Al Dungo: bind two pieces together. Say, like, you want to keep your image, or your text, or your shape specifically binded to, say, another object, or the paint itself, or, like, the center of it.
+
+536
+01:14:29.780 --> 01:14:43.360
+Al Dungo: you also have the ability to do so. Property binding is something that you… we kind of do… you kind of see it a little bit here, where, like, whenever we were messing with the circle, but if you wanted to specifically bind the center of the circle.
+
+537
+01:14:43.360 --> 01:14:51.949
+Al Dungo: Which, as you know, has a property, you can do so by making it clear that it's being binded to the exact middle width of the pane.
+
+538
+01:14:52.410 --> 01:15:06.450
+Al Dungo: And so, property binding is just a little bit of experimentation that has to be done. Again, it's, you know, to your own style and design that you may choose for it to do so, just so that you guys, you know, if you're getting stuck or trying to…
+
+539
+01:15:06.830 --> 01:15:19.980
+Al Dungo: manipulate your visual aspects a certain way. Just be mindful of binding if that's something you are trying to do to, you know, keep that specific element in place, or allow it to move freely whenever the window is moved, or vice versa.
+
+540
+01:15:21.130 --> 01:15:23.479
+Al Dungo: But other than that, guys…
+
+541
+01:15:23.700 --> 01:15:32.599
+Al Dungo: That is all the time we have for today, so thank you so much for the great, presentation of, you know, all these demos for you guys.
+
+542
+01:15:32.740 --> 01:15:37.619
+Al Dungo: Like I said, Lab is optional tonight, but where you want to definitely hash out is Lab 10.
+
+543
+01:15:37.640 --> 01:15:59.970
+Al Dungo: Which is a part of your JavaFX notebook, so really, that's where you guys need to just dive in and get that working. So I'll be open in the lab section tonight at 5 from, for anyone who wants to come in and might need troubleshooting for that. Otherwise, you guys have plenty to work on and get going and get started. So, thank you guys so much for coming in, and we will see you either in lab tonight if you need help with it, or on Tuesday.
+
+544
+01:16:00.870 --> 01:16:02.140
+Al Dungo: Thanks, everybody.
+

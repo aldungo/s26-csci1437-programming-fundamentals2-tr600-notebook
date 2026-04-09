@@ -23,7 +23,7 @@ git checkout student
 # Cherry-pick only student-safe files from instructor
 Write-Host ""
 Write-Host "Updating student-safe content..." -ForegroundColor Yellow
-git checkout instructor -- .devcontainer/ .github/ chapter9/ chapter10/ lectures/ README.md WORKFLOW.md QUICK-REF.txt
+git checkout instructor -- .devcontainer/ .github/ chapter9/ chapter10/ chapter11/ chapter12/ chapter13/ lectures/ Chapter14.ipynb Chapter15.ipynb README.md WORKFLOW.md QUICK-REF.txt
 
 git add .
 git commit -m "Update: $CommitMessage" --allow-empty

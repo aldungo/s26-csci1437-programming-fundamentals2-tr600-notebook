@@ -1,0 +1,81 @@
+JavaFX UI Controls and Multimedia
+▪CheckBoxcontrols allow users to make various independent selections
+• Checking one box does not affect other checkboxes
+▪Similar to Button controls, use setOnActionfor event handling
+CheckBoxcheckbox = new CheckBox(“Bold”);
+// using a lambda expression
+checkBox.setOnAction(event -> {
+// execute if check box becomes checked or unchecked
+});
+CheckBox
+▪Use isSelectedto determine if a CheckBoxis selected or not
+if (checkBox.isSelected()) {
+label.setUnderline(true);
+}
+else {
+label.setUnderline(false);
+}
+CheckBox
+▪RadioButtoncontrols allow users to make various dependent selections
+• Choosing one option over any other options
+▪RadioButtonsare placed within ToggleGroups
+RadioButtonrbRed= new RadioButton(“Red”);
+RadioButtonrbGreen= new RadioButton(“Green”);
+ToggleGroupgroup = new ToggleGroup();
+rbRed.setToggleGroup(group);
+rbGreen.setToggleGroup(group);
+RadioButton
+▪Use setOnActionfor event handling
+▪Use isSelectedto determine if a RadioButtonis selected or not
+rbRed.setOnAction(e -> {
+if (rbRed.isSelected())
+{
+text.setFill(Color.RED));
+});
+RadioButton
+▪TextAreacontrols provide large areas for inputs and outputs
+▪Use setTextand getTextmethods to modify or access text
+▪By default, text does not wrap to the next line
+• Use setWrapTextto ensure text does wrap to the next line
+TextAreatextArea= new TextArea();
+textArea.setText(“Hello, world!”);
+String text = textArea.getText();
+textArea.setWrapText(true);
+TextArea
+▪ComboBoxcontrols allow user to select an item from a drop-down list
+▪Use getItemsto access the ObservableListof items in a ComboBox
+ComboBox<String> colorComboBox= new ComboBox<>();
+colorComboBox.getItems().addAll(“Red”, “Green”, “Blue”);
+ComboBox
+▪Use setOnActionfor event handling
+▪Use setValueand getValueto modify or access the currently selected item
+colorComboBox.setOnAction(event -> {
+String selectedItem= colorComboBox.getValue();
+});
+ComboBox
+▪Use setVisibleRowCountto determine how many items are visible
+▪Use setEditableto treat the control like a TextField
+colorComboBox.setVisibleRowCount(3);
+colorComboBox.setEditable(true);
+ComboBox
+▪Sliders allow users to select a value within a specified range
+▪Sliders have a value property that serves as an event source
+Slider slider= new Slider(0, 255, 0); // minimum, maximum, and initial value
+slider.valueProperty().addListener((observable, oldValue, newValue) -> {
+// execute if value changes
+double currentValue= newValue;
+});
+Slider
+▪Use setMajorTickUnitto set major tick mark spacing
+▪Use setMinorTickCountto set number of minor tick marks between major ticks
+▪Use setShowTickLabelsto determine if tick labels should be visible or not
+▪Use setShowTickMarksto determine if tick marks should be visible or not
+slider.setMajorTickUnit(15);
+slider.setMinorTickCount(5);
+slider.setShowTickLabels(false);
+slider.setShowTickMarks(true);
+Slider
+▪Use setValueand getValueto modify or access the current value
+slider.setValue(127);
+double value = slider.getValue();
+Slider

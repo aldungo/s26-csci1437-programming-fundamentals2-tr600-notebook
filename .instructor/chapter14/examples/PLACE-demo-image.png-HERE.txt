@@ -1,0 +1,13 @@
+PLACEHOLDER FILE for demo-image.png
+
+Instructions:
+1. Download any image from the internet
+2. Save it as "demo-image.png" in this same folder
+3. Delete this placeholder text file
+4. Uncomment the local file lines in ImageDemo*.java files
+
+This will allow you to demonstrate local file loading to students!
+
+Quick option: Download JavaFX logo
+https://openjfx.io/images/logo.png
+→ Right-click "Save image as..." → name it "demo-image.png"
